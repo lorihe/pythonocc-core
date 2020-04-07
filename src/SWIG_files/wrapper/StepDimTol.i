@@ -67,6 +67,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepdimtol.html"
 %import StepShape.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -156,12 +157,12 @@ enum StepDimTol_GeometricToleranceModifier {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepDimTol_LimitCondition:
+class StepDimTol_LimitCondition(IntEnum):
 	StepDimTol_MaximumMaterialCondition = 0
 	StepDimTol_LeastMaterialCondition = 1
 	StepDimTol_RegardlessOfFeatureSize = 2
 
-class StepDimTol_GeometricToleranceType:
+class StepDimTol_GeometricToleranceType(IntEnum):
 	StepDimTol_GTTAngularityTolerance = 0
 	StepDimTol_GTTCircularRunoutTolerance = 1
 	StepDimTol_GTTCoaxialityTolerance = 2
@@ -178,13 +179,13 @@ class StepDimTol_GeometricToleranceType:
 	StepDimTol_GTTSymmetryTolerance = 13
 	StepDimTol_GTTTotalRunoutTolerance = 14
 
-class StepDimTol_DatumReferenceModifierType:
+class StepDimTol_DatumReferenceModifierType(IntEnum):
 	StepDimTol_CircularOrCylindrical = 0
 	StepDimTol_Distance = 1
 	StepDimTol_Projected = 2
 	StepDimTol_Spherical = 3
 
-class StepDimTol_SimpleDatumReferenceModifier:
+class StepDimTol_SimpleDatumReferenceModifier(IntEnum):
 	StepDimTol_SDRMAnyCrossSection = 0
 	StepDimTol_SDRMAnyLongitudinalSection = 1
 	StepDimTol_SDRMBasic = 2
@@ -208,12 +209,12 @@ class StepDimTol_SimpleDatumReferenceModifier:
 	StepDimTol_SDRMPoint = 20
 	StepDimTol_SDRMTranslation = 21
 
-class StepDimTol_AreaUnitType:
+class StepDimTol_AreaUnitType(IntEnum):
 	StepDimTol_Circular = 0
 	StepDimTol_Rectangular = 1
 	StepDimTol_Square = 2
 
-class StepDimTol_GeometricToleranceModifier:
+class StepDimTol_GeometricToleranceModifier(IntEnum):
 	StepDimTol_GTMAnyCrossSection = 0
 	StepDimTol_GTMCommonZone = 1
 	StepDimTol_GTMEachRadialElement = 2

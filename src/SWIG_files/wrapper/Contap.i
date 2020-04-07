@@ -71,6 +71,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_contap.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -94,13 +95,13 @@ enum Contap_TFunction {
 /* python proy classes for enums */
 %pythoncode {
 
-class Contap_IType:
+class Contap_IType(IntEnum):
 	Contap_Lin = 0
 	Contap_Circle = 1
 	Contap_Walking = 2
 	Contap_Restriction = 3
 
-class Contap_TFunction:
+class Contap_TFunction(IntEnum):
 	Contap_ContourStd = 0
 	Contap_ContourPrs = 1
 	Contap_DraftStd = 2

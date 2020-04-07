@@ -79,6 +79,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_locope.html"
 %import Geom.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -94,7 +95,7 @@ enum LocOpe_Operation {
 /* python proy classes for enums */
 %pythoncode {
 
-class LocOpe_Operation:
+class LocOpe_Operation(IntEnum):
 	LocOpe_FUSE = 0
 	LocOpe_CUT = 1
 	LocOpe_INVALID = 2

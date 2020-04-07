@@ -59,6 +59,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_interface.html"
 %import MoniTool.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -101,7 +102,7 @@ enum Interface_CheckStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class Interface_ParamType:
+class Interface_ParamType(IntEnum):
 	Interface_ParamMisc = 0
 	Interface_ParamInteger = 1
 	Interface_ParamReal = 2
@@ -114,7 +115,7 @@ class Interface_ParamType:
 	Interface_ParamHexa = 9
 	Interface_ParamBinary = 10
 
-class Interface_DataState:
+class Interface_DataState(IntEnum):
 	Interface_StateOK = 0
 	Interface_LoadWarning = 1
 	Interface_LoadFail = 2
@@ -123,7 +124,7 @@ class Interface_DataState:
 	Interface_StateUnloaded = 5
 	Interface_StateUnknown = 6
 
-class Interface_CheckStatus:
+class Interface_CheckStatus(IntEnum):
 	Interface_CheckOK = 0
 	Interface_CheckWarning = 1
 	Interface_CheckFail = 2

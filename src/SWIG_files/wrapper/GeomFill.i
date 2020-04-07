@@ -81,6 +81,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_geomfill.html"
 %import TColGeom.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -121,11 +122,11 @@ enum GeomFill_PipeError {
 /* python proy classes for enums */
 %pythoncode {
 
-class GeomFill_ApproxStyle:
+class GeomFill_ApproxStyle(IntEnum):
 	GeomFill_Section = 0
 	GeomFill_Location = 1
 
-class GeomFill_Trihedron:
+class GeomFill_Trihedron(IntEnum):
 	GeomFill_IsCorrectedFrenet = 0
 	GeomFill_IsFixed = 1
 	GeomFill_IsFrenet = 2
@@ -137,12 +138,12 @@ class GeomFill_Trihedron:
 	GeomFill_IsGuidePlanWithContact = 8
 	GeomFill_IsDiscreteTrihedron = 9
 
-class GeomFill_FillingStyle:
+class GeomFill_FillingStyle(IntEnum):
 	GeomFill_StretchStyle = 0
 	GeomFill_CoonsStyle = 1
 	GeomFill_CurvedStyle = 2
 
-class GeomFill_PipeError:
+class GeomFill_PipeError(IntEnum):
 	GeomFill_PipeOk = 0
 	GeomFill_PipeNotOk = 1
 	GeomFill_PlaneNotIntersectGuide = 2

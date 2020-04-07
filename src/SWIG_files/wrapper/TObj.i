@@ -64,6 +64,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_tobj.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -79,7 +80,7 @@ enum TObj_DeletingMode {
 /* python proy classes for enums */
 %pythoncode {
 
-class TObj_DeletingMode:
+class TObj_DeletingMode(IntEnum):
 	TObj_FreeOnly = 0
 	TObj_KeepDepending = 1
 	TObj_Forced = 2
@@ -981,10 +982,10 @@ enum ObjectState {
 /* python proy classes for enums */
 %pythoncode {
 
-class TypeFlags:
+class TypeFlags(IntEnum):
 	Visible = 1
 
-class ObjectState:
+class ObjectState(IntEnum):
 	ObjectState_Hidden = 1
 	ObjectState_Saved = 2
 	ObjectState_Imported = 4

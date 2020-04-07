@@ -58,6 +58,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_math.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -75,7 +76,7 @@ enum math_Status {
 /* python proy classes for enums */
 %pythoncode {
 
-class math_Status:
+class math_Status(IntEnum):
 	math_OK = 0
 	math_TooManyIterations = 1
 	math_FunctionError = 2

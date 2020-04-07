@@ -58,6 +58,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_rwgltf.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -141,7 +142,7 @@ enum RWGltf_GltfAccessorLayout {
 /* python proy classes for enums */
 %pythoncode {
 
-class RWGltf_GltfPrimitiveMode:
+class RWGltf_GltfPrimitiveMode(IntEnum):
 	RWGltf_GltfPrimitiveMode_UNKNOWN = - 1
 	RWGltf_GltfPrimitiveMode_Points = 0
 	RWGltf_GltfPrimitiveMode_Lines = 1
@@ -151,12 +152,12 @@ class RWGltf_GltfPrimitiveMode:
 	RWGltf_GltfPrimitiveMode_TriangleStrip = 5
 	RWGltf_GltfPrimitiveMode_TriangleFan = 6
 
-class RWGltf_GltfBufferViewTarget:
+class RWGltf_GltfBufferViewTarget(IntEnum):
 	RWGltf_GltfBufferViewTarget_UNKNOWN = 0
 	RWGltf_GltfBufferViewTarget_ARRAY_BUFFER = 34962
 	RWGltf_GltfBufferViewTarget_ELEMENT_ARRAY_BUFFER = 34963
 
-class RWGltf_GltfArrayType:
+class RWGltf_GltfArrayType(IntEnum):
 	RWGltf_GltfArrayType_UNKNOWN = 0
 	RWGltf_GltfArrayType_Indices = 1
 	RWGltf_GltfArrayType_Position = 2
@@ -167,7 +168,7 @@ class RWGltf_GltfArrayType:
 	RWGltf_GltfArrayType_Joint = 7
 	RWGltf_GltfArrayType_Weight = 8
 
-class RWGltf_GltfRootElement:
+class RWGltf_GltfRootElement(IntEnum):
 	RWGltf_GltfRootElement_Asset = 0
 	RWGltf_GltfRootElement_Scenes = 1
 	RWGltf_GltfRootElement_Scene = 2
@@ -190,7 +191,7 @@ class RWGltf_GltfRootElement:
 	RWGltf_GltfRootElement_ExtensionsRequired = 19
 	RWGltf_GltfRootElement_NB = 20
 
-class RWGltf_GltfAccessorCompType:
+class RWGltf_GltfAccessorCompType(IntEnum):
 	RWGltf_GltfAccessorCompType_UNKNOWN = 0
 	RWGltf_GltfAccessorCompType_Int8 = 5120
 	RWGltf_GltfAccessorCompType_UInt8 = 5121
@@ -199,7 +200,7 @@ class RWGltf_GltfAccessorCompType:
 	RWGltf_GltfAccessorCompType_UInt32 = 5125
 	RWGltf_GltfAccessorCompType_Float32 = 5126
 
-class RWGltf_GltfAccessorLayout:
+class RWGltf_GltfAccessorLayout(IntEnum):
 	RWGltf_GltfAccessorLayout_UNKNOWN = 0
 	RWGltf_GltfAccessorLayout_Scalar = 1
 	RWGltf_GltfAccessorLayout_Vec2 = 2

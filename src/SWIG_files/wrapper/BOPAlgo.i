@@ -83,6 +83,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_bopalgo.html"
 %import TopAbs.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -122,7 +123,7 @@ enum BOPAlgo_GlueEnum {
 /* python proy classes for enums */
 %pythoncode {
 
-class BOPAlgo_CheckStatus:
+class BOPAlgo_CheckStatus(IntEnum):
 	BOPAlgo_CheckUnknown = 0
 	BOPAlgo_BadType = 1
 	BOPAlgo_SelfIntersect = 2
@@ -136,7 +137,7 @@ class BOPAlgo_CheckStatus:
 	BOPAlgo_InvalidCurveOnSurface = 10
 	BOPAlgo_NotValid = 11
 
-class BOPAlgo_Operation:
+class BOPAlgo_Operation(IntEnum):
 	BOPAlgo_COMMON = 0
 	BOPAlgo_FUSE = 1
 	BOPAlgo_CUT = 2
@@ -144,7 +145,7 @@ class BOPAlgo_Operation:
 	BOPAlgo_SECTION = 4
 	BOPAlgo_UNKNOWN = 5
 
-class BOPAlgo_GlueEnum:
+class BOPAlgo_GlueEnum(IntEnum):
 	BOPAlgo_GlueOff = 0
 	BOPAlgo_GlueShift = 1
 	BOPAlgo_GlueFull = 2

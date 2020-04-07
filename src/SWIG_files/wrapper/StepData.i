@@ -60,6 +60,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepdata.html"
 %import Message.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -75,7 +76,7 @@ enum StepData_Logical {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepData_Logical:
+class StepData_Logical(IntEnum):
 	StepData_LFalse = 0
 	StepData_LTrue = 1
 	StepData_LUnknown = 2

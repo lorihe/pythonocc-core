@@ -52,6 +52,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_resource.html"
 %import TCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -74,7 +75,7 @@ enum Resource_FormatType {
 /* python proy classes for enums */
 %pythoncode {
 
-class Resource_FormatType:
+class Resource_FormatType(IntEnum):
 	Resource_FormatType_SJIS = 0
 	Resource_FormatType_EUC = 1
 	Resource_FormatType_ANSI = 2

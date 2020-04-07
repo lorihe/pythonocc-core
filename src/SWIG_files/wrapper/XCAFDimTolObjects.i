@@ -68,6 +68,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_xcafdimtolobjects
 %import TDocStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -306,7 +307,7 @@ enum XCAFDimTolObjects_DimensionGrade {
 /* python proy classes for enums */
 %pythoncode {
 
-class XCAFDimTolObjects_GeomToleranceType:
+class XCAFDimTolObjects_GeomToleranceType(IntEnum):
 	XCAFDimTolObjects_GeomToleranceType_None = 0
 	XCAFDimTolObjects_GeomToleranceType_Angularity = 1
 	XCAFDimTolObjects_GeomToleranceType_CircularRunout = 2
@@ -324,7 +325,7 @@ class XCAFDimTolObjects_GeomToleranceType:
 	XCAFDimTolObjects_GeomToleranceType_Symmetry = 14
 	XCAFDimTolObjects_GeomToleranceType_TotalRunout = 15
 
-class XCAFDimTolObjects_GeomToleranceModif:
+class XCAFDimTolObjects_GeomToleranceModif(IntEnum):
 	XCAFDimTolObjects_GeomToleranceModif_Any_Cross_Section = 0
 	XCAFDimTolObjects_GeomToleranceModif_Common_Zone = 1
 	XCAFDimTolObjects_GeomToleranceModif_Each_Radial_Element = 2
@@ -343,7 +344,7 @@ class XCAFDimTolObjects_GeomToleranceModif:
 	XCAFDimTolObjects_GeomToleranceModif_All_Around = 15
 	XCAFDimTolObjects_GeomToleranceModif_All_Over = 16
 
-class XCAFDimTolObjects_DimensionModif:
+class XCAFDimTolObjects_DimensionModif(IntEnum):
 	XCAFDimTolObjects_DimensionModif_ControlledRadius = 0
 	XCAFDimTolObjects_DimensionModif_Square = 1
 	XCAFDimTolObjects_DimensionModif_StatisticalTolerance = 2
@@ -369,14 +370,14 @@ class XCAFDimTolObjects_DimensionModif:
 	XCAFDimTolObjects_DimensionModif_FreeStateCondition = 22
 	XCAFDimTolObjects_DimensionModif_Between = 23
 
-class XCAFDimTolObjects_DatumModifWithValue:
+class XCAFDimTolObjects_DatumModifWithValue(IntEnum):
 	XCAFDimTolObjects_DatumModifWithValue_None = 0
 	XCAFDimTolObjects_DatumModifWithValue_CircularOrCylindrical = 1
 	XCAFDimTolObjects_DatumModifWithValue_Distance = 2
 	XCAFDimTolObjects_DatumModifWithValue_Projected = 3
 	XCAFDimTolObjects_DatumModifWithValue_Spherical = 4
 
-class XCAFDimTolObjects_DimensionFormVariance:
+class XCAFDimTolObjects_DimensionFormVariance(IntEnum):
 	XCAFDimTolObjects_DimensionFormVariance_None = 0
 	XCAFDimTolObjects_DimensionFormVariance_A = 1
 	XCAFDimTolObjects_DimensionFormVariance_B = 2
@@ -407,20 +408,20 @@ class XCAFDimTolObjects_DimensionFormVariance:
 	XCAFDimTolObjects_DimensionFormVariance_ZB = 27
 	XCAFDimTolObjects_DimensionFormVariance_ZC = 28
 
-class XCAFDimTolObjects_GeomToleranceZoneModif:
+class XCAFDimTolObjects_GeomToleranceZoneModif(IntEnum):
 	XCAFDimTolObjects_GeomToleranceZoneModif_None = 0
 	XCAFDimTolObjects_GeomToleranceZoneModif_Projected = 1
 	XCAFDimTolObjects_GeomToleranceZoneModif_Runout = 2
 	XCAFDimTolObjects_GeomToleranceZoneModif_NonUniform = 3
 
-class XCAFDimTolObjects_DatumTargetType:
+class XCAFDimTolObjects_DatumTargetType(IntEnum):
 	XCAFDimTolObjects_DatumTargetType_Point = 0
 	XCAFDimTolObjects_DatumTargetType_Line = 1
 	XCAFDimTolObjects_DatumTargetType_Rectangle = 2
 	XCAFDimTolObjects_DatumTargetType_Circle = 3
 	XCAFDimTolObjects_DatumTargetType_Area = 4
 
-class XCAFDimTolObjects_DatumSingleModif:
+class XCAFDimTolObjects_DatumSingleModif(IntEnum):
 	XCAFDimTolObjects_DatumSingleModif_AnyCrossSection = 0
 	XCAFDimTolObjects_DatumSingleModif_Any_LongitudinalSection = 1
 	XCAFDimTolObjects_DatumSingleModif_Basic = 2
@@ -444,23 +445,23 @@ class XCAFDimTolObjects_DatumSingleModif:
 	XCAFDimTolObjects_DatumSingleModif_Point = 20
 	XCAFDimTolObjects_DatumSingleModif_Translation = 21
 
-class XCAFDimTolObjects_DimensionQualifier:
+class XCAFDimTolObjects_DimensionQualifier(IntEnum):
 	XCAFDimTolObjects_DimensionQualifier_None = 0
 	XCAFDimTolObjects_DimensionQualifier_Min = 1
 	XCAFDimTolObjects_DimensionQualifier_Max = 2
 	XCAFDimTolObjects_DimensionQualifier_Avg = 3
 
-class XCAFDimTolObjects_GeomToleranceTypeValue:
+class XCAFDimTolObjects_GeomToleranceTypeValue(IntEnum):
 	XCAFDimTolObjects_GeomToleranceTypeValue_None = 0
 	XCAFDimTolObjects_GeomToleranceTypeValue_Diameter = 1
 	XCAFDimTolObjects_GeomToleranceTypeValue_SphericalDiameter = 2
 
-class XCAFDimTolObjects_ToleranceZoneAffectedPlane:
+class XCAFDimTolObjects_ToleranceZoneAffectedPlane(IntEnum):
 	XCAFDimTolObjects_ToleranceZoneAffectedPlane_None = 0
 	XCAFDimTolObjects_ToleranceZoneAffectedPlane_Intersection = 1
 	XCAFDimTolObjects_ToleranceZoneAffectedPlane_Orientation = 2
 
-class XCAFDimTolObjects_DimensionType:
+class XCAFDimTolObjects_DimensionType(IntEnum):
 	XCAFDimTolObjects_DimensionType_Location_None = 0
 	XCAFDimTolObjects_DimensionType_Location_CurvedDistance = 1
 	XCAFDimTolObjects_DimensionType_Location_LinearDistance = 2
@@ -494,12 +495,12 @@ class XCAFDimTolObjects_DimensionType:
 	XCAFDimTolObjects_DimensionType_CommonLabel = 30
 	XCAFDimTolObjects_DimensionType_DimensionPresentation = 31
 
-class XCAFDimTolObjects_GeomToleranceMatReqModif:
+class XCAFDimTolObjects_GeomToleranceMatReqModif(IntEnum):
 	XCAFDimTolObjects_GeomToleranceMatReqModif_None = 0
 	XCAFDimTolObjects_GeomToleranceMatReqModif_M = 1
 	XCAFDimTolObjects_GeomToleranceMatReqModif_L = 2
 
-class XCAFDimTolObjects_DimensionGrade:
+class XCAFDimTolObjects_DimensionGrade(IntEnum):
 	XCAFDimTolObjects_DimensionGrade_IT01 = 0
 	XCAFDimTolObjects_DimensionGrade_IT0 = 1
 	XCAFDimTolObjects_DimensionGrade_IT1 = 2

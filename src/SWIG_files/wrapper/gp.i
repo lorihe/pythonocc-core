@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_gp.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -100,7 +101,7 @@ enum gp_EulerSequence {
 /* python proy classes for enums */
 %pythoncode {
 
-class gp_TrsfForm:
+class gp_TrsfForm(IntEnum):
 	gp_Identity = 0
 	gp_Rotation = 1
 	gp_Translation = 2
@@ -111,7 +112,7 @@ class gp_TrsfForm:
 	gp_CompoundTrsf = 7
 	gp_Other = 8
 
-class gp_EulerSequence:
+class gp_EulerSequence(IntEnum):
 	gp_EulerAngles = 0
 	gp_YawPitchRoll = 1
 	gp_Extrinsic_XYZ = 2

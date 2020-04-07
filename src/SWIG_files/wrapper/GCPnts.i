@@ -63,6 +63,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_gcpnts.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -85,13 +86,13 @@ enum GCPnts_AbscissaType {
 /* python proy classes for enums */
 %pythoncode {
 
-class GCPnts_DeflectionType:
+class GCPnts_DeflectionType(IntEnum):
 	GCPnts_Linear = 0
 	GCPnts_Circular = 1
 	GCPnts_Curved = 2
 	GCPnts_DefComposite = 3
 
-class GCPnts_AbscissaType:
+class GCPnts_AbscissaType(IntEnum):
 	GCPnts_LengthParametrized = 0
 	GCPnts_Parametrized = 1
 	GCPnts_AbsComposite = 2

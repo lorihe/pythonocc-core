@@ -59,6 +59,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_hlralgo.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -84,7 +85,7 @@ enum HLRAlgo_PolyMask {
 /* python proy classes for enums */
 %pythoncode {
 
-class HLRAlgo_PolyMask:
+class HLRAlgo_PolyMask(IntEnum):
 	HLRAlgo_PolyMask_EMskOutLin1 = 1
 	HLRAlgo_PolyMask_EMskOutLin2 = 2
 	HLRAlgo_PolyMask_EMskOutLin3 = 4

@@ -70,6 +70,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepfea.html"
 %import StepGeom.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -107,15 +108,15 @@ enum StepFEA_UnspecifiedValue {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepFEA_ElementVolume:
+class StepFEA_ElementVolume(IntEnum):
 	StepFEA_Volume = 0
 
-class StepFEA_CoordinateSystemType:
+class StepFEA_CoordinateSystemType(IntEnum):
 	StepFEA_Cartesian = 0
 	StepFEA_Cylindrical = 1
 	StepFEA_Spherical = 2
 
-class StepFEA_EnumeratedDegreeOfFreedom:
+class StepFEA_EnumeratedDegreeOfFreedom(IntEnum):
 	StepFEA_XTranslation = 0
 	StepFEA_YTranslation = 1
 	StepFEA_ZTranslation = 2
@@ -124,10 +125,10 @@ class StepFEA_EnumeratedDegreeOfFreedom:
 	StepFEA_ZRotation = 5
 	StepFEA_Warp = 6
 
-class StepFEA_CurveEdge:
+class StepFEA_CurveEdge(IntEnum):
 	StepFEA_ElementEdge = 0
 
-class StepFEA_UnspecifiedValue:
+class StepFEA_UnspecifiedValue(IntEnum):
 	StepFEA_Unspecified = 0
 };
 /* end python proxy for enums */

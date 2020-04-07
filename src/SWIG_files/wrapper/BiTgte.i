@@ -69,6 +69,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_bitgte.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -87,7 +88,7 @@ enum BiTgte_ContactType {
 /* python proy classes for enums */
 %pythoncode {
 
-class BiTgte_ContactType:
+class BiTgte_ContactType(IntEnum):
 	BiTgte_FaceFace = 0
 	BiTgte_FaceEdge = 1
 	BiTgte_FaceVertex = 2

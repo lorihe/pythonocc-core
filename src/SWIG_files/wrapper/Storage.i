@@ -51,6 +51,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_storage.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -90,12 +91,12 @@ enum Storage_OpenMode {
 /* python proy classes for enums */
 %pythoncode {
 
-class Storage_SolveMode:
+class Storage_SolveMode(IntEnum):
 	Storage_AddSolve = 0
 	Storage_WriteSolve = 1
 	Storage_ReadSolve = 2
 
-class Storage_Error:
+class Storage_Error(IntEnum):
 	Storage_VSOk = 0
 	Storage_VSOpenError = 1
 	Storage_VSModeError = 2
@@ -111,7 +112,7 @@ class Storage_Error:
 	Storage_VSExtCharParityError = 12
 	Storage_VSWrongFileDriver = 13
 
-class Storage_OpenMode:
+class Storage_OpenMode(IntEnum):
 	Storage_VSNone = 0
 	Storage_VSRead = 1
 	Storage_VSWrite = 2

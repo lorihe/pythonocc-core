@@ -71,6 +71,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepadaptor.html"
 %import Adaptor2d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 

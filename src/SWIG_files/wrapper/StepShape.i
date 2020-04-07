@@ -66,6 +66,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepshape.html"
 %import StepBasic.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -87,12 +88,12 @@ enum StepShape_BooleanOperator {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepShape_AngleRelator:
+class StepShape_AngleRelator(IntEnum):
 	StepShape_Equal = 0
 	StepShape_Large = 1
 	StepShape_Small = 2
 
-class StepShape_BooleanOperator:
+class StepShape_BooleanOperator(IntEnum):
 	StepShape_boDifference = 0
 	StepShape_boIntersection = 1
 	StepShape_boUnion = 2

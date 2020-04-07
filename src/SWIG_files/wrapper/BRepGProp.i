@@ -76,6 +76,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepgprop.html"
 %import math.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -911,7 +912,7 @@ enum BRepGProp_GaussType {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepGProp_GaussType:
+class BRepGProp_GaussType(IntEnum):
 	Vinert = 0
 	Sinert = 1
 };

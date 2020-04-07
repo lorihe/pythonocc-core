@@ -54,6 +54,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_intana.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -76,7 +77,7 @@ enum IntAna_ResultType {
 /* python proy classes for enums */
 %pythoncode {
 
-class IntAna_ResultType:
+class IntAna_ResultType(IntEnum):
 	IntAna_Point = 0
 	IntAna_Line = 1
 	IntAna_Circle = 2

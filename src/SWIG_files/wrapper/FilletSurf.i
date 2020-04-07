@@ -80,6 +80,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_filletsurf.html"
 %import ChFi3d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -110,17 +111,17 @@ enum FilletSurf_ErrorTypeStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class FilletSurf_StatusDone:
+class FilletSurf_StatusDone(IntEnum):
 	FilletSurf_IsOk = 0
 	FilletSurf_IsNotOk = 1
 	FilletSurf_IsPartial = 2
 
-class FilletSurf_StatusType:
+class FilletSurf_StatusType(IntEnum):
 	FilletSurf_TwoExtremityOnEdge = 0
 	FilletSurf_OneExtremityOnEdge = 1
 	FilletSurf_NoExtremityOnEdge = 2
 
-class FilletSurf_ErrorTypeStatus:
+class FilletSurf_ErrorTypeStatus(IntEnum):
 	FilletSurf_EmptyList = 0
 	FilletSurf_EdgeNotG1 = 1
 	FilletSurf_FacesNotG1 = 2

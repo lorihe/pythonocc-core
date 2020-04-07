@@ -78,6 +78,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_v3d.html"
 %import Image.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -186,7 +187,7 @@ enum V3d_TypeOfPickLight {
 /* python proy classes for enums */
 %pythoncode {
 
-class V3d_TypeOfPickCamera:
+class V3d_TypeOfPickCamera(IntEnum):
 	V3d_POSITIONCAMERA = 0
 	V3d_SPACECAMERA = 1
 	V3d_RADIUSTEXTCAMERA = 2
@@ -194,21 +195,21 @@ class V3d_TypeOfPickCamera:
 	V3d_IntRADIUSCAMERA = 4
 	V3d_NOTHINGCAMERA = 5
 
-class V3d_TypeOfVisualization:
+class V3d_TypeOfVisualization(IntEnum):
 	V3d_WIREFRAME = 0
 	V3d_ZBUFFER = 1
 
-class V3d_TypeOfView:
+class V3d_TypeOfView(IntEnum):
 	V3d_ORTHOGRAPHIC = 0
 	V3d_PERSPECTIVE = 1
 
-class V3d_StereoDumpOptions:
+class V3d_StereoDumpOptions(IntEnum):
 	V3d_SDO_MONO = 0
 	V3d_SDO_LEFT_EYE = 1
 	V3d_SDO_RIGHT_EYE = 2
 	V3d_SDO_BLENDED = 3
 
-class V3d_TypeOfOrientation:
+class V3d_TypeOfOrientation(IntEnum):
 	V3d_Xpos = 0
 	V3d_Ypos = 1
 	V3d_Zpos = 2
@@ -252,23 +253,23 @@ class V3d_TypeOfOrientation:
 	V3d_TypeOfOrientation_Yup_Left = V3d_Xpos
 	V3d_TypeOfOrientation_Yup_Right = V3d_Xneg
 
-class V3d_TypeOfAxe:
+class V3d_TypeOfAxe(IntEnum):
 	V3d_X = 0
 	V3d_Y = 1
 	V3d_Z = 2
 
-class V3d_TypeOfRepresentation:
+class V3d_TypeOfRepresentation(IntEnum):
 	V3d_SIMPLE = 0
 	V3d_COMPLETE = 1
 	V3d_PARTIAL = 2
 	V3d_SAMELAST = 3
 
-class V3d_TypeOfBackfacingModel:
+class V3d_TypeOfBackfacingModel(IntEnum):
 	V3d_TOBM_AUTOMATIC = 0
 	V3d_TOBM_ALWAYS_DISPLAYED = 1
 	V3d_TOBM_NEVER_DISPLAYED = 2
 
-class V3d_TypeOfPickLight:
+class V3d_TypeOfPickLight(IntEnum):
 	V3d_POSITIONLIGHT = 0
 	V3d_SPACELIGHT = 1
 	V3d_RADIUSTEXTLIGHT = 2

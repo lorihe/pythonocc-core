@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_topabs.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -85,13 +86,13 @@ enum TopAbs_State {
 /* python proy classes for enums */
 %pythoncode {
 
-class TopAbs_Orientation:
+class TopAbs_Orientation(IntEnum):
 	TopAbs_FORWARD = 0
 	TopAbs_REVERSED = 1
 	TopAbs_INTERNAL = 2
 	TopAbs_EXTERNAL = 3
 
-class TopAbs_ShapeEnum:
+class TopAbs_ShapeEnum(IntEnum):
 	TopAbs_COMPOUND = 0
 	TopAbs_COMPSOLID = 1
 	TopAbs_SOLID = 2
@@ -102,7 +103,7 @@ class TopAbs_ShapeEnum:
 	TopAbs_VERTEX = 7
 	TopAbs_SHAPE = 8
 
-class TopAbs_State:
+class TopAbs_State(IntEnum):
 	TopAbs_IN = 0
 	TopAbs_OUT = 1
 	TopAbs_ON = 2

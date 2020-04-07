@@ -97,6 +97,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_topopebreptool.ht
 %import Extrema.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -112,7 +113,7 @@ enum TopOpeBRepTool_OutCurveType {
 /* python proy classes for enums */
 %pythoncode {
 
-class TopOpeBRepTool_OutCurveType:
+class TopOpeBRepTool_OutCurveType(IntEnum):
 	TopOpeBRepTool_BSPLINE1 = 0
 	TopOpeBRepTool_APPROX = 1
 	TopOpeBRepTool_INTERPOL = 2

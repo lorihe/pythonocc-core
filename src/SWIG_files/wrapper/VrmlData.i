@@ -67,6 +67,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_vrmldata.html"
 %import Quantity.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -97,7 +98,7 @@ enum VrmlData_ErrorStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class VrmlData_ErrorStatus:
+class VrmlData_ErrorStatus(IntEnum):
 	VrmlData_StatusOK = 0
 	VrmlData_EmptyData = 1
 	VrmlData_UnrecoverableError = 2

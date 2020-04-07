@@ -52,6 +52,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_quantity.html"
 %import TCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -657,7 +658,7 @@ enum Quantity_PhysicalQuantity {
 /* python proy classes for enums */
 %pythoncode {
 
-class Quantity_NameOfColor:
+class Quantity_NameOfColor(IntEnum):
 	Quantity_NOC_BLACK = 0
 	Quantity_NOC_MATRABLUE = 1
 	Quantity_NOC_MATRAGRAY = 2
@@ -1176,11 +1177,11 @@ class Quantity_NameOfColor:
 	Quantity_NOC_YELLOWGREEN = 515
 	Quantity_NOC_WHITE = 516
 
-class Quantity_TypeOfColor:
+class Quantity_TypeOfColor(IntEnum):
 	Quantity_TOC_RGB = 0
 	Quantity_TOC_HLS = 1
 
-class Quantity_PhysicalQuantity:
+class Quantity_PhysicalQuantity(IntEnum):
 	Quantity_MASS = 0
 	Quantity_PLANEANGLE = 1
 	Quantity_SOLIDANGLE = 2

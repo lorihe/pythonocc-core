@@ -67,6 +67,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepgeom.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -125,13 +126,13 @@ enum StepGeom_TransitionCode {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepGeom_KnotType:
+class StepGeom_KnotType(IntEnum):
 	StepGeom_ktUniformKnots = 0
 	StepGeom_ktUnspecified = 1
 	StepGeom_ktQuasiUniformKnots = 2
 	StepGeom_ktPiecewiseBezierKnots = 3
 
-class StepGeom_BSplineSurfaceForm:
+class StepGeom_BSplineSurfaceForm(IntEnum):
 	StepGeom_bssfPlaneSurf = 0
 	StepGeom_bssfCylindricalSurf = 1
 	StepGeom_bssfConicalSurf = 2
@@ -144,7 +145,7 @@ class StepGeom_BSplineSurfaceForm:
 	StepGeom_bssfSurfOfLinearExtrusion = 9
 	StepGeom_bssfUnspecified = 10
 
-class StepGeom_BSplineCurveForm:
+class StepGeom_BSplineCurveForm(IntEnum):
 	StepGeom_bscfPolylineForm = 0
 	StepGeom_bscfCircularArc = 1
 	StepGeom_bscfEllipticArc = 2
@@ -152,17 +153,17 @@ class StepGeom_BSplineCurveForm:
 	StepGeom_bscfHyperbolicArc = 4
 	StepGeom_bscfUnspecified = 5
 
-class StepGeom_TrimmingPreference:
+class StepGeom_TrimmingPreference(IntEnum):
 	StepGeom_tpCartesian = 0
 	StepGeom_tpParameter = 1
 	StepGeom_tpUnspecified = 2
 
-class StepGeom_PreferredSurfaceCurveRepresentation:
+class StepGeom_PreferredSurfaceCurveRepresentation(IntEnum):
 	StepGeom_pscrCurve3d = 0
 	StepGeom_pscrPcurveS1 = 1
 	StepGeom_pscrPcurveS2 = 2
 
-class StepGeom_TransitionCode:
+class StepGeom_TransitionCode(IntEnum):
 	StepGeom_tcDiscontinuous = 0
 	StepGeom_tcContinuous = 1
 	StepGeom_tcContSameGradient = 2

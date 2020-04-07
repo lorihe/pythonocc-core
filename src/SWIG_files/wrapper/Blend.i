@@ -64,6 +64,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_blend.html"
 %import Adaptor2d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -91,7 +92,7 @@ enum Blend_DecrochStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class Blend_Status:
+class Blend_Status(IntEnum):
 	Blend_StepTooLarge = 0
 	Blend_StepTooSmall = 1
 	Blend_Backward = 2
@@ -101,7 +102,7 @@ class Blend_Status:
 	Blend_OnRst12 = 6
 	Blend_OK = 7
 
-class Blend_DecrochStatus:
+class Blend_DecrochStatus(IntEnum):
 	Blend_NoDecroch = 0
 	Blend_DecrochRst1 = 1
 	Blend_DecrochRst2 = 2

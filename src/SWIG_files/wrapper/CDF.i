@@ -58,6 +58,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_cdf.html"
 %import PCDM.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -93,24 +94,24 @@ enum CDF_StoreSetNameStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class CDF_TypeOfActivation:
+class CDF_TypeOfActivation(IntEnum):
 	CDF_TOA_New = 0
 	CDF_TOA_Modified = 1
 	CDF_TOA_Unchanged = 2
 
-class CDF_TryStoreStatus:
+class CDF_TryStoreStatus(IntEnum):
 	CDF_TS_OK = 0
 	CDF_TS_NoCurrentDocument = 1
 	CDF_TS_NoDriver = 2
 	CDF_TS_NoSubComponentDriver = 3
 
-class CDF_SubComponentStatus:
+class CDF_SubComponentStatus(IntEnum):
 	CDF_SCS_Consistent = 0
 	CDF_SCS_Unconsistent = 1
 	CDF_SCS_Stored = 2
 	CDF_SCS_Modified = 3
 
-class CDF_StoreSetNameStatus:
+class CDF_StoreSetNameStatus(IntEnum):
 	CDF_SSNS_OK = 0
 	CDF_SSNS_ReplacingAnExistentDocument = 1
 	CDF_SSNS_OpenDocument = 2

@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_geomabs.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -142,17 +143,17 @@ enum GeomAbs_UVSense {
 /* python proy classes for enums */
 %pythoncode {
 
-class GeomAbs_IsoType:
+class GeomAbs_IsoType(IntEnum):
 	GeomAbs_IsoU = 0
 	GeomAbs_IsoV = 1
 	GeomAbs_NoneIso = 2
 
-class GeomAbs_JoinType:
+class GeomAbs_JoinType(IntEnum):
 	GeomAbs_Arc = 0
 	GeomAbs_Tangent = 1
 	GeomAbs_Intersection = 2
 
-class GeomAbs_SurfaceType:
+class GeomAbs_SurfaceType(IntEnum):
 	GeomAbs_Plane = 0
 	GeomAbs_Cylinder = 1
 	GeomAbs_Cone = 2
@@ -165,7 +166,7 @@ class GeomAbs_SurfaceType:
 	GeomAbs_OffsetSurface = 9
 	GeomAbs_OtherSurface = 10
 
-class GeomAbs_CurveType:
+class GeomAbs_CurveType(IntEnum):
 	GeomAbs_Line = 0
 	GeomAbs_Circle = 1
 	GeomAbs_Ellipse = 2
@@ -176,7 +177,7 @@ class GeomAbs_CurveType:
 	GeomAbs_OffsetCurve = 7
 	GeomAbs_OtherCurve = 8
 
-class GeomAbs_SurfaceForm:
+class GeomAbs_SurfaceForm(IntEnum):
 	GeomAbs_PlanarForm = 0
 	GeomAbs_ConicalForm = 1
 	GeomAbs_CylindricalForm = 2
@@ -187,7 +188,7 @@ class GeomAbs_SurfaceForm:
 	GeomAbs_QuadricForm = 7
 	GeomAbs_OtherSurfaceForm = 8
 
-class GeomAbs_Shape:
+class GeomAbs_Shape(IntEnum):
 	GeomAbs_C0 = 0
 	GeomAbs_G1 = 1
 	GeomAbs_C1 = 2
@@ -196,13 +197,13 @@ class GeomAbs_Shape:
 	GeomAbs_C3 = 5
 	GeomAbs_CN = 6
 
-class GeomAbs_BSplKnotDistribution:
+class GeomAbs_BSplKnotDistribution(IntEnum):
 	GeomAbs_NonUniform = 0
 	GeomAbs_Uniform = 1
 	GeomAbs_QuasiUniform = 2
 	GeomAbs_PiecewiseBezier = 3
 
-class GeomAbs_CurveForm:
+class GeomAbs_CurveForm(IntEnum):
 	GeomAbs_PolylineForm = 0
 	GeomAbs_CircularForm = 1
 	GeomAbs_EllipticForm = 2
@@ -210,7 +211,7 @@ class GeomAbs_CurveForm:
 	GeomAbs_ParabolicForm = 4
 	GeomAbs_OtherCurveForm = 5
 
-class GeomAbs_UVSense:
+class GeomAbs_UVSense(IntEnum):
 	GeomAbs_SameUV = 0
 	GeomAbs_SameU = 1
 	GeomAbs_SameV = 2

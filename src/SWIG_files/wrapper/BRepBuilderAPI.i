@@ -72,6 +72,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepbuilderapi.ht
 %import Geom2d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -134,20 +135,20 @@ enum BRepBuilderAPI_ShellError {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepBuilderAPI_ShapeModification:
+class BRepBuilderAPI_ShapeModification(IntEnum):
 	BRepBuilderAPI_Preserved = 0
 	BRepBuilderAPI_Deleted = 1
 	BRepBuilderAPI_Trimmed = 2
 	BRepBuilderAPI_Merged = 3
 	BRepBuilderAPI_BoundaryModified = 4
 
-class BRepBuilderAPI_WireError:
+class BRepBuilderAPI_WireError(IntEnum):
 	BRepBuilderAPI_WireDone = 0
 	BRepBuilderAPI_EmptyWire = 1
 	BRepBuilderAPI_DisconnectedWire = 2
 	BRepBuilderAPI_NonManifoldWire = 3
 
-class BRepBuilderAPI_EdgeError:
+class BRepBuilderAPI_EdgeError(IntEnum):
 	BRepBuilderAPI_EdgeDone = 0
 	BRepBuilderAPI_PointProjectionFailed = 1
 	BRepBuilderAPI_ParameterOutOfRange = 2
@@ -156,25 +157,25 @@ class BRepBuilderAPI_EdgeError:
 	BRepBuilderAPI_DifferentsPointAndParameter = 5
 	BRepBuilderAPI_LineThroughIdenticPoints = 6
 
-class BRepBuilderAPI_PipeError:
+class BRepBuilderAPI_PipeError(IntEnum):
 	BRepBuilderAPI_PipeDone = 0
 	BRepBuilderAPI_PipeNotDone = 1
 	BRepBuilderAPI_PlaneNotIntersectGuide = 2
 	BRepBuilderAPI_ImpossibleContact = 3
 
-class BRepBuilderAPI_TransitionMode:
+class BRepBuilderAPI_TransitionMode(IntEnum):
 	BRepBuilderAPI_Transformed = 0
 	BRepBuilderAPI_RightCorner = 1
 	BRepBuilderAPI_RoundCorner = 2
 
-class BRepBuilderAPI_FaceError:
+class BRepBuilderAPI_FaceError(IntEnum):
 	BRepBuilderAPI_FaceDone = 0
 	BRepBuilderAPI_NoFace = 1
 	BRepBuilderAPI_NotPlanar = 2
 	BRepBuilderAPI_CurveProjectionFailed = 3
 	BRepBuilderAPI_ParametersOutOfRange = 4
 
-class BRepBuilderAPI_ShellError:
+class BRepBuilderAPI_ShellError(IntEnum):
 	BRepBuilderAPI_ShellDone = 0
 	BRepBuilderAPI_EmptyShell = 1
 	BRepBuilderAPI_DisconnectedShell = 2
@@ -426,7 +427,7 @@ enum FS_Statuses {
 /* python proy classes for enums */
 %pythoncode {
 
-class FS_Statuses:
+class FS_Statuses(IntEnum):
 	FS_OK = 0
 	FS_Degenerated = 1
 	FS_FindVertexError = 2

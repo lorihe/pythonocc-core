@@ -61,6 +61,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_ifselect.html"
 %import MoniTool.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -111,17 +112,17 @@ enum IFSelect_PrintCount {
 /* python proy classes for enums */
 %pythoncode {
 
-class IFSelect_PrintFail:
+class IFSelect_PrintFail(IntEnum):
 	IFSelect_FailOnly = 0
 	IFSelect_FailAndWarn = 1
 
-class IFSelect_RemainMode:
+class IFSelect_RemainMode(IntEnum):
 	IFSelect_RemainForget = 0
 	IFSelect_RemainCompute = 1
 	IFSelect_RemainDisplay = 2
 	IFSelect_RemainUndo = 3
 
-class IFSelect_EditValue:
+class IFSelect_EditValue(IntEnum):
 	IFSelect_Optional = 0
 	IFSelect_Editable = 1
 	IFSelect_EditProtected = 2
@@ -129,14 +130,14 @@ class IFSelect_EditValue:
 	IFSelect_EditRead = 4
 	IFSelect_EditDynamic = 5
 
-class IFSelect_ReturnStatus:
+class IFSelect_ReturnStatus(IntEnum):
 	IFSelect_RetVoid = 0
 	IFSelect_RetDone = 1
 	IFSelect_RetError = 2
 	IFSelect_RetFail = 3
 	IFSelect_RetStop = 4
 
-class IFSelect_PrintCount:
+class IFSelect_PrintCount(IntEnum):
 	IFSelect_ItemsByEntity = 0
 	IFSelect_CountByItem = 1
 	IFSelect_ShortByItem = 2

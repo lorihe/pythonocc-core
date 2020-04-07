@@ -54,6 +54,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_intf.html"
 %import Bnd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -70,7 +71,7 @@ enum Intf_PIType {
 /* python proy classes for enums */
 %pythoncode {
 
-class Intf_PIType:
+class Intf_PIType(IntEnum):
 	Intf_EXTERNAL = 0
 	Intf_FACE = 1
 	Intf_EDGE = 2

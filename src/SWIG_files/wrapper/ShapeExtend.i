@@ -74,6 +74,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_shapeextend.html"
 %import TopAbs.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -111,7 +112,7 @@ enum ShapeExtend_Parametrisation {
 /* python proy classes for enums */
 %pythoncode {
 
-class ShapeExtend_Status:
+class ShapeExtend_Status(IntEnum):
 	ShapeExtend_OK = 0
 	ShapeExtend_DONE1 = 1
 	ShapeExtend_DONE2 = 2
@@ -132,7 +133,7 @@ class ShapeExtend_Status:
 	ShapeExtend_FAIL8 = 17
 	ShapeExtend_FAIL = 18
 
-class ShapeExtend_Parametrisation:
+class ShapeExtend_Parametrisation(IntEnum):
 	ShapeExtend_Natural = 0
 	ShapeExtend_Uniform = 1
 	ShapeExtend_Unitary = 2

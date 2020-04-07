@@ -98,6 +98,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stdprs.html"
 %import Adaptor2d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -113,7 +114,7 @@ enum StdPrs_Volume {
 /* python proy classes for enums */
 %pythoncode {
 
-class StdPrs_Volume:
+class StdPrs_Volume(IntEnum):
 	StdPrs_Volume_Autodetection = 0
 	StdPrs_Volume_Closed = 1
 	StdPrs_Volume_Opened = 2

@@ -56,6 +56,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_tdatastd.html"
 %import TCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -71,7 +72,7 @@ enum TDataStd_RealEnum {
 /* python proy classes for enums */
 %pythoncode {
 
-class TDataStd_RealEnum:
+class TDataStd_RealEnum(IntEnum):
 	TDataStd_SCALAR = 0
 	TDataStd_LENGTH = 1
 	TDataStd_ANGULAR = 2

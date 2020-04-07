@@ -71,6 +71,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_tdataxtd.html"
 %import TShort.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -120,7 +121,7 @@ enum TDataXtd_GeometryEnum {
 /* python proy classes for enums */
 %pythoncode {
 
-class TDataXtd_ConstraintEnum:
+class TDataXtd_ConstraintEnum(IntEnum):
 	TDataXtd_RADIUS = 0
 	TDataXtd_DIAMETER = 1
 	TDataXtd_MINOR_RADIUS = 2
@@ -148,7 +149,7 @@ class TDataXtd_ConstraintEnum:
 	TDataXtd_ROUND = 24
 	TDataXtd_OFFSET = 25
 
-class TDataXtd_GeometryEnum:
+class TDataXtd_GeometryEnum(IntEnum):
 	TDataXtd_ANY_GEOM = 0
 	TDataXtd_POINT = 1
 	TDataXtd_LINE = 2

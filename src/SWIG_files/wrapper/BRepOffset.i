@@ -109,6 +109,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepoffset.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -157,7 +158,7 @@ enum BRepOffset_Status {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepOffset_Error:
+class BRepOffset_Error(IntEnum):
 	BRepOffset_NoError = 0
 	BRepOffset_UnknownError = 1
 	BRepOffset_BadNormalsOnGeometry = 2
@@ -165,7 +166,7 @@ class BRepOffset_Error:
 	BRepOffset_NullOffset = 4
 	BRepOffset_NotConnectedShell = 5
 
-class BRepOffsetSimple_Status:
+class BRepOffsetSimple_Status(IntEnum):
 	BRepOffsetSimple_OK = 0
 	BRepOffsetSimple_NullInputShape = 1
 	BRepOffsetSimple_ErrorOffsetComputation = 2
@@ -173,19 +174,19 @@ class BRepOffsetSimple_Status:
 	BRepOffsetSimple_ErrorInvalidNbShells = 4
 	BRepOffsetSimple_ErrorNonClosedShell = 5
 
-class BRepOffset_Mode:
+class BRepOffset_Mode(IntEnum):
 	BRepOffset_Skin = 0
 	BRepOffset_Pipe = 1
 	BRepOffset_RectoVerso = 2
 
-class BRepOffset_Type:
+class BRepOffset_Type(IntEnum):
 	BRepOffset_Concave = 0
 	BRepOffset_Convex = 1
 	BRepOffset_Tangent = 2
 	BRepOffset_FreeBoundary = 3
 	BRepOffset_Other = 4
 
-class BRepOffset_Status:
+class BRepOffset_Status(IntEnum):
 	BRepOffset_Good = 0
 	BRepOffset_Reversed = 1
 	BRepOffset_Degenerated = 2

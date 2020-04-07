@@ -61,6 +61,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_pcdm.html"
 %import CDM.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -112,7 +113,7 @@ enum PCDM_ReaderStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class PCDM_StoreStatus:
+class PCDM_StoreStatus(IntEnum):
 	PCDM_SS_OK = 0
 	PCDM_SS_DriverFailure = 1
 	PCDM_SS_WriteFailure = 2
@@ -121,13 +122,13 @@ class PCDM_StoreStatus:
 	PCDM_SS_No_Obj = 5
 	PCDM_SS_Info_Section_Error = 6
 
-class PCDM_TypeOfFileDriver:
+class PCDM_TypeOfFileDriver(IntEnum):
 	PCDM_TOFD_File = 0
 	PCDM_TOFD_CmpFile = 1
 	PCDM_TOFD_XmlFile = 2
 	PCDM_TOFD_Unknown = 3
 
-class PCDM_ReaderStatus:
+class PCDM_ReaderStatus(IntEnum):
 	PCDM_RS_OK = 0
 	PCDM_RS_NoDriver = 1
 	PCDM_RS_UnknownFileDriver = 2

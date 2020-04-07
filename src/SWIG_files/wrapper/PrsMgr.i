@@ -84,6 +84,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_prsmgr.html"
 %import V3d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -98,7 +99,7 @@ enum PrsMgr_TypeOfPresentation3d {
 /* python proy classes for enums */
 %pythoncode {
 
-class PrsMgr_TypeOfPresentation3d:
+class PrsMgr_TypeOfPresentation3d(IntEnum):
 	PrsMgr_TOP_AllView = 0
 	PrsMgr_TOP_ProjectorDependant = 1
 };

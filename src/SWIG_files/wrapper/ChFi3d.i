@@ -102,6 +102,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_chfi3d.html"
 %import GeomFill.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -117,7 +118,7 @@ enum ChFi3d_FilletShape {
 /* python proy classes for enums */
 %pythoncode {
 
-class ChFi3d_FilletShape:
+class ChFi3d_FilletShape(IntEnum):
 	ChFi3d_Rational = 0
 	ChFi3d_QuasiAngular = 1
 	ChFi3d_Polynomial = 2

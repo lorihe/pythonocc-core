@@ -64,6 +64,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepbasic.html"
 %import Interface.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -135,17 +136,17 @@ enum StepBasic_SiPrefix {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepBasic_Source:
+class StepBasic_Source(IntEnum):
 	StepBasic_sMade = 0
 	StepBasic_sBought = 1
 	StepBasic_sNotKnown = 2
 
-class StepBasic_AheadOrBehind:
+class StepBasic_AheadOrBehind(IntEnum):
 	StepBasic_aobAhead = 0
 	StepBasic_aobExact = 1
 	StepBasic_aobBehind = 2
 
-class StepBasic_SiUnitName:
+class StepBasic_SiUnitName(IntEnum):
 	StepBasic_sunMetre = 0
 	StepBasic_sunGram = 1
 	StepBasic_sunSecond = 2
@@ -175,7 +176,7 @@ class StepBasic_SiUnitName:
 	StepBasic_sunGray = 26
 	StepBasic_sunSievert = 27
 
-class StepBasic_SiPrefix:
+class StepBasic_SiPrefix(IntEnum):
 	StepBasic_spExa = 0
 	StepBasic_spPeta = 1
 	StepBasic_spTera = 2

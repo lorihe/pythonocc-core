@@ -58,6 +58,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_transfer.html"
 %import Message.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -88,20 +89,20 @@ enum Transfer_StatusResult {
 /* python proy classes for enums */
 %pythoncode {
 
-class Transfer_StatusExec:
+class Transfer_StatusExec(IntEnum):
 	Transfer_StatusInitial = 0
 	Transfer_StatusRun = 1
 	Transfer_StatusDone = 2
 	Transfer_StatusError = 3
 	Transfer_StatusLoop = 4
 
-class Transfer_UndefMode:
+class Transfer_UndefMode(IntEnum):
 	Transfer_UndefIgnore = 0
 	Transfer_UndefFailure = 1
 	Transfer_UndefContent = 2
 	Transfer_UndefUser = 3
 
-class Transfer_StatusResult:
+class Transfer_StatusResult(IntEnum):
 	Transfer_StatusVoid = 0
 	Transfer_StatusDefined = 1
 	Transfer_StatusUsed = 2

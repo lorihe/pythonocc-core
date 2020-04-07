@@ -59,6 +59,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_cslib.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -90,7 +91,7 @@ enum CSLib_DerivativeStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class CSLib_NormalStatus:
+class CSLib_NormalStatus(IntEnum):
 	CSLib_Singular = 0
 	CSLib_Defined = 1
 	CSLib_InfinityOfSolutions = 2
@@ -101,7 +102,7 @@ class CSLib_NormalStatus:
 	CSLib_D1NvNuRatioIsNull = 7
 	CSLib_D1NuIsParallelD1Nv = 8
 
-class CSLib_DerivativeStatus:
+class CSLib_DerivativeStatus(IntEnum):
 	CSLib_Done = 0
 	CSLib_D1uIsNull = 1
 	CSLib_D1vIsNull = 2

@@ -91,6 +91,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_meshvs.html"
 %import Aspect.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -201,7 +202,7 @@ enum  {
 /* python proy classes for enums */
 %pythoncode {
 
-class MeshVS_EntityType:
+class MeshVS_EntityType(IntEnum):
 	MeshVS_ET_NONE = 0
 	MeshVS_ET_Node = 1
 	MeshVS_ET_0D = 2
@@ -211,12 +212,12 @@ class MeshVS_EntityType:
 	MeshVS_ET_Element = MeshVS_ET_0D | MeshVS_ET_Link | MeshVS_ET_Face | MeshVS_ET_Volume
 	MeshVS_ET_All = MeshVS_ET_Element | MeshVS_ET_Node
 
-class MeshVS_MeshSelectionMethod:
+class MeshVS_MeshSelectionMethod(IntEnum):
 	MeshVS_MSM_PRECISE = 0
 	MeshVS_MSM_NODES = 1
 	MeshVS_MSM_BOX = 2
 
-class MeshVS_SelectionModeFlags:
+class MeshVS_SelectionModeFlags(IntEnum):
 	MeshVS_SMF_Mesh = 0
 	MeshVS_SMF_Node = 1
 	MeshVS_SMF_0D = 2
@@ -227,7 +228,7 @@ class MeshVS_SelectionModeFlags:
 	MeshVS_SMF_All = MeshVS_SMF_Element | MeshVS_SMF_Node
 	MeshVS_SMF_Group = 256
 
-class MeshVS_DrawerAttribute:
+class MeshVS_DrawerAttribute(IntEnum):
 	MeshVS_DA_InteriorStyle = 0
 	MeshVS_DA_InteriorColor = 1
 	MeshVS_DA_BackInteriorColor = 2

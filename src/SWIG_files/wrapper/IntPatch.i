@@ -75,6 +75,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_intpatch.html"
 %import IntAna.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -104,7 +105,7 @@ enum IntPatch_IType {
 /* python proy classes for enums */
 %pythoncode {
 
-class IntPatch_SpecPntType:
+class IntPatch_SpecPntType(IntEnum):
 	IntPatch_SPntNone = 0
 	IntPatch_SPntSeamU = 1
 	IntPatch_SPntSeamV = 2
@@ -112,7 +113,7 @@ class IntPatch_SpecPntType:
 	IntPatch_SPntPoleSeamU = 4
 	IntPatch_SPntPole = 5
 
-class IntPatch_IType:
+class IntPatch_IType(IntEnum):
 	IntPatch_Lin = 0
 	IntPatch_Circle = 1
 	IntPatch_Ellipse = 2
@@ -1482,7 +1483,7 @@ enum IntStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class IntStatus:
+class IntStatus(IntEnum):
 	IntStatus_OK = 0
 	IntStatus_InfiniteSectionCurve = 1
 	IntStatus_Fail = 2
@@ -6608,7 +6609,7 @@ enum IntPatch_WLType {
 /* python proy classes for enums */
 %pythoncode {
 
-class IntPatch_WLType:
+class IntPatch_WLType(IntEnum):
 	IntPatch_WLUnknown = 0
 	IntPatch_WLImpImp = 1
 	IntPatch_WLImpPrm = 2

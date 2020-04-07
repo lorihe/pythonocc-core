@@ -58,6 +58,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_cdm.html"
 %import Resource.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -75,7 +76,7 @@ enum CDM_CanCloseStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class CDM_CanCloseStatus:
+class CDM_CanCloseStatus(IntEnum):
 	CDM_CCS_OK = 0
 	CDM_CCS_NotOpen = 1
 	CDM_CCS_UnstoredReferenced = 2

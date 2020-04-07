@@ -52,6 +52,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_gce.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -78,7 +79,7 @@ enum gce_ErrorType {
 /* python proy classes for enums */
 %pythoncode {
 
-class gce_ErrorType:
+class gce_ErrorType(IntEnum):
 	gce_Done = 0
 	gce_ConfusedPoints = 1
 	gce_NegativeRadius = 2

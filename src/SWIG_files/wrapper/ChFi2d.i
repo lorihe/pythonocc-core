@@ -58,6 +58,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_chfi2d.html"
 %import TopTools.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -83,7 +84,7 @@ enum ChFi2d_ConstructionError {
 /* python proy classes for enums */
 %pythoncode {
 
-class ChFi2d_ConstructionError:
+class ChFi2d_ConstructionError(IntEnum):
 	ChFi2d_NotPlanar = 0
 	ChFi2d_NoFace = 1
 	ChFi2d_InitialisationError = 2

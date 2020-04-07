@@ -54,6 +54,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_aspect.html"
 %import TCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -405,7 +406,7 @@ enum Aspect_InteriorStyle {
 /* python proy classes for enums */
 %pythoncode {
 
-class Aspect_VKeyBasic:
+class Aspect_VKeyBasic(IntEnum):
 	Aspect_VKey_UNKNOWN = 0
 	Aspect_VKey_A = 1
 	Aspect_VKey_B = 2
@@ -538,11 +539,11 @@ class Aspect_VKeyBasic:
 	Aspect_VKey_NavSpeedIncrease = 129
 	Aspect_VKey_NavSpeedDecrease = 130
 
-class Aspect_TypeOfDeflection:
+class Aspect_TypeOfDeflection(IntEnum):
 	Aspect_TOD_RELATIVE = 0
 	Aspect_TOD_ABSOLUTE = 1
 
-class Aspect_TypeOfLine:
+class Aspect_TypeOfLine(IntEnum):
 	Aspect_TOL_EMPTY = - 1
 	Aspect_TOL_SOLID = 0
 	Aspect_TOL_DASH = 1
@@ -550,7 +551,7 @@ class Aspect_TypeOfLine:
 	Aspect_TOL_DOTDASH = 3
 	Aspect_TOL_USERDEFINED = 4
 
-class Aspect_GradientFillMethod:
+class Aspect_GradientFillMethod(IntEnum):
 	Aspect_GFM_NONE = 0
 	Aspect_GFM_HOR = 1
 	Aspect_GFM_VER = 2
@@ -561,11 +562,11 @@ class Aspect_GradientFillMethod:
 	Aspect_GFM_CORNER3 = 7
 	Aspect_GFM_CORNER4 = 8
 
-class Aspect_TypeOfHighlightMethod:
+class Aspect_TypeOfHighlightMethod(IntEnum):
 	Aspect_TOHM_COLOR = 0
 	Aspect_TOHM_BOUNDBOX = 1
 
-class Aspect_TypeOfResize:
+class Aspect_TypeOfResize(IntEnum):
 	Aspect_TOR_UNKNOWN = 0
 	Aspect_TOR_NO_BORDER = 1
 	Aspect_TOR_TOP_BORDER = 2
@@ -577,19 +578,19 @@ class Aspect_TypeOfResize:
 	Aspect_TOR_BOTTOM_AND_LEFT_BORDER = 8
 	Aspect_TOR_LEFT_AND_TOP_BORDER = 9
 
-class Aspect_GridType:
+class Aspect_GridType(IntEnum):
 	Aspect_GT_Rectangular = 0
 	Aspect_GT_Circular = 1
 
-class Aspect_TypeOfColorScaleData:
+class Aspect_TypeOfColorScaleData(IntEnum):
 	Aspect_TOCSD_AUTO = 0
 	Aspect_TOCSD_USER = 1
 
-class Aspect_TypeOfStyleText:
+class Aspect_TypeOfStyleText(IntEnum):
 	Aspect_TOST_NORMAL = 0
 	Aspect_TOST_ANNOTATION = 1
 
-class Aspect_TypeOfMarker:
+class Aspect_TypeOfMarker(IntEnum):
 	Aspect_TOM_EMPTY = - 1
 	Aspect_TOM_POINT = 0
 	Aspect_TOM_PLUS = 1
@@ -606,24 +607,24 @@ class Aspect_TypeOfMarker:
 	Aspect_TOM_BALL = 12
 	Aspect_TOM_USERDEFINED = 13
 
-class Aspect_TypeOfColorScaleOrientation:
+class Aspect_TypeOfColorScaleOrientation(IntEnum):
 	Aspect_TOCSO_NONE = 0
 	Aspect_TOCSO_LEFT = 1
 	Aspect_TOCSO_RIGHT = 2
 	Aspect_TOCSO_CENTER = 3
 
-class Aspect_TypeOfFacingModel:
+class Aspect_TypeOfFacingModel(IntEnum):
 	Aspect_TOFM_BOTH_SIDE = 0
 	Aspect_TOFM_BACK_SIDE = 1
 	Aspect_TOFM_FRONT_SIDE = 2
 
-class Aspect_FillMethod:
+class Aspect_FillMethod(IntEnum):
 	Aspect_FM_NONE = 0
 	Aspect_FM_CENTERED = 1
 	Aspect_FM_TILED = 2
 	Aspect_FM_STRETCH = 3
 
-class Aspect_HatchStyle:
+class Aspect_HatchStyle(IntEnum):
 	Aspect_HS_SOLID = 0
 	Aspect_HS_HORIZONTAL = 7
 	Aspect_HS_HORIZONTAL_WIDE = 11
@@ -639,7 +640,7 @@ class Aspect_HatchStyle:
 	Aspect_HS_GRID_DIAGONAL_WIDE = 2
 	Aspect_HS_NB = 13
 
-class Aspect_PolygonOffsetMode:
+class Aspect_PolygonOffsetMode(IntEnum):
 	Aspect_POM_Off = 0
 	Aspect_POM_Fill = 1
 	Aspect_POM_Line = 2
@@ -648,16 +649,16 @@ class Aspect_PolygonOffsetMode:
 	Aspect_POM_None = 8
 	Aspect_POM_Mask = Aspect_POM_All | Aspect_POM_None
 
-class Aspect_TypeOfColorScalePosition:
+class Aspect_TypeOfColorScalePosition(IntEnum):
 	Aspect_TOCSP_NONE = 0
 	Aspect_TOCSP_LEFT = 1
 	Aspect_TOCSP_RIGHT = 2
 	Aspect_TOCSP_CENTER = 3
 
-class Aspect_XAtom:
+class Aspect_XAtom(IntEnum):
 	Aspect_XA_DELETE_WINDOW = 0
 
-class Aspect_TypeOfTriedronPosition:
+class Aspect_TypeOfTriedronPosition(IntEnum):
 	Aspect_TOTP_CENTER = 0
 	Aspect_TOTP_TOP = 1
 	Aspect_TOTP_BOTTOM = 2
@@ -668,19 +669,19 @@ class Aspect_TypeOfTriedronPosition:
 	Aspect_TOTP_RIGHT_LOWER = Aspect_TOTP_BOTTOM | Aspect_TOTP_RIGHT
 	Aspect_TOTP_RIGHT_UPPER = Aspect_TOTP_TOP | Aspect_TOTP_RIGHT
 
-class Aspect_GridDrawMode:
+class Aspect_GridDrawMode(IntEnum):
 	Aspect_GDM_Lines = 0
 	Aspect_GDM_Points = 1
 	Aspect_GDM_None = 2
 
-class Aspect_WidthOfLine:
+class Aspect_WidthOfLine(IntEnum):
 	Aspect_WOL_THIN = 0
 	Aspect_WOL_MEDIUM = 1
 	Aspect_WOL_THICK = 2
 	Aspect_WOL_VERYTHICK = 3
 	Aspect_WOL_USERDEFINED = 4
 
-class Aspect_TypeOfDisplayText:
+class Aspect_TypeOfDisplayText(IntEnum):
 	Aspect_TODT_NORMAL = 0
 	Aspect_TODT_SUBTITLE = 1
 	Aspect_TODT_DEKALE = 2
@@ -688,7 +689,7 @@ class Aspect_TypeOfDisplayText:
 	Aspect_TODT_DIMENSION = 4
 	Aspect_TODT_SHADOW = 5
 
-class Aspect_InteriorStyle:
+class Aspect_InteriorStyle(IntEnum):
 	Aspect_IS_EMPTY = - 1
 	Aspect_IS_SOLID = 0
 	Aspect_IS_HATCH = 1

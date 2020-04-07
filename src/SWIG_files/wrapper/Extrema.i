@@ -70,6 +70,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_extrema.html"
 %import GeomAdaptor.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -97,16 +98,16 @@ enum Extrema_ElementType {
 /* python proy classes for enums */
 %pythoncode {
 
-class Extrema_ExtAlgo:
+class Extrema_ExtAlgo(IntEnum):
 	Extrema_ExtAlgo_Grad = 0
 	Extrema_ExtAlgo_Tree = 1
 
-class Extrema_ExtFlag:
+class Extrema_ExtFlag(IntEnum):
 	Extrema_ExtFlag_MIN = 0
 	Extrema_ExtFlag_MAX = 1
 	Extrema_ExtFlag_MINMAX = 2
 
-class Extrema_ElementType:
+class Extrema_ElementType(IntEnum):
 	Extrema_Node = 0
 	Extrema_UIsoEdge = 1
 	Extrema_VIsoEdge = 2

@@ -65,6 +65,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_steprepr.html"
 %import StepBasic.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 

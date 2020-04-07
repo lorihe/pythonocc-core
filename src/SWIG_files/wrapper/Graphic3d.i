@@ -80,6 +80,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_graphic3d.html"
 %import Media.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -566,37 +567,37 @@ enum Graphic3d_NameOfTextureEnv {
 /* python proy classes for enums */
 %pythoncode {
 
-class Graphic3d_ClipState:
+class Graphic3d_ClipState(IntEnum):
 	Graphic3d_ClipState_Out = 0
 	Graphic3d_ClipState_In = 1
 	Graphic3d_ClipState_On = 2
 
-class Graphic3d_BufferType:
+class Graphic3d_BufferType(IntEnum):
 	Graphic3d_BT_RGB = 0
 	Graphic3d_BT_RGBA = 1
 	Graphic3d_BT_Depth = 2
 	Graphic3d_BT_RGB_RayTraceHdrLeft = 3
 
-class Graphic3d_FrameStatsTimer:
+class Graphic3d_FrameStatsTimer(IntEnum):
 	Graphic3d_FrameStatsTimer_ElapsedFrame = 0
 	Graphic3d_FrameStatsTimer_CpuFrame = 1
 	Graphic3d_FrameStatsTimer_CpuCulling = 2
 	Graphic3d_FrameStatsTimer_CpuPicking = 3
 	Graphic3d_FrameStatsTimer_CpuDynamics = 4
 
-class Graphic3d_VerticalTextAlignment:
+class Graphic3d_VerticalTextAlignment(IntEnum):
 	Graphic3d_VTA_BOTTOM = 0
 	Graphic3d_VTA_CENTER = 1
 	Graphic3d_VTA_TOP = 2
 	Graphic3d_VTA_TOPFIRSTLINE = 3
 
-class Graphic3d_LevelOfTextureAnisotropy:
+class Graphic3d_LevelOfTextureAnisotropy(IntEnum):
 	Graphic3d_LOTA_OFF = 0
 	Graphic3d_LOTA_FAST = 1
 	Graphic3d_LOTA_MIDDLE = 2
 	Graphic3d_LOTA_QUALITY = 3
 
-class Graphic3d_TypeOfLimit:
+class Graphic3d_TypeOfLimit(IntEnum):
 	Graphic3d_TypeOfLimit_MaxNbLights = 0
 	Graphic3d_TypeOfLimit_MaxNbClipPlanes = 1
 	Graphic3d_TypeOfLimit_MaxNbViews = 2
@@ -616,7 +617,7 @@ class Graphic3d_TypeOfLimit:
 	Graphic3d_TypeOfLimit_IsWorkaroundFBO = 16
 	Graphic3d_TypeOfLimit_NB = 17
 
-class Graphic3d_DiagnosticInfo:
+class Graphic3d_DiagnosticInfo(IntEnum):
 	Graphic3d_DiagnosticInfo_Device = 1
 	Graphic3d_DiagnosticInfo_FrameBuffer = 2
 	Graphic3d_DiagnosticInfo_Limits = 4
@@ -627,7 +628,7 @@ class Graphic3d_DiagnosticInfo:
 	Graphic3d_DiagnosticInfo_Basic = Graphic3d_DiagnosticInfo_Short | Graphic3d_DiagnosticInfo_NativePlatform | Graphic3d_DiagnosticInfo_Memory
 	Graphic3d_DiagnosticInfo_Complete = Graphic3d_DiagnosticInfo_Basic | Graphic3d_DiagnosticInfo_Extensions
 
-class Graphic3d_StereoMode:
+class Graphic3d_StereoMode(IntEnum):
 	Graphic3d_StereoMode_QuadBuffer = 0
 	Graphic3d_StereoMode_Anaglyph = 1
 	Graphic3d_StereoMode_RowInterlaced = 2
@@ -638,33 +639,33 @@ class Graphic3d_StereoMode:
 	Graphic3d_StereoMode_SoftPageFlip = 7
 	Graphic3d_StereoMode_NB = 8
 
-class Graphic3d_AlphaMode:
+class Graphic3d_AlphaMode(IntEnum):
 	Graphic3d_AlphaMode_Opaque = 0
 	Graphic3d_AlphaMode_Mask = 1
 	Graphic3d_AlphaMode_Blend = 2
 	Graphic3d_AlphaMode_BlendAuto = - 1
 
-class Graphic3d_FresnelModel:
+class Graphic3d_FresnelModel(IntEnum):
 	Graphic3d_FM_SCHLICK = 0
 	Graphic3d_FM_CONSTANT = 1
 	Graphic3d_FM_CONDUCTOR = 2
 	Graphic3d_FM_DIELECTRIC = 3
 
-class Graphic3d_TypeOfReflection:
+class Graphic3d_TypeOfReflection(IntEnum):
 	Graphic3d_TOR_AMBIENT = 0
 	Graphic3d_TOR_DIFFUSE = 1
 	Graphic3d_TOR_SPECULAR = 2
 	Graphic3d_TOR_EMISSION = 3
 
-class Graphic3d_RenderTransparentMethod:
+class Graphic3d_RenderTransparentMethod(IntEnum):
 	Graphic3d_RTM_BLEND_UNORDERED = 0
 	Graphic3d_RTM_BLEND_OIT = 1
 
-class Graphic3d_RenderingMode:
+class Graphic3d_RenderingMode(IntEnum):
 	Graphic3d_RM_RASTERIZATION = 0
 	Graphic3d_RM_RAYTRACING = 1
 
-class Graphic3d_FrameStatsCounter:
+class Graphic3d_FrameStatsCounter(IntEnum):
 	Graphic3d_FrameStatsCounter_NbLayers = 0
 	Graphic3d_FrameStatsCounter_NbLayersNotCulled = 1
 	Graphic3d_FrameStatsCounter_NbStructs = 2
@@ -681,26 +682,26 @@ class Graphic3d_FrameStatsCounter:
 	Graphic3d_FrameStatsCounter_EstimatedBytesFbos = 13
 	Graphic3d_FrameStatsCounter_EstimatedBytesTextures = 14
 
-class Graphic3d_TypeOfBackground:
+class Graphic3d_TypeOfBackground(IntEnum):
 	Graphic3d_TOB_NONE = - 1
 	Graphic3d_TOB_GRADIENT = 1
 	Graphic3d_TOB_TEXTURE = 2
 	Graphic3d_TOB_CUBEMAP = 3
 
-class Graphic3d_TypeOfStructure:
+class Graphic3d_TypeOfStructure(IntEnum):
 	Graphic3d_TOS_WIREFRAME = 0
 	Graphic3d_TOS_SHADING = 1
 	Graphic3d_TOS_COMPUTED = 2
 	Graphic3d_TOS_ALL = 3
 
-class Graphic3d_TypeOfTextureMode:
+class Graphic3d_TypeOfTextureMode(IntEnum):
 	Graphic3d_TOTM_OBJECT = 0
 	Graphic3d_TOTM_SPHERE = 1
 	Graphic3d_TOTM_EYE = 2
 	Graphic3d_TOTM_MANUAL = 3
 	Graphic3d_TOTM_SPRITE = 4
 
-class Graphic3d_TypeOfShaderObject:
+class Graphic3d_TypeOfShaderObject(IntEnum):
 	Graphic3d_TOS_VERTEX = 1
 	Graphic3d_TOS_TESS_CONTROL = 2
 	Graphic3d_TOS_TESS_EVALUATION = 4
@@ -708,26 +709,26 @@ class Graphic3d_TypeOfShaderObject:
 	Graphic3d_TOS_FRAGMENT = 16
 	Graphic3d_TOS_COMPUTE = 32
 
-class Graphic3d_ZLayerSetting:
+class Graphic3d_ZLayerSetting(IntEnum):
 	Graphic3d_ZLayerDepthTest = 1
 	Graphic3d_ZLayerDepthWrite = 2
 	Graphic3d_ZLayerDepthClear = 4
 	Graphic3d_ZLayerDepthOffset = 8
 
-class Graphic3d_CappingFlags:
+class Graphic3d_CappingFlags(IntEnum):
 	Graphic3d_CappingFlags_None = 0
 	Graphic3d_CappingFlags_ObjectMaterial = 1
 	Graphic3d_CappingFlags_ObjectTexture = 2
 	Graphic3d_CappingFlags_ObjectShader = 8
 	Graphic3d_CappingFlags_ObjectAspect = Graphic3d_CappingFlags_ObjectMaterial | Graphic3d_CappingFlags_ObjectTexture | Graphic3d_CappingFlags_ObjectShader
 
-class Graphic3d_NameOfTexturePlane:
+class Graphic3d_NameOfTexturePlane(IntEnum):
 	Graphic3d_NOTP_XY = 0
 	Graphic3d_NOTP_YZ = 1
 	Graphic3d_NOTP_ZX = 2
 	Graphic3d_NOTP_UNKNOWN = 3
 
-class Graphic3d_TypeOfShadingModel:
+class Graphic3d_TypeOfShadingModel(IntEnum):
 	Graphic3d_TOSM_DEFAULT = - 1
 	Graphic3d_TOSM_UNLIT = 0
 	Graphic3d_TOSM_FACET = 1
@@ -739,7 +740,7 @@ class Graphic3d_TypeOfShadingModel:
 	V3d_GOURAUD = Graphic3d_TOSM_VERTEX
 	V3d_PHONG = Graphic3d_TOSM_FRAGMENT
 
-class Graphic3d_TypeOfPrimitiveArray:
+class Graphic3d_TypeOfPrimitiveArray(IntEnum):
 	Graphic3d_TOPA_UNDEFINED = 0
 	Graphic3d_TOPA_POINTS = 1
 	Graphic3d_TOPA_SEGMENTS = 2
@@ -755,31 +756,31 @@ class Graphic3d_TypeOfPrimitiveArray:
 	Graphic3d_TOPA_QUADRANGLESTRIPS = 12
 	Graphic3d_TOPA_POLYGONS = 13
 
-class Graphic3d_ToneMappingMethod:
+class Graphic3d_ToneMappingMethod(IntEnum):
 	Graphic3d_ToneMappingMethod_Disabled = 0
 	Graphic3d_ToneMappingMethod_Filmic = 1
 
-class Graphic3d_TypeOfTexture:
+class Graphic3d_TypeOfTexture(IntEnum):
 	Graphic3d_TOT_1D = 0
 	Graphic3d_TOT_2D = 1
 	Graphic3d_TOT_2D_MIPMAP = 2
 	Graphic3d_TOT_CUBEMAP = 3
 
-class Graphic3d_TypeOfMaterial:
+class Graphic3d_TypeOfMaterial(IntEnum):
 	Graphic3d_MATERIAL_ASPECT = 0
 	Graphic3d_MATERIAL_PHYSIC = 1
 
-class Graphic3d_TypeOfBackfacingModel:
+class Graphic3d_TypeOfBackfacingModel(IntEnum):
 	Graphic3d_TOBM_AUTOMATIC = 0
 	Graphic3d_TOBM_FORCE = 1
 	Graphic3d_TOBM_DISABLE = 2
 
-class Graphic3d_HorizontalTextAlignment:
+class Graphic3d_HorizontalTextAlignment(IntEnum):
 	Graphic3d_HTA_LEFT = 0
 	Graphic3d_HTA_CENTER = 1
 	Graphic3d_HTA_RIGHT = 2
 
-class Graphic3d_TransModeFlags:
+class Graphic3d_TransModeFlags(IntEnum):
 	Graphic3d_TMF_None = 0
 	Graphic3d_TMF_ZoomPers = 2
 	Graphic3d_TMF_RotatePers = 8
@@ -787,18 +788,18 @@ class Graphic3d_TransModeFlags:
 	Graphic3d_TMF_2d = 64
 	Graphic3d_TMF_ZoomRotatePers = Graphic3d_TMF_ZoomPers | Graphic3d_TMF_RotatePers
 
-class Graphic3d_TypeOfAnswer:
+class Graphic3d_TypeOfAnswer(IntEnum):
 	Graphic3d_TOA_YES = 0
 	Graphic3d_TOA_NO = 1
 	Graphic3d_TOA_COMPUTE = 2
 
-class Graphic3d_GroupAspect:
+class Graphic3d_GroupAspect(IntEnum):
 	Graphic3d_ASPECT_LINE = 0
 	Graphic3d_ASPECT_TEXT = 1
 	Graphic3d_ASPECT_MARKER = 2
 	Graphic3d_ASPECT_FILL_AREA = 3
 
-class Graphic3d_TextureUnit:
+class Graphic3d_TextureUnit(IntEnum):
 	Graphic3d_TextureUnit_0 = 0
 	Graphic3d_TextureUnit_1 = 1
 	Graphic3d_TextureUnit_2 = 2
@@ -818,21 +819,21 @@ class Graphic3d_TextureUnit:
 	Graphic3d_TextureUnit_BaseColor = Graphic3d_TextureUnit_0
 	Graphic3d_TextureUnit_EnvMap = Graphic3d_TextureUnit_0
 
-class Graphic3d_TypeOfConnection:
+class Graphic3d_TypeOfConnection(IntEnum):
 	Graphic3d_TOC_ANCESTOR = 0
 	Graphic3d_TOC_DESCENDANT = 1
 
-class Graphic3d_NameOfTexture1D:
+class Graphic3d_NameOfTexture1D(IntEnum):
 	Graphic3d_NOT_1D_ELEVATION = 0
 	Graphic3d_NOT_1D_UNKNOWN = 1
 
-class Graphic3d_TextPath:
+class Graphic3d_TextPath(IntEnum):
 	Graphic3d_TP_UP = 0
 	Graphic3d_TP_DOWN = 1
 	Graphic3d_TP_LEFT = 2
 	Graphic3d_TP_RIGHT = 3
 
-class Graphic3d_CubeMapSide:
+class Graphic3d_CubeMapSide(IntEnum):
 	Graphic3d_CMS_POS_X = 0
 	Graphic3d_CMS_NEG_X = 1
 	Graphic3d_CMS_POS_Y = 2
@@ -840,18 +841,18 @@ class Graphic3d_CubeMapSide:
 	Graphic3d_CMS_POS_Z = 4
 	Graphic3d_CMS_NEG_Z = 5
 
-class Graphic3d_TypeOfComposition:
+class Graphic3d_TypeOfComposition(IntEnum):
 	Graphic3d_TOC_REPLACE = 0
 	Graphic3d_TOC_POSTCONCATENATE = 1
 
-class Graphic3d_TypeOfAttribute:
+class Graphic3d_TypeOfAttribute(IntEnum):
 	Graphic3d_TOA_POS = 0
 	Graphic3d_TOA_NORM = 1
 	Graphic3d_TOA_UV = 2
 	Graphic3d_TOA_COLOR = 3
 	Graphic3d_TOA_CUSTOM = 4
 
-class Graphic3d_TypeOfData:
+class Graphic3d_TypeOfData(IntEnum):
 	Graphic3d_TOD_USHORT = 0
 	Graphic3d_TOD_UINT = 1
 	Graphic3d_TOD_VEC2 = 2
@@ -860,7 +861,7 @@ class Graphic3d_TypeOfData:
 	Graphic3d_TOD_VEC4UB = 5
 	Graphic3d_TOD_FLOAT = 6
 
-class Graphic3d_NameOfTexture2D:
+class Graphic3d_NameOfTexture2D(IntEnum):
 	Graphic3d_NOT_2D_MATRA = 0
 	Graphic3d_NOT_2D_ALIENSKIN = 1
 	Graphic3d_NOT_2D_BLUE_ROCK = 2
@@ -885,7 +886,7 @@ class Graphic3d_NameOfTexture2D:
 	Graphic3d_NOT_2D_CHESS = 21
 	Graphic3d_NOT_2D_UNKNOWN = 22
 
-class Graphic3d_NameOfMaterial:
+class Graphic3d_NameOfMaterial(IntEnum):
 	Graphic3d_NOM_BRASS = 0
 	Graphic3d_NOM_BRONZE = 1
 	Graphic3d_NOM_COPPER = 2
@@ -913,16 +914,16 @@ class Graphic3d_NameOfMaterial:
 	Graphic3d_NOM_DEFAULT = 24
 	Graphic3d_NOM_UserDefined = 25
 
-class Graphic3d_TypeOfTextureFilter:
+class Graphic3d_TypeOfTextureFilter(IntEnum):
 	Graphic3d_TOTF_NEAREST = 0
 	Graphic3d_TOTF_BILINEAR = 1
 	Graphic3d_TOTF_TRILINEAR = 2
 
-class Graphic3d_TypeOfVisualization:
+class Graphic3d_TypeOfVisualization(IntEnum):
 	Graphic3d_TOV_WIREFRAME = 0
 	Graphic3d_TOV_SHADING = 1
 
-class Graphic3d_TypeOfLightSource:
+class Graphic3d_TypeOfLightSource(IntEnum):
 	Graphic3d_TOLS_AMBIENT = 0
 	Graphic3d_TOLS_DIRECTIONAL = 1
 	Graphic3d_TOLS_POSITIONAL = 2
@@ -932,7 +933,7 @@ class Graphic3d_TypeOfLightSource:
 	V3d_POSITIONAL = Graphic3d_TOLS_POSITIONAL
 	V3d_SPOT = Graphic3d_TOLS_SPOT
 
-class Graphic3d_NameOfTextureEnv:
+class Graphic3d_NameOfTextureEnv(IntEnum):
 	Graphic3d_NOT_ENV_CLOUDS = 0
 	Graphic3d_NOT_ENV_CV = 1
 	Graphic3d_NOT_ENV_MEDIT = 2
@@ -5104,18 +5105,18 @@ enum  {
 /* python proy classes for enums */
 %pythoncode {
 
-class Projection:
+class Projection(IntEnum):
 	Projection_Orthographic = 0
 	Projection_Perspective = 1
 	Projection_Stereo = 2
 	Projection_MonoLeftEye = 3
 	Projection_MonoRightEye = 4
 
-class FocusType:
+class FocusType(IntEnum):
 	FocusType_Absolute = 0
 	FocusType_Relative = 1
 
-class IODType:
+class IODType(IntEnum):
 	IODType_Absolute = 0
 	IODType_Relative = 1
 };
@@ -8892,7 +8893,7 @@ enum IterationFilter {
 /* python proy classes for enums */
 %pythoncode {
 
-class IterationFilter:
+class IterationFilter(IntEnum):
 	IterationFilter_None = 0
 	IterationFilter_ExcludeAmbient = 2
 	IterationFilter_ExcludeDisabled = 4
@@ -10039,7 +10040,7 @@ enum FrustumCulling {
 /* python proy classes for enums */
 %pythoncode {
 
-class Anaglyph:
+class Anaglyph(IntEnum):
 	Anaglyph_RedCyan_Simple = 0
 	Anaglyph_RedCyan_Optimized = 1
 	Anaglyph_YellowBlue_Simple = 2
@@ -10047,7 +10048,7 @@ class Anaglyph:
 	Anaglyph_GreenMagenta_Simple = 4
 	Anaglyph_UserDefined = 5
 
-class PerfCounters:
+class PerfCounters(IntEnum):
 	PerfCounters_NONE = 0
 	PerfCounters_FrameRate = 1
 	PerfCounters_CPU = 2
@@ -10065,7 +10066,7 @@ class PerfCounters:
 	PerfCounters_Extended = PerfCounters_Basic | PerfCounters_Groups | PerfCounters_GroupArrays | PerfCounters_Triangles | PerfCounters_Points | PerfCounters_EstimMem
 	PerfCounters_All = PerfCounters_Extended | PerfCounters_FrameTime | PerfCounters_FrameTimeMax
 
-class FrustumCulling:
+class FrustumCulling(IntEnum):
 	FrustumCulling_Off = 0
 	FrustumCulling_On = 1
 	FrustumCulling_NoUpdate = 2

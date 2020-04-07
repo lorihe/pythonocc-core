@@ -73,6 +73,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_approx.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -94,12 +95,12 @@ enum Approx_ParametrizationType {
 /* python proy classes for enums */
 %pythoncode {
 
-class Approx_Status:
+class Approx_Status(IntEnum):
 	Approx_PointsAdded = 0
 	Approx_NoPointsAdded = 1
 	Approx_NoApproximation = 2
 
-class Approx_ParametrizationType:
+class Approx_ParametrizationType(IntEnum):
 	Approx_ChordLength = 0
 	Approx_Centripetal = 1
 	Approx_IsoParametric = 2

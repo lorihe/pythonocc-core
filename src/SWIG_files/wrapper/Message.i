@@ -54,6 +54,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_message.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -210,7 +211,7 @@ enum Message_StatusType {
 /* python proy classes for enums */
 %pythoncode {
 
-class Message_Status:
+class Message_Status(IntEnum):
 	Message_None = 0
 	Message_Done1 = Message_DONE
 	Message_Done2 = 2
@@ -341,14 +342,14 @@ class Message_Status:
 	Message_Fail31 = 127
 	Message_Fail32 = 128
 
-class Message_Gravity:
+class Message_Gravity(IntEnum):
 	Message_Trace = 0
 	Message_Info = 1
 	Message_Warning = 2
 	Message_Alarm = 3
 	Message_Fail = 4
 
-class Message_StatusType:
+class Message_StatusType(IntEnum):
 	Message_DONE = 256
 	Message_WARN = 512
 	Message_ALARM = 1024
@@ -824,7 +825,7 @@ enum StatusRange {
 /* python proy classes for enums */
 %pythoncode {
 
-class StatusRange:
+class StatusRange(IntEnum):
 	FirstStatus = 1
 	StatusesPerType = 32
 	NbStatuses = 128

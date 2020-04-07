@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_mat.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -64,7 +65,7 @@ enum MAT_Side {
 /* python proy classes for enums */
 %pythoncode {
 
-class MAT_Side:
+class MAT_Side(IntEnum):
 	MAT_Left = 0
 	MAT_Right = 1
 };

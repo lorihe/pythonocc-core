@@ -97,6 +97,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_topopebrep.html"
 %import Geom.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -126,14 +127,14 @@ enum TopOpeBRep_TypeLineCurve {
 /* python proy classes for enums */
 %pythoncode {
 
-class TopOpeBRep_P2Dstatus:
+class TopOpeBRep_P2Dstatus(IntEnum):
 	TopOpeBRep_P2DUNK = 0
 	TopOpeBRep_P2DINT = 1
 	TopOpeBRep_P2DSGF = 2
 	TopOpeBRep_P2DSGL = 3
 	TopOpeBRep_P2DNEW = 4
 
-class TopOpeBRep_TypeLineCurve:
+class TopOpeBRep_TypeLineCurve(IntEnum):
 	TopOpeBRep_ANALYTIC = 0
 	TopOpeBRep_RESTRICTION = 1
 	TopOpeBRep_WALKING = 2

@@ -66,6 +66,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_tnaming.html"
 %import TopAbs.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -99,7 +100,7 @@ enum TNaming_NameType {
 /* python proy classes for enums */
 %pythoncode {
 
-class TNaming_Evolution:
+class TNaming_Evolution(IntEnum):
 	TNaming_PRIMITIVE = 0
 	TNaming_GENERATED = 1
 	TNaming_MODIFY = 2
@@ -107,7 +108,7 @@ class TNaming_Evolution:
 	TNaming_REPLACE = 4
 	TNaming_SELECTED = 5
 
-class TNaming_NameType:
+class TNaming_NameType(IntEnum):
 	TNaming_UNKNOWN = 0
 	TNaming_IDENTITY = 1
 	TNaming_MODIFUNTIL = 2

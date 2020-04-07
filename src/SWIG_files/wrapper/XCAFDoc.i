@@ -84,6 +84,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_xcafdoc.html"
 %import XCAFView.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -99,7 +100,7 @@ enum XCAFDoc_ColorType {
 /* python proy classes for enums */
 %pythoncode {
 
-class XCAFDoc_ColorType:
+class XCAFDoc_ColorType(IntEnum):
 	XCAFDoc_ColorGen = 0
 	XCAFDoc_ColorSurf = 1
 	XCAFDoc_ColorCurv = 2

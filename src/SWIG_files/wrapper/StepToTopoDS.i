@@ -76,6 +76,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_steptotopods.html
 %import Geom2d.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -134,7 +135,7 @@ enum StepToTopoDS_TranslateVertexError {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepToTopoDS_GeometricToolError:
+class StepToTopoDS_GeometricToolError(IntEnum):
 	StepToTopoDS_GeometricToolDone = 0
 	StepToTopoDS_GeometricToolIsDegenerated = 1
 	StepToTopoDS_GeometricToolHasNoPCurve = 2
@@ -142,35 +143,35 @@ class StepToTopoDS_GeometricToolError:
 	StepToTopoDS_GeometricToolNoProjectiOnCurve = 4
 	StepToTopoDS_GeometricToolOther = 5
 
-class StepToTopoDS_TranslateShellError:
+class StepToTopoDS_TranslateShellError(IntEnum):
 	StepToTopoDS_TranslateShellDone = 0
 	StepToTopoDS_TranslateShellOther = 1
 
-class StepToTopoDS_TranslatePolyLoopError:
+class StepToTopoDS_TranslatePolyLoopError(IntEnum):
 	StepToTopoDS_TranslatePolyLoopDone = 0
 	StepToTopoDS_TranslatePolyLoopOther = 1
 
-class StepToTopoDS_TranslateEdgeError:
+class StepToTopoDS_TranslateEdgeError(IntEnum):
 	StepToTopoDS_TranslateEdgeDone = 0
 	StepToTopoDS_TranslateEdgeOther = 1
 
-class StepToTopoDS_BuilderError:
+class StepToTopoDS_BuilderError(IntEnum):
 	StepToTopoDS_BuilderDone = 0
 	StepToTopoDS_BuilderOther = 1
 
-class StepToTopoDS_TranslateFaceError:
+class StepToTopoDS_TranslateFaceError(IntEnum):
 	StepToTopoDS_TranslateFaceDone = 0
 	StepToTopoDS_TranslateFaceOther = 1
 
-class StepToTopoDS_TranslateVertexLoopError:
+class StepToTopoDS_TranslateVertexLoopError(IntEnum):
 	StepToTopoDS_TranslateVertexLoopDone = 0
 	StepToTopoDS_TranslateVertexLoopOther = 1
 
-class StepToTopoDS_TranslateEdgeLoopError:
+class StepToTopoDS_TranslateEdgeLoopError(IntEnum):
 	StepToTopoDS_TranslateEdgeLoopDone = 0
 	StepToTopoDS_TranslateEdgeLoopOther = 1
 
-class StepToTopoDS_TranslateVertexError:
+class StepToTopoDS_TranslateVertexError(IntEnum):
 	StepToTopoDS_TranslateVertexDone = 0
 	StepToTopoDS_TranslateVertexOther = 1
 };

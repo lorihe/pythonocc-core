@@ -99,6 +99,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepfill.html"
 %import TColgp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -120,12 +121,12 @@ enum BRepFill_TransitionStyle {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepFill_TypeOfContact:
+class BRepFill_TypeOfContact(IntEnum):
 	BRepFill_NoContact = 0
 	BRepFill_Contact = 1
 	BRepFill_ContactOnBorder = 2
 
-class BRepFill_TransitionStyle:
+class BRepFill_TransitionStyle(IntEnum):
 	BRepFill_Modified = 0
 	BRepFill_Right = 1
 	BRepFill_Round = 2

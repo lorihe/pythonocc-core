@@ -94,6 +94,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_selectmgr.html"
 %import Bnd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -129,25 +130,25 @@ enum SelectMgr_PickingStrategy {
 /* python proy classes for enums */
 %pythoncode {
 
-class SelectMgr_TypeOfUpdate:
+class SelectMgr_TypeOfUpdate(IntEnum):
 	SelectMgr_TOU_Full = 0
 	SelectMgr_TOU_Partial = 1
 	SelectMgr_TOU_None = 2
 
-class SelectMgr_TypeOfBVHUpdate:
+class SelectMgr_TypeOfBVHUpdate(IntEnum):
 	SelectMgr_TBU_Add = 0
 	SelectMgr_TBU_Remove = 1
 	SelectMgr_TBU_Renew = 2
 	SelectMgr_TBU_Invalidate = 3
 	SelectMgr_TBU_None = 4
 
-class SelectMgr_StateOfSelection:
+class SelectMgr_StateOfSelection(IntEnum):
 	SelectMgr_SOS_Any = - 2
 	SelectMgr_SOS_Unknown = - 1
 	SelectMgr_SOS_Deactivated = 0
 	SelectMgr_SOS_Activated = 1
 
-class SelectMgr_PickingStrategy:
+class SelectMgr_PickingStrategy(IntEnum):
 	SelectMgr_PickingStrategy_FirstAcceptable = 0
 	SelectMgr_PickingStrategy_OnlyTopmost = 1
 };
@@ -1104,7 +1105,7 @@ enum BVHSubset {
 /* python proy classes for enums */
 %pythoncode {
 
-class BVHSubset:
+class BVHSubset(IntEnum):
 	BVHSubset_3d = 0
 	BVHSubset_3dPersistent = 1
 	BVHSubset_2dPersistent = 2

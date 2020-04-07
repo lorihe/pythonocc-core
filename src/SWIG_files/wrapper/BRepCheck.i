@@ -62,6 +62,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepcheck.html"
 %import TopTools.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -111,7 +112,7 @@ enum BRepCheck_Status {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepCheck_Status:
+class BRepCheck_Status(IntEnum):
 	BRepCheck_NoError = 0
 	BRepCheck_InvalidPointOnCurve = 1
 	BRepCheck_InvalidPointOnCurveOnSurface = 2

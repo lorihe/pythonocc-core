@@ -56,6 +56,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_gprop.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -87,14 +88,14 @@ enum GProp_ValueType {
 /* python proy classes for enums */
 %pythoncode {
 
-class GProp_EquaType:
+class GProp_EquaType(IntEnum):
 	GProp_Plane = 0
 	GProp_Line = 1
 	GProp_Point = 2
 	GProp_Space = 3
 	GProp_None = 4
 
-class GProp_ValueType:
+class GProp_ValueType(IntEnum):
 	GProp_Mass = 0
 	GProp_CenterMassX = 1
 	GProp_CenterMassY = 2

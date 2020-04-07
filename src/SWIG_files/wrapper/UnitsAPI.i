@@ -52,6 +52,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_unitsapi.html"
 %import Units.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -67,7 +68,7 @@ enum UnitsAPI_SystemUnits {
 /* python proy classes for enums */
 %pythoncode {
 
-class UnitsAPI_SystemUnits:
+class UnitsAPI_SystemUnits(IntEnum):
 	UnitsAPI_DEFAULT = 0
 	UnitsAPI_SI = 1
 	UnitsAPI_MDTV = 2

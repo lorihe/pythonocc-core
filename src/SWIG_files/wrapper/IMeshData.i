@@ -65,6 +65,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_imeshdata.html"
 %import BRepAdaptor.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -86,7 +87,7 @@ enum IMeshData_Status {
 /* python proy classes for enums */
 %pythoncode {
 
-class IMeshData_Status:
+class IMeshData_Status(IntEnum):
 	IMeshData_NoError = 0
 	IMeshData_OpenWire = 1
 	IMeshData_SelfIntersectingWire = 2

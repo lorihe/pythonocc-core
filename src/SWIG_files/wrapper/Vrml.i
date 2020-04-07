@@ -60,6 +60,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_vrml.html"
 %import TCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -151,47 +152,47 @@ enum Vrml_FontStyleStyle {
 /* python proy classes for enums */
 %pythoncode {
 
-class Vrml_VertexOrdering:
+class Vrml_VertexOrdering(IntEnum):
 	Vrml_UNKNOWN_ORDERING = 0
 	Vrml_CLOCKWISE = 1
 	Vrml_COUNTERCLOCKWISE = 2
 
-class Vrml_FontStyleFamily:
+class Vrml_FontStyleFamily(IntEnum):
 	Vrml_SERIF = 0
 	Vrml_SANS = 1
 	Vrml_TYPEWRITER = 2
 
-class Vrml_SeparatorRenderCulling:
+class Vrml_SeparatorRenderCulling(IntEnum):
 	Vrml_OFF = 0
 	Vrml_ON = 1
 	Vrml_AUTO = 2
 
-class Vrml_Texture2Wrap:
+class Vrml_Texture2Wrap(IntEnum):
 	Vrml_REPEAT = 0
 	Vrml_CLAMP = 1
 
-class Vrml_FaceType:
+class Vrml_FaceType(IntEnum):
 	Vrml_UNKNOWN_FACE_TYPE = 0
 	Vrml_CONVEX = 1
 
-class Vrml_AsciiTextJustification:
+class Vrml_AsciiTextJustification(IntEnum):
 	Vrml_LEFT = 0
 	Vrml_CENTER = 1
 	Vrml_RIGHT = 2
 
-class Vrml_ConeParts:
+class Vrml_ConeParts(IntEnum):
 	Vrml_ConeSIDES = 0
 	Vrml_ConeBOTTOM = 1
 	Vrml_ConeALL = 2
 
-class Vrml_SFImageNumber:
+class Vrml_SFImageNumber(IntEnum):
 	Vrml_NULL = 0
 	Vrml_ONE = 1
 	Vrml_TWO = 2
 	Vrml_THREE = 3
 	Vrml_FOUR = 4
 
-class Vrml_MaterialBindingAndNormalBinding:
+class Vrml_MaterialBindingAndNormalBinding(IntEnum):
 	Vrml_DEFAULT = 0
 	Vrml_OVERALL = 1
 	Vrml_PER_PART = 2
@@ -201,21 +202,21 @@ class Vrml_MaterialBindingAndNormalBinding:
 	Vrml_PER_VERTEX = 6
 	Vrml_PER_VERTEX_INDEXED = 7
 
-class Vrml_ShapeType:
+class Vrml_ShapeType(IntEnum):
 	Vrml_UNKNOWN_SHAPE_TYPE = 0
 	Vrml_SOLID = 1
 
-class Vrml_WWWAnchorMap:
+class Vrml_WWWAnchorMap(IntEnum):
 	Vrml_MAP_NONE = 0
 	Vrml_POINT = 1
 
-class Vrml_CylinderParts:
+class Vrml_CylinderParts(IntEnum):
 	Vrml_CylinderSIDES = 0
 	Vrml_CylinderTOP = 1
 	Vrml_CylinderBOTTOM = 2
 	Vrml_CylinderALL = 3
 
-class Vrml_FontStyleStyle:
+class Vrml_FontStyleStyle(IntEnum):
 	Vrml_NONE = 0
 	Vrml_BOLD = 1
 	Vrml_ITALIC = 2

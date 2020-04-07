@@ -75,6 +75,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_breplib.html"
 %import TopLoc.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -124,7 +125,7 @@ enum BRepLib_FaceError {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepLib_EdgeError:
+class BRepLib_EdgeError(IntEnum):
 	BRepLib_EdgeDone = 0
 	BRepLib_PointProjectionFailed = 1
 	BRepLib_ParameterOutOfRange = 2
@@ -133,26 +134,26 @@ class BRepLib_EdgeError:
 	BRepLib_DifferentsPointAndParameter = 5
 	BRepLib_LineThroughIdenticPoints = 6
 
-class BRepLib_ShellError:
+class BRepLib_ShellError(IntEnum):
 	BRepLib_ShellDone = 0
 	BRepLib_EmptyShell = 1
 	BRepLib_DisconnectedShell = 2
 	BRepLib_ShellParametersOutOfRange = 3
 
-class BRepLib_ShapeModification:
+class BRepLib_ShapeModification(IntEnum):
 	BRepLib_Preserved = 0
 	BRepLib_Deleted = 1
 	BRepLib_Trimmed = 2
 	BRepLib_Merged = 3
 	BRepLib_BoundaryModified = 4
 
-class BRepLib_WireError:
+class BRepLib_WireError(IntEnum):
 	BRepLib_WireDone = 0
 	BRepLib_EmptyWire = 1
 	BRepLib_DisconnectedWire = 2
 	BRepLib_NonManifoldWire = 3
 
-class BRepLib_FaceError:
+class BRepLib_FaceError(IntEnum):
 	BRepLib_FaceDone = 0
 	BRepLib_NoFace = 1
 	BRepLib_NotPlanar = 2

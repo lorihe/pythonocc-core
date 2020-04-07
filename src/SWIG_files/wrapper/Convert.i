@@ -56,6 +56,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_convert.html"
 %import gp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -76,7 +77,7 @@ enum Convert_ParameterisationType {
 /* python proy classes for enums */
 %pythoncode {
 
-class Convert_ParameterisationType:
+class Convert_ParameterisationType(IntEnum):
 	Convert_TgtThetaOver2 = 0
 	Convert_TgtThetaOver2_1 = 1
 	Convert_TgtThetaOver2_2 = 2

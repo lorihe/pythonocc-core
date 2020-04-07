@@ -59,6 +59,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_appparcurves.html
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -75,7 +76,7 @@ enum AppParCurves_Constraint {
 /* python proy classes for enums */
 %pythoncode {
 
-class AppParCurves_Constraint:
+class AppParCurves_Constraint(IntEnum):
 	AppParCurves_NoConstraint = 0
 	AppParCurves_PassPoint = 1
 	AppParCurves_TangencyPoint = 2

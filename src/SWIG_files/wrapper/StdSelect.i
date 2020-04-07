@@ -85,6 +85,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stdselect.html"
 %import Image.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -136,15 +137,15 @@ enum StdSelect_TypeOfSelectionImage {
 /* python proy classes for enums */
 %pythoncode {
 
-class StdSelect_TypeOfResult:
+class StdSelect_TypeOfResult(IntEnum):
 	StdSelect_TOR_SIMPLE = 0
 	StdSelect_TOR_MULTIPLE = 1
 
-class StdSelect_SensitivityMode:
+class StdSelect_SensitivityMode(IntEnum):
 	StdSelect_SM_WINDOW = 0
 	StdSelect_SM_VIEW = 1
 
-class StdSelect_TypeOfFace:
+class StdSelect_TypeOfFace(IntEnum):
 	StdSelect_AnyFace = 0
 	StdSelect_Plane = 1
 	StdSelect_Cylinder = 2
@@ -153,17 +154,17 @@ class StdSelect_TypeOfFace:
 	StdSelect_Revol = 5
 	StdSelect_Cone = 6
 
-class StdSelect_TypeOfEdge:
+class StdSelect_TypeOfEdge(IntEnum):
 	StdSelect_AnyEdge = 0
 	StdSelect_Line = 1
 	StdSelect_Circle = 2
 
-class StdSelect_DisplayMode:
+class StdSelect_DisplayMode(IntEnum):
 	StdSelect_DM_Wireframe = 0
 	StdSelect_DM_Shading = 1
 	StdSelect_DM_HLR = 2
 
-class StdSelect_TypeOfSelectionImage:
+class StdSelect_TypeOfSelectionImage(IntEnum):
 	StdSelect_TypeOfSelectionImage_NormalizedDepth = 0
 	StdSelect_TypeOfSelectionImage_NormalizedDepthInverted = 1
 	StdSelect_TypeOfSelectionImage_UnnormalizedDepth = 2

@@ -62,6 +62,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_monitool.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -85,7 +86,7 @@ enum MoniTool_ValueType {
 /* python proy classes for enums */
 %pythoncode {
 
-class MoniTool_ValueType:
+class MoniTool_ValueType(IntEnum):
 	MoniTool_ValueMisc = 0
 	MoniTool_ValueInteger = 1
 	MoniTool_ValueReal = 2

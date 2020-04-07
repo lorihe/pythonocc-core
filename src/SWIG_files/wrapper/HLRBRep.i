@@ -101,6 +101,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_hlrbrep.html"
 %import IntSurf.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -119,7 +120,7 @@ enum HLRBRep_TypeOfResultingEdge {
 /* python proy classes for enums */
 %pythoncode {
 
-class HLRBRep_TypeOfResultingEdge:
+class HLRBRep_TypeOfResultingEdge(IntEnum):
 	HLRBRep_Undefined = 0
 	HLRBRep_IsoLine = 1
 	HLRBRep_OutLine = 2

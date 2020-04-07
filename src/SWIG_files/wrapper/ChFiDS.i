@@ -79,6 +79,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_chfids.html"
 %import Law.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -118,7 +119,7 @@ enum ChFiDS_ErrorStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class ChFiDS_State:
+class ChFiDS_State(IntEnum):
 	ChFiDS_OnSame = 0
 	ChFiDS_OnDiff = 1
 	ChFiDS_AllSame = 2
@@ -127,17 +128,17 @@ class ChFiDS_State:
 	ChFiDS_Closed = 5
 	ChFiDS_Tangent = 6
 
-class ChFiDS_ChamfMethod:
+class ChFiDS_ChamfMethod(IntEnum):
 	ChFiDS_Sym = 0
 	ChFiDS_TwoDist = 1
 	ChFiDS_DistAngle = 2
 
-class ChFiDS_ChamfMode:
+class ChFiDS_ChamfMode(IntEnum):
 	ChFiDS_ClassicChamfer = 0
 	ChFiDS_ConstThroatChamfer = 1
 	ChFiDS_ConstThroatWithPenetrationChamfer = 2
 
-class ChFiDS_ErrorStatus:
+class ChFiDS_ErrorStatus(IntEnum):
 	ChFiDS_Ok = 0
 	ChFiDS_Error = 1
 	ChFiDS_WalkingFailure = 2

@@ -62,6 +62,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_igesdata.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -103,27 +104,27 @@ enum IGESData_DefType {
 /* python proy classes for enums */
 %pythoncode {
 
-class IGESData_ReadStage:
+class IGESData_ReadStage(IntEnum):
 	IGESData_ReadDir = 0
 	IGESData_ReadOwn = 1
 	IGESData_ReadAssocs = 2
 	IGESData_ReadProps = 3
 	IGESData_ReadEnd = 4
 
-class IGESData_DefList:
+class IGESData_DefList(IntEnum):
 	IGESData_DefNone = 0
 	IGESData_DefOne = 1
 	IGESData_DefSeveral = 2
 	IGESData_ErrorOne = 3
 	IGESData_ErrorSeveral = 4
 
-class IGESData_Status:
+class IGESData_Status(IntEnum):
 	IGESData_EntityOK = 0
 	IGESData_EntityError = 1
 	IGESData_ReferenceError = 2
 	IGESData_TypeError = 3
 
-class IGESData_DefType:
+class IGESData_DefType(IntEnum):
 	IGESData_DefVoid = 0
 	IGESData_DefValue = 1
 	IGESData_DefReference = 2

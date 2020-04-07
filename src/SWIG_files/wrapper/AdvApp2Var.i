@@ -67,6 +67,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_advapp2var.html"
 %import TColgp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -86,11 +87,11 @@ enum AdvApp2Var_CriterionType {
 /* python proy classes for enums */
 %pythoncode {
 
-class AdvApp2Var_CriterionRepartition:
+class AdvApp2Var_CriterionRepartition(IntEnum):
 	AdvApp2Var_Regular = 0
 	AdvApp2Var_Incremental = 1
 
-class AdvApp2Var_CriterionType:
+class AdvApp2Var_CriterionType(IntEnum):
 	AdvApp2Var_Absolute = 0
 	AdvApp2Var_Relative = 1
 };

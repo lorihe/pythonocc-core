@@ -83,6 +83,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_topopebrepds.html
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -118,16 +119,16 @@ enum TopOpeBRepDS_Kind {
 /* python proy classes for enums */
 %pythoncode {
 
-class TopOpeBRepDS_Config:
+class TopOpeBRepDS_Config(IntEnum):
 	TopOpeBRepDS_UNSHGEOMETRY = 0
 	TopOpeBRepDS_SAMEORIENTED = 1
 	TopOpeBRepDS_DIFFORIENTED = 2
 
-class TopOpeBRepDS_CheckStatus:
+class TopOpeBRepDS_CheckStatus(IntEnum):
 	TopOpeBRepDS_OK = 0
 	TopOpeBRepDS_NOK = 1
 
-class TopOpeBRepDS_Kind:
+class TopOpeBRepDS_Kind(IntEnum):
 	TopOpeBRepDS_POINT = 0
 	TopOpeBRepDS_CURVE = 1
 	TopOpeBRepDS_SURFACE = 2

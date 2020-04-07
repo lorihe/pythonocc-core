@@ -83,6 +83,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_vrmlconverter.htm
 %import BRepAdaptor.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -105,13 +106,13 @@ enum VrmlConverter_TypeOfCamera {
 /* python proy classes for enums */
 %pythoncode {
 
-class VrmlConverter_TypeOfLight:
+class VrmlConverter_TypeOfLight(IntEnum):
 	VrmlConverter_NoLight = 0
 	VrmlConverter_DirectionLight = 1
 	VrmlConverter_PointLight = 2
 	VrmlConverter_SpotLight = 3
 
-class VrmlConverter_TypeOfCamera:
+class VrmlConverter_TypeOfCamera(IntEnum):
 	VrmlConverter_NoCamera = 0
 	VrmlConverter_PerspectiveCamera = 1
 	VrmlConverter_OrthographicCamera = 2

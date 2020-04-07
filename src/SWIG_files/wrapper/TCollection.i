@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_tcollection.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -64,7 +65,7 @@ enum TCollection_Side {
 /* python proy classes for enums */
 %pythoncode {
 
-class TCollection_Side:
+class TCollection_Side(IntEnum):
 	TCollection_Left = 0
 	TCollection_Right = 1
 };

@@ -101,6 +101,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_ais.html"
 %import Image.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -387,13 +388,13 @@ enum AIS_DisplayStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class AIS_TrihedronSelectionMode:
+class AIS_TrihedronSelectionMode(IntEnum):
 	AIS_TrihedronSelectionMode_EntireObject = 0
 	AIS_TrihedronSelectionMode_Origin = 1
 	AIS_TrihedronSelectionMode_Axes = 2
 	AIS_TrihedronSelectionMode_MainPlanes = 3
 
-class AIS_MouseGesture:
+class AIS_MouseGesture(IntEnum):
 	AIS_MouseGesture_NONE = 0
 	AIS_MouseGesture_SelectRectangle = 1
 	AIS_MouseGesture_SelectLasso = 2
@@ -402,14 +403,14 @@ class AIS_MouseGesture:
 	AIS_MouseGesture_RotateOrbit = 5
 	AIS_MouseGesture_RotateView = 6
 
-class AIS_ClearMode:
+class AIS_ClearMode(IntEnum):
 	AIS_CM_All = 0
 	AIS_CM_Interactive = 1
 	AIS_CM_Filters = 2
 	AIS_CM_StandardModes = 3
 	AIS_CM_TemporaryShapePrs = 4
 
-class AIS_TypeOfAttribute:
+class AIS_TypeOfAttribute(IntEnum):
 	AIS_TOA_Line = 0
 	AIS_TOA_Dimension = 1
 	AIS_TOA_Wire = 2
@@ -427,18 +428,18 @@ class AIS_TypeOfAttribute:
 	AIS_TOA_SecondAxis = 14
 	AIS_TOA_ThirdAxis = 15
 
-class AIS_TypeOfAngleArrowVisibility:
+class AIS_TypeOfAngleArrowVisibility(IntEnum):
 	AIS_TOAV_Both = 0
 	AIS_TOAV_First = 1
 	AIS_TOAV_Second = 2
 	AIS_TOAV_None = 3
 
-class AIS_DimensionSelectionMode:
+class AIS_DimensionSelectionMode(IntEnum):
 	AIS_DSM_All = 0
 	AIS_DSM_Line = 1
 	AIS_DSM_Text = 2
 
-class AIS_KindOfInteractive:
+class AIS_KindOfInteractive(IntEnum):
 	AIS_KOI_None = 0
 	AIS_KOI_Datum = 1
 	AIS_KOI_Shape = 2
@@ -446,7 +447,7 @@ class AIS_KindOfInteractive:
 	AIS_KOI_Relation = 4
 	AIS_KOI_Dimension = 5
 
-class AIS_KindOfDimension:
+class AIS_KindOfDimension(IntEnum):
 	AIS_KOD_NONE = 0
 	AIS_KOD_LENGTH = 1
 	AIS_KOD_PLANEANGLE = 2
@@ -462,18 +463,18 @@ class AIS_KindOfDimension:
 	AIS_KOD_OFFSET = 12
 	AIS_KOD_ELLIPSERADIUS = 13
 
-class AIS_SelectStatus:
+class AIS_SelectStatus(IntEnum):
 	AIS_SS_Added = 0
 	AIS_SS_Removed = 1
 	AIS_SS_NotDone = 2
 
-class AIS_TypeOfAxis:
+class AIS_TypeOfAxis(IntEnum):
 	AIS_TOAX_Unknown = 0
 	AIS_TOAX_XAxis = 1
 	AIS_TOAX_YAxis = 2
 	AIS_TOAX_ZAxis = 3
 
-class AIS_KindOfUnit:
+class AIS_KindOfUnit(IntEnum):
 	AIS_TOU_LENGTH = 0
 	AIS_TOU_SURFACE = 1
 	AIS_TOU_VOLUME = 2
@@ -483,43 +484,43 @@ class AIS_KindOfUnit:
 	AIS_TOU_FORCE = 6
 	AIS_TOU_TIME = 7
 
-class AIS_TypeOfAngle:
+class AIS_TypeOfAngle(IntEnum):
 	AIS_TOA_Interior = 0
 	AIS_TOA_Exterior = 1
 
-class AIS_ConnectStatus:
+class AIS_ConnectStatus(IntEnum):
 	AIS_CS_None = 0
 	AIS_CS_Connection = 1
 	AIS_CS_Transform = 2
 	AIS_CS_Both = 3
 
-class AIS_RotationMode:
+class AIS_RotationMode(IntEnum):
 	AIS_RotationMode_BndBoxActive = 0
 	AIS_RotationMode_PickLast = 1
 	AIS_RotationMode_PickCenter = 2
 	AIS_RotationMode_CameraAt = 3
 	AIS_RotationMode_BndBoxScene = 4
 
-class AIS_ViewSelectionTool:
+class AIS_ViewSelectionTool(IntEnum):
 	AIS_ViewSelectionTool_Picking = 0
 	AIS_ViewSelectionTool_RubberBand = 1
 	AIS_ViewSelectionTool_Polygon = 2
 
-class AIS_ViewInputBufferType:
+class AIS_ViewInputBufferType(IntEnum):
 	AIS_ViewInputBufferType_UI = 0
 	AIS_ViewInputBufferType_GL = 1
 
-class AIS_NavigationMode:
+class AIS_NavigationMode(IntEnum):
 	AIS_NavigationMode_Orbit = 0
 	AIS_NavigationMode_FirstPersonFlight = 1
 	AIS_NavigationMode_FirstPersonWalk = 2
 
-class AIS_TypeOfIso:
+class AIS_TypeOfIso(IntEnum):
 	AIS_TOI_IsoU = 0
 	AIS_TOI_IsoV = 1
 	AIS_TOI_Both = 2
 
-class AIS_KindOfRelation:
+class AIS_KindOfRelation(IntEnum):
 	AIS_KOR_NONE = 0
 	AIS_KOR_CONCENTRIC = 1
 	AIS_KOR_EQUALDISTANCE = 2
@@ -532,7 +533,7 @@ class AIS_KindOfRelation:
 	AIS_KOR_TANGENT = 9
 	AIS_KOR_SYMMETRIC = 10
 
-class AIS_StatusOfDetection:
+class AIS_StatusOfDetection(IntEnum):
 	AIS_SOD_Error = 0
 	AIS_SOD_Nothing = 1
 	AIS_SOD_AllBad = 2
@@ -541,29 +542,29 @@ class AIS_StatusOfDetection:
 	AIS_SOD_OnlyOneGood = 5
 	AIS_SOD_SeveralGood = 6
 
-class AIS_WalkTranslation:
+class AIS_WalkTranslation(IntEnum):
 	AIS_WalkTranslation_Forward = 0
 	AIS_WalkTranslation_Side = 1
 	AIS_WalkTranslation_Up = 2
 
-class AIS_WalkRotation:
+class AIS_WalkRotation(IntEnum):
 	AIS_WalkRotation_Yaw = 0
 	AIS_WalkRotation_Pitch = 1
 	AIS_WalkRotation_Roll = 2
 
-class AIS_ManipulatorMode:
+class AIS_ManipulatorMode(IntEnum):
 	AIS_MM_None = 0
 	AIS_MM_Translation = 1
 	AIS_MM_Rotation = 2
 	AIS_MM_Scaling = 3
 	AIS_MM_TranslationPlane = 4
 
-class AIS_SelectionModesConcurrency:
+class AIS_SelectionModesConcurrency(IntEnum):
 	AIS_SelectionModesConcurrency_Single = 0
 	AIS_SelectionModesConcurrency_GlobalOrLocal = 1
 	AIS_SelectionModesConcurrency_Multiple = 2
 
-class AIS_KindOfSurface:
+class AIS_KindOfSurface(IntEnum):
 	AIS_KOS_Plane = 0
 	AIS_KOS_Cylinder = 1
 	AIS_KOS_Cone = 2
@@ -573,7 +574,7 @@ class AIS_KindOfSurface:
 	AIS_KOS_Extrusion = 6
 	AIS_KOS_OtherSurface = 7
 
-class AIS_StandardDatum:
+class AIS_StandardDatum(IntEnum):
 	AIS_SD_None = 0
 	AIS_SD_Point = 1
 	AIS_SD_Axis = 2
@@ -583,40 +584,40 @@ class AIS_StandardDatum:
 	AIS_SD_Circle = 6
 	AIS_SD_Plane = 7
 
-class AIS_DisplayMode:
+class AIS_DisplayMode(IntEnum):
 	AIS_WireFrame = 0
 	AIS_Shaded = 1
 
-class AIS_StatusOfPick:
+class AIS_StatusOfPick(IntEnum):
 	AIS_SOP_Error = 0
 	AIS_SOP_NothingSelected = 1
 	AIS_SOP_Removed = 2
 	AIS_SOP_OneSelected = 3
 	AIS_SOP_SeveralSelected = 4
 
-class AIS_DragAction:
+class AIS_DragAction(IntEnum):
 	AIS_DragAction_Start = 0
 	AIS_DragAction_Update = 1
 	AIS_DragAction_Stop = 2
 	AIS_DragAction_Abort = 3
 
-class AIS_DisplaySpecialSymbol:
+class AIS_DisplaySpecialSymbol(IntEnum):
 	AIS_DSS_No = 0
 	AIS_DSS_Before = 1
 	AIS_DSS_After = 2
 
-class AIS_TypeOfDist:
+class AIS_TypeOfDist(IntEnum):
 	AIS_TOD_Unknown = 0
 	AIS_TOD_Horizontal = 1
 	AIS_TOD_Vertical = 2
 
-class AIS_TypeOfPlane:
+class AIS_TypeOfPlane(IntEnum):
 	AIS_TOPL_Unknown = 0
 	AIS_TOPL_XYPlane = 1
 	AIS_TOPL_XZPlane = 2
 	AIS_TOPL_YZPlane = 3
 
-class AIS_DisplayStatus:
+class AIS_DisplayStatus(IntEnum):
 	AIS_DS_Displayed = 0
 	AIS_DS_Erased = 1
 	AIS_DS_None = 2
@@ -8161,7 +8162,7 @@ enum SelectionMode {
 /* python proy classes for enums */
 %pythoncode {
 
-class SelectionMode:
+class SelectionMode(IntEnum):
 	SelectionMode_Edges = 0
 	SelectionMode_Volume = 1
 };
@@ -9563,7 +9564,7 @@ enum ComputeMode {
 /* python proy classes for enums */
 %pythoncode {
 
-class ComputeMode:
+class ComputeMode(IntEnum):
 	ComputeMode_All = 0
 	ComputeMode_Line = 1
 	ComputeMode_Text = 2
@@ -11828,11 +11829,11 @@ enum SelectionMode {
 /* python proy classes for enums */
 %pythoncode {
 
-class DisplayMode:
+class DisplayMode(IntEnum):
 	DM_Points = 0
 	DM_BndBox = 2
 
-class SelectionMode:
+class SelectionMode(IntEnum):
 	SM_Points = 0
 	SM_SubsetOfPoints = 1
 	SM_BndBox = 2

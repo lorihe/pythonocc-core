@@ -70,6 +70,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepvisual.html"
 %import TColgp.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -111,25 +112,25 @@ enum StepVisual_MarkerType {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepVisual_NullStyle:
+class StepVisual_NullStyle(IntEnum):
 	StepVisual_Null = 0
 
-class StepVisual_CentralOrParallel:
+class StepVisual_CentralOrParallel(IntEnum):
 	StepVisual_copCentral = 0
 	StepVisual_copParallel = 1
 
-class StepVisual_SurfaceSide:
+class StepVisual_SurfaceSide(IntEnum):
 	StepVisual_ssNegative = 0
 	StepVisual_ssPositive = 1
 	StepVisual_ssBoth = 2
 
-class StepVisual_TextPath:
+class StepVisual_TextPath(IntEnum):
 	StepVisual_tpUp = 0
 	StepVisual_tpRight = 1
 	StepVisual_tpDown = 2
 	StepVisual_tpLeft = 3
 
-class StepVisual_MarkerType:
+class StepVisual_MarkerType(IntEnum):
 	StepVisual_mtDot = 0
 	StepVisual_mtX = 1
 	StepVisual_mtPlus = 2

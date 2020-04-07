@@ -54,6 +54,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_tfunction.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -71,7 +72,7 @@ enum TFunction_ExecutionStatus {
 /* python proy classes for enums */
 %pythoncode {
 
-class TFunction_ExecutionStatus:
+class TFunction_ExecutionStatus(IntEnum):
 	TFunction_ES_WrongDefinition = 0
 	TFunction_ES_NotExecuted = 1
 	TFunction_ES_Executing = 2

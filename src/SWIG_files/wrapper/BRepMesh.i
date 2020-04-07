@@ -90,6 +90,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepmesh.html"
 %import IMeshData.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -116,13 +117,13 @@ enum BRepMesh_DegreeOfFreedom {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepMesh_FactoryError:
+class BRepMesh_FactoryError(IntEnum):
 	BRepMesh_FE_NOERROR = 0
 	BRepMesh_FE_LIBRARYNOTFOUND = 1
 	BRepMesh_FE_FUNCTIONNOTFOUND = 2
 	BRepMesh_FE_CANNOTCREATEALGO = 3
 
-class BRepMesh_DegreeOfFreedom:
+class BRepMesh_DegreeOfFreedom(IntEnum):
 	BRepMesh_Free = 0
 	BRepMesh_InVolume = 1
 	BRepMesh_OnSurface = 2
@@ -1868,7 +1869,7 @@ enum IntFlag {
 /* python proy classes for enums */
 %pythoncode {
 
-class IntFlag:
+class IntFlag(IntEnum):
 	NoIntersection = 0
 	Cross = 1
 	EndPointTouch = 2

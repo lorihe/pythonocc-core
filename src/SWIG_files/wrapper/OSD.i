@@ -52,6 +52,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_osd.html"
 %import TCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -167,22 +168,22 @@ enum OSD_SingleProtection {
 /* python proy classes for enums */
 %pythoncode {
 
-class OSD_LockType:
+class OSD_LockType(IntEnum):
 	OSD_NoLock = 0
 	OSD_ReadLock = 1
 	OSD_WriteLock = 2
 	OSD_ExclusiveLock = 3
 
-class OSD_LoadMode:
+class OSD_LoadMode(IntEnum):
 	OSD_RTLD_LAZY = 0
 	OSD_RTLD_NOW = 1
 
-class OSD_OpenMode:
+class OSD_OpenMode(IntEnum):
 	OSD_ReadOnly = 0
 	OSD_WriteOnly = 1
 	OSD_ReadWrite = 2
 
-class OSD_OEMType:
+class OSD_OEMType(IntEnum):
 	OSD_Unavailable = 0
 	OSD_SUN = 1
 	OSD_DEC = 2
@@ -196,7 +197,7 @@ class OSD_OEMType:
 	OSD_LIN = 10
 	OSD_AIX = 11
 
-class OSD_WhoAmI:
+class OSD_WhoAmI(IntEnum):
 	OSD_WDirectory = 0
 	OSD_WDirectoryIterator = 1
 	OSD_WEnvironment = 2
@@ -213,7 +214,7 @@ class OSD_WhoAmI:
 	OSD_WPackage = 13
 	OSD_WEnvironmentIterator = 14
 
-class OSD_SysType:
+class OSD_SysType(IntEnum):
 	OSD_Unknown = 0
 	OSD_Default = 1
 	OSD_UnixBSD = 2
@@ -227,25 +228,25 @@ class OSD_SysType:
 	OSD_LinuxREDHAT = 10
 	OSD_Aix = 11
 
-class OSD_KindFile:
+class OSD_KindFile(IntEnum):
 	OSD_FILE = 0
 	OSD_DIRECTORY = 1
 	OSD_LINK = 2
 	OSD_SOCKET = 3
 	OSD_UNKNOWN = 4
 
-class OSD_SignalMode:
+class OSD_SignalMode(IntEnum):
 	OSD_SignalMode_AsIs = 0
 	OSD_SignalMode_Set = 1
 	OSD_SignalMode_SetUnhandled = 2
 	OSD_SignalMode_Unset = 3
 
-class OSD_FromWhere:
+class OSD_FromWhere(IntEnum):
 	OSD_FromBeginning = 0
 	OSD_FromHere = 1
 	OSD_FromEnd = 2
 
-class OSD_SingleProtection:
+class OSD_SingleProtection(IntEnum):
 	OSD_None = 0
 	OSD_R = 1
 	OSD_W = 2

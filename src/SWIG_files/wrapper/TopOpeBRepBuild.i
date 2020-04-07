@@ -81,6 +81,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_topopebrepbuild.h
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -96,7 +97,7 @@ enum TopOpeBRepBuild_LoopEnum {
 /* python proy classes for enums */
 %pythoncode {
 
-class TopOpeBRepBuild_LoopEnum:
+class TopOpeBRepBuild_LoopEnum(IntEnum):
 	TopOpeBRepBuild_ANYLOOP = 0
 	TopOpeBRepBuild_BOUNDARY = 1
 	TopOpeBRepBuild_BLOCK = 2

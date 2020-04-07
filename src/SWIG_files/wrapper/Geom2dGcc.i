@@ -65,6 +65,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_geom2dgcc.html"
 %import math.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -103,7 +104,7 @@ enum Geom2dGcc_Type1 {
 /* python proy classes for enums */
 %pythoncode {
 
-class Geom2dGcc_Type2:
+class Geom2dGcc_Type2(IntEnum):
 	Geom2dGcc_CuCuOnCu = 0
 	Geom2dGcc_CiCuOnCu = 1
 	Geom2dGcc_LiCuOnCu = 2
@@ -117,11 +118,11 @@ class Geom2dGcc_Type2:
 	Geom2dGcc_LiCuOnCi = 10
 	Geom2dGcc_CuPtOnCi = 11
 
-class Geom2dGcc_Type3:
+class Geom2dGcc_Type3(IntEnum):
 	Geom2dGcc_CuCu = 0
 	Geom2dGcc_CiCu = 1
 
-class Geom2dGcc_Type1:
+class Geom2dGcc_Type1(IntEnum):
 	Geom2dGcc_CuCuCu = 0
 	Geom2dGcc_CiCuCu = 1
 	Geom2dGcc_CiCiCu = 2

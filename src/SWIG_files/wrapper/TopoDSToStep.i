@@ -70,6 +70,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_topodstostep.html
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -116,33 +117,33 @@ enum TopoDSToStep_FacetedError {
 /* python proy classes for enums */
 %pythoncode {
 
-class TopoDSToStep_MakeEdgeError:
+class TopoDSToStep_MakeEdgeError(IntEnum):
 	TopoDSToStep_EdgeDone = 0
 	TopoDSToStep_NonManifoldEdge = 1
 	TopoDSToStep_EdgeOther = 2
 
-class TopoDSToStep_BuilderError:
+class TopoDSToStep_BuilderError(IntEnum):
 	TopoDSToStep_BuilderDone = 0
 	TopoDSToStep_NoFaceMapped = 1
 	TopoDSToStep_BuilderOther = 2
 
-class TopoDSToStep_MakeVertexError:
+class TopoDSToStep_MakeVertexError(IntEnum):
 	TopoDSToStep_VertexDone = 0
 	TopoDSToStep_VertexOther = 1
 
-class TopoDSToStep_MakeWireError:
+class TopoDSToStep_MakeWireError(IntEnum):
 	TopoDSToStep_WireDone = 0
 	TopoDSToStep_NonManifoldWire = 1
 	TopoDSToStep_WireOther = 2
 
-class TopoDSToStep_MakeFaceError:
+class TopoDSToStep_MakeFaceError(IntEnum):
 	TopoDSToStep_FaceDone = 0
 	TopoDSToStep_InfiniteFace = 1
 	TopoDSToStep_NonManifoldFace = 2
 	TopoDSToStep_NoWireMapped = 3
 	TopoDSToStep_FaceOther = 4
 
-class TopoDSToStep_FacetedError:
+class TopoDSToStep_FacetedError(IntEnum):
 	TopoDSToStep_FacetedDone = 0
 	TopoDSToStep_SurfaceNotPlane = 1
 	TopoDSToStep_PCurveNotLinear = 2

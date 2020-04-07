@@ -87,6 +87,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_prs3d.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -184,12 +185,12 @@ enum Prs3d_DimensionArrowOrientation {
 /* python proy classes for enums */
 %pythoncode {
 
-class Prs3d_DimensionTextVerticalPosition:
+class Prs3d_DimensionTextVerticalPosition(IntEnum):
 	Prs3d_DTVP_Above = 0
 	Prs3d_DTVP_Below = 1
 	Prs3d_DTVP_Center = 2
 
-class Prs3d_TypeOfHighlight:
+class Prs3d_TypeOfHighlight(IntEnum):
 	Prs3d_TypeOfHighlight_None = 0
 	Prs3d_TypeOfHighlight_Selected = 1
 	Prs3d_TypeOfHighlight_Dynamic = 2
@@ -198,16 +199,16 @@ class Prs3d_TypeOfHighlight:
 	Prs3d_TypeOfHighlight_SubIntensity = 5
 	Prs3d_TypeOfHighlight_NB = 6
 
-class Prs3d_VertexDrawMode:
+class Prs3d_VertexDrawMode(IntEnum):
 	Prs3d_VDM_Isolated = 0
 	Prs3d_VDM_All = 1
 	Prs3d_VDM_Inherited = 2
 
-class Prs3d_DatumMode:
+class Prs3d_DatumMode(IntEnum):
 	Prs3d_DM_WireFrame = 0
 	Prs3d_DM_Shaded = 1
 
-class Prs3d_DatumAttribute:
+class Prs3d_DatumAttribute(IntEnum):
 	Prs3d_DA_XAxisLength = 0
 	Prs3d_DA_YAxisLength = 1
 	Prs3d_DA_ZAxisLength = 2
@@ -217,22 +218,22 @@ class Prs3d_DatumAttribute:
 	Prs3d_DP_ShadingOriginRadiusPercent = 6
 	Prs3d_DP_ShadingNumberOfFacettes = 7
 
-class Prs3d_DimensionTextHorizontalPosition:
+class Prs3d_DimensionTextHorizontalPosition(IntEnum):
 	Prs3d_DTHP_Left = 0
 	Prs3d_DTHP_Right = 1
 	Prs3d_DTHP_Center = 2
 	Prs3d_DTHP_Fit = 3
 
-class Prs3d_TypeOfLinePicking:
+class Prs3d_TypeOfLinePicking(IntEnum):
 	Prs3d_TOLP_Point = 0
 	Prs3d_TOLP_Segment = 1
 
-class Prs3d_TypeOfHLR:
+class Prs3d_TypeOfHLR(IntEnum):
 	Prs3d_TOH_NotSet = 0
 	Prs3d_TOH_PolyAlgo = 1
 	Prs3d_TOH_Algo = 2
 
-class Prs3d_DatumAxes:
+class Prs3d_DatumAxes(IntEnum):
 	Prs3d_DA_XAxis = 1
 	Prs3d_DA_YAxis = 2
 	Prs3d_DA_ZAxis = 4
@@ -241,7 +242,7 @@ class Prs3d_DatumAxes:
 	Prs3d_DA_XZAxis = Prs3d_DA_XAxis | Prs3d_DA_ZAxis
 	Prs3d_DA_XYZAxis = Prs3d_DA_XAxis | Prs3d_DA_YAxis | Prs3d_DA_ZAxis
 
-class Prs3d_DatumParts:
+class Prs3d_DatumParts(IntEnum):
 	Prs3d_DP_Origin = 0
 	Prs3d_DP_XAxis = 1
 	Prs3d_DP_YAxis = 2
@@ -254,7 +255,7 @@ class Prs3d_DatumParts:
 	Prs3d_DP_XOZAxis = 9
 	Prs3d_DP_None = 10
 
-class Prs3d_DimensionArrowOrientation:
+class Prs3d_DimensionArrowOrientation(IntEnum):
 	Prs3d_DAO_Internal = 0
 	Prs3d_DAO_External = 1
 	Prs3d_DAO_Fit = 2

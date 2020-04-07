@@ -65,6 +65,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_stepelement.html"
 %import TColStd.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -137,28 +138,28 @@ enum StepElement_EnumeratedCurveElementPurpose {
 /* python proy classes for enums */
 %pythoncode {
 
-class StepElement_ElementVolume:
+class StepElement_ElementVolume(IntEnum):
 	StepElement_Volume = 0
 
-class StepElement_CurveEdge:
+class StepElement_CurveEdge(IntEnum):
 	StepElement_ElementEdge = 0
 
-class StepElement_Volume3dElementShape:
+class StepElement_Volume3dElementShape(IntEnum):
 	StepElement_Hexahedron = 0
 	StepElement_Wedge = 1
 	StepElement_Tetrahedron = 2
 	StepElement_Pyramid = 3
 
-class StepElement_ElementOrder:
+class StepElement_ElementOrder(IntEnum):
 	StepElement_Linear = 0
 	StepElement_Quadratic = 1
 	StepElement_Cubic = 2
 
-class StepElement_Element2dShape:
+class StepElement_Element2dShape(IntEnum):
 	StepElement_Quadrilateral = 0
 	StepElement_Triangle = 1
 
-class StepElement_EnumeratedCurveElementFreedom:
+class StepElement_EnumeratedCurveElementFreedom(IntEnum):
 	StepElement_XTranslation = 0
 	StepElement_YTranslation = 1
 	StepElement_ZTranslation = 2
@@ -168,20 +169,20 @@ class StepElement_EnumeratedCurveElementFreedom:
 	StepElement_Warp = 6
 	StepElement_None = 7
 
-class StepElement_EnumeratedVolumeElementPurpose:
+class StepElement_EnumeratedVolumeElementPurpose(IntEnum):
 	StepElement_StressDisplacement = 0
 
-class StepElement_EnumeratedSurfaceElementPurpose:
+class StepElement_EnumeratedSurfaceElementPurpose(IntEnum):
 	StepElement_MembraneDirect = 0
 	StepElement_MembraneShear = 1
 	StepElement_BendingDirect = 2
 	StepElement_BendingTorsion = 3
 	StepElement_NormalToPlaneShear = 4
 
-class StepElement_UnspecifiedValue:
+class StepElement_UnspecifiedValue(IntEnum):
 	StepElement_Unspecified = 0
 
-class StepElement_EnumeratedCurveElementPurpose:
+class StepElement_EnumeratedCurveElementPurpose(IntEnum):
 	StepElement_Axial = 0
 	StepElement_YYBending = 1
 	StepElement_ZZBending = 2

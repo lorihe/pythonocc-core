@@ -90,6 +90,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_brepfeat.html"
 %import LocOpe.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -144,12 +145,12 @@ enum BRepFeat_PerfSelection {
 /* python proy classes for enums */
 %pythoncode {
 
-class BRepFeat_Status:
+class BRepFeat_Status(IntEnum):
 	BRepFeat_NoError = 0
 	BRepFeat_InvalidPlacement = 1
 	BRepFeat_HoleTooLong = 2
 
-class BRepFeat_StatusError:
+class BRepFeat_StatusError(IntEnum):
 	BRepFeat_OK = 0
 	BRepFeat_BadDirect = 1
 	BRepFeat_BadIntersect = 2
@@ -179,7 +180,7 @@ class BRepFeat_StatusError:
 	BRepFeat_NullToolF = 26
 	BRepFeat_NullToolU = 27
 
-class BRepFeat_PerfSelection:
+class BRepFeat_PerfSelection(IntEnum):
 	BRepFeat_NoSelection = 0
 	BRepFeat_SelectionFU = 1
 	BRepFeat_SelectionU = 2

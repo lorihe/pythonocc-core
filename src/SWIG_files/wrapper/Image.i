@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_image.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -77,7 +78,7 @@ enum Image_Format {
 /* python proy classes for enums */
 %pythoncode {
 
-class Image_Format:
+class Image_Format(IntEnum):
 	Image_Format_UNKNOWN = 0
 	Image_Format_Gray = 1
 	Image_Format_Alpha = 2

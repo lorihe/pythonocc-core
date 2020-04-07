@@ -50,6 +50,7 @@ https://www.opencascade.com/doc/occt-7.4.0/refman/html/package_intrv.html"
 %import NCollection.i
 
 %pythoncode {
+from enum import IntEnum
 from OCC.Core.Exception import *
 };
 
@@ -75,7 +76,7 @@ enum Intrv_Position {
 /* python proy classes for enums */
 %pythoncode {
 
-class Intrv_Position:
+class Intrv_Position(IntEnum):
 	Intrv_Before = 0
 	Intrv_JustBefore = 1
 	Intrv_OverlappingAtStart = 2
