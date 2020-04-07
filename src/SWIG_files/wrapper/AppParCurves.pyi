@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,11 +9,15 @@ from OCC.Core.gp import *
 from OCC.Core.TColStd import *
 
 
-class AppParCurves_Constraint:
+class AppParCurves_Constraint(IntEnum):
 	AppParCurves_NoConstraint: int = ...
 	AppParCurves_PassPoint: int = ...
 	AppParCurves_TangencyPoint: int = ...
 	AppParCurves_CurvaturePoint: int = ...
+AppParCurves_NoConstraint = AppParCurves_Constraint.AppParCurves_NoConstraint
+AppParCurves_PassPoint = AppParCurves_Constraint.AppParCurves_PassPoint
+AppParCurves_TangencyPoint = AppParCurves_Constraint.AppParCurves_TangencyPoint
+AppParCurves_CurvaturePoint = AppParCurves_Constraint.AppParCurves_CurvaturePoint
 
 class AppParCurves:
 	@staticmethod

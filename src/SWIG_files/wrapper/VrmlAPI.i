@@ -97,6 +97,9 @@ class VrmlAPI_RepresentationOfShape(IntEnum):
 	VrmlAPI_ShadedRepresentation = 0
 	VrmlAPI_WireFrameRepresentation = 1
 	VrmlAPI_BothRepresentation = 2
+VrmlAPI_ShadedRepresentation = VrmlAPI_RepresentationOfShape.VrmlAPI_ShadedRepresentation
+VrmlAPI_WireFrameRepresentation = VrmlAPI_RepresentationOfShape.VrmlAPI_WireFrameRepresentation
+VrmlAPI_BothRepresentation = VrmlAPI_RepresentationOfShape.VrmlAPI_BothRepresentation
 };
 /* end python proxy for enums */
 

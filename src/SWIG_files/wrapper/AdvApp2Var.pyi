@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,13 +11,17 @@ from OCC.Core.gp import *
 from OCC.Core.TColgp import *
 
 
-class AdvApp2Var_CriterionRepartition:
+class AdvApp2Var_CriterionRepartition(IntEnum):
 	AdvApp2Var_Regular: int = ...
 	AdvApp2Var_Incremental: int = ...
+AdvApp2Var_Regular = AdvApp2Var_CriterionRepartition.AdvApp2Var_Regular
+AdvApp2Var_Incremental = AdvApp2Var_CriterionRepartition.AdvApp2Var_Incremental
 
-class AdvApp2Var_CriterionType:
+class AdvApp2Var_CriterionType(IntEnum):
 	AdvApp2Var_Absolute: int = ...
 	AdvApp2Var_Relative: int = ...
+AdvApp2Var_Absolute = AdvApp2Var_CriterionType.AdvApp2Var_Absolute
+AdvApp2Var_Relative = AdvApp2Var_CriterionType.AdvApp2Var_Relative
 
 class AdvApp2Var_ApproxAFunc2Var:
 	@overload

@@ -95,6 +95,12 @@ class BiTgte_ContactType(IntEnum):
 	BiTgte_EdgeEdge = 3
 	BiTgte_EdgeVertex = 4
 	BiTgte_VertexVertex = 5
+BiTgte_FaceFace = BiTgte_ContactType.BiTgte_FaceFace
+BiTgte_FaceEdge = BiTgte_ContactType.BiTgte_FaceEdge
+BiTgte_FaceVertex = BiTgte_ContactType.BiTgte_FaceVertex
+BiTgte_EdgeEdge = BiTgte_ContactType.BiTgte_EdgeEdge
+BiTgte_EdgeVertex = BiTgte_ContactType.BiTgte_EdgeVertex
+BiTgte_VertexVertex = BiTgte_ContactType.BiTgte_VertexVertex
 };
 /* end python proxy for enums */
 

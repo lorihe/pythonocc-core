@@ -82,6 +82,11 @@ class math_Status(IntEnum):
 	math_FunctionError = 2
 	math_DirectionSearchError = 3
 	math_NotBracketed = 4
+math_OK = math_Status.math_OK
+math_TooManyIterations = math_Status.math_TooManyIterations
+math_FunctionError = math_Status.math_FunctionError
+math_DirectionSearchError = math_Status.math_DirectionSearchError
+math_NotBracketed = math_Status.math_NotBracketed
 };
 /* end python proxy for enums */
 

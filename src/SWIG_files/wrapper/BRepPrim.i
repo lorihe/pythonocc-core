@@ -90,6 +90,12 @@ class BRepPrim_Direction(IntEnum):
 	BRepPrim_YMax = 3
 	BRepPrim_ZMin = 4
 	BRepPrim_ZMax = 5
+BRepPrim_XMin = BRepPrim_Direction.BRepPrim_XMin
+BRepPrim_XMax = BRepPrim_Direction.BRepPrim_XMax
+BRepPrim_YMin = BRepPrim_Direction.BRepPrim_YMin
+BRepPrim_YMax = BRepPrim_Direction.BRepPrim_YMax
+BRepPrim_ZMin = BRepPrim_Direction.BRepPrim_ZMin
+BRepPrim_ZMax = BRepPrim_Direction.BRepPrim_ZMax
 };
 /* end python proxy for enums */
 

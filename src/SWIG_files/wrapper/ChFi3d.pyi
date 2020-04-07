@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -24,10 +25,13 @@ from OCC.Core.IntSurf import *
 from OCC.Core.GeomFill import *
 
 
-class ChFi3d_FilletShape:
+class ChFi3d_FilletShape(IntEnum):
 	ChFi3d_Rational: int = ...
 	ChFi3d_QuasiAngular: int = ...
 	ChFi3d_Polynomial: int = ...
+ChFi3d_Rational = ChFi3d_FilletShape.ChFi3d_Rational
+ChFi3d_QuasiAngular = ChFi3d_FilletShape.ChFi3d_QuasiAngular
+ChFi3d_Polynomial = ChFi3d_FilletShape.ChFi3d_Polynomial
 
 class ChFi3d:
 	@staticmethod

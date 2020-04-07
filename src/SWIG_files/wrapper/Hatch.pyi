@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,10 +6,13 @@ from OCC.Core.NCollection import *
 from OCC.Core.gp import *
 
 
-class Hatch_LineForm:
+class Hatch_LineForm(IntEnum):
 	Hatch_XLINE: int = ...
 	Hatch_YLINE: int = ...
 	Hatch_ANYLINE: int = ...
+Hatch_XLINE = Hatch_LineForm.Hatch_XLINE
+Hatch_YLINE = Hatch_LineForm.Hatch_YLINE
+Hatch_ANYLINE = Hatch_LineForm.Hatch_ANYLINE
 
 class Hatch_Hatcher:
 	def __init__(self, Tol: float, Oriented: Optional[bool]) -> None: ...

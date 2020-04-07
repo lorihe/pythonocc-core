@@ -110,11 +110,15 @@ enum StepFEA_UnspecifiedValue {
 
 class StepFEA_ElementVolume(IntEnum):
 	StepFEA_Volume = 0
+StepFEA_Volume = StepFEA_ElementVolume.StepFEA_Volume
 
 class StepFEA_CoordinateSystemType(IntEnum):
 	StepFEA_Cartesian = 0
 	StepFEA_Cylindrical = 1
 	StepFEA_Spherical = 2
+StepFEA_Cartesian = StepFEA_CoordinateSystemType.StepFEA_Cartesian
+StepFEA_Cylindrical = StepFEA_CoordinateSystemType.StepFEA_Cylindrical
+StepFEA_Spherical = StepFEA_CoordinateSystemType.StepFEA_Spherical
 
 class StepFEA_EnumeratedDegreeOfFreedom(IntEnum):
 	StepFEA_XTranslation = 0
@@ -124,12 +128,21 @@ class StepFEA_EnumeratedDegreeOfFreedom(IntEnum):
 	StepFEA_YRotation = 4
 	StepFEA_ZRotation = 5
 	StepFEA_Warp = 6
+StepFEA_XTranslation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_XTranslation
+StepFEA_YTranslation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_YTranslation
+StepFEA_ZTranslation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_ZTranslation
+StepFEA_XRotation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_XRotation
+StepFEA_YRotation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_YRotation
+StepFEA_ZRotation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_ZRotation
+StepFEA_Warp = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_Warp
 
 class StepFEA_CurveEdge(IntEnum):
 	StepFEA_ElementEdge = 0
+StepFEA_ElementEdge = StepFEA_CurveEdge.StepFEA_ElementEdge
 
 class StepFEA_UnspecifiedValue(IntEnum):
 	StepFEA_Unspecified = 0
+StepFEA_Unspecified = StepFEA_UnspecifiedValue.StepFEA_Unspecified
 };
 /* end python proxy for enums */
 

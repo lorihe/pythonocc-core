@@ -112,6 +112,14 @@ class STEPControl_StepModelType(IntEnum):
 	STEPControl_ShellBasedSurfaceModel = 5
 	STEPControl_GeometricCurveSet = 6
 	STEPControl_Hybrid = 7
+STEPControl_AsIs = STEPControl_StepModelType.STEPControl_AsIs
+STEPControl_ManifoldSolidBrep = STEPControl_StepModelType.STEPControl_ManifoldSolidBrep
+STEPControl_BrepWithVoids = STEPControl_StepModelType.STEPControl_BrepWithVoids
+STEPControl_FacetedBrep = STEPControl_StepModelType.STEPControl_FacetedBrep
+STEPControl_FacetedBrepAndBrepWithVoids = STEPControl_StepModelType.STEPControl_FacetedBrepAndBrepWithVoids
+STEPControl_ShellBasedSurfaceModel = STEPControl_StepModelType.STEPControl_ShellBasedSurfaceModel
+STEPControl_GeometricCurveSet = STEPControl_StepModelType.STEPControl_GeometricCurveSet
+STEPControl_Hybrid = STEPControl_StepModelType.STEPControl_Hybrid
 };
 /* end python proxy for enums */
 

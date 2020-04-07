@@ -117,6 +117,24 @@ class VrmlData_ErrorStatus(IntEnum):
 	VrmlData_NonSupportedFeature = 15
 	VrmlData_OutputStreamUndefined = 16
 	VrmlData_NotImplemented = 17
+VrmlData_StatusOK = VrmlData_ErrorStatus.VrmlData_StatusOK
+VrmlData_EmptyData = VrmlData_ErrorStatus.VrmlData_EmptyData
+VrmlData_UnrecoverableError = VrmlData_ErrorStatus.VrmlData_UnrecoverableError
+VrmlData_GeneralError = VrmlData_ErrorStatus.VrmlData_GeneralError
+VrmlData_EndOfFile = VrmlData_ErrorStatus.VrmlData_EndOfFile
+VrmlData_NotVrmlFile = VrmlData_ErrorStatus.VrmlData_NotVrmlFile
+VrmlData_CannotOpenFile = VrmlData_ErrorStatus.VrmlData_CannotOpenFile
+VrmlData_VrmlFormatError = VrmlData_ErrorStatus.VrmlData_VrmlFormatError
+VrmlData_NumericInputError = VrmlData_ErrorStatus.VrmlData_NumericInputError
+VrmlData_IrrelevantNumber = VrmlData_ErrorStatus.VrmlData_IrrelevantNumber
+VrmlData_BooleanInputError = VrmlData_ErrorStatus.VrmlData_BooleanInputError
+VrmlData_StringInputError = VrmlData_ErrorStatus.VrmlData_StringInputError
+VrmlData_NodeNameUnknown = VrmlData_ErrorStatus.VrmlData_NodeNameUnknown
+VrmlData_NonPositiveSize = VrmlData_ErrorStatus.VrmlData_NonPositiveSize
+VrmlData_ReadUnknownNode = VrmlData_ErrorStatus.VrmlData_ReadUnknownNode
+VrmlData_NonSupportedFeature = VrmlData_ErrorStatus.VrmlData_NonSupportedFeature
+VrmlData_OutputStreamUndefined = VrmlData_ErrorStatus.VrmlData_OutputStreamUndefined
+VrmlData_NotImplemented = VrmlData_ErrorStatus.VrmlData_NotImplemented
 };
 /* end python proxy for enums */
 

@@ -87,12 +87,19 @@ class IntSurf_Situation(IntEnum):
 	IntSurf_Inside = 0
 	IntSurf_Outside = 1
 	IntSurf_Unknown = 2
+IntSurf_Inside = IntSurf_Situation.IntSurf_Inside
+IntSurf_Outside = IntSurf_Situation.IntSurf_Outside
+IntSurf_Unknown = IntSurf_Situation.IntSurf_Unknown
 
 class IntSurf_TypeTrans(IntEnum):
 	IntSurf_In = 0
 	IntSurf_Out = 1
 	IntSurf_Touch = 2
 	IntSurf_Undecided = 3
+IntSurf_In = IntSurf_TypeTrans.IntSurf_In
+IntSurf_Out = IntSurf_TypeTrans.IntSurf_Out
+IntSurf_Touch = IntSurf_TypeTrans.IntSurf_Touch
+IntSurf_Undecided = IntSurf_TypeTrans.IntSurf_Undecided
 };
 /* end python proxy for enums */
 

@@ -102,6 +102,8 @@ enum Select3D_TypeOfSensitivity {
 class Select3D_TypeOfSensitivity(IntEnum):
 	Select3D_TOS_INTERIOR = 0
 	Select3D_TOS_BOUNDARY = 1
+Select3D_TOS_INTERIOR = Select3D_TypeOfSensitivity.Select3D_TOS_INTERIOR
+Select3D_TOS_BOUNDARY = Select3D_TypeOfSensitivity.Select3D_TOS_BOUNDARY
 };
 /* end python proxy for enums */
 

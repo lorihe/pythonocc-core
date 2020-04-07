@@ -131,6 +131,10 @@ class StepGeom_KnotType(IntEnum):
 	StepGeom_ktUnspecified = 1
 	StepGeom_ktQuasiUniformKnots = 2
 	StepGeom_ktPiecewiseBezierKnots = 3
+StepGeom_ktUniformKnots = StepGeom_KnotType.StepGeom_ktUniformKnots
+StepGeom_ktUnspecified = StepGeom_KnotType.StepGeom_ktUnspecified
+StepGeom_ktQuasiUniformKnots = StepGeom_KnotType.StepGeom_ktQuasiUniformKnots
+StepGeom_ktPiecewiseBezierKnots = StepGeom_KnotType.StepGeom_ktPiecewiseBezierKnots
 
 class StepGeom_BSplineSurfaceForm(IntEnum):
 	StepGeom_bssfPlaneSurf = 0
@@ -144,6 +148,17 @@ class StepGeom_BSplineSurfaceForm(IntEnum):
 	StepGeom_bssfQuadricSurf = 8
 	StepGeom_bssfSurfOfLinearExtrusion = 9
 	StepGeom_bssfUnspecified = 10
+StepGeom_bssfPlaneSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfPlaneSurf
+StepGeom_bssfCylindricalSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfCylindricalSurf
+StepGeom_bssfConicalSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfConicalSurf
+StepGeom_bssfSphericalSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfSphericalSurf
+StepGeom_bssfToroidalSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfToroidalSurf
+StepGeom_bssfSurfOfRevolution = StepGeom_BSplineSurfaceForm.StepGeom_bssfSurfOfRevolution
+StepGeom_bssfRuledSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfRuledSurf
+StepGeom_bssfGeneralisedCone = StepGeom_BSplineSurfaceForm.StepGeom_bssfGeneralisedCone
+StepGeom_bssfQuadricSurf = StepGeom_BSplineSurfaceForm.StepGeom_bssfQuadricSurf
+StepGeom_bssfSurfOfLinearExtrusion = StepGeom_BSplineSurfaceForm.StepGeom_bssfSurfOfLinearExtrusion
+StepGeom_bssfUnspecified = StepGeom_BSplineSurfaceForm.StepGeom_bssfUnspecified
 
 class StepGeom_BSplineCurveForm(IntEnum):
 	StepGeom_bscfPolylineForm = 0
@@ -152,22 +167,38 @@ class StepGeom_BSplineCurveForm(IntEnum):
 	StepGeom_bscfParabolicArc = 3
 	StepGeom_bscfHyperbolicArc = 4
 	StepGeom_bscfUnspecified = 5
+StepGeom_bscfPolylineForm = StepGeom_BSplineCurveForm.StepGeom_bscfPolylineForm
+StepGeom_bscfCircularArc = StepGeom_BSplineCurveForm.StepGeom_bscfCircularArc
+StepGeom_bscfEllipticArc = StepGeom_BSplineCurveForm.StepGeom_bscfEllipticArc
+StepGeom_bscfParabolicArc = StepGeom_BSplineCurveForm.StepGeom_bscfParabolicArc
+StepGeom_bscfHyperbolicArc = StepGeom_BSplineCurveForm.StepGeom_bscfHyperbolicArc
+StepGeom_bscfUnspecified = StepGeom_BSplineCurveForm.StepGeom_bscfUnspecified
 
 class StepGeom_TrimmingPreference(IntEnum):
 	StepGeom_tpCartesian = 0
 	StepGeom_tpParameter = 1
 	StepGeom_tpUnspecified = 2
+StepGeom_tpCartesian = StepGeom_TrimmingPreference.StepGeom_tpCartesian
+StepGeom_tpParameter = StepGeom_TrimmingPreference.StepGeom_tpParameter
+StepGeom_tpUnspecified = StepGeom_TrimmingPreference.StepGeom_tpUnspecified
 
 class StepGeom_PreferredSurfaceCurveRepresentation(IntEnum):
 	StepGeom_pscrCurve3d = 0
 	StepGeom_pscrPcurveS1 = 1
 	StepGeom_pscrPcurveS2 = 2
+StepGeom_pscrCurve3d = StepGeom_PreferredSurfaceCurveRepresentation.StepGeom_pscrCurve3d
+StepGeom_pscrPcurveS1 = StepGeom_PreferredSurfaceCurveRepresentation.StepGeom_pscrPcurveS1
+StepGeom_pscrPcurveS2 = StepGeom_PreferredSurfaceCurveRepresentation.StepGeom_pscrPcurveS2
 
 class StepGeom_TransitionCode(IntEnum):
 	StepGeom_tcDiscontinuous = 0
 	StepGeom_tcContinuous = 1
 	StepGeom_tcContSameGradient = 2
 	StepGeom_tcContSameGradientSameCurvature = 3
+StepGeom_tcDiscontinuous = StepGeom_TransitionCode.StepGeom_tcDiscontinuous
+StepGeom_tcContinuous = StepGeom_TransitionCode.StepGeom_tcContinuous
+StepGeom_tcContSameGradient = StepGeom_TransitionCode.StepGeom_tcContSameGradient
+StepGeom_tcContSameGradientSameCurvature = StepGeom_TransitionCode.StepGeom_tcContSameGradientSameCurvature
 };
 /* end python proxy for enums */
 

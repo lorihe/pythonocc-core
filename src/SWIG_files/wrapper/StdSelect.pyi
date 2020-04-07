@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -17,15 +18,19 @@ from OCC.Core.TColgp import *
 from OCC.Core.Image import *
 
 
-class StdSelect_TypeOfResult:
+class StdSelect_TypeOfResult(IntEnum):
 	StdSelect_TOR_SIMPLE: int = ...
 	StdSelect_TOR_MULTIPLE: int = ...
+StdSelect_TOR_SIMPLE = StdSelect_TypeOfResult.StdSelect_TOR_SIMPLE
+StdSelect_TOR_MULTIPLE = StdSelect_TypeOfResult.StdSelect_TOR_MULTIPLE
 
-class StdSelect_SensitivityMode:
+class StdSelect_SensitivityMode(IntEnum):
 	StdSelect_SM_WINDOW: int = ...
 	StdSelect_SM_VIEW: int = ...
+StdSelect_SM_WINDOW = StdSelect_SensitivityMode.StdSelect_SM_WINDOW
+StdSelect_SM_VIEW = StdSelect_SensitivityMode.StdSelect_SM_VIEW
 
-class StdSelect_TypeOfFace:
+class StdSelect_TypeOfFace(IntEnum):
 	StdSelect_AnyFace: int = ...
 	StdSelect_Plane: int = ...
 	StdSelect_Cylinder: int = ...
@@ -33,18 +38,31 @@ class StdSelect_TypeOfFace:
 	StdSelect_Torus: int = ...
 	StdSelect_Revol: int = ...
 	StdSelect_Cone: int = ...
+StdSelect_AnyFace = StdSelect_TypeOfFace.StdSelect_AnyFace
+StdSelect_Plane = StdSelect_TypeOfFace.StdSelect_Plane
+StdSelect_Cylinder = StdSelect_TypeOfFace.StdSelect_Cylinder
+StdSelect_Sphere = StdSelect_TypeOfFace.StdSelect_Sphere
+StdSelect_Torus = StdSelect_TypeOfFace.StdSelect_Torus
+StdSelect_Revol = StdSelect_TypeOfFace.StdSelect_Revol
+StdSelect_Cone = StdSelect_TypeOfFace.StdSelect_Cone
 
-class StdSelect_TypeOfEdge:
+class StdSelect_TypeOfEdge(IntEnum):
 	StdSelect_AnyEdge: int = ...
 	StdSelect_Line: int = ...
 	StdSelect_Circle: int = ...
+StdSelect_AnyEdge = StdSelect_TypeOfEdge.StdSelect_AnyEdge
+StdSelect_Line = StdSelect_TypeOfEdge.StdSelect_Line
+StdSelect_Circle = StdSelect_TypeOfEdge.StdSelect_Circle
 
-class StdSelect_DisplayMode:
+class StdSelect_DisplayMode(IntEnum):
 	StdSelect_DM_Wireframe: int = ...
 	StdSelect_DM_Shading: int = ...
 	StdSelect_DM_HLR: int = ...
+StdSelect_DM_Wireframe = StdSelect_DisplayMode.StdSelect_DM_Wireframe
+StdSelect_DM_Shading = StdSelect_DisplayMode.StdSelect_DM_Shading
+StdSelect_DM_HLR = StdSelect_DisplayMode.StdSelect_DM_HLR
 
-class StdSelect_TypeOfSelectionImage:
+class StdSelect_TypeOfSelectionImage(IntEnum):
 	StdSelect_TypeOfSelectionImage_NormalizedDepth: int = ...
 	StdSelect_TypeOfSelectionImage_NormalizedDepthInverted: int = ...
 	StdSelect_TypeOfSelectionImage_UnnormalizedDepth: int = ...
@@ -52,6 +70,13 @@ class StdSelect_TypeOfSelectionImage:
 	StdSelect_TypeOfSelectionImage_ColoredEntity: int = ...
 	StdSelect_TypeOfSelectionImage_ColoredOwner: int = ...
 	StdSelect_TypeOfSelectionImage_ColoredSelectionMode: int = ...
+StdSelect_TypeOfSelectionImage_NormalizedDepth = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_NormalizedDepth
+StdSelect_TypeOfSelectionImage_NormalizedDepthInverted = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_NormalizedDepthInverted
+StdSelect_TypeOfSelectionImage_UnnormalizedDepth = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_UnnormalizedDepth
+StdSelect_TypeOfSelectionImage_ColoredDetectedObject = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_ColoredDetectedObject
+StdSelect_TypeOfSelectionImage_ColoredEntity = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_ColoredEntity
+StdSelect_TypeOfSelectionImage_ColoredOwner = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_ColoredOwner
+StdSelect_TypeOfSelectionImage_ColoredSelectionMode = StdSelect_TypeOfSelectionImage.StdSelect_TypeOfSelectionImage_ColoredSelectionMode
 
 class StdSelect:
 	@staticmethod

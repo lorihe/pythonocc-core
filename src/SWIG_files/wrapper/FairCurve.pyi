@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,11 +10,15 @@ from OCC.Core.TColgp import *
 from OCC.Core.TColStd import *
 
 
-class FairCurve_AnalysisCode:
+class FairCurve_AnalysisCode(IntEnum):
 	FairCurve_OK: int = ...
 	FairCurve_NotConverged: int = ...
 	FairCurve_InfiniteSliding: int = ...
 	FairCurve_NullHeight: int = ...
+FairCurve_OK = FairCurve_AnalysisCode.FairCurve_OK
+FairCurve_NotConverged = FairCurve_AnalysisCode.FairCurve_NotConverged
+FairCurve_InfiniteSliding = FairCurve_AnalysisCode.FairCurve_InfiniteSliding
+FairCurve_NullHeight = FairCurve_AnalysisCode.FairCurve_NullHeight
 
 class FairCurve_Batten:
 	def __init__(self, P1: gp_Pnt2d, P2: gp_Pnt2d, Height: float, Slope: Optional[float]) -> None: ...

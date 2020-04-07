@@ -83,6 +83,11 @@ class LocalAnalysis_StatusErrorType(IntEnum):
 	LocalAnalysis_TangentNotDefined = 2
 	LocalAnalysis_NormalNotDefined = 3
 	LocalAnalysis_CurvatureNotDefined = 4
+LocalAnalysis_NullFirstDerivative = LocalAnalysis_StatusErrorType.LocalAnalysis_NullFirstDerivative
+LocalAnalysis_NullSecondDerivative = LocalAnalysis_StatusErrorType.LocalAnalysis_NullSecondDerivative
+LocalAnalysis_TangentNotDefined = LocalAnalysis_StatusErrorType.LocalAnalysis_TangentNotDefined
+LocalAnalysis_NormalNotDefined = LocalAnalysis_StatusErrorType.LocalAnalysis_NormalNotDefined
+LocalAnalysis_CurvatureNotDefined = LocalAnalysis_StatusErrorType.LocalAnalysis_CurvatureNotDefined
 };
 /* end python proxy for enums */
 

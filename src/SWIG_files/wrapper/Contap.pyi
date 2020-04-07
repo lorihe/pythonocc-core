@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -12,17 +13,25 @@ from OCC.Core.Geom2d import *
 from OCC.Core.TColStd import *
 
 
-class Contap_IType:
+class Contap_IType(IntEnum):
 	Contap_Lin: int = ...
 	Contap_Circle: int = ...
 	Contap_Walking: int = ...
 	Contap_Restriction: int = ...
+Contap_Lin = Contap_IType.Contap_Lin
+Contap_Circle = Contap_IType.Contap_Circle
+Contap_Walking = Contap_IType.Contap_Walking
+Contap_Restriction = Contap_IType.Contap_Restriction
 
-class Contap_TFunction:
+class Contap_TFunction(IntEnum):
 	Contap_ContourStd: int = ...
 	Contap_ContourPrs: int = ...
 	Contap_DraftStd: int = ...
 	Contap_DraftPrs: int = ...
+Contap_ContourStd = Contap_TFunction.Contap_ContourStd
+Contap_ContourPrs = Contap_TFunction.Contap_ContourPrs
+Contap_DraftStd = Contap_TFunction.Contap_DraftStd
+Contap_DraftPrs = Contap_TFunction.Contap_DraftPrs
 
 class Contap_ArcFunction(math_FunctionWithDerivative):
 	def __init__(self) -> None: ...

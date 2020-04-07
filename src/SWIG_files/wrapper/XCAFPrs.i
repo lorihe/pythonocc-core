@@ -109,6 +109,9 @@ enum  {
 
 /* python proy classes for enums */
 %pythoncode {
+XCAFPrs_DocumentExplorerFlags_None = .XCAFPrs_DocumentExplorerFlags_None
+XCAFPrs_DocumentExplorerFlags_OnlyLeafNodes = .XCAFPrs_DocumentExplorerFlags_OnlyLeafNodes
+XCAFPrs_DocumentExplorerFlags_NoStyle = .XCAFPrs_DocumentExplorerFlags_NoStyle
 };
 /* end python proxy for enums */
 

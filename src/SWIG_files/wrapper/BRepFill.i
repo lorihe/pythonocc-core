@@ -125,11 +125,17 @@ class BRepFill_TypeOfContact(IntEnum):
 	BRepFill_NoContact = 0
 	BRepFill_Contact = 1
 	BRepFill_ContactOnBorder = 2
+BRepFill_NoContact = BRepFill_TypeOfContact.BRepFill_NoContact
+BRepFill_Contact = BRepFill_TypeOfContact.BRepFill_Contact
+BRepFill_ContactOnBorder = BRepFill_TypeOfContact.BRepFill_ContactOnBorder
 
 class BRepFill_TransitionStyle(IntEnum):
 	BRepFill_Modified = 0
 	BRepFill_Right = 1
 	BRepFill_Round = 2
+BRepFill_Modified = BRepFill_TransitionStyle.BRepFill_Modified
+BRepFill_Right = BRepFill_TransitionStyle.BRepFill_Right
+BRepFill_Round = BRepFill_TransitionStyle.BRepFill_Round
 };
 /* end python proxy for enums */
 

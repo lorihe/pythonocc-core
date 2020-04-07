@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -12,13 +13,19 @@ from OCC.Core.GeomAbs import *
 from OCC.Core.TColStd import *
 
 
-class BiTgte_ContactType:
+class BiTgte_ContactType(IntEnum):
 	BiTgte_FaceFace: int = ...
 	BiTgte_FaceEdge: int = ...
 	BiTgte_FaceVertex: int = ...
 	BiTgte_EdgeEdge: int = ...
 	BiTgte_EdgeVertex: int = ...
 	BiTgte_VertexVertex: int = ...
+BiTgte_FaceFace = BiTgte_ContactType.BiTgte_FaceFace
+BiTgte_FaceEdge = BiTgte_ContactType.BiTgte_FaceEdge
+BiTgte_FaceVertex = BiTgte_ContactType.BiTgte_FaceVertex
+BiTgte_EdgeEdge = BiTgte_ContactType.BiTgte_EdgeEdge
+BiTgte_EdgeVertex = BiTgte_ContactType.BiTgte_EdgeVertex
+BiTgte_VertexVertex = BiTgte_ContactType.BiTgte_VertexVertex
 
 class BiTgte_Blend:
 	@overload

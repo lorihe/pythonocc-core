@@ -99,6 +99,9 @@ class LocOpe_Operation(IntEnum):
 	LocOpe_FUSE = 0
 	LocOpe_CUT = 1
 	LocOpe_INVALID = 2
+LocOpe_FUSE = LocOpe_Operation.LocOpe_FUSE
+LocOpe_CUT = LocOpe_Operation.LocOpe_CUT
+LocOpe_INVALID = LocOpe_Operation.LocOpe_INVALID
 };
 /* end python proxy for enums */
 

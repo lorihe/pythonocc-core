@@ -582,6 +582,9 @@ class TRelationType(IntEnum):
 	TRelationType_Removed = 0
 	TRelationType_Generated = 1
 	TRelationType_Modified = 2
+TRelationType_Removed = TRelationType.TRelationType_Removed
+TRelationType_Generated = TRelationType.TRelationType_Generated
+TRelationType_Modified = TRelationType.TRelationType_Modified
 };
 /* end python proxy for enums */
 

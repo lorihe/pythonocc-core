@@ -95,6 +95,10 @@ class BlendFunc_SectionShape(IntEnum):
 	BlendFunc_QuasiAngular = 1
 	BlendFunc_Polynomial = 2
 	BlendFunc_Linear = 3
+BlendFunc_Rational = BlendFunc_SectionShape.BlendFunc_Rational
+BlendFunc_QuasiAngular = BlendFunc_SectionShape.BlendFunc_QuasiAngular
+BlendFunc_Polynomial = BlendFunc_SectionShape.BlendFunc_Polynomial
+BlendFunc_Linear = BlendFunc_SectionShape.BlendFunc_Linear
 };
 /* end python proxy for enums */
 

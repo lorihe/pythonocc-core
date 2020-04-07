@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,7 +6,7 @@ from OCC.Core.NCollection import *
 from OCC.Core.gp import *
 
 
-class gce_ErrorType:
+class gce_ErrorType(IntEnum):
 	gce_Done: int = ...
 	gce_ConfusedPoints: int = ...
 	gce_NegativeRadius: int = ...
@@ -20,6 +21,20 @@ class gce_ErrorType:
 	gce_NullFocusLength: int = ...
 	gce_NullVector: int = ...
 	gce_BadEquation: int = ...
+gce_Done = gce_ErrorType.gce_Done
+gce_ConfusedPoints = gce_ErrorType.gce_ConfusedPoints
+gce_NegativeRadius = gce_ErrorType.gce_NegativeRadius
+gce_ColinearPoints = gce_ErrorType.gce_ColinearPoints
+gce_IntersectionError = gce_ErrorType.gce_IntersectionError
+gce_NullAxis = gce_ErrorType.gce_NullAxis
+gce_NullAngle = gce_ErrorType.gce_NullAngle
+gce_NullRadius = gce_ErrorType.gce_NullRadius
+gce_InvertAxis = gce_ErrorType.gce_InvertAxis
+gce_BadAngle = gce_ErrorType.gce_BadAngle
+gce_InvertRadius = gce_ErrorType.gce_InvertRadius
+gce_NullFocusLength = gce_ErrorType.gce_NullFocusLength
+gce_NullVector = gce_ErrorType.gce_NullVector
+gce_BadEquation = gce_ErrorType.gce_BadEquation
 
 class gce_MakeMirror:
 	@overload

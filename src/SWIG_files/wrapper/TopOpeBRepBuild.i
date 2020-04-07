@@ -101,6 +101,9 @@ class TopOpeBRepBuild_LoopEnum(IntEnum):
 	TopOpeBRepBuild_ANYLOOP = 0
 	TopOpeBRepBuild_BOUNDARY = 1
 	TopOpeBRepBuild_BLOCK = 2
+TopOpeBRepBuild_ANYLOOP = TopOpeBRepBuild_LoopEnum.TopOpeBRepBuild_ANYLOOP
+TopOpeBRepBuild_BOUNDARY = TopOpeBRepBuild_LoopEnum.TopOpeBRepBuild_BOUNDARY
+TopOpeBRepBuild_BLOCK = TopOpeBRepBuild_LoopEnum.TopOpeBRepBuild_BLOCK
 };
 /* end python proxy for enums */
 

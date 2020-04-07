@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,7 +9,7 @@ from OCC.Core.TopAbs import *
 from OCC.Core.BRepAdaptor import *
 
 
-class IMeshData_Status:
+class IMeshData_Status(IntEnum):
 	IMeshData_NoError: int = ...
 	IMeshData_OpenWire: int = ...
 	IMeshData_SelfIntersectingWire: int = ...
@@ -18,6 +19,15 @@ class IMeshData_Status:
 	IMeshData_TooFewPoints: int = ...
 	IMeshData_Outdated: int = ...
 	IMeshData_Reused: int = ...
+IMeshData_NoError = IMeshData_Status.IMeshData_NoError
+IMeshData_OpenWire = IMeshData_Status.IMeshData_OpenWire
+IMeshData_SelfIntersectingWire = IMeshData_Status.IMeshData_SelfIntersectingWire
+IMeshData_Failure = IMeshData_Status.IMeshData_Failure
+IMeshData_ReMesh = IMeshData_Status.IMeshData_ReMesh
+IMeshData_UnorientedWire = IMeshData_Status.IMeshData_UnorientedWire
+IMeshData_TooFewPoints = IMeshData_Status.IMeshData_TooFewPoints
+IMeshData_Outdated = IMeshData_Status.IMeshData_Outdated
+IMeshData_Reused = IMeshData_Status.IMeshData_Reused
 
 class IMeshData_ParametersList(Standard_Transient):
 	def Clear(self, isKeepEndPoints: bool) -> None: ...

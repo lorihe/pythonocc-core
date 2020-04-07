@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,28 +9,39 @@ from OCC.Core.StepData import *
 from OCC.Core.TColStd import *
 
 
-class StepElement_ElementVolume:
+class StepElement_ElementVolume(IntEnum):
 	StepElement_Volume: int = ...
+StepElement_Volume = StepElement_ElementVolume.StepElement_Volume
 
-class StepElement_CurveEdge:
+class StepElement_CurveEdge(IntEnum):
 	StepElement_ElementEdge: int = ...
+StepElement_ElementEdge = StepElement_CurveEdge.StepElement_ElementEdge
 
-class StepElement_Volume3dElementShape:
+class StepElement_Volume3dElementShape(IntEnum):
 	StepElement_Hexahedron: int = ...
 	StepElement_Wedge: int = ...
 	StepElement_Tetrahedron: int = ...
 	StepElement_Pyramid: int = ...
+StepElement_Hexahedron = StepElement_Volume3dElementShape.StepElement_Hexahedron
+StepElement_Wedge = StepElement_Volume3dElementShape.StepElement_Wedge
+StepElement_Tetrahedron = StepElement_Volume3dElementShape.StepElement_Tetrahedron
+StepElement_Pyramid = StepElement_Volume3dElementShape.StepElement_Pyramid
 
-class StepElement_ElementOrder:
+class StepElement_ElementOrder(IntEnum):
 	StepElement_Linear: int = ...
 	StepElement_Quadratic: int = ...
 	StepElement_Cubic: int = ...
+StepElement_Linear = StepElement_ElementOrder.StepElement_Linear
+StepElement_Quadratic = StepElement_ElementOrder.StepElement_Quadratic
+StepElement_Cubic = StepElement_ElementOrder.StepElement_Cubic
 
-class StepElement_Element2dShape:
+class StepElement_Element2dShape(IntEnum):
 	StepElement_Quadrilateral: int = ...
 	StepElement_Triangle: int = ...
+StepElement_Quadrilateral = StepElement_Element2dShape.StepElement_Quadrilateral
+StepElement_Triangle = StepElement_Element2dShape.StepElement_Triangle
 
-class StepElement_EnumeratedCurveElementFreedom:
+class StepElement_EnumeratedCurveElementFreedom(IntEnum):
 	StepElement_XTranslation: int = ...
 	StepElement_YTranslation: int = ...
 	StepElement_ZTranslation: int = ...
@@ -38,21 +50,36 @@ class StepElement_EnumeratedCurveElementFreedom:
 	StepElement_ZRotation: int = ...
 	StepElement_Warp: int = ...
 	StepElement_None: int = ...
+StepElement_XTranslation = StepElement_EnumeratedCurveElementFreedom.StepElement_XTranslation
+StepElement_YTranslation = StepElement_EnumeratedCurveElementFreedom.StepElement_YTranslation
+StepElement_ZTranslation = StepElement_EnumeratedCurveElementFreedom.StepElement_ZTranslation
+StepElement_XRotation = StepElement_EnumeratedCurveElementFreedom.StepElement_XRotation
+StepElement_YRotation = StepElement_EnumeratedCurveElementFreedom.StepElement_YRotation
+StepElement_ZRotation = StepElement_EnumeratedCurveElementFreedom.StepElement_ZRotation
+StepElement_Warp = StepElement_EnumeratedCurveElementFreedom.StepElement_Warp
+StepElement_None = StepElement_EnumeratedCurveElementFreedom.StepElement_None
 
-class StepElement_EnumeratedVolumeElementPurpose:
+class StepElement_EnumeratedVolumeElementPurpose(IntEnum):
 	StepElement_StressDisplacement: int = ...
+StepElement_StressDisplacement = StepElement_EnumeratedVolumeElementPurpose.StepElement_StressDisplacement
 
-class StepElement_EnumeratedSurfaceElementPurpose:
+class StepElement_EnumeratedSurfaceElementPurpose(IntEnum):
 	StepElement_MembraneDirect: int = ...
 	StepElement_MembraneShear: int = ...
 	StepElement_BendingDirect: int = ...
 	StepElement_BendingTorsion: int = ...
 	StepElement_NormalToPlaneShear: int = ...
+StepElement_MembraneDirect = StepElement_EnumeratedSurfaceElementPurpose.StepElement_MembraneDirect
+StepElement_MembraneShear = StepElement_EnumeratedSurfaceElementPurpose.StepElement_MembraneShear
+StepElement_BendingDirect = StepElement_EnumeratedSurfaceElementPurpose.StepElement_BendingDirect
+StepElement_BendingTorsion = StepElement_EnumeratedSurfaceElementPurpose.StepElement_BendingTorsion
+StepElement_NormalToPlaneShear = StepElement_EnumeratedSurfaceElementPurpose.StepElement_NormalToPlaneShear
 
-class StepElement_UnspecifiedValue:
+class StepElement_UnspecifiedValue(IntEnum):
 	StepElement_Unspecified: int = ...
+StepElement_Unspecified = StepElement_UnspecifiedValue.StepElement_Unspecified
 
-class StepElement_EnumeratedCurveElementPurpose:
+class StepElement_EnumeratedCurveElementPurpose(IntEnum):
 	StepElement_Axial: int = ...
 	StepElement_YYBending: int = ...
 	StepElement_ZZBending: int = ...
@@ -60,6 +87,13 @@ class StepElement_EnumeratedCurveElementPurpose:
 	StepElement_XYShear: int = ...
 	StepElement_XZShear: int = ...
 	StepElement_Warping: int = ...
+StepElement_Axial = StepElement_EnumeratedCurveElementPurpose.StepElement_Axial
+StepElement_YYBending = StepElement_EnumeratedCurveElementPurpose.StepElement_YYBending
+StepElement_ZZBending = StepElement_EnumeratedCurveElementPurpose.StepElement_ZZBending
+StepElement_Torsion = StepElement_EnumeratedCurveElementPurpose.StepElement_Torsion
+StepElement_XYShear = StepElement_EnumeratedCurveElementPurpose.StepElement_XYShear
+StepElement_XZShear = StepElement_EnumeratedCurveElementPurpose.StepElement_XZShear
+StepElement_Warping = StepElement_EnumeratedCurveElementPurpose.StepElement_Warping
 
 class StepElement_AnalysisItemWithinRepresentation(Standard_Transient):
 	def __init__(self) -> None: ...

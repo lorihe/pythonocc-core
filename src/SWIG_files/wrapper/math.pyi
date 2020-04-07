@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -7,12 +8,17 @@ from OCC.Core.Message import *
 from OCC.Core.gp import *
 
 
-class math_Status:
+class math_Status(IntEnum):
 	math_OK: int = ...
 	math_TooManyIterations: int = ...
 	math_FunctionError: int = ...
 	math_DirectionSearchError: int = ...
 	math_NotBracketed: int = ...
+math_OK = math_Status.math_OK
+math_TooManyIterations = math_Status.math_TooManyIterations
+math_FunctionError = math_Status.math_FunctionError
+math_DirectionSearchError = math_Status.math_DirectionSearchError
+math_NotBracketed = math_Status.math_NotBracketed
 
 class math:
 	@staticmethod

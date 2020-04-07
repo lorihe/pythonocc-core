@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,7 +11,7 @@ from OCC.Core.GccEnt import *
 from OCC.Core.math import *
 
 
-class Geom2dGcc_Type2:
+class Geom2dGcc_Type2(IntEnum):
 	Geom2dGcc_CuCuOnCu: int = ...
 	Geom2dGcc_CiCuOnCu: int = ...
 	Geom2dGcc_LiCuOnCu: int = ...
@@ -23,18 +24,38 @@ class Geom2dGcc_Type2:
 	Geom2dGcc_CiCuOnCi: int = ...
 	Geom2dGcc_LiCuOnCi: int = ...
 	Geom2dGcc_CuPtOnCi: int = ...
+Geom2dGcc_CuCuOnCu = Geom2dGcc_Type2.Geom2dGcc_CuCuOnCu
+Geom2dGcc_CiCuOnCu = Geom2dGcc_Type2.Geom2dGcc_CiCuOnCu
+Geom2dGcc_LiCuOnCu = Geom2dGcc_Type2.Geom2dGcc_LiCuOnCu
+Geom2dGcc_CuPtOnCu = Geom2dGcc_Type2.Geom2dGcc_CuPtOnCu
+Geom2dGcc_CuCuOnLi = Geom2dGcc_Type2.Geom2dGcc_CuCuOnLi
+Geom2dGcc_CiCuOnLi = Geom2dGcc_Type2.Geom2dGcc_CiCuOnLi
+Geom2dGcc_LiCuOnLi = Geom2dGcc_Type2.Geom2dGcc_LiCuOnLi
+Geom2dGcc_CuPtOnLi = Geom2dGcc_Type2.Geom2dGcc_CuPtOnLi
+Geom2dGcc_CuCuOnCi = Geom2dGcc_Type2.Geom2dGcc_CuCuOnCi
+Geom2dGcc_CiCuOnCi = Geom2dGcc_Type2.Geom2dGcc_CiCuOnCi
+Geom2dGcc_LiCuOnCi = Geom2dGcc_Type2.Geom2dGcc_LiCuOnCi
+Geom2dGcc_CuPtOnCi = Geom2dGcc_Type2.Geom2dGcc_CuPtOnCi
 
-class Geom2dGcc_Type3:
+class Geom2dGcc_Type3(IntEnum):
 	Geom2dGcc_CuCu: int = ...
 	Geom2dGcc_CiCu: int = ...
+Geom2dGcc_CuCu = Geom2dGcc_Type3.Geom2dGcc_CuCu
+Geom2dGcc_CiCu = Geom2dGcc_Type3.Geom2dGcc_CiCu
 
-class Geom2dGcc_Type1:
+class Geom2dGcc_Type1(IntEnum):
 	Geom2dGcc_CuCuCu: int = ...
 	Geom2dGcc_CiCuCu: int = ...
 	Geom2dGcc_CiCiCu: int = ...
 	Geom2dGcc_CiLiCu: int = ...
 	Geom2dGcc_LiLiCu: int = ...
 	Geom2dGcc_LiCuCu: int = ...
+Geom2dGcc_CuCuCu = Geom2dGcc_Type1.Geom2dGcc_CuCuCu
+Geom2dGcc_CiCuCu = Geom2dGcc_Type1.Geom2dGcc_CiCuCu
+Geom2dGcc_CiCiCu = Geom2dGcc_Type1.Geom2dGcc_CiCiCu
+Geom2dGcc_CiLiCu = Geom2dGcc_Type1.Geom2dGcc_CiLiCu
+Geom2dGcc_LiLiCu = Geom2dGcc_Type1.Geom2dGcc_LiLiCu
+Geom2dGcc_LiCuCu = Geom2dGcc_Type1.Geom2dGcc_LiCuCu
 
 class Geom2dGcc:
 	@staticmethod

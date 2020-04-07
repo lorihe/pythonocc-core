@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -18,7 +19,7 @@ BOPAlgo_PPaveFiller = NewType('BOPAlgo_PPaveFiller', BOPAlgo_PaveFiller)
 BOPAlgo_PSection = NewType('BOPAlgo_PSection', BOPAlgo_Section)
 BOPAlgo_PWireEdgeSet = NewType('BOPAlgo_PWireEdgeSet', BOPAlgo_WireEdgeSet)
 
-class BOPAlgo_CheckStatus:
+class BOPAlgo_CheckStatus(IntEnum):
 	BOPAlgo_CheckUnknown: int = ...
 	BOPAlgo_BadType: int = ...
 	BOPAlgo_SelfIntersect: int = ...
@@ -31,19 +32,40 @@ class BOPAlgo_CheckStatus:
 	BOPAlgo_GeomAbs_C0: int = ...
 	BOPAlgo_InvalidCurveOnSurface: int = ...
 	BOPAlgo_NotValid: int = ...
+BOPAlgo_CheckUnknown = BOPAlgo_CheckStatus.BOPAlgo_CheckUnknown
+BOPAlgo_BadType = BOPAlgo_CheckStatus.BOPAlgo_BadType
+BOPAlgo_SelfIntersect = BOPAlgo_CheckStatus.BOPAlgo_SelfIntersect
+BOPAlgo_TooSmallEdge = BOPAlgo_CheckStatus.BOPAlgo_TooSmallEdge
+BOPAlgo_NonRecoverableFace = BOPAlgo_CheckStatus.BOPAlgo_NonRecoverableFace
+BOPAlgo_IncompatibilityOfVertex = BOPAlgo_CheckStatus.BOPAlgo_IncompatibilityOfVertex
+BOPAlgo_IncompatibilityOfEdge = BOPAlgo_CheckStatus.BOPAlgo_IncompatibilityOfEdge
+BOPAlgo_IncompatibilityOfFace = BOPAlgo_CheckStatus.BOPAlgo_IncompatibilityOfFace
+BOPAlgo_OperationAborted = BOPAlgo_CheckStatus.BOPAlgo_OperationAborted
+BOPAlgo_GeomAbs_C0 = BOPAlgo_CheckStatus.BOPAlgo_GeomAbs_C0
+BOPAlgo_InvalidCurveOnSurface = BOPAlgo_CheckStatus.BOPAlgo_InvalidCurveOnSurface
+BOPAlgo_NotValid = BOPAlgo_CheckStatus.BOPAlgo_NotValid
 
-class BOPAlgo_Operation:
+class BOPAlgo_Operation(IntEnum):
 	BOPAlgo_COMMON: int = ...
 	BOPAlgo_FUSE: int = ...
 	BOPAlgo_CUT: int = ...
 	BOPAlgo_CUT21: int = ...
 	BOPAlgo_SECTION: int = ...
 	BOPAlgo_UNKNOWN: int = ...
+BOPAlgo_COMMON = BOPAlgo_Operation.BOPAlgo_COMMON
+BOPAlgo_FUSE = BOPAlgo_Operation.BOPAlgo_FUSE
+BOPAlgo_CUT = BOPAlgo_Operation.BOPAlgo_CUT
+BOPAlgo_CUT21 = BOPAlgo_Operation.BOPAlgo_CUT21
+BOPAlgo_SECTION = BOPAlgo_Operation.BOPAlgo_SECTION
+BOPAlgo_UNKNOWN = BOPAlgo_Operation.BOPAlgo_UNKNOWN
 
-class BOPAlgo_GlueEnum:
+class BOPAlgo_GlueEnum(IntEnum):
 	BOPAlgo_GlueOff: int = ...
 	BOPAlgo_GlueShift: int = ...
 	BOPAlgo_GlueFull: int = ...
+BOPAlgo_GlueOff = BOPAlgo_GlueEnum.BOPAlgo_GlueOff
+BOPAlgo_GlueShift = BOPAlgo_GlueEnum.BOPAlgo_GlueShift
+BOPAlgo_GlueFull = BOPAlgo_GlueEnum.BOPAlgo_GlueFull
 
 class BOPAlgo_CheckResult:
 	def __init__(self) -> None: ...

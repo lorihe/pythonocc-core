@@ -93,6 +93,12 @@ class IntWalk_StatusDeflection(IntEnum):
 	IntWalk_ArretSurPointPrecedent = 3
 	IntWalk_ArretSurPoint = 4
 	IntWalk_OK = 5
+IntWalk_PasTropGrand = IntWalk_StatusDeflection.IntWalk_PasTropGrand
+IntWalk_StepTooSmall = IntWalk_StatusDeflection.IntWalk_StepTooSmall
+IntWalk_PointConfondu = IntWalk_StatusDeflection.IntWalk_PointConfondu
+IntWalk_ArretSurPointPrecedent = IntWalk_StatusDeflection.IntWalk_ArretSurPointPrecedent
+IntWalk_ArretSurPoint = IntWalk_StatusDeflection.IntWalk_ArretSurPoint
+IntWalk_OK = IntWalk_StatusDeflection.IntWalk_OK
 };
 /* end python proxy for enums */
 

@@ -92,6 +92,10 @@ class RWObj_SubMeshReason(IntEnum):
 	RWObj_SubMeshReason_NewGroup = 1
 	RWObj_SubMeshReason_NewMaterial = 2
 	RWObj_SubMeshReason_NewSmoothGroup = 3
+RWObj_SubMeshReason_NewObject = RWObj_SubMeshReason.RWObj_SubMeshReason_NewObject
+RWObj_SubMeshReason_NewGroup = RWObj_SubMeshReason.RWObj_SubMeshReason_NewGroup
+RWObj_SubMeshReason_NewMaterial = RWObj_SubMeshReason.RWObj_SubMeshReason_NewMaterial
+RWObj_SubMeshReason_NewSmoothGroup = RWObj_SubMeshReason.RWObj_SubMeshReason_NewSmoothGroup
 };
 /* end python proxy for enums */
 

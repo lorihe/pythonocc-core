@@ -87,6 +87,9 @@ class BRepExtrema_SupportType(IntEnum):
 	BRepExtrema_IsVertex = 0
 	BRepExtrema_IsOnEdge = 1
 	BRepExtrema_IsInFace = 2
+BRepExtrema_IsVertex = BRepExtrema_SupportType.BRepExtrema_IsVertex
+BRepExtrema_IsOnEdge = BRepExtrema_SupportType.BRepExtrema_IsOnEdge
+BRepExtrema_IsInFace = BRepExtrema_SupportType.BRepExtrema_IsInFace
 };
 /* end python proxy for enums */
 
@@ -599,6 +602,9 @@ class FilterResult(IntEnum):
 	NoCheck = 0
 	Overlap = 1
 	DoCheck = 2
+NoCheck = FilterResult.NoCheck
+Overlap = FilterResult.Overlap
+DoCheck = FilterResult.DoCheck
 };
 /* end python proxy for enums */
 

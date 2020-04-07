@@ -92,11 +92,17 @@ class StepShape_AngleRelator(IntEnum):
 	StepShape_Equal = 0
 	StepShape_Large = 1
 	StepShape_Small = 2
+StepShape_Equal = StepShape_AngleRelator.StepShape_Equal
+StepShape_Large = StepShape_AngleRelator.StepShape_Large
+StepShape_Small = StepShape_AngleRelator.StepShape_Small
 
 class StepShape_BooleanOperator(IntEnum):
 	StepShape_boDifference = 0
 	StepShape_boIntersection = 1
 	StepShape_boUnion = 2
+StepShape_boDifference = StepShape_BooleanOperator.StepShape_boDifference
+StepShape_boIntersection = StepShape_BooleanOperator.StepShape_boIntersection
+StepShape_boUnion = StepShape_BooleanOperator.StepShape_boUnion
 };
 /* end python proxy for enums */
 

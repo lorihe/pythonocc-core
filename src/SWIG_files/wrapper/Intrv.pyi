@@ -1,10 +1,11 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 
 
-class Intrv_Position:
+class Intrv_Position(IntEnum):
 	Intrv_Before: int = ...
 	Intrv_JustBefore: int = ...
 	Intrv_OverlappingAtStart: int = ...
@@ -18,6 +19,19 @@ class Intrv_Position:
 	Intrv_OverlappingAtEnd: int = ...
 	Intrv_JustAfter: int = ...
 	Intrv_After: int = ...
+Intrv_Before = Intrv_Position.Intrv_Before
+Intrv_JustBefore = Intrv_Position.Intrv_JustBefore
+Intrv_OverlappingAtStart = Intrv_Position.Intrv_OverlappingAtStart
+Intrv_JustEnclosingAtEnd = Intrv_Position.Intrv_JustEnclosingAtEnd
+Intrv_Enclosing = Intrv_Position.Intrv_Enclosing
+Intrv_JustOverlappingAtStart = Intrv_Position.Intrv_JustOverlappingAtStart
+Intrv_Similar = Intrv_Position.Intrv_Similar
+Intrv_JustEnclosingAtStart = Intrv_Position.Intrv_JustEnclosingAtStart
+Intrv_Inside = Intrv_Position.Intrv_Inside
+Intrv_JustOverlappingAtEnd = Intrv_Position.Intrv_JustOverlappingAtEnd
+Intrv_OverlappingAtEnd = Intrv_Position.Intrv_OverlappingAtEnd
+Intrv_JustAfter = Intrv_Position.Intrv_JustAfter
+Intrv_After = Intrv_Position.Intrv_After
 
 class Intrv_Interval:
 	@overload

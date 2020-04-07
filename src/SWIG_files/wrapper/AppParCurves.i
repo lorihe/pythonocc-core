@@ -81,6 +81,10 @@ class AppParCurves_Constraint(IntEnum):
 	AppParCurves_PassPoint = 1
 	AppParCurves_TangencyPoint = 2
 	AppParCurves_CurvaturePoint = 3
+AppParCurves_NoConstraint = AppParCurves_Constraint.AppParCurves_NoConstraint
+AppParCurves_PassPoint = AppParCurves_Constraint.AppParCurves_PassPoint
+AppParCurves_TangencyPoint = AppParCurves_Constraint.AppParCurves_TangencyPoint
+AppParCurves_CurvaturePoint = AppParCurves_Constraint.AppParCurves_CurvaturePoint
 };
 /* end python proxy for enums */
 

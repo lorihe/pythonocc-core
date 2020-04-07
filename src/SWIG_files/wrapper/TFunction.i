@@ -78,6 +78,11 @@ class TFunction_ExecutionStatus(IntEnum):
 	TFunction_ES_Executing = 2
 	TFunction_ES_Succeeded = 3
 	TFunction_ES_Failed = 4
+TFunction_ES_WrongDefinition = TFunction_ExecutionStatus.TFunction_ES_WrongDefinition
+TFunction_ES_NotExecuted = TFunction_ExecutionStatus.TFunction_ES_NotExecuted
+TFunction_ES_Executing = TFunction_ExecutionStatus.TFunction_ES_Executing
+TFunction_ES_Succeeded = TFunction_ExecutionStatus.TFunction_ES_Succeeded
+TFunction_ES_Failed = TFunction_ExecutionStatus.TFunction_ES_Failed
 };
 /* end python proxy for enums */
 

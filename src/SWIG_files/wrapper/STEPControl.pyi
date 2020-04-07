@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -16,7 +17,7 @@ from OCC.Core.TColStd import *
 from OCC.Core.StepData import *
 
 
-class STEPControl_StepModelType:
+class STEPControl_StepModelType(IntEnum):
 	STEPControl_AsIs: int = ...
 	STEPControl_ManifoldSolidBrep: int = ...
 	STEPControl_BrepWithVoids: int = ...
@@ -25,6 +26,14 @@ class STEPControl_StepModelType:
 	STEPControl_ShellBasedSurfaceModel: int = ...
 	STEPControl_GeometricCurveSet: int = ...
 	STEPControl_Hybrid: int = ...
+STEPControl_AsIs = STEPControl_StepModelType.STEPControl_AsIs
+STEPControl_ManifoldSolidBrep = STEPControl_StepModelType.STEPControl_ManifoldSolidBrep
+STEPControl_BrepWithVoids = STEPControl_StepModelType.STEPControl_BrepWithVoids
+STEPControl_FacetedBrep = STEPControl_StepModelType.STEPControl_FacetedBrep
+STEPControl_FacetedBrepAndBrepWithVoids = STEPControl_StepModelType.STEPControl_FacetedBrepAndBrepWithVoids
+STEPControl_ShellBasedSurfaceModel = STEPControl_StepModelType.STEPControl_ShellBasedSurfaceModel
+STEPControl_GeometricCurveSet = STEPControl_StepModelType.STEPControl_GeometricCurveSet
+STEPControl_Hybrid = STEPControl_StepModelType.STEPControl_Hybrid
 
 class STEPControl_ActorRead(Transfer_ActorOfTransientProcess):
 	def __init__(self) -> None: ...

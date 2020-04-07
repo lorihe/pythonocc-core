@@ -140,11 +140,17 @@ class StepBasic_Source(IntEnum):
 	StepBasic_sMade = 0
 	StepBasic_sBought = 1
 	StepBasic_sNotKnown = 2
+StepBasic_sMade = StepBasic_Source.StepBasic_sMade
+StepBasic_sBought = StepBasic_Source.StepBasic_sBought
+StepBasic_sNotKnown = StepBasic_Source.StepBasic_sNotKnown
 
 class StepBasic_AheadOrBehind(IntEnum):
 	StepBasic_aobAhead = 0
 	StepBasic_aobExact = 1
 	StepBasic_aobBehind = 2
+StepBasic_aobAhead = StepBasic_AheadOrBehind.StepBasic_aobAhead
+StepBasic_aobExact = StepBasic_AheadOrBehind.StepBasic_aobExact
+StepBasic_aobBehind = StepBasic_AheadOrBehind.StepBasic_aobBehind
 
 class StepBasic_SiUnitName(IntEnum):
 	StepBasic_sunMetre = 0
@@ -175,6 +181,34 @@ class StepBasic_SiUnitName(IntEnum):
 	StepBasic_sunBecquerel = 25
 	StepBasic_sunGray = 26
 	StepBasic_sunSievert = 27
+StepBasic_sunMetre = StepBasic_SiUnitName.StepBasic_sunMetre
+StepBasic_sunGram = StepBasic_SiUnitName.StepBasic_sunGram
+StepBasic_sunSecond = StepBasic_SiUnitName.StepBasic_sunSecond
+StepBasic_sunAmpere = StepBasic_SiUnitName.StepBasic_sunAmpere
+StepBasic_sunKelvin = StepBasic_SiUnitName.StepBasic_sunKelvin
+StepBasic_sunMole = StepBasic_SiUnitName.StepBasic_sunMole
+StepBasic_sunCandela = StepBasic_SiUnitName.StepBasic_sunCandela
+StepBasic_sunRadian = StepBasic_SiUnitName.StepBasic_sunRadian
+StepBasic_sunSteradian = StepBasic_SiUnitName.StepBasic_sunSteradian
+StepBasic_sunHertz = StepBasic_SiUnitName.StepBasic_sunHertz
+StepBasic_sunNewton = StepBasic_SiUnitName.StepBasic_sunNewton
+StepBasic_sunPascal = StepBasic_SiUnitName.StepBasic_sunPascal
+StepBasic_sunJoule = StepBasic_SiUnitName.StepBasic_sunJoule
+StepBasic_sunWatt = StepBasic_SiUnitName.StepBasic_sunWatt
+StepBasic_sunCoulomb = StepBasic_SiUnitName.StepBasic_sunCoulomb
+StepBasic_sunVolt = StepBasic_SiUnitName.StepBasic_sunVolt
+StepBasic_sunFarad = StepBasic_SiUnitName.StepBasic_sunFarad
+StepBasic_sunOhm = StepBasic_SiUnitName.StepBasic_sunOhm
+StepBasic_sunSiemens = StepBasic_SiUnitName.StepBasic_sunSiemens
+StepBasic_sunWeber = StepBasic_SiUnitName.StepBasic_sunWeber
+StepBasic_sunTesla = StepBasic_SiUnitName.StepBasic_sunTesla
+StepBasic_sunHenry = StepBasic_SiUnitName.StepBasic_sunHenry
+StepBasic_sunDegreeCelsius = StepBasic_SiUnitName.StepBasic_sunDegreeCelsius
+StepBasic_sunLumen = StepBasic_SiUnitName.StepBasic_sunLumen
+StepBasic_sunLux = StepBasic_SiUnitName.StepBasic_sunLux
+StepBasic_sunBecquerel = StepBasic_SiUnitName.StepBasic_sunBecquerel
+StepBasic_sunGray = StepBasic_SiUnitName.StepBasic_sunGray
+StepBasic_sunSievert = StepBasic_SiUnitName.StepBasic_sunSievert
 
 class StepBasic_SiPrefix(IntEnum):
 	StepBasic_spExa = 0
@@ -193,6 +227,22 @@ class StepBasic_SiPrefix(IntEnum):
 	StepBasic_spPico = 13
 	StepBasic_spFemto = 14
 	StepBasic_spAtto = 15
+StepBasic_spExa = StepBasic_SiPrefix.StepBasic_spExa
+StepBasic_spPeta = StepBasic_SiPrefix.StepBasic_spPeta
+StepBasic_spTera = StepBasic_SiPrefix.StepBasic_spTera
+StepBasic_spGiga = StepBasic_SiPrefix.StepBasic_spGiga
+StepBasic_spMega = StepBasic_SiPrefix.StepBasic_spMega
+StepBasic_spKilo = StepBasic_SiPrefix.StepBasic_spKilo
+StepBasic_spHecto = StepBasic_SiPrefix.StepBasic_spHecto
+StepBasic_spDeca = StepBasic_SiPrefix.StepBasic_spDeca
+StepBasic_spDeci = StepBasic_SiPrefix.StepBasic_spDeci
+StepBasic_spCenti = StepBasic_SiPrefix.StepBasic_spCenti
+StepBasic_spMilli = StepBasic_SiPrefix.StepBasic_spMilli
+StepBasic_spMicro = StepBasic_SiPrefix.StepBasic_spMicro
+StepBasic_spNano = StepBasic_SiPrefix.StepBasic_spNano
+StepBasic_spPico = StepBasic_SiPrefix.StepBasic_spPico
+StepBasic_spFemto = StepBasic_SiPrefix.StepBasic_spFemto
+StepBasic_spAtto = StepBasic_SiPrefix.StepBasic_spAtto
 };
 /* end python proxy for enums */
 

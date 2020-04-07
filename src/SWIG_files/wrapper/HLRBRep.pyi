@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -26,13 +27,19 @@ from OCC.Core.Intf import *
 from OCC.Core.IntSurf import *
 
 
-class HLRBRep_TypeOfResultingEdge:
+class HLRBRep_TypeOfResultingEdge(IntEnum):
 	HLRBRep_Undefined: int = ...
 	HLRBRep_IsoLine: int = ...
 	HLRBRep_OutLine: int = ...
 	HLRBRep_Rg1Line: int = ...
 	HLRBRep_RgNLine: int = ...
 	HLRBRep_Sharp: int = ...
+HLRBRep_Undefined = HLRBRep_TypeOfResultingEdge.HLRBRep_Undefined
+HLRBRep_IsoLine = HLRBRep_TypeOfResultingEdge.HLRBRep_IsoLine
+HLRBRep_OutLine = HLRBRep_TypeOfResultingEdge.HLRBRep_OutLine
+HLRBRep_Rg1Line = HLRBRep_TypeOfResultingEdge.HLRBRep_Rg1Line
+HLRBRep_RgNLine = HLRBRep_TypeOfResultingEdge.HLRBRep_RgNLine
+HLRBRep_Sharp = HLRBRep_TypeOfResultingEdge.HLRBRep_Sharp
 
 class HLRBRep:
 	@staticmethod

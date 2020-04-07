@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -27,14 +28,19 @@ TopOpeBRep_PLineInter = NewType('TopOpeBRep_PLineInter', TopOpeBRep_LineInter)
 TopOpeBRep_PPntOn2S = NewType('TopOpeBRep_PPntOn2S', IntSurf_PntOn2S)
 TopOpeBRep_PThePointOfIntersection = NewType('TopOpeBRep_PThePointOfIntersection', IntPatch_Point)
 
-class TopOpeBRep_P2Dstatus:
+class TopOpeBRep_P2Dstatus(IntEnum):
 	TopOpeBRep_P2DUNK: int = ...
 	TopOpeBRep_P2DINT: int = ...
 	TopOpeBRep_P2DSGF: int = ...
 	TopOpeBRep_P2DSGL: int = ...
 	TopOpeBRep_P2DNEW: int = ...
+TopOpeBRep_P2DUNK = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DUNK
+TopOpeBRep_P2DINT = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DINT
+TopOpeBRep_P2DSGF = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DSGF
+TopOpeBRep_P2DSGL = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DSGL
+TopOpeBRep_P2DNEW = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DNEW
 
-class TopOpeBRep_TypeLineCurve:
+class TopOpeBRep_TypeLineCurve(IntEnum):
 	TopOpeBRep_ANALYTIC: int = ...
 	TopOpeBRep_RESTRICTION: int = ...
 	TopOpeBRep_WALKING: int = ...
@@ -44,6 +50,15 @@ class TopOpeBRep_TypeLineCurve:
 	TopOpeBRep_PARABOLA: int = ...
 	TopOpeBRep_HYPERBOLA: int = ...
 	TopOpeBRep_OTHERTYPE: int = ...
+TopOpeBRep_ANALYTIC = TopOpeBRep_TypeLineCurve.TopOpeBRep_ANALYTIC
+TopOpeBRep_RESTRICTION = TopOpeBRep_TypeLineCurve.TopOpeBRep_RESTRICTION
+TopOpeBRep_WALKING = TopOpeBRep_TypeLineCurve.TopOpeBRep_WALKING
+TopOpeBRep_LINE = TopOpeBRep_TypeLineCurve.TopOpeBRep_LINE
+TopOpeBRep_CIRCLE = TopOpeBRep_TypeLineCurve.TopOpeBRep_CIRCLE
+TopOpeBRep_ELLIPSE = TopOpeBRep_TypeLineCurve.TopOpeBRep_ELLIPSE
+TopOpeBRep_PARABOLA = TopOpeBRep_TypeLineCurve.TopOpeBRep_PARABOLA
+TopOpeBRep_HYPERBOLA = TopOpeBRep_TypeLineCurve.TopOpeBRep_HYPERBOLA
+TopOpeBRep_OTHERTYPE = TopOpeBRep_TypeLineCurve.TopOpeBRep_OTHERTYPE
 
 class TopOpeBRep:
 	pass

@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -16,15 +17,21 @@ from OCC.Core.IntAna import *
 
 IntPatch_SearchPnt = NewType('IntPatch_SearchPnt', Intf_InterferencePolygon2d)
 
-class IntPatch_SpecPntType:
+class IntPatch_SpecPntType(IntEnum):
 	IntPatch_SPntNone: int = ...
 	IntPatch_SPntSeamU: int = ...
 	IntPatch_SPntSeamV: int = ...
 	IntPatch_SPntSeamUV: int = ...
 	IntPatch_SPntPoleSeamU: int = ...
 	IntPatch_SPntPole: int = ...
+IntPatch_SPntNone = IntPatch_SpecPntType.IntPatch_SPntNone
+IntPatch_SPntSeamU = IntPatch_SpecPntType.IntPatch_SPntSeamU
+IntPatch_SPntSeamV = IntPatch_SpecPntType.IntPatch_SPntSeamV
+IntPatch_SPntSeamUV = IntPatch_SpecPntType.IntPatch_SPntSeamUV
+IntPatch_SPntPoleSeamU = IntPatch_SpecPntType.IntPatch_SPntPoleSeamU
+IntPatch_SPntPole = IntPatch_SpecPntType.IntPatch_SPntPole
 
-class IntPatch_IType:
+class IntPatch_IType(IntEnum):
 	IntPatch_Lin: int = ...
 	IntPatch_Circle: int = ...
 	IntPatch_Ellipse: int = ...
@@ -33,6 +40,14 @@ class IntPatch_IType:
 	IntPatch_Analytic: int = ...
 	IntPatch_Walking: int = ...
 	IntPatch_Restriction: int = ...
+IntPatch_Lin = IntPatch_IType.IntPatch_Lin
+IntPatch_Circle = IntPatch_IType.IntPatch_Circle
+IntPatch_Ellipse = IntPatch_IType.IntPatch_Ellipse
+IntPatch_Parabola = IntPatch_IType.IntPatch_Parabola
+IntPatch_Hyperbola = IntPatch_IType.IntPatch_Hyperbola
+IntPatch_Analytic = IntPatch_IType.IntPatch_Analytic
+IntPatch_Walking = IntPatch_IType.IntPatch_Walking
+IntPatch_Restriction = IntPatch_IType.IntPatch_Restriction
 
 class IntPatch_ALineToWLine:
 	def __init__(self, theS1: Adaptor3d_HSurface, theS2: Adaptor3d_HSurface, theNbPoints: Optional[int]) -> None: ...

@@ -99,6 +99,19 @@ class HLRAlgo_PolyMask(IntEnum):
 	HLRAlgo_PolyMask_FMskOnOutL = 1024
 	HLRAlgo_PolyMask_FMskOrBack = 2048
 	HLRAlgo_PolyMask_FMskFrBack = 4096
+HLRAlgo_PolyMask_EMskOutLin1 = HLRAlgo_PolyMask.HLRAlgo_PolyMask_EMskOutLin1
+HLRAlgo_PolyMask_EMskOutLin2 = HLRAlgo_PolyMask.HLRAlgo_PolyMask_EMskOutLin2
+HLRAlgo_PolyMask_EMskOutLin3 = HLRAlgo_PolyMask.HLRAlgo_PolyMask_EMskOutLin3
+HLRAlgo_PolyMask_EMskGrALin1 = HLRAlgo_PolyMask.HLRAlgo_PolyMask_EMskGrALin1
+HLRAlgo_PolyMask_EMskGrALin2 = HLRAlgo_PolyMask.HLRAlgo_PolyMask_EMskGrALin2
+HLRAlgo_PolyMask_EMskGrALin3 = HLRAlgo_PolyMask.HLRAlgo_PolyMask_EMskGrALin3
+HLRAlgo_PolyMask_FMskBack = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskBack
+HLRAlgo_PolyMask_FMskSide = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskSide
+HLRAlgo_PolyMask_FMskHiding = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskHiding
+HLRAlgo_PolyMask_FMskFlat = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskFlat
+HLRAlgo_PolyMask_FMskOnOutL = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskOnOutL
+HLRAlgo_PolyMask_FMskOrBack = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskOrBack
+HLRAlgo_PolyMask_FMskFrBack = HLRAlgo_PolyMask.HLRAlgo_PolyMask_FMskFrBack
 };
 /* end python proxy for enums */
 

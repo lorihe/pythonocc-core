@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -13,7 +14,7 @@ from OCC.Core.TopTools import *
 from OCC.Core.TopAbs import *
 
 
-class ShapeExtend_Status:
+class ShapeExtend_Status(IntEnum):
 	ShapeExtend_OK: int = ...
 	ShapeExtend_DONE1: int = ...
 	ShapeExtend_DONE2: int = ...
@@ -33,11 +34,33 @@ class ShapeExtend_Status:
 	ShapeExtend_FAIL7: int = ...
 	ShapeExtend_FAIL8: int = ...
 	ShapeExtend_FAIL: int = ...
+ShapeExtend_OK = ShapeExtend_Status.ShapeExtend_OK
+ShapeExtend_DONE1 = ShapeExtend_Status.ShapeExtend_DONE1
+ShapeExtend_DONE2 = ShapeExtend_Status.ShapeExtend_DONE2
+ShapeExtend_DONE3 = ShapeExtend_Status.ShapeExtend_DONE3
+ShapeExtend_DONE4 = ShapeExtend_Status.ShapeExtend_DONE4
+ShapeExtend_DONE5 = ShapeExtend_Status.ShapeExtend_DONE5
+ShapeExtend_DONE6 = ShapeExtend_Status.ShapeExtend_DONE6
+ShapeExtend_DONE7 = ShapeExtend_Status.ShapeExtend_DONE7
+ShapeExtend_DONE8 = ShapeExtend_Status.ShapeExtend_DONE8
+ShapeExtend_DONE = ShapeExtend_Status.ShapeExtend_DONE
+ShapeExtend_FAIL1 = ShapeExtend_Status.ShapeExtend_FAIL1
+ShapeExtend_FAIL2 = ShapeExtend_Status.ShapeExtend_FAIL2
+ShapeExtend_FAIL3 = ShapeExtend_Status.ShapeExtend_FAIL3
+ShapeExtend_FAIL4 = ShapeExtend_Status.ShapeExtend_FAIL4
+ShapeExtend_FAIL5 = ShapeExtend_Status.ShapeExtend_FAIL5
+ShapeExtend_FAIL6 = ShapeExtend_Status.ShapeExtend_FAIL6
+ShapeExtend_FAIL7 = ShapeExtend_Status.ShapeExtend_FAIL7
+ShapeExtend_FAIL8 = ShapeExtend_Status.ShapeExtend_FAIL8
+ShapeExtend_FAIL = ShapeExtend_Status.ShapeExtend_FAIL
 
-class ShapeExtend_Parametrisation:
+class ShapeExtend_Parametrisation(IntEnum):
 	ShapeExtend_Natural: int = ...
 	ShapeExtend_Uniform: int = ...
 	ShapeExtend_Unitary: int = ...
+ShapeExtend_Natural = ShapeExtend_Parametrisation.ShapeExtend_Natural
+ShapeExtend_Uniform = ShapeExtend_Parametrisation.ShapeExtend_Uniform
+ShapeExtend_Unitary = ShapeExtend_Parametrisation.ShapeExtend_Unitary
 
 class ShapeExtend:
 	@staticmethod

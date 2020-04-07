@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -7,27 +8,41 @@ from OCC.Core.TCollection import *
 from OCC.Core.PCDM import *
 
 
-class CDF_TypeOfActivation:
+class CDF_TypeOfActivation(IntEnum):
 	CDF_TOA_New: int = ...
 	CDF_TOA_Modified: int = ...
 	CDF_TOA_Unchanged: int = ...
+CDF_TOA_New = CDF_TypeOfActivation.CDF_TOA_New
+CDF_TOA_Modified = CDF_TypeOfActivation.CDF_TOA_Modified
+CDF_TOA_Unchanged = CDF_TypeOfActivation.CDF_TOA_Unchanged
 
-class CDF_TryStoreStatus:
+class CDF_TryStoreStatus(IntEnum):
 	CDF_TS_OK: int = ...
 	CDF_TS_NoCurrentDocument: int = ...
 	CDF_TS_NoDriver: int = ...
 	CDF_TS_NoSubComponentDriver: int = ...
+CDF_TS_OK = CDF_TryStoreStatus.CDF_TS_OK
+CDF_TS_NoCurrentDocument = CDF_TryStoreStatus.CDF_TS_NoCurrentDocument
+CDF_TS_NoDriver = CDF_TryStoreStatus.CDF_TS_NoDriver
+CDF_TS_NoSubComponentDriver = CDF_TryStoreStatus.CDF_TS_NoSubComponentDriver
 
-class CDF_SubComponentStatus:
+class CDF_SubComponentStatus(IntEnum):
 	CDF_SCS_Consistent: int = ...
 	CDF_SCS_Unconsistent: int = ...
 	CDF_SCS_Stored: int = ...
 	CDF_SCS_Modified: int = ...
+CDF_SCS_Consistent = CDF_SubComponentStatus.CDF_SCS_Consistent
+CDF_SCS_Unconsistent = CDF_SubComponentStatus.CDF_SCS_Unconsistent
+CDF_SCS_Stored = CDF_SubComponentStatus.CDF_SCS_Stored
+CDF_SCS_Modified = CDF_SubComponentStatus.CDF_SCS_Modified
 
-class CDF_StoreSetNameStatus:
+class CDF_StoreSetNameStatus(IntEnum):
 	CDF_SSNS_OK: int = ...
 	CDF_SSNS_ReplacingAnExistentDocument: int = ...
 	CDF_SSNS_OpenDocument: int = ...
+CDF_SSNS_OK = CDF_StoreSetNameStatus.CDF_SSNS_OK
+CDF_SSNS_ReplacingAnExistentDocument = CDF_StoreSetNameStatus.CDF_SSNS_ReplacingAnExistentDocument
+CDF_SSNS_OpenDocument = CDF_StoreSetNameStatus.CDF_SSNS_OpenDocument
 
 class CDF:
 	@staticmethod

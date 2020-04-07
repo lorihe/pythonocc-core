@@ -78,6 +78,12 @@ class GccInt_IType(IntEnum):
 	GccInt_Par = 3
 	GccInt_Hpr = 4
 	GccInt_Pnt = 5
+GccInt_Lin = GccInt_IType.GccInt_Lin
+GccInt_Cir = GccInt_IType.GccInt_Cir
+GccInt_Ell = GccInt_IType.GccInt_Ell
+GccInt_Par = GccInt_IType.GccInt_Par
+GccInt_Hpr = GccInt_IType.GccInt_Hpr
+GccInt_Pnt = GccInt_IType.GccInt_Pnt
 };
 /* end python proxy for enums */
 

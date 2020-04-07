@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -7,7 +8,7 @@ from OCC.Core.TopoDS import *
 from OCC.Core.TopTools import *
 
 
-class BRepCheck_Status:
+class BRepCheck_Status(IntEnum):
 	BRepCheck_NoError: int = ...
 	BRepCheck_InvalidPointOnCurve: int = ...
 	BRepCheck_InvalidPointOnCurveOnSurface: int = ...
@@ -45,6 +46,43 @@ class BRepCheck_Status:
 	BRepCheck_InvalidToleranceValue: int = ...
 	BRepCheck_EnclosedRegion: int = ...
 	BRepCheck_CheckFail: int = ...
+BRepCheck_NoError = BRepCheck_Status.BRepCheck_NoError
+BRepCheck_InvalidPointOnCurve = BRepCheck_Status.BRepCheck_InvalidPointOnCurve
+BRepCheck_InvalidPointOnCurveOnSurface = BRepCheck_Status.BRepCheck_InvalidPointOnCurveOnSurface
+BRepCheck_InvalidPointOnSurface = BRepCheck_Status.BRepCheck_InvalidPointOnSurface
+BRepCheck_No3DCurve = BRepCheck_Status.BRepCheck_No3DCurve
+BRepCheck_Multiple3DCurve = BRepCheck_Status.BRepCheck_Multiple3DCurve
+BRepCheck_Invalid3DCurve = BRepCheck_Status.BRepCheck_Invalid3DCurve
+BRepCheck_NoCurveOnSurface = BRepCheck_Status.BRepCheck_NoCurveOnSurface
+BRepCheck_InvalidCurveOnSurface = BRepCheck_Status.BRepCheck_InvalidCurveOnSurface
+BRepCheck_InvalidCurveOnClosedSurface = BRepCheck_Status.BRepCheck_InvalidCurveOnClosedSurface
+BRepCheck_InvalidSameRangeFlag = BRepCheck_Status.BRepCheck_InvalidSameRangeFlag
+BRepCheck_InvalidSameParameterFlag = BRepCheck_Status.BRepCheck_InvalidSameParameterFlag
+BRepCheck_InvalidDegeneratedFlag = BRepCheck_Status.BRepCheck_InvalidDegeneratedFlag
+BRepCheck_FreeEdge = BRepCheck_Status.BRepCheck_FreeEdge
+BRepCheck_InvalidMultiConnexity = BRepCheck_Status.BRepCheck_InvalidMultiConnexity
+BRepCheck_InvalidRange = BRepCheck_Status.BRepCheck_InvalidRange
+BRepCheck_EmptyWire = BRepCheck_Status.BRepCheck_EmptyWire
+BRepCheck_RedundantEdge = BRepCheck_Status.BRepCheck_RedundantEdge
+BRepCheck_SelfIntersectingWire = BRepCheck_Status.BRepCheck_SelfIntersectingWire
+BRepCheck_NoSurface = BRepCheck_Status.BRepCheck_NoSurface
+BRepCheck_InvalidWire = BRepCheck_Status.BRepCheck_InvalidWire
+BRepCheck_RedundantWire = BRepCheck_Status.BRepCheck_RedundantWire
+BRepCheck_IntersectingWires = BRepCheck_Status.BRepCheck_IntersectingWires
+BRepCheck_InvalidImbricationOfWires = BRepCheck_Status.BRepCheck_InvalidImbricationOfWires
+BRepCheck_EmptyShell = BRepCheck_Status.BRepCheck_EmptyShell
+BRepCheck_RedundantFace = BRepCheck_Status.BRepCheck_RedundantFace
+BRepCheck_InvalidImbricationOfShells = BRepCheck_Status.BRepCheck_InvalidImbricationOfShells
+BRepCheck_UnorientableShape = BRepCheck_Status.BRepCheck_UnorientableShape
+BRepCheck_NotClosed = BRepCheck_Status.BRepCheck_NotClosed
+BRepCheck_NotConnected = BRepCheck_Status.BRepCheck_NotConnected
+BRepCheck_SubshapeNotInShape = BRepCheck_Status.BRepCheck_SubshapeNotInShape
+BRepCheck_BadOrientation = BRepCheck_Status.BRepCheck_BadOrientation
+BRepCheck_BadOrientationOfSubshape = BRepCheck_Status.BRepCheck_BadOrientationOfSubshape
+BRepCheck_InvalidPolygonOnTriangulation = BRepCheck_Status.BRepCheck_InvalidPolygonOnTriangulation
+BRepCheck_InvalidToleranceValue = BRepCheck_Status.BRepCheck_InvalidToleranceValue
+BRepCheck_EnclosedRegion = BRepCheck_Status.BRepCheck_EnclosedRegion
+BRepCheck_CheckFail = BRepCheck_Status.BRepCheck_CheckFail
 
 class BRepCheck:
 	@staticmethod

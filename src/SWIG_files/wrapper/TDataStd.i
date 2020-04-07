@@ -76,6 +76,9 @@ class TDataStd_RealEnum(IntEnum):
 	TDataStd_SCALAR = 0
 	TDataStd_LENGTH = 1
 	TDataStd_ANGULAR = 2
+TDataStd_SCALAR = TDataStd_RealEnum.TDataStd_SCALAR
+TDataStd_LENGTH = TDataStd_RealEnum.TDataStd_LENGTH
+TDataStd_ANGULAR = TDataStd_RealEnum.TDataStd_ANGULAR
 };
 /* end python proxy for enums */
 

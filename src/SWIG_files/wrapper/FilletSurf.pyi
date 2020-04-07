@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,23 +10,35 @@ from OCC.Core.Geom2d import *
 from OCC.Core.ChFi3d import *
 
 
-class FilletSurf_StatusDone:
+class FilletSurf_StatusDone(IntEnum):
 	FilletSurf_IsOk: int = ...
 	FilletSurf_IsNotOk: int = ...
 	FilletSurf_IsPartial: int = ...
+FilletSurf_IsOk = FilletSurf_StatusDone.FilletSurf_IsOk
+FilletSurf_IsNotOk = FilletSurf_StatusDone.FilletSurf_IsNotOk
+FilletSurf_IsPartial = FilletSurf_StatusDone.FilletSurf_IsPartial
 
-class FilletSurf_StatusType:
+class FilletSurf_StatusType(IntEnum):
 	FilletSurf_TwoExtremityOnEdge: int = ...
 	FilletSurf_OneExtremityOnEdge: int = ...
 	FilletSurf_NoExtremityOnEdge: int = ...
+FilletSurf_TwoExtremityOnEdge = FilletSurf_StatusType.FilletSurf_TwoExtremityOnEdge
+FilletSurf_OneExtremityOnEdge = FilletSurf_StatusType.FilletSurf_OneExtremityOnEdge
+FilletSurf_NoExtremityOnEdge = FilletSurf_StatusType.FilletSurf_NoExtremityOnEdge
 
-class FilletSurf_ErrorTypeStatus:
+class FilletSurf_ErrorTypeStatus(IntEnum):
 	FilletSurf_EmptyList: int = ...
 	FilletSurf_EdgeNotG1: int = ...
 	FilletSurf_FacesNotG1: int = ...
 	FilletSurf_EdgeNotOnShape: int = ...
 	FilletSurf_NotSharpEdge: int = ...
 	FilletSurf_PbFilletCompute: int = ...
+FilletSurf_EmptyList = FilletSurf_ErrorTypeStatus.FilletSurf_EmptyList
+FilletSurf_EdgeNotG1 = FilletSurf_ErrorTypeStatus.FilletSurf_EdgeNotG1
+FilletSurf_FacesNotG1 = FilletSurf_ErrorTypeStatus.FilletSurf_FacesNotG1
+FilletSurf_EdgeNotOnShape = FilletSurf_ErrorTypeStatus.FilletSurf_EdgeNotOnShape
+FilletSurf_NotSharpEdge = FilletSurf_ErrorTypeStatus.FilletSurf_NotSharpEdge
+FilletSurf_PbFilletCompute = FilletSurf_ErrorTypeStatus.FilletSurf_PbFilletCompute
 
 class FilletSurf_Builder:
 	def __init__(self, S: TopoDS_Shape, E: TopTools_ListOfShape, R: float, Ta: Optional[float], Tapp3d: Optional[float], Tapp2d: Optional[float]) -> None: ...

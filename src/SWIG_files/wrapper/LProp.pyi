@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,16 +6,23 @@ from OCC.Core.NCollection import *
 from OCC.Core.GeomAbs import *
 
 
-class LProp_Status:
+class LProp_Status(IntEnum):
 	LProp_Undecided: int = ...
 	LProp_Undefined: int = ...
 	LProp_Defined: int = ...
 	LProp_Computed: int = ...
+LProp_Undecided = LProp_Status.LProp_Undecided
+LProp_Undefined = LProp_Status.LProp_Undefined
+LProp_Defined = LProp_Status.LProp_Defined
+LProp_Computed = LProp_Status.LProp_Computed
 
-class LProp_CIType:
+class LProp_CIType(IntEnum):
 	LProp_Inflection: int = ...
 	LProp_MinCur: int = ...
 	LProp_MaxCur: int = ...
+LProp_Inflection = LProp_CIType.LProp_Inflection
+LProp_MinCur = LProp_CIType.LProp_MinCur
+LProp_MaxCur = LProp_CIType.LProp_MaxCur
 
 class LProp_AnalyticCurInf:
 	def __init__(self) -> None: ...

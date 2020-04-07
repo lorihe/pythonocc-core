@@ -71,6 +71,10 @@ enum  {
 
 /* python proy classes for enums */
 %pythoncode {
+TDF_LabelNodeImportMsk = .TDF_LabelNodeImportMsk
+TDF_LabelNodeAttModMsk = .TDF_LabelNodeAttModMsk
+TDF_LabelNodeMayModMsk = .TDF_LabelNodeMayModMsk
+TDF_LabelNodeFlagsMsk = .TDF_LabelNodeFlagsMsk
 };
 /* end python proxy for enums */
 

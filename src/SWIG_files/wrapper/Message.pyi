@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,7 +7,7 @@ from OCC.Core.TCollection import *
 from OCC.Core.TColStd import *
 
 
-class Message_Status:
+class Message_Status(IntEnum):
 	Message_None: int = ...
 	Message_Done1: int = ...
 	Message_Done2: int = ...
@@ -136,19 +137,157 @@ class Message_Status:
 	Message_Fail30: int = ...
 	Message_Fail31: int = ...
 	Message_Fail32: int = ...
+Message_None = Message_Status.Message_None
+Message_Done1 = Message_Status.Message_Done1
+Message_Done2 = Message_Status.Message_Done2
+Message_Done3 = Message_Status.Message_Done3
+Message_Done4 = Message_Status.Message_Done4
+Message_Done5 = Message_Status.Message_Done5
+Message_Done6 = Message_Status.Message_Done6
+Message_Done7 = Message_Status.Message_Done7
+Message_Done8 = Message_Status.Message_Done8
+Message_Done9 = Message_Status.Message_Done9
+Message_Done10 = Message_Status.Message_Done10
+Message_Done11 = Message_Status.Message_Done11
+Message_Done12 = Message_Status.Message_Done12
+Message_Done13 = Message_Status.Message_Done13
+Message_Done14 = Message_Status.Message_Done14
+Message_Done15 = Message_Status.Message_Done15
+Message_Done16 = Message_Status.Message_Done16
+Message_Done17 = Message_Status.Message_Done17
+Message_Done18 = Message_Status.Message_Done18
+Message_Done19 = Message_Status.Message_Done19
+Message_Done20 = Message_Status.Message_Done20
+Message_Done21 = Message_Status.Message_Done21
+Message_Done22 = Message_Status.Message_Done22
+Message_Done23 = Message_Status.Message_Done23
+Message_Done24 = Message_Status.Message_Done24
+Message_Done25 = Message_Status.Message_Done25
+Message_Done26 = Message_Status.Message_Done26
+Message_Done27 = Message_Status.Message_Done27
+Message_Done28 = Message_Status.Message_Done28
+Message_Done29 = Message_Status.Message_Done29
+Message_Done30 = Message_Status.Message_Done30
+Message_Done31 = Message_Status.Message_Done31
+Message_Done32 = Message_Status.Message_Done32
+Message_Warn1 = Message_Status.Message_Warn1
+Message_Warn2 = Message_Status.Message_Warn2
+Message_Warn3 = Message_Status.Message_Warn3
+Message_Warn4 = Message_Status.Message_Warn4
+Message_Warn5 = Message_Status.Message_Warn5
+Message_Warn6 = Message_Status.Message_Warn6
+Message_Warn7 = Message_Status.Message_Warn7
+Message_Warn8 = Message_Status.Message_Warn8
+Message_Warn9 = Message_Status.Message_Warn9
+Message_Warn10 = Message_Status.Message_Warn10
+Message_Warn11 = Message_Status.Message_Warn11
+Message_Warn12 = Message_Status.Message_Warn12
+Message_Warn13 = Message_Status.Message_Warn13
+Message_Warn14 = Message_Status.Message_Warn14
+Message_Warn15 = Message_Status.Message_Warn15
+Message_Warn16 = Message_Status.Message_Warn16
+Message_Warn17 = Message_Status.Message_Warn17
+Message_Warn18 = Message_Status.Message_Warn18
+Message_Warn19 = Message_Status.Message_Warn19
+Message_Warn20 = Message_Status.Message_Warn20
+Message_Warn21 = Message_Status.Message_Warn21
+Message_Warn22 = Message_Status.Message_Warn22
+Message_Warn23 = Message_Status.Message_Warn23
+Message_Warn24 = Message_Status.Message_Warn24
+Message_Warn25 = Message_Status.Message_Warn25
+Message_Warn26 = Message_Status.Message_Warn26
+Message_Warn27 = Message_Status.Message_Warn27
+Message_Warn28 = Message_Status.Message_Warn28
+Message_Warn29 = Message_Status.Message_Warn29
+Message_Warn30 = Message_Status.Message_Warn30
+Message_Warn31 = Message_Status.Message_Warn31
+Message_Warn32 = Message_Status.Message_Warn32
+Message_Alarm1 = Message_Status.Message_Alarm1
+Message_Alarm2 = Message_Status.Message_Alarm2
+Message_Alarm3 = Message_Status.Message_Alarm3
+Message_Alarm4 = Message_Status.Message_Alarm4
+Message_Alarm5 = Message_Status.Message_Alarm5
+Message_Alarm6 = Message_Status.Message_Alarm6
+Message_Alarm7 = Message_Status.Message_Alarm7
+Message_Alarm8 = Message_Status.Message_Alarm8
+Message_Alarm9 = Message_Status.Message_Alarm9
+Message_Alarm10 = Message_Status.Message_Alarm10
+Message_Alarm11 = Message_Status.Message_Alarm11
+Message_Alarm12 = Message_Status.Message_Alarm12
+Message_Alarm13 = Message_Status.Message_Alarm13
+Message_Alarm14 = Message_Status.Message_Alarm14
+Message_Alarm15 = Message_Status.Message_Alarm15
+Message_Alarm16 = Message_Status.Message_Alarm16
+Message_Alarm17 = Message_Status.Message_Alarm17
+Message_Alarm18 = Message_Status.Message_Alarm18
+Message_Alarm19 = Message_Status.Message_Alarm19
+Message_Alarm20 = Message_Status.Message_Alarm20
+Message_Alarm21 = Message_Status.Message_Alarm21
+Message_Alarm22 = Message_Status.Message_Alarm22
+Message_Alarm23 = Message_Status.Message_Alarm23
+Message_Alarm24 = Message_Status.Message_Alarm24
+Message_Alarm25 = Message_Status.Message_Alarm25
+Message_Alarm26 = Message_Status.Message_Alarm26
+Message_Alarm27 = Message_Status.Message_Alarm27
+Message_Alarm28 = Message_Status.Message_Alarm28
+Message_Alarm29 = Message_Status.Message_Alarm29
+Message_Alarm30 = Message_Status.Message_Alarm30
+Message_Alarm31 = Message_Status.Message_Alarm31
+Message_Alarm32 = Message_Status.Message_Alarm32
+Message_Fail1 = Message_Status.Message_Fail1
+Message_Fail2 = Message_Status.Message_Fail2
+Message_Fail3 = Message_Status.Message_Fail3
+Message_Fail4 = Message_Status.Message_Fail4
+Message_Fail5 = Message_Status.Message_Fail5
+Message_Fail6 = Message_Status.Message_Fail6
+Message_Fail7 = Message_Status.Message_Fail7
+Message_Fail8 = Message_Status.Message_Fail8
+Message_Fail9 = Message_Status.Message_Fail9
+Message_Fail10 = Message_Status.Message_Fail10
+Message_Fail11 = Message_Status.Message_Fail11
+Message_Fail12 = Message_Status.Message_Fail12
+Message_Fail13 = Message_Status.Message_Fail13
+Message_Fail14 = Message_Status.Message_Fail14
+Message_Fail15 = Message_Status.Message_Fail15
+Message_Fail16 = Message_Status.Message_Fail16
+Message_Fail17 = Message_Status.Message_Fail17
+Message_Fail18 = Message_Status.Message_Fail18
+Message_Fail19 = Message_Status.Message_Fail19
+Message_Fail20 = Message_Status.Message_Fail20
+Message_Fail21 = Message_Status.Message_Fail21
+Message_Fail22 = Message_Status.Message_Fail22
+Message_Fail23 = Message_Status.Message_Fail23
+Message_Fail24 = Message_Status.Message_Fail24
+Message_Fail25 = Message_Status.Message_Fail25
+Message_Fail26 = Message_Status.Message_Fail26
+Message_Fail27 = Message_Status.Message_Fail27
+Message_Fail28 = Message_Status.Message_Fail28
+Message_Fail29 = Message_Status.Message_Fail29
+Message_Fail30 = Message_Status.Message_Fail30
+Message_Fail31 = Message_Status.Message_Fail31
+Message_Fail32 = Message_Status.Message_Fail32
 
-class Message_Gravity:
+class Message_Gravity(IntEnum):
 	Message_Trace: int = ...
 	Message_Info: int = ...
 	Message_Warning: int = ...
 	Message_Alarm: int = ...
 	Message_Fail: int = ...
+Message_Trace = Message_Gravity.Message_Trace
+Message_Info = Message_Gravity.Message_Info
+Message_Warning = Message_Gravity.Message_Warning
+Message_Alarm = Message_Gravity.Message_Alarm
+Message_Fail = Message_Gravity.Message_Fail
 
-class Message_StatusType:
+class Message_StatusType(IntEnum):
 	Message_DONE: int = ...
 	Message_WARN: int = ...
 	Message_ALARM: int = ...
 	Message_FAIL: int = ...
+Message_DONE = Message_StatusType.Message_DONE
+Message_WARN = Message_StatusType.Message_WARN
+Message_ALARM = Message_StatusType.Message_ALARM
+Message_FAIL = Message_StatusType.Message_FAIL
 
 class Message:
 	@staticmethod

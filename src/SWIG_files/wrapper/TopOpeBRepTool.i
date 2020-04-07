@@ -117,6 +117,9 @@ class TopOpeBRepTool_OutCurveType(IntEnum):
 	TopOpeBRepTool_BSPLINE1 = 0
 	TopOpeBRepTool_APPROX = 1
 	TopOpeBRepTool_INTERPOL = 2
+TopOpeBRepTool_BSPLINE1 = TopOpeBRepTool_OutCurveType.TopOpeBRepTool_BSPLINE1
+TopOpeBRepTool_APPROX = TopOpeBRepTool_OutCurveType.TopOpeBRepTool_APPROX
+TopOpeBRepTool_INTERPOL = TopOpeBRepTool_OutCurveType.TopOpeBRepTool_INTERPOL
 };
 /* end python proxy for enums */
 

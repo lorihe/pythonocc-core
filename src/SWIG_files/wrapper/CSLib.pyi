@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,7 +9,7 @@ from OCC.Core.math import *
 from OCC.Core.TColStd import *
 
 
-class CSLib_NormalStatus:
+class CSLib_NormalStatus(IntEnum):
 	CSLib_Singular: int = ...
 	CSLib_Defined: int = ...
 	CSLib_InfinityOfSolutions: int = ...
@@ -18,8 +19,17 @@ class CSLib_NormalStatus:
 	CSLib_D1NuNvRatioIsNull: int = ...
 	CSLib_D1NvNuRatioIsNull: int = ...
 	CSLib_D1NuIsParallelD1Nv: int = ...
+CSLib_Singular = CSLib_NormalStatus.CSLib_Singular
+CSLib_Defined = CSLib_NormalStatus.CSLib_Defined
+CSLib_InfinityOfSolutions = CSLib_NormalStatus.CSLib_InfinityOfSolutions
+CSLib_D1NuIsNull = CSLib_NormalStatus.CSLib_D1NuIsNull
+CSLib_D1NvIsNull = CSLib_NormalStatus.CSLib_D1NvIsNull
+CSLib_D1NIsNull = CSLib_NormalStatus.CSLib_D1NIsNull
+CSLib_D1NuNvRatioIsNull = CSLib_NormalStatus.CSLib_D1NuNvRatioIsNull
+CSLib_D1NvNuRatioIsNull = CSLib_NormalStatus.CSLib_D1NvNuRatioIsNull
+CSLib_D1NuIsParallelD1Nv = CSLib_NormalStatus.CSLib_D1NuIsParallelD1Nv
 
-class CSLib_DerivativeStatus:
+class CSLib_DerivativeStatus(IntEnum):
 	CSLib_Done: int = ...
 	CSLib_D1uIsNull: int = ...
 	CSLib_D1vIsNull: int = ...
@@ -27,6 +37,13 @@ class CSLib_DerivativeStatus:
 	CSLib_D1uD1vRatioIsNull: int = ...
 	CSLib_D1vD1uRatioIsNull: int = ...
 	CSLib_D1uIsParallelD1v: int = ...
+CSLib_Done = CSLib_DerivativeStatus.CSLib_Done
+CSLib_D1uIsNull = CSLib_DerivativeStatus.CSLib_D1uIsNull
+CSLib_D1vIsNull = CSLib_DerivativeStatus.CSLib_D1vIsNull
+CSLib_D1IsNull = CSLib_DerivativeStatus.CSLib_D1IsNull
+CSLib_D1uD1vRatioIsNull = CSLib_DerivativeStatus.CSLib_D1uD1vRatioIsNull
+CSLib_D1vD1uRatioIsNull = CSLib_DerivativeStatus.CSLib_D1vD1uRatioIsNull
+CSLib_D1uIsParallelD1v = CSLib_DerivativeStatus.CSLib_D1uIsParallelD1v
 
 class CSLib:
 	@staticmethod

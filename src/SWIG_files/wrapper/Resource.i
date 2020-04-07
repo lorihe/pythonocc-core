@@ -86,6 +86,16 @@ class Resource_FormatType(IntEnum):
 	Resource_EUC = Resource_FormatType_EUC
 	Resource_ANSI = Resource_FormatType_ANSI
 	Resource_GB = Resource_FormatType_GB
+Resource_FormatType_SJIS = Resource_FormatType.Resource_FormatType_SJIS
+Resource_FormatType_EUC = Resource_FormatType.Resource_FormatType_EUC
+Resource_FormatType_ANSI = Resource_FormatType.Resource_FormatType_ANSI
+Resource_FormatType_GB = Resource_FormatType.Resource_FormatType_GB
+Resource_FormatType_UTF8 = Resource_FormatType.Resource_FormatType_UTF8
+Resource_FormatType_SystemLocale = Resource_FormatType.Resource_FormatType_SystemLocale
+Resource_SJIS = Resource_FormatType.Resource_SJIS
+Resource_EUC = Resource_FormatType.Resource_EUC
+Resource_ANSI = Resource_FormatType.Resource_ANSI
+Resource_GB = Resource_FormatType.Resource_GB
 };
 /* end python proxy for enums */
 

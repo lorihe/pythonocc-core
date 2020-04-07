@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,16 +15,23 @@ from OCC.Core.TColgp import *
 from OCC.Core.BRepAdaptor import *
 
 
-class VrmlConverter_TypeOfLight:
+class VrmlConverter_TypeOfLight(IntEnum):
 	VrmlConverter_NoLight: int = ...
 	VrmlConverter_DirectionLight: int = ...
 	VrmlConverter_PointLight: int = ...
 	VrmlConverter_SpotLight: int = ...
+VrmlConverter_NoLight = VrmlConverter_TypeOfLight.VrmlConverter_NoLight
+VrmlConverter_DirectionLight = VrmlConverter_TypeOfLight.VrmlConverter_DirectionLight
+VrmlConverter_PointLight = VrmlConverter_TypeOfLight.VrmlConverter_PointLight
+VrmlConverter_SpotLight = VrmlConverter_TypeOfLight.VrmlConverter_SpotLight
 
-class VrmlConverter_TypeOfCamera:
+class VrmlConverter_TypeOfCamera(IntEnum):
 	VrmlConverter_NoCamera: int = ...
 	VrmlConverter_PerspectiveCamera: int = ...
 	VrmlConverter_OrthographicCamera: int = ...
+VrmlConverter_NoCamera = VrmlConverter_TypeOfCamera.VrmlConverter_NoCamera
+VrmlConverter_PerspectiveCamera = VrmlConverter_TypeOfCamera.VrmlConverter_PerspectiveCamera
+VrmlConverter_OrthographicCamera = VrmlConverter_TypeOfCamera.VrmlConverter_OrthographicCamera
 
 class VrmlConverter_Curve:
 	pass

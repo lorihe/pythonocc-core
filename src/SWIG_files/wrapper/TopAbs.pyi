@@ -1,16 +1,21 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 
 
-class TopAbs_Orientation:
+class TopAbs_Orientation(IntEnum):
 	TopAbs_FORWARD: int = ...
 	TopAbs_REVERSED: int = ...
 	TopAbs_INTERNAL: int = ...
 	TopAbs_EXTERNAL: int = ...
+TopAbs_FORWARD = TopAbs_Orientation.TopAbs_FORWARD
+TopAbs_REVERSED = TopAbs_Orientation.TopAbs_REVERSED
+TopAbs_INTERNAL = TopAbs_Orientation.TopAbs_INTERNAL
+TopAbs_EXTERNAL = TopAbs_Orientation.TopAbs_EXTERNAL
 
-class TopAbs_ShapeEnum:
+class TopAbs_ShapeEnum(IntEnum):
 	TopAbs_COMPOUND: int = ...
 	TopAbs_COMPSOLID: int = ...
 	TopAbs_SOLID: int = ...
@@ -20,12 +25,25 @@ class TopAbs_ShapeEnum:
 	TopAbs_EDGE: int = ...
 	TopAbs_VERTEX: int = ...
 	TopAbs_SHAPE: int = ...
+TopAbs_COMPOUND = TopAbs_ShapeEnum.TopAbs_COMPOUND
+TopAbs_COMPSOLID = TopAbs_ShapeEnum.TopAbs_COMPSOLID
+TopAbs_SOLID = TopAbs_ShapeEnum.TopAbs_SOLID
+TopAbs_SHELL = TopAbs_ShapeEnum.TopAbs_SHELL
+TopAbs_FACE = TopAbs_ShapeEnum.TopAbs_FACE
+TopAbs_WIRE = TopAbs_ShapeEnum.TopAbs_WIRE
+TopAbs_EDGE = TopAbs_ShapeEnum.TopAbs_EDGE
+TopAbs_VERTEX = TopAbs_ShapeEnum.TopAbs_VERTEX
+TopAbs_SHAPE = TopAbs_ShapeEnum.TopAbs_SHAPE
 
-class TopAbs_State:
+class TopAbs_State(IntEnum):
 	TopAbs_IN: int = ...
 	TopAbs_OUT: int = ...
 	TopAbs_ON: int = ...
 	TopAbs_UNKNOWN: int = ...
+TopAbs_IN = TopAbs_State.TopAbs_IN
+TopAbs_OUT = TopAbs_State.TopAbs_OUT
+TopAbs_ON = TopAbs_State.TopAbs_ON
+TopAbs_UNKNOWN = TopAbs_State.TopAbs_UNKNOWN
 
 class TopAbs:
 	@staticmethod

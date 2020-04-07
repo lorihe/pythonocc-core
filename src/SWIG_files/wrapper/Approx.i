@@ -99,11 +99,17 @@ class Approx_Status(IntEnum):
 	Approx_PointsAdded = 0
 	Approx_NoPointsAdded = 1
 	Approx_NoApproximation = 2
+Approx_PointsAdded = Approx_Status.Approx_PointsAdded
+Approx_NoPointsAdded = Approx_Status.Approx_NoPointsAdded
+Approx_NoApproximation = Approx_Status.Approx_NoApproximation
 
 class Approx_ParametrizationType(IntEnum):
 	Approx_ChordLength = 0
 	Approx_Centripetal = 1
 	Approx_IsoParametric = 2
+Approx_ChordLength = Approx_ParametrizationType.Approx_ChordLength
+Approx_Centripetal = Approx_ParametrizationType.Approx_Centripetal
+Approx_IsoParametric = Approx_ParametrizationType.Approx_IsoParametric
 };
 /* end python proxy for enums */
 

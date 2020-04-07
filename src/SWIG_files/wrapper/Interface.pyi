@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,7 +9,7 @@ from OCC.Core.Message import *
 from OCC.Core.MoniTool import *
 
 
-class Interface_ParamType:
+class Interface_ParamType(IntEnum):
 	Interface_ParamMisc: int = ...
 	Interface_ParamInteger: int = ...
 	Interface_ParamReal: int = ...
@@ -20,8 +21,19 @@ class Interface_ParamType:
 	Interface_ParamSub: int = ...
 	Interface_ParamHexa: int = ...
 	Interface_ParamBinary: int = ...
+Interface_ParamMisc = Interface_ParamType.Interface_ParamMisc
+Interface_ParamInteger = Interface_ParamType.Interface_ParamInteger
+Interface_ParamReal = Interface_ParamType.Interface_ParamReal
+Interface_ParamIdent = Interface_ParamType.Interface_ParamIdent
+Interface_ParamVoid = Interface_ParamType.Interface_ParamVoid
+Interface_ParamText = Interface_ParamType.Interface_ParamText
+Interface_ParamEnum = Interface_ParamType.Interface_ParamEnum
+Interface_ParamLogical = Interface_ParamType.Interface_ParamLogical
+Interface_ParamSub = Interface_ParamType.Interface_ParamSub
+Interface_ParamHexa = Interface_ParamType.Interface_ParamHexa
+Interface_ParamBinary = Interface_ParamType.Interface_ParamBinary
 
-class Interface_DataState:
+class Interface_DataState(IntEnum):
 	Interface_StateOK: int = ...
 	Interface_LoadWarning: int = ...
 	Interface_LoadFail: int = ...
@@ -29,14 +41,27 @@ class Interface_DataState:
 	Interface_DataFail: int = ...
 	Interface_StateUnloaded: int = ...
 	Interface_StateUnknown: int = ...
+Interface_StateOK = Interface_DataState.Interface_StateOK
+Interface_LoadWarning = Interface_DataState.Interface_LoadWarning
+Interface_LoadFail = Interface_DataState.Interface_LoadFail
+Interface_DataWarning = Interface_DataState.Interface_DataWarning
+Interface_DataFail = Interface_DataState.Interface_DataFail
+Interface_StateUnloaded = Interface_DataState.Interface_StateUnloaded
+Interface_StateUnknown = Interface_DataState.Interface_StateUnknown
 
-class Interface_CheckStatus:
+class Interface_CheckStatus(IntEnum):
 	Interface_CheckOK: int = ...
 	Interface_CheckWarning: int = ...
 	Interface_CheckFail: int = ...
 	Interface_CheckAny: int = ...
 	Interface_CheckMessage: int = ...
 	Interface_CheckNoFail: int = ...
+Interface_CheckOK = Interface_CheckStatus.Interface_CheckOK
+Interface_CheckWarning = Interface_CheckStatus.Interface_CheckWarning
+Interface_CheckFail = Interface_CheckStatus.Interface_CheckFail
+Interface_CheckAny = Interface_CheckStatus.Interface_CheckAny
+Interface_CheckMessage = Interface_CheckStatus.Interface_CheckMessage
+Interface_CheckNoFail = Interface_CheckStatus.Interface_CheckNoFail
 
 class Interface_BitMap:
 	@overload

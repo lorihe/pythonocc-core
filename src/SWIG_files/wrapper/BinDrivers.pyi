@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,9 +11,11 @@ from OCC.Core.BinLDrivers import *
 from OCC.Core.Storage import *
 
 
-class BinDrivers_Marker:
+class BinDrivers_Marker(IntEnum):
 	BinDrivers_ENDATTRLIST: int = ...
 	BinDrivers_ENDLABEL: int = ...
+BinDrivers_ENDATTRLIST = BinDrivers_Marker.BinDrivers_ENDATTRLIST
+BinDrivers_ENDLABEL = BinDrivers_Marker.BinDrivers_ENDLABEL
 
 class BinDrivers:
 	@staticmethod

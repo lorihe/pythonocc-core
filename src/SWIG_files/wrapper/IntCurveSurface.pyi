@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -13,10 +14,13 @@ from OCC.Core.Bnd import *
 from OCC.Core.IntSurf import *
 
 
-class IntCurveSurface_TransitionOnCurve:
+class IntCurveSurface_TransitionOnCurve(IntEnum):
 	IntCurveSurface_Tangent: int = ...
 	IntCurveSurface_In: int = ...
 	IntCurveSurface_Out: int = ...
+IntCurveSurface_Tangent = IntCurveSurface_TransitionOnCurve.IntCurveSurface_Tangent
+IntCurveSurface_In = IntCurveSurface_TransitionOnCurve.IntCurveSurface_In
+IntCurveSurface_Out = IntCurveSurface_TransitionOnCurve.IntCurveSurface_Out
 
 class IntCurveSurface_Intersection:
 	def Dump(self) -> None: ...

@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,7 +11,7 @@ from OCC.Core.CDM import *
 
 PCDM_BaseDriverPointer = NewType('PCDM_BaseDriverPointer', Storage_BaseDriver)
 
-class PCDM_StoreStatus:
+class PCDM_StoreStatus(IntEnum):
 	PCDM_SS_OK: int = ...
 	PCDM_SS_DriverFailure: int = ...
 	PCDM_SS_WriteFailure: int = ...
@@ -18,14 +19,25 @@ class PCDM_StoreStatus:
 	PCDM_SS_Doc_IsNull: int = ...
 	PCDM_SS_No_Obj: int = ...
 	PCDM_SS_Info_Section_Error: int = ...
+PCDM_SS_OK = PCDM_StoreStatus.PCDM_SS_OK
+PCDM_SS_DriverFailure = PCDM_StoreStatus.PCDM_SS_DriverFailure
+PCDM_SS_WriteFailure = PCDM_StoreStatus.PCDM_SS_WriteFailure
+PCDM_SS_Failure = PCDM_StoreStatus.PCDM_SS_Failure
+PCDM_SS_Doc_IsNull = PCDM_StoreStatus.PCDM_SS_Doc_IsNull
+PCDM_SS_No_Obj = PCDM_StoreStatus.PCDM_SS_No_Obj
+PCDM_SS_Info_Section_Error = PCDM_StoreStatus.PCDM_SS_Info_Section_Error
 
-class PCDM_TypeOfFileDriver:
+class PCDM_TypeOfFileDriver(IntEnum):
 	PCDM_TOFD_File: int = ...
 	PCDM_TOFD_CmpFile: int = ...
 	PCDM_TOFD_XmlFile: int = ...
 	PCDM_TOFD_Unknown: int = ...
+PCDM_TOFD_File = PCDM_TypeOfFileDriver.PCDM_TOFD_File
+PCDM_TOFD_CmpFile = PCDM_TypeOfFileDriver.PCDM_TOFD_CmpFile
+PCDM_TOFD_XmlFile = PCDM_TypeOfFileDriver.PCDM_TOFD_XmlFile
+PCDM_TOFD_Unknown = PCDM_TypeOfFileDriver.PCDM_TOFD_Unknown
 
-class PCDM_ReaderStatus:
+class PCDM_ReaderStatus(IntEnum):
 	PCDM_RS_OK: int = ...
 	PCDM_RS_NoDriver: int = ...
 	PCDM_RS_UnknownFileDriver: int = ...
@@ -48,6 +60,28 @@ class PCDM_ReaderStatus:
 	PCDM_RS_WrongResource: int = ...
 	PCDM_RS_ReaderException: int = ...
 	PCDM_RS_NoModel: int = ...
+PCDM_RS_OK = PCDM_ReaderStatus.PCDM_RS_OK
+PCDM_RS_NoDriver = PCDM_ReaderStatus.PCDM_RS_NoDriver
+PCDM_RS_UnknownFileDriver = PCDM_ReaderStatus.PCDM_RS_UnknownFileDriver
+PCDM_RS_OpenError = PCDM_ReaderStatus.PCDM_RS_OpenError
+PCDM_RS_NoVersion = PCDM_ReaderStatus.PCDM_RS_NoVersion
+PCDM_RS_NoSchema = PCDM_ReaderStatus.PCDM_RS_NoSchema
+PCDM_RS_NoDocument = PCDM_ReaderStatus.PCDM_RS_NoDocument
+PCDM_RS_ExtensionFailure = PCDM_ReaderStatus.PCDM_RS_ExtensionFailure
+PCDM_RS_WrongStreamMode = PCDM_ReaderStatus.PCDM_RS_WrongStreamMode
+PCDM_RS_FormatFailure = PCDM_ReaderStatus.PCDM_RS_FormatFailure
+PCDM_RS_TypeFailure = PCDM_ReaderStatus.PCDM_RS_TypeFailure
+PCDM_RS_TypeNotFoundInSchema = PCDM_ReaderStatus.PCDM_RS_TypeNotFoundInSchema
+PCDM_RS_UnrecognizedFileFormat = PCDM_ReaderStatus.PCDM_RS_UnrecognizedFileFormat
+PCDM_RS_MakeFailure = PCDM_ReaderStatus.PCDM_RS_MakeFailure
+PCDM_RS_PermissionDenied = PCDM_ReaderStatus.PCDM_RS_PermissionDenied
+PCDM_RS_DriverFailure = PCDM_ReaderStatus.PCDM_RS_DriverFailure
+PCDM_RS_AlreadyRetrievedAndModified = PCDM_ReaderStatus.PCDM_RS_AlreadyRetrievedAndModified
+PCDM_RS_AlreadyRetrieved = PCDM_ReaderStatus.PCDM_RS_AlreadyRetrieved
+PCDM_RS_UnknownDocument = PCDM_ReaderStatus.PCDM_RS_UnknownDocument
+PCDM_RS_WrongResource = PCDM_ReaderStatus.PCDM_RS_WrongResource
+PCDM_RS_ReaderException = PCDM_ReaderStatus.PCDM_RS_ReaderException
+PCDM_RS_NoModel = PCDM_ReaderStatus.PCDM_RS_NoModel
 
 class PCDM:
 	@staticmethod

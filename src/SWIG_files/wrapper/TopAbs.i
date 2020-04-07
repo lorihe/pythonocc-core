@@ -91,6 +91,10 @@ class TopAbs_Orientation(IntEnum):
 	TopAbs_REVERSED = 1
 	TopAbs_INTERNAL = 2
 	TopAbs_EXTERNAL = 3
+TopAbs_FORWARD = TopAbs_Orientation.TopAbs_FORWARD
+TopAbs_REVERSED = TopAbs_Orientation.TopAbs_REVERSED
+TopAbs_INTERNAL = TopAbs_Orientation.TopAbs_INTERNAL
+TopAbs_EXTERNAL = TopAbs_Orientation.TopAbs_EXTERNAL
 
 class TopAbs_ShapeEnum(IntEnum):
 	TopAbs_COMPOUND = 0
@@ -102,12 +106,25 @@ class TopAbs_ShapeEnum(IntEnum):
 	TopAbs_EDGE = 6
 	TopAbs_VERTEX = 7
 	TopAbs_SHAPE = 8
+TopAbs_COMPOUND = TopAbs_ShapeEnum.TopAbs_COMPOUND
+TopAbs_COMPSOLID = TopAbs_ShapeEnum.TopAbs_COMPSOLID
+TopAbs_SOLID = TopAbs_ShapeEnum.TopAbs_SOLID
+TopAbs_SHELL = TopAbs_ShapeEnum.TopAbs_SHELL
+TopAbs_FACE = TopAbs_ShapeEnum.TopAbs_FACE
+TopAbs_WIRE = TopAbs_ShapeEnum.TopAbs_WIRE
+TopAbs_EDGE = TopAbs_ShapeEnum.TopAbs_EDGE
+TopAbs_VERTEX = TopAbs_ShapeEnum.TopAbs_VERTEX
+TopAbs_SHAPE = TopAbs_ShapeEnum.TopAbs_SHAPE
 
 class TopAbs_State(IntEnum):
 	TopAbs_IN = 0
 	TopAbs_OUT = 1
 	TopAbs_ON = 2
 	TopAbs_UNKNOWN = 3
+TopAbs_IN = TopAbs_State.TopAbs_IN
+TopAbs_OUT = TopAbs_State.TopAbs_OUT
+TopAbs_ON = TopAbs_State.TopAbs_ON
+TopAbs_UNKNOWN = TopAbs_State.TopAbs_UNKNOWN
 };
 /* end python proxy for enums */
 

@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,16 +15,21 @@ from OCC.Core.TColStd import *
 
 TopOpeBRepDS_PDataStructure = NewType('TopOpeBRepDS_PDataStructure', TopOpeBRepDS_DataStructure)
 
-class TopOpeBRepDS_Config:
+class TopOpeBRepDS_Config(IntEnum):
 	TopOpeBRepDS_UNSHGEOMETRY: int = ...
 	TopOpeBRepDS_SAMEORIENTED: int = ...
 	TopOpeBRepDS_DIFFORIENTED: int = ...
+TopOpeBRepDS_UNSHGEOMETRY = TopOpeBRepDS_Config.TopOpeBRepDS_UNSHGEOMETRY
+TopOpeBRepDS_SAMEORIENTED = TopOpeBRepDS_Config.TopOpeBRepDS_SAMEORIENTED
+TopOpeBRepDS_DIFFORIENTED = TopOpeBRepDS_Config.TopOpeBRepDS_DIFFORIENTED
 
-class TopOpeBRepDS_CheckStatus:
+class TopOpeBRepDS_CheckStatus(IntEnum):
 	TopOpeBRepDS_OK: int = ...
 	TopOpeBRepDS_NOK: int = ...
+TopOpeBRepDS_OK = TopOpeBRepDS_CheckStatus.TopOpeBRepDS_OK
+TopOpeBRepDS_NOK = TopOpeBRepDS_CheckStatus.TopOpeBRepDS_NOK
 
-class TopOpeBRepDS_Kind:
+class TopOpeBRepDS_Kind(IntEnum):
 	TopOpeBRepDS_POINT: int = ...
 	TopOpeBRepDS_CURVE: int = ...
 	TopOpeBRepDS_SURFACE: int = ...
@@ -36,6 +42,18 @@ class TopOpeBRepDS_Kind:
 	TopOpeBRepDS_COMPSOLID: int = ...
 	TopOpeBRepDS_COMPOUND: int = ...
 	TopOpeBRepDS_UNKNOWN: int = ...
+TopOpeBRepDS_POINT = TopOpeBRepDS_Kind.TopOpeBRepDS_POINT
+TopOpeBRepDS_CURVE = TopOpeBRepDS_Kind.TopOpeBRepDS_CURVE
+TopOpeBRepDS_SURFACE = TopOpeBRepDS_Kind.TopOpeBRepDS_SURFACE
+TopOpeBRepDS_VERTEX = TopOpeBRepDS_Kind.TopOpeBRepDS_VERTEX
+TopOpeBRepDS_EDGE = TopOpeBRepDS_Kind.TopOpeBRepDS_EDGE
+TopOpeBRepDS_WIRE = TopOpeBRepDS_Kind.TopOpeBRepDS_WIRE
+TopOpeBRepDS_FACE = TopOpeBRepDS_Kind.TopOpeBRepDS_FACE
+TopOpeBRepDS_SHELL = TopOpeBRepDS_Kind.TopOpeBRepDS_SHELL
+TopOpeBRepDS_SOLID = TopOpeBRepDS_Kind.TopOpeBRepDS_SOLID
+TopOpeBRepDS_COMPSOLID = TopOpeBRepDS_Kind.TopOpeBRepDS_COMPSOLID
+TopOpeBRepDS_COMPOUND = TopOpeBRepDS_Kind.TopOpeBRepDS_COMPOUND
+TopOpeBRepDS_UNKNOWN = TopOpeBRepDS_Kind.TopOpeBRepDS_UNKNOWN
 
 class TopOpeBRepDS:
 	@staticmethod

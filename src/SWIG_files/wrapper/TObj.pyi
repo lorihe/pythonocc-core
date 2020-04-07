@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,10 +10,13 @@ from OCC.Core.TDF import *
 from OCC.Core.gp import *
 
 
-class TObj_DeletingMode:
+class TObj_DeletingMode(IntEnum):
 	TObj_FreeOnly: int = ...
 	TObj_KeepDepending: int = ...
 	TObj_Forced: int = ...
+TObj_FreeOnly = TObj_DeletingMode.TObj_FreeOnly
+TObj_KeepDepending = TObj_DeletingMode.TObj_KeepDepending
+TObj_Forced = TObj_DeletingMode.TObj_Forced
 
 class TObj_Application(TDocStd_Application):
 	def CreateNewDocument(self, theDoc: TDocStd_Document, theFormat: TCollection_ExtendedString) -> bool: ...

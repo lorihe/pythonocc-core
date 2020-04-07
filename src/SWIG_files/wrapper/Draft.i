@@ -93,6 +93,10 @@ class Draft_ErrorStatus(IntEnum):
 	Draft_FaceRecomputation = 1
 	Draft_EdgeRecomputation = 2
 	Draft_VertexRecomputation = 3
+Draft_NoError = Draft_ErrorStatus.Draft_NoError
+Draft_FaceRecomputation = Draft_ErrorStatus.Draft_FaceRecomputation
+Draft_EdgeRecomputation = Draft_ErrorStatus.Draft_EdgeRecomputation
+Draft_VertexRecomputation = Draft_ErrorStatus.Draft_VertexRecomputation
 };
 /* end python proxy for enums */
 

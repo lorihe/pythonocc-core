@@ -297,6 +297,10 @@ class SelectionType(IntEnum):
 	Box = 1
 	Polyline = 2
 	Unknown = 3
+Point = SelectionType.Point
+Box = SelectionType.Box
+Polyline = SelectionType.Polyline
+Unknown = SelectionType.Unknown
 };
 /* end python proxy for enums */
 

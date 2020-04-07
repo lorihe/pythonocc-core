@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -21,10 +22,13 @@ from OCC.Core.TopAbs import *
 from OCC.Core.Adaptor2d import *
 
 
-class StdPrs_Volume:
+class StdPrs_Volume(IntEnum):
 	StdPrs_Volume_Autodetection: int = ...
 	StdPrs_Volume_Closed: int = ...
 	StdPrs_Volume_Opened: int = ...
+StdPrs_Volume_Autodetection = StdPrs_Volume.StdPrs_Volume_Autodetection
+StdPrs_Volume_Closed = StdPrs_Volume.StdPrs_Volume_Closed
+StdPrs_Volume_Opened = StdPrs_Volume.StdPrs_Volume_Opened
 
 class StdPrs_BndBox(Prs3d_Root):
 	@staticmethod

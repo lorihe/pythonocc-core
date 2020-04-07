@@ -105,6 +105,8 @@ enum BRepAlgo_CheckStatus {
 class BRepAlgo_CheckStatus(IntEnum):
 	BRepAlgo_OK = 0
 	BRepAlgo_NOK = 1
+BRepAlgo_OK = BRepAlgo_CheckStatus.BRepAlgo_OK
+BRepAlgo_NOK = BRepAlgo_CheckStatus.BRepAlgo_NOK
 };
 /* end python proxy for enums */
 

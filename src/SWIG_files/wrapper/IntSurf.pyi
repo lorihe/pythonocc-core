@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -7,16 +8,23 @@ from OCC.Core.Adaptor3d import *
 from OCC.Core.GeomAbs import *
 
 
-class IntSurf_Situation:
+class IntSurf_Situation(IntEnum):
 	IntSurf_Inside: int = ...
 	IntSurf_Outside: int = ...
 	IntSurf_Unknown: int = ...
+IntSurf_Inside = IntSurf_Situation.IntSurf_Inside
+IntSurf_Outside = IntSurf_Situation.IntSurf_Outside
+IntSurf_Unknown = IntSurf_Situation.IntSurf_Unknown
 
-class IntSurf_TypeTrans:
+class IntSurf_TypeTrans(IntEnum):
 	IntSurf_In: int = ...
 	IntSurf_Out: int = ...
 	IntSurf_Touch: int = ...
 	IntSurf_Undecided: int = ...
+IntSurf_In = IntSurf_TypeTrans.IntSurf_In
+IntSurf_Out = IntSurf_TypeTrans.IntSurf_Out
+IntSurf_Touch = IntSurf_TypeTrans.IntSurf_Touch
+IntSurf_Undecided = IntSurf_TypeTrans.IntSurf_Undecided
 
 class IntSurf:
 	@staticmethod

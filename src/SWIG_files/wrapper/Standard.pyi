@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 
@@ -32,10 +33,13 @@ uint32_t = NewType('uint32_t', int)
 uint64_t = NewType('uint64_t', int)
 uint8_t = NewType('uint8_t', int)
 
-class Standard_HandlerStatus:
+class Standard_HandlerStatus(IntEnum):
 	Standard_HandlerVoid: int = ...
 	Standard_HandlerJumped: int = ...
 	Standard_HandlerProcessed: int = ...
+Standard_HandlerVoid = Standard_HandlerStatus.Standard_HandlerVoid
+Standard_HandlerJumped = Standard_HandlerStatus.Standard_HandlerJumped
+Standard_HandlerProcessed = Standard_HandlerStatus.Standard_HandlerProcessed
 
 class Standard:
 	@staticmethod

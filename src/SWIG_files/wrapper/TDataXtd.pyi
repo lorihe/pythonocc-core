@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -12,7 +13,7 @@ from OCC.Core.Poly import *
 from OCC.Core.TShort import *
 
 
-class TDataXtd_ConstraintEnum:
+class TDataXtd_ConstraintEnum(IntEnum):
 	TDataXtd_RADIUS: int = ...
 	TDataXtd_DIAMETER: int = ...
 	TDataXtd_MINOR_RADIUS: int = ...
@@ -39,8 +40,34 @@ class TDataXtd_ConstraintEnum:
 	TDataXtd_FACES_ANGLE: int = ...
 	TDataXtd_ROUND: int = ...
 	TDataXtd_OFFSET: int = ...
+TDataXtd_RADIUS = TDataXtd_ConstraintEnum.TDataXtd_RADIUS
+TDataXtd_DIAMETER = TDataXtd_ConstraintEnum.TDataXtd_DIAMETER
+TDataXtd_MINOR_RADIUS = TDataXtd_ConstraintEnum.TDataXtd_MINOR_RADIUS
+TDataXtd_MAJOR_RADIUS = TDataXtd_ConstraintEnum.TDataXtd_MAJOR_RADIUS
+TDataXtd_TANGENT = TDataXtd_ConstraintEnum.TDataXtd_TANGENT
+TDataXtd_PARALLEL = TDataXtd_ConstraintEnum.TDataXtd_PARALLEL
+TDataXtd_PERPENDICULAR = TDataXtd_ConstraintEnum.TDataXtd_PERPENDICULAR
+TDataXtd_CONCENTRIC = TDataXtd_ConstraintEnum.TDataXtd_CONCENTRIC
+TDataXtd_COINCIDENT = TDataXtd_ConstraintEnum.TDataXtd_COINCIDENT
+TDataXtd_DISTANCE = TDataXtd_ConstraintEnum.TDataXtd_DISTANCE
+TDataXtd_ANGLE = TDataXtd_ConstraintEnum.TDataXtd_ANGLE
+TDataXtd_EQUAL_RADIUS = TDataXtd_ConstraintEnum.TDataXtd_EQUAL_RADIUS
+TDataXtd_SYMMETRY = TDataXtd_ConstraintEnum.TDataXtd_SYMMETRY
+TDataXtd_MIDPOINT = TDataXtd_ConstraintEnum.TDataXtd_MIDPOINT
+TDataXtd_EQUAL_DISTANCE = TDataXtd_ConstraintEnum.TDataXtd_EQUAL_DISTANCE
+TDataXtd_FIX = TDataXtd_ConstraintEnum.TDataXtd_FIX
+TDataXtd_RIGID = TDataXtd_ConstraintEnum.TDataXtd_RIGID
+TDataXtd_FROM = TDataXtd_ConstraintEnum.TDataXtd_FROM
+TDataXtd_AXIS = TDataXtd_ConstraintEnum.TDataXtd_AXIS
+TDataXtd_MATE = TDataXtd_ConstraintEnum.TDataXtd_MATE
+TDataXtd_ALIGN_FACES = TDataXtd_ConstraintEnum.TDataXtd_ALIGN_FACES
+TDataXtd_ALIGN_AXES = TDataXtd_ConstraintEnum.TDataXtd_ALIGN_AXES
+TDataXtd_AXES_ANGLE = TDataXtd_ConstraintEnum.TDataXtd_AXES_ANGLE
+TDataXtd_FACES_ANGLE = TDataXtd_ConstraintEnum.TDataXtd_FACES_ANGLE
+TDataXtd_ROUND = TDataXtd_ConstraintEnum.TDataXtd_ROUND
+TDataXtd_OFFSET = TDataXtd_ConstraintEnum.TDataXtd_OFFSET
 
-class TDataXtd_GeometryEnum:
+class TDataXtd_GeometryEnum(IntEnum):
 	TDataXtd_ANY_GEOM: int = ...
 	TDataXtd_POINT: int = ...
 	TDataXtd_LINE: int = ...
@@ -49,6 +76,14 @@ class TDataXtd_GeometryEnum:
 	TDataXtd_SPLINE: int = ...
 	TDataXtd_PLANE: int = ...
 	TDataXtd_CYLINDER: int = ...
+TDataXtd_ANY_GEOM = TDataXtd_GeometryEnum.TDataXtd_ANY_GEOM
+TDataXtd_POINT = TDataXtd_GeometryEnum.TDataXtd_POINT
+TDataXtd_LINE = TDataXtd_GeometryEnum.TDataXtd_LINE
+TDataXtd_CIRCLE = TDataXtd_GeometryEnum.TDataXtd_CIRCLE
+TDataXtd_ELLIPSE = TDataXtd_GeometryEnum.TDataXtd_ELLIPSE
+TDataXtd_SPLINE = TDataXtd_GeometryEnum.TDataXtd_SPLINE
+TDataXtd_PLANE = TDataXtd_GeometryEnum.TDataXtd_PLANE
+TDataXtd_CYLINDER = TDataXtd_GeometryEnum.TDataXtd_CYLINDER
 
 class TDataXtd:
 	@staticmethod

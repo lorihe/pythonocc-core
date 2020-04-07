@@ -122,6 +122,9 @@ class ChFi3d_FilletShape(IntEnum):
 	ChFi3d_Rational = 0
 	ChFi3d_QuasiAngular = 1
 	ChFi3d_Polynomial = 2
+ChFi3d_Rational = ChFi3d_FilletShape.ChFi3d_Rational
+ChFi3d_QuasiAngular = ChFi3d_FilletShape.ChFi3d_QuasiAngular
+ChFi3d_Polynomial = ChFi3d_FilletShape.ChFi3d_Polynomial
 };
 /* end python proxy for enums */
 

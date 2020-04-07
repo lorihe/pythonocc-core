@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,12 +11,17 @@ from OCC.Core.Resource import *
 CDM_DocumentPointer = NewType('CDM_DocumentPointer', CDM_Document)
 CDM_NamesDirectory = NewType('CDM_NamesDirectory', TColStd_DataMapOfStringInteger)
 
-class CDM_CanCloseStatus:
+class CDM_CanCloseStatus(IntEnum):
 	CDM_CCS_OK: int = ...
 	CDM_CCS_NotOpen: int = ...
 	CDM_CCS_UnstoredReferenced: int = ...
 	CDM_CCS_ModifiedReferenced: int = ...
 	CDM_CCS_ReferenceRejection: int = ...
+CDM_CCS_OK = CDM_CanCloseStatus.CDM_CCS_OK
+CDM_CCS_NotOpen = CDM_CanCloseStatus.CDM_CCS_NotOpen
+CDM_CCS_UnstoredReferenced = CDM_CanCloseStatus.CDM_CCS_UnstoredReferenced
+CDM_CCS_ModifiedReferenced = CDM_CanCloseStatus.CDM_CCS_ModifiedReferenced
+CDM_CCS_ReferenceRejection = CDM_CanCloseStatus.CDM_CCS_ReferenceRejection
 
 class CDM_Application(Standard_Transient):
 	def BeginOfUpdate(self, aDocument: CDM_Document) -> None: ...

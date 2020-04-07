@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,7 +10,7 @@ from OCC.Core.gp import *
 ) = NewType(')', None)
 Convert_SequenceOfArray1OfPoles2d = NewType('Convert_SequenceOfArray1OfPoles2d', TColgp_SequenceOfArray1OfPnt2d)
 
-class Convert_ParameterisationType:
+class Convert_ParameterisationType(IntEnum):
 	Convert_TgtThetaOver2: int = ...
 	Convert_TgtThetaOver2_1: int = ...
 	Convert_TgtThetaOver2_2: int = ...
@@ -18,6 +19,14 @@ class Convert_ParameterisationType:
 	Convert_QuasiAngular: int = ...
 	Convert_RationalC1: int = ...
 	Convert_Polynomial: int = ...
+Convert_TgtThetaOver2 = Convert_ParameterisationType.Convert_TgtThetaOver2
+Convert_TgtThetaOver2_1 = Convert_ParameterisationType.Convert_TgtThetaOver2_1
+Convert_TgtThetaOver2_2 = Convert_ParameterisationType.Convert_TgtThetaOver2_2
+Convert_TgtThetaOver2_3 = Convert_ParameterisationType.Convert_TgtThetaOver2_3
+Convert_TgtThetaOver2_4 = Convert_ParameterisationType.Convert_TgtThetaOver2_4
+Convert_QuasiAngular = Convert_ParameterisationType.Convert_QuasiAngular
+Convert_RationalC1 = Convert_ParameterisationType.Convert_RationalC1
+Convert_Polynomial = Convert_ParameterisationType.Convert_Polynomial
 
 class Convert_CompBezierCurves2dToBSplineCurve2d:
 	def __init__(self, AngularTolerance: Optional[float]) -> None: ...

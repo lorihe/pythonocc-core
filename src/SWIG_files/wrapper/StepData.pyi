@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,10 +9,13 @@ from OCC.Core.TColStd import *
 from OCC.Core.Message import *
 
 
-class StepData_Logical:
+class StepData_Logical(IntEnum):
 	StepData_LFalse: int = ...
 	StepData_LTrue: int = ...
 	StepData_LUnknown: int = ...
+StepData_LFalse = StepData_Logical.StepData_LFalse
+StepData_LTrue = StepData_Logical.StepData_LTrue
+StepData_LUnknown = StepData_Logical.StepData_LUnknown
 
 class StepData:
 	@staticmethod

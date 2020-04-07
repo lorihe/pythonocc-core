@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -13,6 +14,9 @@ from OCC.Core.TopoDS import *
 from OCC.Core.TPrsStd import *
 
 XCAFPrs_DocumentExplorerFlags = NewType('XCAFPrs_DocumentExplorerFlags', Standard_Integer)
+XCAFPrs_DocumentExplorerFlags_None = .XCAFPrs_DocumentExplorerFlags_None
+XCAFPrs_DocumentExplorerFlags_OnlyLeafNodes = .XCAFPrs_DocumentExplorerFlags_OnlyLeafNodes
+XCAFPrs_DocumentExplorerFlags_NoStyle = .XCAFPrs_DocumentExplorerFlags_NoStyle
 
 class XCAFPrs:
 	@staticmethod

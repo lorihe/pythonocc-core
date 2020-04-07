@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,15 +15,21 @@ from OCC.Core.TColgp import *
 from OCC.Core.gp import *
 
 
-class Approx_Status:
+class Approx_Status(IntEnum):
 	Approx_PointsAdded: int = ...
 	Approx_NoPointsAdded: int = ...
 	Approx_NoApproximation: int = ...
+Approx_PointsAdded = Approx_Status.Approx_PointsAdded
+Approx_NoPointsAdded = Approx_Status.Approx_NoPointsAdded
+Approx_NoApproximation = Approx_Status.Approx_NoApproximation
 
-class Approx_ParametrizationType:
+class Approx_ParametrizationType(IntEnum):
 	Approx_ChordLength: int = ...
 	Approx_Centripetal: int = ...
 	Approx_IsoParametric: int = ...
+Approx_ChordLength = Approx_ParametrizationType.Approx_ChordLength
+Approx_Centripetal = Approx_ParametrizationType.Approx_Centripetal
+Approx_IsoParametric = Approx_ParametrizationType.Approx_IsoParametric
 
 class Approx_Curve2d:
 	def __init__(self, C2D: Adaptor2d_HCurve2d, First: float, Last: float, TolU: float, TolV: float, Continuity: GeomAbs_Shape, MaxDegree: int, MaxSegments: int) -> None: ...

@@ -80,11 +80,18 @@ class LProp_Status(IntEnum):
 	LProp_Undefined = 1
 	LProp_Defined = 2
 	LProp_Computed = 3
+LProp_Undecided = LProp_Status.LProp_Undecided
+LProp_Undefined = LProp_Status.LProp_Undefined
+LProp_Defined = LProp_Status.LProp_Defined
+LProp_Computed = LProp_Status.LProp_Computed
 
 class LProp_CIType(IntEnum):
 	LProp_Inflection = 0
 	LProp_MinCur = 1
 	LProp_MaxCur = 2
+LProp_Inflection = LProp_CIType.LProp_Inflection
+LProp_MinCur = LProp_CIType.LProp_MinCur
+LProp_MaxCur = LProp_CIType.LProp_MaxCur
 };
 /* end python proxy for enums */
 

@@ -66,6 +66,9 @@ class Standard_HandlerStatus(IntEnum):
 	Standard_HandlerVoid = 0
 	Standard_HandlerJumped = 1
 	Standard_HandlerProcessed = 2
+Standard_HandlerVoid = Standard_HandlerStatus.Standard_HandlerVoid
+Standard_HandlerJumped = Standard_HandlerStatus.Standard_HandlerJumped
+Standard_HandlerProcessed = Standard_HandlerStatus.Standard_HandlerProcessed
 };
 /* end python proxy for enums */
 

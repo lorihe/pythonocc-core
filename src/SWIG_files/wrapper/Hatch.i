@@ -72,6 +72,9 @@ class Hatch_LineForm(IntEnum):
 	Hatch_XLINE = 0
 	Hatch_YLINE = 1
 	Hatch_ANYLINE = 2
+Hatch_XLINE = Hatch_LineForm.Hatch_XLINE
+Hatch_YLINE = Hatch_LineForm.Hatch_YLINE
+Hatch_ANYLINE = Hatch_LineForm.Hatch_ANYLINE
 };
 /* end python proxy for enums */
 

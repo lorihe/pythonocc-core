@@ -1,10 +1,11 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 
 
-class DsgPrs_ArrowSide:
+class DsgPrs_ArrowSide(IntEnum):
 	DsgPrs_AS_NONE: int = ...
 	DsgPrs_AS_FIRSTAR: int = ...
 	DsgPrs_AS_LASTAR: int = ...
@@ -14,6 +15,15 @@ class DsgPrs_ArrowSide:
 	DsgPrs_AS_BOTHPT: int = ...
 	DsgPrs_AS_FIRSTAR_LASTPT: int = ...
 	DsgPrs_AS_FIRSTPT_LASTAR: int = ...
+DsgPrs_AS_NONE = DsgPrs_ArrowSide.DsgPrs_AS_NONE
+DsgPrs_AS_FIRSTAR = DsgPrs_ArrowSide.DsgPrs_AS_FIRSTAR
+DsgPrs_AS_LASTAR = DsgPrs_ArrowSide.DsgPrs_AS_LASTAR
+DsgPrs_AS_BOTHAR = DsgPrs_ArrowSide.DsgPrs_AS_BOTHAR
+DsgPrs_AS_FIRSTPT = DsgPrs_ArrowSide.DsgPrs_AS_FIRSTPT
+DsgPrs_AS_LASTPT = DsgPrs_ArrowSide.DsgPrs_AS_LASTPT
+DsgPrs_AS_BOTHPT = DsgPrs_ArrowSide.DsgPrs_AS_BOTHPT
+DsgPrs_AS_FIRSTAR_LASTPT = DsgPrs_ArrowSide.DsgPrs_AS_FIRSTAR_LASTPT
+DsgPrs_AS_FIRSTPT_LASTAR = DsgPrs_ArrowSide.DsgPrs_AS_FIRSTPT_LASTAR
 
 #classnotwrapped
 class DsgPrs_EllipseRadiusPresentation:

@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,12 +15,15 @@ from OCC.Core.TColGeom import *
 from OCC.Core.LocOpe import *
 
 
-class BRepFeat_Status:
+class BRepFeat_Status(IntEnum):
 	BRepFeat_NoError: int = ...
 	BRepFeat_InvalidPlacement: int = ...
 	BRepFeat_HoleTooLong: int = ...
+BRepFeat_NoError = BRepFeat_Status.BRepFeat_NoError
+BRepFeat_InvalidPlacement = BRepFeat_Status.BRepFeat_InvalidPlacement
+BRepFeat_HoleTooLong = BRepFeat_Status.BRepFeat_HoleTooLong
 
-class BRepFeat_StatusError:
+class BRepFeat_StatusError(IntEnum):
 	BRepFeat_OK: int = ...
 	BRepFeat_BadDirect: int = ...
 	BRepFeat_BadIntersect: int = ...
@@ -48,13 +52,46 @@ class BRepFeat_StatusError:
 	BRepFeat_NullRealTool: int = ...
 	BRepFeat_NullToolF: int = ...
 	BRepFeat_NullToolU: int = ...
+BRepFeat_OK = BRepFeat_StatusError.BRepFeat_OK
+BRepFeat_BadDirect = BRepFeat_StatusError.BRepFeat_BadDirect
+BRepFeat_BadIntersect = BRepFeat_StatusError.BRepFeat_BadIntersect
+BRepFeat_EmptyBaryCurve = BRepFeat_StatusError.BRepFeat_EmptyBaryCurve
+BRepFeat_EmptyCutResult = BRepFeat_StatusError.BRepFeat_EmptyCutResult
+BRepFeat_FalseSide = BRepFeat_StatusError.BRepFeat_FalseSide
+BRepFeat_IncDirection = BRepFeat_StatusError.BRepFeat_IncDirection
+BRepFeat_IncSlidFace = BRepFeat_StatusError.BRepFeat_IncSlidFace
+BRepFeat_IncParameter = BRepFeat_StatusError.BRepFeat_IncParameter
+BRepFeat_IncTypes = BRepFeat_StatusError.BRepFeat_IncTypes
+BRepFeat_IntervalOverlap = BRepFeat_StatusError.BRepFeat_IntervalOverlap
+BRepFeat_InvFirstShape = BRepFeat_StatusError.BRepFeat_InvFirstShape
+BRepFeat_InvOption = BRepFeat_StatusError.BRepFeat_InvOption
+BRepFeat_InvShape = BRepFeat_StatusError.BRepFeat_InvShape
+BRepFeat_LocOpeNotDone = BRepFeat_StatusError.BRepFeat_LocOpeNotDone
+BRepFeat_LocOpeInvNotDone = BRepFeat_StatusError.BRepFeat_LocOpeInvNotDone
+BRepFeat_NoExtFace = BRepFeat_StatusError.BRepFeat_NoExtFace
+BRepFeat_NoFaceProf = BRepFeat_StatusError.BRepFeat_NoFaceProf
+BRepFeat_NoGluer = BRepFeat_StatusError.BRepFeat_NoGluer
+BRepFeat_NoIntersectF = BRepFeat_StatusError.BRepFeat_NoIntersectF
+BRepFeat_NoIntersectU = BRepFeat_StatusError.BRepFeat_NoIntersectU
+BRepFeat_NoParts = BRepFeat_StatusError.BRepFeat_NoParts
+BRepFeat_NoProjPt = BRepFeat_StatusError.BRepFeat_NoProjPt
+BRepFeat_NotInitialized = BRepFeat_StatusError.BRepFeat_NotInitialized
+BRepFeat_NotYetImplemented = BRepFeat_StatusError.BRepFeat_NotYetImplemented
+BRepFeat_NullRealTool = BRepFeat_StatusError.BRepFeat_NullRealTool
+BRepFeat_NullToolF = BRepFeat_StatusError.BRepFeat_NullToolF
+BRepFeat_NullToolU = BRepFeat_StatusError.BRepFeat_NullToolU
 
-class BRepFeat_PerfSelection:
+class BRepFeat_PerfSelection(IntEnum):
 	BRepFeat_NoSelection: int = ...
 	BRepFeat_SelectionFU: int = ...
 	BRepFeat_SelectionU: int = ...
 	BRepFeat_SelectionSh: int = ...
 	BRepFeat_SelectionShU: int = ...
+BRepFeat_NoSelection = BRepFeat_PerfSelection.BRepFeat_NoSelection
+BRepFeat_SelectionFU = BRepFeat_PerfSelection.BRepFeat_SelectionFU
+BRepFeat_SelectionU = BRepFeat_PerfSelection.BRepFeat_SelectionU
+BRepFeat_SelectionSh = BRepFeat_PerfSelection.BRepFeat_SelectionSh
+BRepFeat_SelectionShU = BRepFeat_PerfSelection.BRepFeat_SelectionShU
 
 class BRepFeat:
 	@staticmethod

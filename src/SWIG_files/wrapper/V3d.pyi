@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -20,29 +21,43 @@ V3d_TypeOfShadingModel = NewType('V3d_TypeOfShadingModel', Graphic3d_TypeOfShadi
 V3d_ViewPointer = NewType('V3d_ViewPointer', V3d_View)
 V3d_ViewerPointer = NewType('V3d_ViewerPointer', V3d_Viewer)
 
-class V3d_TypeOfPickCamera:
+class V3d_TypeOfPickCamera(IntEnum):
 	V3d_POSITIONCAMERA: int = ...
 	V3d_SPACECAMERA: int = ...
 	V3d_RADIUSTEXTCAMERA: int = ...
 	V3d_ExtRADIUSCAMERA: int = ...
 	V3d_IntRADIUSCAMERA: int = ...
 	V3d_NOTHINGCAMERA: int = ...
+V3d_POSITIONCAMERA = V3d_TypeOfPickCamera.V3d_POSITIONCAMERA
+V3d_SPACECAMERA = V3d_TypeOfPickCamera.V3d_SPACECAMERA
+V3d_RADIUSTEXTCAMERA = V3d_TypeOfPickCamera.V3d_RADIUSTEXTCAMERA
+V3d_ExtRADIUSCAMERA = V3d_TypeOfPickCamera.V3d_ExtRADIUSCAMERA
+V3d_IntRADIUSCAMERA = V3d_TypeOfPickCamera.V3d_IntRADIUSCAMERA
+V3d_NOTHINGCAMERA = V3d_TypeOfPickCamera.V3d_NOTHINGCAMERA
 
-class V3d_TypeOfVisualization:
+class V3d_TypeOfVisualization(IntEnum):
 	V3d_WIREFRAME: int = ...
 	V3d_ZBUFFER: int = ...
+V3d_WIREFRAME = V3d_TypeOfVisualization.V3d_WIREFRAME
+V3d_ZBUFFER = V3d_TypeOfVisualization.V3d_ZBUFFER
 
-class V3d_TypeOfView:
+class V3d_TypeOfView(IntEnum):
 	V3d_ORTHOGRAPHIC: int = ...
 	V3d_PERSPECTIVE: int = ...
+V3d_ORTHOGRAPHIC = V3d_TypeOfView.V3d_ORTHOGRAPHIC
+V3d_PERSPECTIVE = V3d_TypeOfView.V3d_PERSPECTIVE
 
-class V3d_StereoDumpOptions:
+class V3d_StereoDumpOptions(IntEnum):
 	V3d_SDO_MONO: int = ...
 	V3d_SDO_LEFT_EYE: int = ...
 	V3d_SDO_RIGHT_EYE: int = ...
 	V3d_SDO_BLENDED: int = ...
+V3d_SDO_MONO = V3d_StereoDumpOptions.V3d_SDO_MONO
+V3d_SDO_LEFT_EYE = V3d_StereoDumpOptions.V3d_SDO_LEFT_EYE
+V3d_SDO_RIGHT_EYE = V3d_StereoDumpOptions.V3d_SDO_RIGHT_EYE
+V3d_SDO_BLENDED = V3d_StereoDumpOptions.V3d_SDO_BLENDED
 
-class V3d_TypeOfOrientation:
+class V3d_TypeOfOrientation(IntEnum):
 	V3d_Xpos: int = ...
 	V3d_Ypos: int = ...
 	V3d_Zpos: int = ...
@@ -85,30 +100,88 @@ class V3d_TypeOfOrientation:
 	V3d_TypeOfOrientation_Yup_Bottom: int = ...
 	V3d_TypeOfOrientation_Yup_Left: int = ...
 	V3d_TypeOfOrientation_Yup_Right: int = ...
+V3d_Xpos = V3d_TypeOfOrientation.V3d_Xpos
+V3d_Ypos = V3d_TypeOfOrientation.V3d_Ypos
+V3d_Zpos = V3d_TypeOfOrientation.V3d_Zpos
+V3d_Xneg = V3d_TypeOfOrientation.V3d_Xneg
+V3d_Yneg = V3d_TypeOfOrientation.V3d_Yneg
+V3d_Zneg = V3d_TypeOfOrientation.V3d_Zneg
+V3d_XposYpos = V3d_TypeOfOrientation.V3d_XposYpos
+V3d_XposZpos = V3d_TypeOfOrientation.V3d_XposZpos
+V3d_YposZpos = V3d_TypeOfOrientation.V3d_YposZpos
+V3d_XnegYneg = V3d_TypeOfOrientation.V3d_XnegYneg
+V3d_XnegYpos = V3d_TypeOfOrientation.V3d_XnegYpos
+V3d_XnegZneg = V3d_TypeOfOrientation.V3d_XnegZneg
+V3d_XnegZpos = V3d_TypeOfOrientation.V3d_XnegZpos
+V3d_YnegZneg = V3d_TypeOfOrientation.V3d_YnegZneg
+V3d_YnegZpos = V3d_TypeOfOrientation.V3d_YnegZpos
+V3d_XposYneg = V3d_TypeOfOrientation.V3d_XposYneg
+V3d_XposZneg = V3d_TypeOfOrientation.V3d_XposZneg
+V3d_YposZneg = V3d_TypeOfOrientation.V3d_YposZneg
+V3d_XposYposZpos = V3d_TypeOfOrientation.V3d_XposYposZpos
+V3d_XposYnegZpos = V3d_TypeOfOrientation.V3d_XposYnegZpos
+V3d_XposYposZneg = V3d_TypeOfOrientation.V3d_XposYposZneg
+V3d_XnegYposZpos = V3d_TypeOfOrientation.V3d_XnegYposZpos
+V3d_XposYnegZneg = V3d_TypeOfOrientation.V3d_XposYnegZneg
+V3d_XnegYposZneg = V3d_TypeOfOrientation.V3d_XnegYposZneg
+V3d_XnegYnegZpos = V3d_TypeOfOrientation.V3d_XnegYnegZpos
+V3d_XnegYnegZneg = V3d_TypeOfOrientation.V3d_XnegYnegZneg
+V3d_TypeOfOrientation_Zup_AxoLeft = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_AxoLeft
+V3d_TypeOfOrientation_Zup_AxoRight = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_AxoRight
+V3d_TypeOfOrientation_Zup_Front = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_Front
+V3d_TypeOfOrientation_Zup_Back = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_Back
+V3d_TypeOfOrientation_Zup_Top = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_Top
+V3d_TypeOfOrientation_Zup_Bottom = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_Bottom
+V3d_TypeOfOrientation_Zup_Left = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_Left
+V3d_TypeOfOrientation_Zup_Right = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Zup_Right
+V3d_TypeOfOrientation_Yup_AxoLeft = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_AxoLeft
+V3d_TypeOfOrientation_Yup_AxoRight = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_AxoRight
+V3d_TypeOfOrientation_Yup_Front = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_Front
+V3d_TypeOfOrientation_Yup_Back = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_Back
+V3d_TypeOfOrientation_Yup_Top = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_Top
+V3d_TypeOfOrientation_Yup_Bottom = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_Bottom
+V3d_TypeOfOrientation_Yup_Left = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_Left
+V3d_TypeOfOrientation_Yup_Right = V3d_TypeOfOrientation.V3d_TypeOfOrientation_Yup_Right
 
-class V3d_TypeOfAxe:
+class V3d_TypeOfAxe(IntEnum):
 	V3d_X: int = ...
 	V3d_Y: int = ...
 	V3d_Z: int = ...
+V3d_X = V3d_TypeOfAxe.V3d_X
+V3d_Y = V3d_TypeOfAxe.V3d_Y
+V3d_Z = V3d_TypeOfAxe.V3d_Z
 
-class V3d_TypeOfRepresentation:
+class V3d_TypeOfRepresentation(IntEnum):
 	V3d_SIMPLE: int = ...
 	V3d_COMPLETE: int = ...
 	V3d_PARTIAL: int = ...
 	V3d_SAMELAST: int = ...
+V3d_SIMPLE = V3d_TypeOfRepresentation.V3d_SIMPLE
+V3d_COMPLETE = V3d_TypeOfRepresentation.V3d_COMPLETE
+V3d_PARTIAL = V3d_TypeOfRepresentation.V3d_PARTIAL
+V3d_SAMELAST = V3d_TypeOfRepresentation.V3d_SAMELAST
 
-class V3d_TypeOfBackfacingModel:
+class V3d_TypeOfBackfacingModel(IntEnum):
 	V3d_TOBM_AUTOMATIC: int = ...
 	V3d_TOBM_ALWAYS_DISPLAYED: int = ...
 	V3d_TOBM_NEVER_DISPLAYED: int = ...
+V3d_TOBM_AUTOMATIC = V3d_TypeOfBackfacingModel.V3d_TOBM_AUTOMATIC
+V3d_TOBM_ALWAYS_DISPLAYED = V3d_TypeOfBackfacingModel.V3d_TOBM_ALWAYS_DISPLAYED
+V3d_TOBM_NEVER_DISPLAYED = V3d_TypeOfBackfacingModel.V3d_TOBM_NEVER_DISPLAYED
 
-class V3d_TypeOfPickLight:
+class V3d_TypeOfPickLight(IntEnum):
 	V3d_POSITIONLIGHT: int = ...
 	V3d_SPACELIGHT: int = ...
 	V3d_RADIUSTEXTLIGHT: int = ...
 	V3d_ExtRADIUSLIGHT: int = ...
 	V3d_IntRADIUSLIGHT: int = ...
 	V3d_NOTHING: int = ...
+V3d_POSITIONLIGHT = V3d_TypeOfPickLight.V3d_POSITIONLIGHT
+V3d_SPACELIGHT = V3d_TypeOfPickLight.V3d_SPACELIGHT
+V3d_RADIUSTEXTLIGHT = V3d_TypeOfPickLight.V3d_RADIUSTEXTLIGHT
+V3d_ExtRADIUSLIGHT = V3d_TypeOfPickLight.V3d_ExtRADIUSLIGHT
+V3d_IntRADIUSLIGHT = V3d_TypeOfPickLight.V3d_IntRADIUSLIGHT
+V3d_NOTHING = V3d_TypeOfPickLight.V3d_NOTHING
 
 class V3d:
 	@staticmethod

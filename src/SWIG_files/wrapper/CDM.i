@@ -82,6 +82,11 @@ class CDM_CanCloseStatus(IntEnum):
 	CDM_CCS_UnstoredReferenced = 2
 	CDM_CCS_ModifiedReferenced = 3
 	CDM_CCS_ReferenceRejection = 4
+CDM_CCS_OK = CDM_CanCloseStatus.CDM_CCS_OK
+CDM_CCS_NotOpen = CDM_CanCloseStatus.CDM_CCS_NotOpen
+CDM_CCS_UnstoredReferenced = CDM_CanCloseStatus.CDM_CCS_UnstoredReferenced
+CDM_CCS_ModifiedReferenced = CDM_CanCloseStatus.CDM_CCS_ModifiedReferenced
+CDM_CCS_ReferenceRejection = CDM_CanCloseStatus.CDM_CCS_ReferenceRejection
 };
 /* end python proxy for enums */
 

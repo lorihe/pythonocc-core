@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,12 +10,15 @@ from OCC.Core.StepBasic import *
 from OCC.Core.StepShape import *
 
 
-class StepDimTol_LimitCondition:
+class StepDimTol_LimitCondition(IntEnum):
 	StepDimTol_MaximumMaterialCondition: int = ...
 	StepDimTol_LeastMaterialCondition: int = ...
 	StepDimTol_RegardlessOfFeatureSize: int = ...
+StepDimTol_MaximumMaterialCondition = StepDimTol_LimitCondition.StepDimTol_MaximumMaterialCondition
+StepDimTol_LeastMaterialCondition = StepDimTol_LimitCondition.StepDimTol_LeastMaterialCondition
+StepDimTol_RegardlessOfFeatureSize = StepDimTol_LimitCondition.StepDimTol_RegardlessOfFeatureSize
 
-class StepDimTol_GeometricToleranceType:
+class StepDimTol_GeometricToleranceType(IntEnum):
 	StepDimTol_GTTAngularityTolerance: int = ...
 	StepDimTol_GTTCircularRunoutTolerance: int = ...
 	StepDimTol_GTTCoaxialityTolerance: int = ...
@@ -30,14 +34,33 @@ class StepDimTol_GeometricToleranceType:
 	StepDimTol_GTTSurfaceProfileTolerance: int = ...
 	StepDimTol_GTTSymmetryTolerance: int = ...
 	StepDimTol_GTTTotalRunoutTolerance: int = ...
+StepDimTol_GTTAngularityTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTAngularityTolerance
+StepDimTol_GTTCircularRunoutTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTCircularRunoutTolerance
+StepDimTol_GTTCoaxialityTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTCoaxialityTolerance
+StepDimTol_GTTConcentricityTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTConcentricityTolerance
+StepDimTol_GTTCylindricityTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTCylindricityTolerance
+StepDimTol_GTTFlatnessTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTFlatnessTolerance
+StepDimTol_GTTLineProfileTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTLineProfileTolerance
+StepDimTol_GTTParallelismTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTParallelismTolerance
+StepDimTol_GTTPerpendicularityTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTPerpendicularityTolerance
+StepDimTol_GTTPositionTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTPositionTolerance
+StepDimTol_GTTRoundnessTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTRoundnessTolerance
+StepDimTol_GTTStraightnessTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTStraightnessTolerance
+StepDimTol_GTTSurfaceProfileTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTSurfaceProfileTolerance
+StepDimTol_GTTSymmetryTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTSymmetryTolerance
+StepDimTol_GTTTotalRunoutTolerance = StepDimTol_GeometricToleranceType.StepDimTol_GTTTotalRunoutTolerance
 
-class StepDimTol_DatumReferenceModifierType:
+class StepDimTol_DatumReferenceModifierType(IntEnum):
 	StepDimTol_CircularOrCylindrical: int = ...
 	StepDimTol_Distance: int = ...
 	StepDimTol_Projected: int = ...
 	StepDimTol_Spherical: int = ...
+StepDimTol_CircularOrCylindrical = StepDimTol_DatumReferenceModifierType.StepDimTol_CircularOrCylindrical
+StepDimTol_Distance = StepDimTol_DatumReferenceModifierType.StepDimTol_Distance
+StepDimTol_Projected = StepDimTol_DatumReferenceModifierType.StepDimTol_Projected
+StepDimTol_Spherical = StepDimTol_DatumReferenceModifierType.StepDimTol_Spherical
 
-class StepDimTol_SimpleDatumReferenceModifier:
+class StepDimTol_SimpleDatumReferenceModifier(IntEnum):
 	StepDimTol_SDRMAnyCrossSection: int = ...
 	StepDimTol_SDRMAnyLongitudinalSection: int = ...
 	StepDimTol_SDRMBasic: int = ...
@@ -60,13 +83,38 @@ class StepDimTol_SimpleDatumReferenceModifier:
 	StepDimTol_SDRMPlane: int = ...
 	StepDimTol_SDRMPoint: int = ...
 	StepDimTol_SDRMTranslation: int = ...
+StepDimTol_SDRMAnyCrossSection = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMAnyCrossSection
+StepDimTol_SDRMAnyLongitudinalSection = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMAnyLongitudinalSection
+StepDimTol_SDRMBasic = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMBasic
+StepDimTol_SDRMContactingFeature = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMContactingFeature
+StepDimTol_SDRMDegreeOfFreedomConstraintU = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDegreeOfFreedomConstraintU
+StepDimTol_SDRMDegreeOfFreedomConstraintV = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDegreeOfFreedomConstraintV
+StepDimTol_SDRMDegreeOfFreedomConstraintW = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDegreeOfFreedomConstraintW
+StepDimTol_SDRMDegreeOfFreedomConstraintX = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDegreeOfFreedomConstraintX
+StepDimTol_SDRMDegreeOfFreedomConstraintY = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDegreeOfFreedomConstraintY
+StepDimTol_SDRMDegreeOfFreedomConstraintZ = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDegreeOfFreedomConstraintZ
+StepDimTol_SDRMDistanceVariable = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMDistanceVariable
+StepDimTol_SDRMFreeState = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMFreeState
+StepDimTol_SDRMLeastMaterialRequirement = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMLeastMaterialRequirement
+StepDimTol_SDRMLine = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMLine
+StepDimTol_SDRMMajorDiameter = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMMajorDiameter
+StepDimTol_SDRMMaximumMaterialRequirement = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMMaximumMaterialRequirement
+StepDimTol_SDRMMinorDiameter = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMMinorDiameter
+StepDimTol_SDRMOrientation = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMOrientation
+StepDimTol_SDRMPitchDiameter = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMPitchDiameter
+StepDimTol_SDRMPlane = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMPlane
+StepDimTol_SDRMPoint = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMPoint
+StepDimTol_SDRMTranslation = StepDimTol_SimpleDatumReferenceModifier.StepDimTol_SDRMTranslation
 
-class StepDimTol_AreaUnitType:
+class StepDimTol_AreaUnitType(IntEnum):
 	StepDimTol_Circular: int = ...
 	StepDimTol_Rectangular: int = ...
 	StepDimTol_Square: int = ...
+StepDimTol_Circular = StepDimTol_AreaUnitType.StepDimTol_Circular
+StepDimTol_Rectangular = StepDimTol_AreaUnitType.StepDimTol_Rectangular
+StepDimTol_Square = StepDimTol_AreaUnitType.StepDimTol_Square
 
-class StepDimTol_GeometricToleranceModifier:
+class StepDimTol_GeometricToleranceModifier(IntEnum):
 	StepDimTol_GTMAnyCrossSection: int = ...
 	StepDimTol_GTMCommonZone: int = ...
 	StepDimTol_GTMEachRadialElement: int = ...
@@ -82,6 +130,21 @@ class StepDimTol_GeometricToleranceModifier:
 	StepDimTol_GTMSeparateRequirement: int = ...
 	StepDimTol_GTMStatisticalTolerance: int = ...
 	StepDimTol_GTMTangentPlane: int = ...
+StepDimTol_GTMAnyCrossSection = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMAnyCrossSection
+StepDimTol_GTMCommonZone = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMCommonZone
+StepDimTol_GTMEachRadialElement = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMEachRadialElement
+StepDimTol_GTMFreeState = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMFreeState
+StepDimTol_GTMLeastMaterialRequirement = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMLeastMaterialRequirement
+StepDimTol_GTMLineElement = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMLineElement
+StepDimTol_GTMMajorDiameter = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMMajorDiameter
+StepDimTol_GTMMaximumMaterialRequirement = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMMaximumMaterialRequirement
+StepDimTol_GTMMinorDiameter = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMMinorDiameter
+StepDimTol_GTMNotConvex = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMNotConvex
+StepDimTol_GTMPitchDiameter = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMPitchDiameter
+StepDimTol_GTMReciprocityRequirement = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMReciprocityRequirement
+StepDimTol_GTMSeparateRequirement = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMSeparateRequirement
+StepDimTol_GTMStatisticalTolerance = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMStatisticalTolerance
+StepDimTol_GTMTangentPlane = StepDimTol_GeometricToleranceModifier.StepDimTol_GTMTangentPlane
 
 class StepDimTol_CommonDatum(StepRepr_CompositeShapeAspect):
 	def __init__(self) -> None: ...

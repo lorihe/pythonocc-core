@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,7 +11,7 @@ from OCC.Core.TColgp import *
 from OCC.Core.Adaptor2d import *
 
 
-class Blend_Status:
+class Blend_Status(IntEnum):
 	Blend_StepTooLarge: int = ...
 	Blend_StepTooSmall: int = ...
 	Blend_Backward: int = ...
@@ -19,12 +20,24 @@ class Blend_Status:
 	Blend_OnRst2: int = ...
 	Blend_OnRst12: int = ...
 	Blend_OK: int = ...
+Blend_StepTooLarge = Blend_Status.Blend_StepTooLarge
+Blend_StepTooSmall = Blend_Status.Blend_StepTooSmall
+Blend_Backward = Blend_Status.Blend_Backward
+Blend_SamePoints = Blend_Status.Blend_SamePoints
+Blend_OnRst1 = Blend_Status.Blend_OnRst1
+Blend_OnRst2 = Blend_Status.Blend_OnRst2
+Blend_OnRst12 = Blend_Status.Blend_OnRst12
+Blend_OK = Blend_Status.Blend_OK
 
-class Blend_DecrochStatus:
+class Blend_DecrochStatus(IntEnum):
 	Blend_NoDecroch: int = ...
 	Blend_DecrochRst1: int = ...
 	Blend_DecrochRst2: int = ...
 	Blend_DecrochBoth: int = ...
+Blend_NoDecroch = Blend_DecrochStatus.Blend_NoDecroch
+Blend_DecrochRst1 = Blend_DecrochStatus.Blend_DecrochRst1
+Blend_DecrochRst2 = Blend_DecrochStatus.Blend_DecrochRst2
+Blend_DecrochBoth = Blend_DecrochStatus.Blend_DecrochBoth
 
 class Blend_AppFunction(math_FunctionSetWithDerivatives):
 	def Derivatives(self, X: math_Vector, D: math_Matrix) -> bool: ...

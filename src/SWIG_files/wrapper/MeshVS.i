@@ -211,11 +211,22 @@ class MeshVS_EntityType(IntEnum):
 	MeshVS_ET_Volume = 16
 	MeshVS_ET_Element = MeshVS_ET_0D | MeshVS_ET_Link | MeshVS_ET_Face | MeshVS_ET_Volume
 	MeshVS_ET_All = MeshVS_ET_Element | MeshVS_ET_Node
+MeshVS_ET_NONE = MeshVS_EntityType.MeshVS_ET_NONE
+MeshVS_ET_Node = MeshVS_EntityType.MeshVS_ET_Node
+MeshVS_ET_0D = MeshVS_EntityType.MeshVS_ET_0D
+MeshVS_ET_Link = MeshVS_EntityType.MeshVS_ET_Link
+MeshVS_ET_Face = MeshVS_EntityType.MeshVS_ET_Face
+MeshVS_ET_Volume = MeshVS_EntityType.MeshVS_ET_Volume
+MeshVS_ET_Element = MeshVS_EntityType.MeshVS_ET_Element
+MeshVS_ET_All = MeshVS_EntityType.MeshVS_ET_All
 
 class MeshVS_MeshSelectionMethod(IntEnum):
 	MeshVS_MSM_PRECISE = 0
 	MeshVS_MSM_NODES = 1
 	MeshVS_MSM_BOX = 2
+MeshVS_MSM_PRECISE = MeshVS_MeshSelectionMethod.MeshVS_MSM_PRECISE
+MeshVS_MSM_NODES = MeshVS_MeshSelectionMethod.MeshVS_MSM_NODES
+MeshVS_MSM_BOX = MeshVS_MeshSelectionMethod.MeshVS_MSM_BOX
 
 class MeshVS_SelectionModeFlags(IntEnum):
 	MeshVS_SMF_Mesh = 0
@@ -227,6 +238,22 @@ class MeshVS_SelectionModeFlags(IntEnum):
 	MeshVS_SMF_Element = MeshVS_SMF_0D | MeshVS_SMF_Link | MeshVS_SMF_Face | MeshVS_SMF_Volume
 	MeshVS_SMF_All = MeshVS_SMF_Element | MeshVS_SMF_Node
 	MeshVS_SMF_Group = 256
+MeshVS_SMF_Mesh = MeshVS_SelectionModeFlags.MeshVS_SMF_Mesh
+MeshVS_SMF_Node = MeshVS_SelectionModeFlags.MeshVS_SMF_Node
+MeshVS_SMF_0D = MeshVS_SelectionModeFlags.MeshVS_SMF_0D
+MeshVS_SMF_Link = MeshVS_SelectionModeFlags.MeshVS_SMF_Link
+MeshVS_SMF_Face = MeshVS_SelectionModeFlags.MeshVS_SMF_Face
+MeshVS_SMF_Volume = MeshVS_SelectionModeFlags.MeshVS_SMF_Volume
+MeshVS_SMF_Element = MeshVS_SelectionModeFlags.MeshVS_SMF_Element
+MeshVS_SMF_All = MeshVS_SelectionModeFlags.MeshVS_SMF_All
+MeshVS_SMF_Group = MeshVS_SelectionModeFlags.MeshVS_SMF_Group
+MeshVS_BP_Mesh = .MeshVS_BP_Mesh
+MeshVS_BP_NodalColor = .MeshVS_BP_NodalColor
+MeshVS_BP_ElemColor = .MeshVS_BP_ElemColor
+MeshVS_BP_Text = .MeshVS_BP_Text
+MeshVS_BP_Vector = .MeshVS_BP_Vector
+MeshVS_BP_User = .MeshVS_BP_User
+MeshVS_BP_Default = .MeshVS_BP_Default
 
 class MeshVS_DrawerAttribute(IntEnum):
 	MeshVS_DA_InteriorStyle = 0
@@ -269,6 +296,62 @@ class MeshVS_DrawerAttribute(IntEnum):
 	MeshVS_DA_SmoothShading = 37
 	MeshVS_DA_SupressBackFaces = 38
 	MeshVS_DA_User = 39
+MeshVS_DA_InteriorStyle = MeshVS_DrawerAttribute.MeshVS_DA_InteriorStyle
+MeshVS_DA_InteriorColor = MeshVS_DrawerAttribute.MeshVS_DA_InteriorColor
+MeshVS_DA_BackInteriorColor = MeshVS_DrawerAttribute.MeshVS_DA_BackInteriorColor
+MeshVS_DA_EdgeColor = MeshVS_DrawerAttribute.MeshVS_DA_EdgeColor
+MeshVS_DA_EdgeType = MeshVS_DrawerAttribute.MeshVS_DA_EdgeType
+MeshVS_DA_EdgeWidth = MeshVS_DrawerAttribute.MeshVS_DA_EdgeWidth
+MeshVS_DA_HatchStyle = MeshVS_DrawerAttribute.MeshVS_DA_HatchStyle
+MeshVS_DA_FrontMaterial = MeshVS_DrawerAttribute.MeshVS_DA_FrontMaterial
+MeshVS_DA_BackMaterial = MeshVS_DrawerAttribute.MeshVS_DA_BackMaterial
+MeshVS_DA_BeamType = MeshVS_DrawerAttribute.MeshVS_DA_BeamType
+MeshVS_DA_BeamWidth = MeshVS_DrawerAttribute.MeshVS_DA_BeamWidth
+MeshVS_DA_BeamColor = MeshVS_DrawerAttribute.MeshVS_DA_BeamColor
+MeshVS_DA_MarkerType = MeshVS_DrawerAttribute.MeshVS_DA_MarkerType
+MeshVS_DA_MarkerColor = MeshVS_DrawerAttribute.MeshVS_DA_MarkerColor
+MeshVS_DA_MarkerScale = MeshVS_DrawerAttribute.MeshVS_DA_MarkerScale
+MeshVS_DA_TextColor = MeshVS_DrawerAttribute.MeshVS_DA_TextColor
+MeshVS_DA_TextHeight = MeshVS_DrawerAttribute.MeshVS_DA_TextHeight
+MeshVS_DA_TextFont = MeshVS_DrawerAttribute.MeshVS_DA_TextFont
+MeshVS_DA_TextExpansionFactor = MeshVS_DrawerAttribute.MeshVS_DA_TextExpansionFactor
+MeshVS_DA_TextSpace = MeshVS_DrawerAttribute.MeshVS_DA_TextSpace
+MeshVS_DA_TextStyle = MeshVS_DrawerAttribute.MeshVS_DA_TextStyle
+MeshVS_DA_TextDisplayType = MeshVS_DrawerAttribute.MeshVS_DA_TextDisplayType
+MeshVS_DA_TextTexFont = MeshVS_DrawerAttribute.MeshVS_DA_TextTexFont
+MeshVS_DA_TextFontAspect = MeshVS_DrawerAttribute.MeshVS_DA_TextFontAspect
+MeshVS_DA_VectorColor = MeshVS_DrawerAttribute.MeshVS_DA_VectorColor
+MeshVS_DA_VectorMaxLength = MeshVS_DrawerAttribute.MeshVS_DA_VectorMaxLength
+MeshVS_DA_VectorArrowPart = MeshVS_DrawerAttribute.MeshVS_DA_VectorArrowPart
+MeshVS_DA_IsAllowOverlapped = MeshVS_DrawerAttribute.MeshVS_DA_IsAllowOverlapped
+MeshVS_DA_Reflection = MeshVS_DrawerAttribute.MeshVS_DA_Reflection
+MeshVS_DA_ColorReflection = MeshVS_DrawerAttribute.MeshVS_DA_ColorReflection
+MeshVS_DA_ShrinkCoeff = MeshVS_DrawerAttribute.MeshVS_DA_ShrinkCoeff
+MeshVS_DA_MaxFaceNodes = MeshVS_DrawerAttribute.MeshVS_DA_MaxFaceNodes
+MeshVS_DA_ComputeTime = MeshVS_DrawerAttribute.MeshVS_DA_ComputeTime
+MeshVS_DA_ComputeSelectionTime = MeshVS_DrawerAttribute.MeshVS_DA_ComputeSelectionTime
+MeshVS_DA_DisplayNodes = MeshVS_DrawerAttribute.MeshVS_DA_DisplayNodes
+MeshVS_DA_SelectableAuto = MeshVS_DrawerAttribute.MeshVS_DA_SelectableAuto
+MeshVS_DA_ShowEdges = MeshVS_DrawerAttribute.MeshVS_DA_ShowEdges
+MeshVS_DA_SmoothShading = MeshVS_DrawerAttribute.MeshVS_DA_SmoothShading
+MeshVS_DA_SupressBackFaces = MeshVS_DrawerAttribute.MeshVS_DA_SupressBackFaces
+MeshVS_DA_User = MeshVS_DrawerAttribute.MeshVS_DA_User
+MeshVS_DMF_WireFrame = .MeshVS_DMF_WireFrame
+MeshVS_DMF_Shading = .MeshVS_DMF_Shading
+MeshVS_DMF_Shrink = .MeshVS_DMF_Shrink
+MeshVS_DMF_OCCMask = .MeshVS_DMF_OCCMask
+MeshVS_DMF_VectorDataPrs = .MeshVS_DMF_VectorDataPrs
+MeshVS_DMF_NodalColorDataPrs = .MeshVS_DMF_NodalColorDataPrs
+MeshVS_DMF_ElementalColorDataPrs = .MeshVS_DMF_ElementalColorDataPrs
+MeshVS_DMF_TextDataPrs = .MeshVS_DMF_TextDataPrs
+MeshVS_DMF_EntitiesWithData = .MeshVS_DMF_EntitiesWithData
+MeshVS_DMF_DeformedPrsWireFrame = .MeshVS_DMF_DeformedPrsWireFrame
+MeshVS_DMF_DeformedPrsShading = .MeshVS_DMF_DeformedPrsShading
+MeshVS_DMF_DeformedPrsShrink = .MeshVS_DMF_DeformedPrsShrink
+MeshVS_DMF_DeformedMask = .MeshVS_DMF_DeformedMask
+MeshVS_DMF_SelectionPrs = .MeshVS_DMF_SelectionPrs
+MeshVS_DMF_HilightPrs = .MeshVS_DMF_HilightPrs
+MeshVS_DMF_User = .MeshVS_DMF_User
 };
 /* end python proxy for enums */
 

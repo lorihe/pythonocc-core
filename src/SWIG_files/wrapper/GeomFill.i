@@ -125,6 +125,8 @@ enum GeomFill_PipeError {
 class GeomFill_ApproxStyle(IntEnum):
 	GeomFill_Section = 0
 	GeomFill_Location = 1
+GeomFill_Section = GeomFill_ApproxStyle.GeomFill_Section
+GeomFill_Location = GeomFill_ApproxStyle.GeomFill_Location
 
 class GeomFill_Trihedron(IntEnum):
 	GeomFill_IsCorrectedFrenet = 0
@@ -137,17 +139,34 @@ class GeomFill_Trihedron(IntEnum):
 	GeomFill_IsGuideACWithContact = 7
 	GeomFill_IsGuidePlanWithContact = 8
 	GeomFill_IsDiscreteTrihedron = 9
+GeomFill_IsCorrectedFrenet = GeomFill_Trihedron.GeomFill_IsCorrectedFrenet
+GeomFill_IsFixed = GeomFill_Trihedron.GeomFill_IsFixed
+GeomFill_IsFrenet = GeomFill_Trihedron.GeomFill_IsFrenet
+GeomFill_IsConstantNormal = GeomFill_Trihedron.GeomFill_IsConstantNormal
+GeomFill_IsDarboux = GeomFill_Trihedron.GeomFill_IsDarboux
+GeomFill_IsGuideAC = GeomFill_Trihedron.GeomFill_IsGuideAC
+GeomFill_IsGuidePlan = GeomFill_Trihedron.GeomFill_IsGuidePlan
+GeomFill_IsGuideACWithContact = GeomFill_Trihedron.GeomFill_IsGuideACWithContact
+GeomFill_IsGuidePlanWithContact = GeomFill_Trihedron.GeomFill_IsGuidePlanWithContact
+GeomFill_IsDiscreteTrihedron = GeomFill_Trihedron.GeomFill_IsDiscreteTrihedron
 
 class GeomFill_FillingStyle(IntEnum):
 	GeomFill_StretchStyle = 0
 	GeomFill_CoonsStyle = 1
 	GeomFill_CurvedStyle = 2
+GeomFill_StretchStyle = GeomFill_FillingStyle.GeomFill_StretchStyle
+GeomFill_CoonsStyle = GeomFill_FillingStyle.GeomFill_CoonsStyle
+GeomFill_CurvedStyle = GeomFill_FillingStyle.GeomFill_CurvedStyle
 
 class GeomFill_PipeError(IntEnum):
 	GeomFill_PipeOk = 0
 	GeomFill_PipeNotOk = 1
 	GeomFill_PlaneNotIntersectGuide = 2
 	GeomFill_ImpossibleContact = 3
+GeomFill_PipeOk = GeomFill_PipeError.GeomFill_PipeOk
+GeomFill_PipeNotOk = GeomFill_PipeError.GeomFill_PipeNotOk
+GeomFill_PlaneNotIntersectGuide = GeomFill_PipeError.GeomFill_PlaneNotIntersectGuide
+GeomFill_ImpossibleContact = GeomFill_PipeError.GeomFill_ImpossibleContact
 };
 /* end python proxy for enums */
 

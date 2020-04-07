@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,15 +10,21 @@ from OCC.Core.StepData import *
 from OCC.Core.StepBasic import *
 
 
-class StepShape_AngleRelator:
+class StepShape_AngleRelator(IntEnum):
 	StepShape_Equal: int = ...
 	StepShape_Large: int = ...
 	StepShape_Small: int = ...
+StepShape_Equal = StepShape_AngleRelator.StepShape_Equal
+StepShape_Large = StepShape_AngleRelator.StepShape_Large
+StepShape_Small = StepShape_AngleRelator.StepShape_Small
 
-class StepShape_BooleanOperator:
+class StepShape_BooleanOperator(IntEnum):
 	StepShape_boDifference: int = ...
 	StepShape_boIntersection: int = ...
 	StepShape_boUnion: int = ...
+StepShape_boDifference = StepShape_BooleanOperator.StepShape_boDifference
+StepShape_boIntersection = StepShape_BooleanOperator.StepShape_boIntersection
+StepShape_boUnion = StepShape_BooleanOperator.StepShape_boUnion
 
 class StepShape_Block(StepGeom_GeometricRepresentationItem):
 	def __init__(self) -> None: ...

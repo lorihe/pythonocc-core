@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,13 +6,19 @@ from OCC.Core.NCollection import *
 from OCC.Core.gp import *
 
 
-class GccInt_IType:
+class GccInt_IType(IntEnum):
 	GccInt_Lin: int = ...
 	GccInt_Cir: int = ...
 	GccInt_Ell: int = ...
 	GccInt_Par: int = ...
 	GccInt_Hpr: int = ...
 	GccInt_Pnt: int = ...
+GccInt_Lin = GccInt_IType.GccInt_Lin
+GccInt_Cir = GccInt_IType.GccInt_Cir
+GccInt_Ell = GccInt_IType.GccInt_Ell
+GccInt_Par = GccInt_IType.GccInt_Par
+GccInt_Hpr = GccInt_IType.GccInt_Hpr
+GccInt_Pnt = GccInt_IType.GccInt_Pnt
 
 class GccInt_Bisec(Standard_Transient):
 	def ArcType(self) -> GccInt_IType: ...

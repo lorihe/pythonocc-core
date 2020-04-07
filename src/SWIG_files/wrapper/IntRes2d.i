@@ -85,17 +85,27 @@ class IntRes2d_Position(IntEnum):
 	IntRes2d_Head = 0
 	IntRes2d_Middle = 1
 	IntRes2d_End = 2
+IntRes2d_Head = IntRes2d_Position.IntRes2d_Head
+IntRes2d_Middle = IntRes2d_Position.IntRes2d_Middle
+IntRes2d_End = IntRes2d_Position.IntRes2d_End
 
 class IntRes2d_Situation(IntEnum):
 	IntRes2d_Inside = 0
 	IntRes2d_Outside = 1
 	IntRes2d_Unknown = 2
+IntRes2d_Inside = IntRes2d_Situation.IntRes2d_Inside
+IntRes2d_Outside = IntRes2d_Situation.IntRes2d_Outside
+IntRes2d_Unknown = IntRes2d_Situation.IntRes2d_Unknown
 
 class IntRes2d_TypeTrans(IntEnum):
 	IntRes2d_In = 0
 	IntRes2d_Out = 1
 	IntRes2d_Touch = 2
 	IntRes2d_Undecided = 3
+IntRes2d_In = IntRes2d_TypeTrans.IntRes2d_In
+IntRes2d_Out = IntRes2d_TypeTrans.IntRes2d_Out
+IntRes2d_Touch = IntRes2d_TypeTrans.IntRes2d_Touch
+IntRes2d_Undecided = IntRes2d_TypeTrans.IntRes2d_Undecided
 };
 /* end python proxy for enums */
 

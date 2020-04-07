@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -18,9 +19,11 @@ Prs3d_Presentation = NewType('Prs3d_Presentation', Graphic3d_Structure)
 PrsMgr_Presentation3d = NewType('PrsMgr_Presentation3d', PrsMgr_Presentation)
 PrsMgr_PresentationManager3d = NewType('PrsMgr_PresentationManager3d', PrsMgr_PresentationManager)
 
-class PrsMgr_TypeOfPresentation3d:
+class PrsMgr_TypeOfPresentation3d(IntEnum):
 	PrsMgr_TOP_AllView: int = ...
 	PrsMgr_TOP_ProjectorDependant: int = ...
+PrsMgr_TOP_AllView = PrsMgr_TypeOfPresentation3d.PrsMgr_TOP_AllView
+PrsMgr_TOP_ProjectorDependant = PrsMgr_TypeOfPresentation3d.PrsMgr_TOP_ProjectorDependant
 
 class PrsMgr_PresentableObject(Standard_Transient):
 	def AcceptDisplayMode(self, theMode: int) -> bool: ...

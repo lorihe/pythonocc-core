@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -17,11 +18,13 @@ from OCC.Core.Geom2d import *
 from OCC.Core.TColGeom import *
 
 
-class GeomFill_ApproxStyle:
+class GeomFill_ApproxStyle(IntEnum):
 	GeomFill_Section: int = ...
 	GeomFill_Location: int = ...
+GeomFill_Section = GeomFill_ApproxStyle.GeomFill_Section
+GeomFill_Location = GeomFill_ApproxStyle.GeomFill_Location
 
-class GeomFill_Trihedron:
+class GeomFill_Trihedron(IntEnum):
 	GeomFill_IsCorrectedFrenet: int = ...
 	GeomFill_IsFixed: int = ...
 	GeomFill_IsFrenet: int = ...
@@ -32,17 +35,34 @@ class GeomFill_Trihedron:
 	GeomFill_IsGuideACWithContact: int = ...
 	GeomFill_IsGuidePlanWithContact: int = ...
 	GeomFill_IsDiscreteTrihedron: int = ...
+GeomFill_IsCorrectedFrenet = GeomFill_Trihedron.GeomFill_IsCorrectedFrenet
+GeomFill_IsFixed = GeomFill_Trihedron.GeomFill_IsFixed
+GeomFill_IsFrenet = GeomFill_Trihedron.GeomFill_IsFrenet
+GeomFill_IsConstantNormal = GeomFill_Trihedron.GeomFill_IsConstantNormal
+GeomFill_IsDarboux = GeomFill_Trihedron.GeomFill_IsDarboux
+GeomFill_IsGuideAC = GeomFill_Trihedron.GeomFill_IsGuideAC
+GeomFill_IsGuidePlan = GeomFill_Trihedron.GeomFill_IsGuidePlan
+GeomFill_IsGuideACWithContact = GeomFill_Trihedron.GeomFill_IsGuideACWithContact
+GeomFill_IsGuidePlanWithContact = GeomFill_Trihedron.GeomFill_IsGuidePlanWithContact
+GeomFill_IsDiscreteTrihedron = GeomFill_Trihedron.GeomFill_IsDiscreteTrihedron
 
-class GeomFill_FillingStyle:
+class GeomFill_FillingStyle(IntEnum):
 	GeomFill_StretchStyle: int = ...
 	GeomFill_CoonsStyle: int = ...
 	GeomFill_CurvedStyle: int = ...
+GeomFill_StretchStyle = GeomFill_FillingStyle.GeomFill_StretchStyle
+GeomFill_CoonsStyle = GeomFill_FillingStyle.GeomFill_CoonsStyle
+GeomFill_CurvedStyle = GeomFill_FillingStyle.GeomFill_CurvedStyle
 
-class GeomFill_PipeError:
+class GeomFill_PipeError(IntEnum):
 	GeomFill_PipeOk: int = ...
 	GeomFill_PipeNotOk: int = ...
 	GeomFill_PlaneNotIntersectGuide: int = ...
 	GeomFill_ImpossibleContact: int = ...
+GeomFill_PipeOk = GeomFill_PipeError.GeomFill_PipeOk
+GeomFill_PipeNotOk = GeomFill_PipeError.GeomFill_PipeNotOk
+GeomFill_PlaneNotIntersectGuide = GeomFill_PipeError.GeomFill_PlaneNotIntersectGuide
+GeomFill_ImpossibleContact = GeomFill_PipeError.GeomFill_ImpossibleContact
 
 class GeomFill:
 	@staticmethod

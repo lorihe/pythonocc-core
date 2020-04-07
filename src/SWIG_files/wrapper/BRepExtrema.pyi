@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,10 +10,13 @@ from OCC.Core.Bnd import *
 from OCC.Core.BVH import *
 
 
-class BRepExtrema_SupportType:
+class BRepExtrema_SupportType(IntEnum):
 	BRepExtrema_IsVertex: int = ...
 	BRepExtrema_IsOnEdge: int = ...
 	BRepExtrema_IsInFace: int = ...
+BRepExtrema_IsVertex = BRepExtrema_SupportType.BRepExtrema_IsVertex
+BRepExtrema_IsOnEdge = BRepExtrema_SupportType.BRepExtrema_IsOnEdge
+BRepExtrema_IsInFace = BRepExtrema_SupportType.BRepExtrema_IsInFace
 
 class BRepExtrema_DistShapeShape:
 	@overload

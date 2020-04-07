@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -12,25 +13,35 @@ from OCC.Core.StepBasic import *
 from OCC.Core.TColgp import *
 
 
-class StepVisual_NullStyle:
+class StepVisual_NullStyle(IntEnum):
 	StepVisual_Null: int = ...
+StepVisual_Null = StepVisual_NullStyle.StepVisual_Null
 
-class StepVisual_CentralOrParallel:
+class StepVisual_CentralOrParallel(IntEnum):
 	StepVisual_copCentral: int = ...
 	StepVisual_copParallel: int = ...
+StepVisual_copCentral = StepVisual_CentralOrParallel.StepVisual_copCentral
+StepVisual_copParallel = StepVisual_CentralOrParallel.StepVisual_copParallel
 
-class StepVisual_SurfaceSide:
+class StepVisual_SurfaceSide(IntEnum):
 	StepVisual_ssNegative: int = ...
 	StepVisual_ssPositive: int = ...
 	StepVisual_ssBoth: int = ...
+StepVisual_ssNegative = StepVisual_SurfaceSide.StepVisual_ssNegative
+StepVisual_ssPositive = StepVisual_SurfaceSide.StepVisual_ssPositive
+StepVisual_ssBoth = StepVisual_SurfaceSide.StepVisual_ssBoth
 
-class StepVisual_TextPath:
+class StepVisual_TextPath(IntEnum):
 	StepVisual_tpUp: int = ...
 	StepVisual_tpRight: int = ...
 	StepVisual_tpDown: int = ...
 	StepVisual_tpLeft: int = ...
+StepVisual_tpUp = StepVisual_TextPath.StepVisual_tpUp
+StepVisual_tpRight = StepVisual_TextPath.StepVisual_tpRight
+StepVisual_tpDown = StepVisual_TextPath.StepVisual_tpDown
+StepVisual_tpLeft = StepVisual_TextPath.StepVisual_tpLeft
 
-class StepVisual_MarkerType:
+class StepVisual_MarkerType(IntEnum):
 	StepVisual_mtDot: int = ...
 	StepVisual_mtX: int = ...
 	StepVisual_mtPlus: int = ...
@@ -38,6 +49,13 @@ class StepVisual_MarkerType:
 	StepVisual_mtRing: int = ...
 	StepVisual_mtSquare: int = ...
 	StepVisual_mtTriangle: int = ...
+StepVisual_mtDot = StepVisual_MarkerType.StepVisual_mtDot
+StepVisual_mtX = StepVisual_MarkerType.StepVisual_mtX
+StepVisual_mtPlus = StepVisual_MarkerType.StepVisual_mtPlus
+StepVisual_mtAsterisk = StepVisual_MarkerType.StepVisual_mtAsterisk
+StepVisual_mtRing = StepVisual_MarkerType.StepVisual_mtRing
+StepVisual_mtSquare = StepVisual_MarkerType.StepVisual_mtSquare
+StepVisual_mtTriangle = StepVisual_MarkerType.StepVisual_mtTriangle
 
 class StepVisual_AnnotationFillArea(StepShape_GeometricCurveSet):
 	def __init__(self) -> None: ...

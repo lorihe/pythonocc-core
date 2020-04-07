@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -7,7 +8,7 @@ from OCC.Core.gp import *
 from OCC.Core.TopTools import *
 
 
-class ChFi2d_ConstructionError:
+class ChFi2d_ConstructionError(IntEnum):
 	ChFi2d_NotPlanar: int = ...
 	ChFi2d_NoFace: int = ...
 	ChFi2d_InitialisationError: int = ...
@@ -21,6 +22,19 @@ class ChFi2d_ConstructionError:
 	ChFi2d_LastEdgeDegenerated: int = ...
 	ChFi2d_BothEdgesDegenerated: int = ...
 	ChFi2d_NotAuthorized: int = ...
+ChFi2d_NotPlanar = ChFi2d_ConstructionError.ChFi2d_NotPlanar
+ChFi2d_NoFace = ChFi2d_ConstructionError.ChFi2d_NoFace
+ChFi2d_InitialisationError = ChFi2d_ConstructionError.ChFi2d_InitialisationError
+ChFi2d_ParametersError = ChFi2d_ConstructionError.ChFi2d_ParametersError
+ChFi2d_Ready = ChFi2d_ConstructionError.ChFi2d_Ready
+ChFi2d_IsDone = ChFi2d_ConstructionError.ChFi2d_IsDone
+ChFi2d_ComputationError = ChFi2d_ConstructionError.ChFi2d_ComputationError
+ChFi2d_ConnexionError = ChFi2d_ConstructionError.ChFi2d_ConnexionError
+ChFi2d_TangencyError = ChFi2d_ConstructionError.ChFi2d_TangencyError
+ChFi2d_FirstEdgeDegenerated = ChFi2d_ConstructionError.ChFi2d_FirstEdgeDegenerated
+ChFi2d_LastEdgeDegenerated = ChFi2d_ConstructionError.ChFi2d_LastEdgeDegenerated
+ChFi2d_BothEdgesDegenerated = ChFi2d_ConstructionError.ChFi2d_BothEdgesDegenerated
+ChFi2d_NotAuthorized = ChFi2d_ConstructionError.ChFi2d_NotAuthorized
 
 class ChFi2d:
 	pass

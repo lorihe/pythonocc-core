@@ -98,6 +98,17 @@ class MoniTool_ValueType(IntEnum):
 	MoniTool_ValueSub = 8
 	MoniTool_ValueHexa = 9
 	MoniTool_ValueBinary = 10
+MoniTool_ValueMisc = MoniTool_ValueType.MoniTool_ValueMisc
+MoniTool_ValueInteger = MoniTool_ValueType.MoniTool_ValueInteger
+MoniTool_ValueReal = MoniTool_ValueType.MoniTool_ValueReal
+MoniTool_ValueIdent = MoniTool_ValueType.MoniTool_ValueIdent
+MoniTool_ValueVoid = MoniTool_ValueType.MoniTool_ValueVoid
+MoniTool_ValueText = MoniTool_ValueType.MoniTool_ValueText
+MoniTool_ValueEnum = MoniTool_ValueType.MoniTool_ValueEnum
+MoniTool_ValueLogical = MoniTool_ValueType.MoniTool_ValueLogical
+MoniTool_ValueSub = MoniTool_ValueType.MoniTool_ValueSub
+MoniTool_ValueHexa = MoniTool_ValueType.MoniTool_ValueHexa
+MoniTool_ValueBinary = MoniTool_ValueType.MoniTool_ValueBinary
 };
 /* end python proxy for enums */
 

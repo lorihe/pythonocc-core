@@ -102,6 +102,8 @@ enum PrsMgr_TypeOfPresentation3d {
 class PrsMgr_TypeOfPresentation3d(IntEnum):
 	PrsMgr_TOP_AllView = 0
 	PrsMgr_TOP_ProjectorDependant = 1
+PrsMgr_TOP_AllView = PrsMgr_TypeOfPresentation3d.PrsMgr_TOP_AllView
+PrsMgr_TOP_ProjectorDependant = PrsMgr_TypeOfPresentation3d.PrsMgr_TOP_ProjectorDependant
 };
 /* end python proxy for enums */
 

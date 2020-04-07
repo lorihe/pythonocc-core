@@ -107,6 +107,12 @@ class TNaming_Evolution(IntEnum):
 	TNaming_DELETE = 3
 	TNaming_REPLACE = 4
 	TNaming_SELECTED = 5
+TNaming_PRIMITIVE = TNaming_Evolution.TNaming_PRIMITIVE
+TNaming_GENERATED = TNaming_Evolution.TNaming_GENERATED
+TNaming_MODIFY = TNaming_Evolution.TNaming_MODIFY
+TNaming_DELETE = TNaming_Evolution.TNaming_DELETE
+TNaming_REPLACE = TNaming_Evolution.TNaming_REPLACE
+TNaming_SELECTED = TNaming_Evolution.TNaming_SELECTED
 
 class TNaming_NameType(IntEnum):
 	TNaming_UNKNOWN = 0
@@ -121,6 +127,18 @@ class TNaming_NameType(IntEnum):
 	TNaming_ORIENTATION = 9
 	TNaming_WIREIN = 10
 	TNaming_SHELLIN = 11
+TNaming_UNKNOWN = TNaming_NameType.TNaming_UNKNOWN
+TNaming_IDENTITY = TNaming_NameType.TNaming_IDENTITY
+TNaming_MODIFUNTIL = TNaming_NameType.TNaming_MODIFUNTIL
+TNaming_GENERATION = TNaming_NameType.TNaming_GENERATION
+TNaming_INTERSECTION = TNaming_NameType.TNaming_INTERSECTION
+TNaming_UNION = TNaming_NameType.TNaming_UNION
+TNaming_SUBSTRACTION = TNaming_NameType.TNaming_SUBSTRACTION
+TNaming_CONSTSHAPE = TNaming_NameType.TNaming_CONSTSHAPE
+TNaming_FILTERBYNEIGHBOURGS = TNaming_NameType.TNaming_FILTERBYNEIGHBOURGS
+TNaming_ORIENTATION = TNaming_NameType.TNaming_ORIENTATION
+TNaming_WIREIN = TNaming_NameType.TNaming_WIREIN
+TNaming_SHELLIN = TNaming_NameType.TNaming_SHELLIN
 };
 /* end python proxy for enums */
 

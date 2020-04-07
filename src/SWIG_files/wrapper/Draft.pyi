@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -12,11 +13,15 @@ from OCC.Core.GeomAbs import *
 from OCC.Core.TopLoc import *
 
 
-class Draft_ErrorStatus:
+class Draft_ErrorStatus(IntEnum):
 	Draft_NoError: int = ...
 	Draft_FaceRecomputation: int = ...
 	Draft_EdgeRecomputation: int = ...
 	Draft_VertexRecomputation: int = ...
+Draft_NoError = Draft_ErrorStatus.Draft_NoError
+Draft_FaceRecomputation = Draft_ErrorStatus.Draft_FaceRecomputation
+Draft_EdgeRecomputation = Draft_ErrorStatus.Draft_EdgeRecomputation
+Draft_VertexRecomputation = Draft_ErrorStatus.Draft_VertexRecomputation
 
 class Draft:
 	@staticmethod

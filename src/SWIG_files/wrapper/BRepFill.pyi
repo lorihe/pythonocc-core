@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -21,15 +22,21 @@ from OCC.Core.Bisector import *
 from OCC.Core.TColgp import *
 
 
-class BRepFill_TypeOfContact:
+class BRepFill_TypeOfContact(IntEnum):
 	BRepFill_NoContact: int = ...
 	BRepFill_Contact: int = ...
 	BRepFill_ContactOnBorder: int = ...
+BRepFill_NoContact = BRepFill_TypeOfContact.BRepFill_NoContact
+BRepFill_Contact = BRepFill_TypeOfContact.BRepFill_Contact
+BRepFill_ContactOnBorder = BRepFill_TypeOfContact.BRepFill_ContactOnBorder
 
-class BRepFill_TransitionStyle:
+class BRepFill_TransitionStyle(IntEnum):
 	BRepFill_Modified: int = ...
 	BRepFill_Right: int = ...
 	BRepFill_Round: int = ...
+BRepFill_Modified = BRepFill_TransitionStyle.BRepFill_Modified
+BRepFill_Right = BRepFill_TransitionStyle.BRepFill_Right
+BRepFill_Round = BRepFill_TransitionStyle.BRepFill_Round
 
 class BRepFill:
 	@staticmethod

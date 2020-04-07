@@ -189,6 +189,9 @@ class Prs3d_DimensionTextVerticalPosition(IntEnum):
 	Prs3d_DTVP_Above = 0
 	Prs3d_DTVP_Below = 1
 	Prs3d_DTVP_Center = 2
+Prs3d_DTVP_Above = Prs3d_DimensionTextVerticalPosition.Prs3d_DTVP_Above
+Prs3d_DTVP_Below = Prs3d_DimensionTextVerticalPosition.Prs3d_DTVP_Below
+Prs3d_DTVP_Center = Prs3d_DimensionTextVerticalPosition.Prs3d_DTVP_Center
 
 class Prs3d_TypeOfHighlight(IntEnum):
 	Prs3d_TypeOfHighlight_None = 0
@@ -198,15 +201,27 @@ class Prs3d_TypeOfHighlight(IntEnum):
 	Prs3d_TypeOfHighlight_LocalDynamic = 4
 	Prs3d_TypeOfHighlight_SubIntensity = 5
 	Prs3d_TypeOfHighlight_NB = 6
+Prs3d_TypeOfHighlight_None = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_None
+Prs3d_TypeOfHighlight_Selected = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_Selected
+Prs3d_TypeOfHighlight_Dynamic = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_Dynamic
+Prs3d_TypeOfHighlight_LocalSelected = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_LocalSelected
+Prs3d_TypeOfHighlight_LocalDynamic = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_LocalDynamic
+Prs3d_TypeOfHighlight_SubIntensity = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_SubIntensity
+Prs3d_TypeOfHighlight_NB = Prs3d_TypeOfHighlight.Prs3d_TypeOfHighlight_NB
 
 class Prs3d_VertexDrawMode(IntEnum):
 	Prs3d_VDM_Isolated = 0
 	Prs3d_VDM_All = 1
 	Prs3d_VDM_Inherited = 2
+Prs3d_VDM_Isolated = Prs3d_VertexDrawMode.Prs3d_VDM_Isolated
+Prs3d_VDM_All = Prs3d_VertexDrawMode.Prs3d_VDM_All
+Prs3d_VDM_Inherited = Prs3d_VertexDrawMode.Prs3d_VDM_Inherited
 
 class Prs3d_DatumMode(IntEnum):
 	Prs3d_DM_WireFrame = 0
 	Prs3d_DM_Shaded = 1
+Prs3d_DM_WireFrame = Prs3d_DatumMode.Prs3d_DM_WireFrame
+Prs3d_DM_Shaded = Prs3d_DatumMode.Prs3d_DM_Shaded
 
 class Prs3d_DatumAttribute(IntEnum):
 	Prs3d_DA_XAxisLength = 0
@@ -217,21 +232,38 @@ class Prs3d_DatumAttribute(IntEnum):
 	Prs3d_DP_ShadingConeLengthPercent = 5
 	Prs3d_DP_ShadingOriginRadiusPercent = 6
 	Prs3d_DP_ShadingNumberOfFacettes = 7
+Prs3d_DA_XAxisLength = Prs3d_DatumAttribute.Prs3d_DA_XAxisLength
+Prs3d_DA_YAxisLength = Prs3d_DatumAttribute.Prs3d_DA_YAxisLength
+Prs3d_DA_ZAxisLength = Prs3d_DatumAttribute.Prs3d_DA_ZAxisLength
+Prs3d_DP_ShadingTubeRadiusPercent = Prs3d_DatumAttribute.Prs3d_DP_ShadingTubeRadiusPercent
+Prs3d_DP_ShadingConeRadiusPercent = Prs3d_DatumAttribute.Prs3d_DP_ShadingConeRadiusPercent
+Prs3d_DP_ShadingConeLengthPercent = Prs3d_DatumAttribute.Prs3d_DP_ShadingConeLengthPercent
+Prs3d_DP_ShadingOriginRadiusPercent = Prs3d_DatumAttribute.Prs3d_DP_ShadingOriginRadiusPercent
+Prs3d_DP_ShadingNumberOfFacettes = Prs3d_DatumAttribute.Prs3d_DP_ShadingNumberOfFacettes
 
 class Prs3d_DimensionTextHorizontalPosition(IntEnum):
 	Prs3d_DTHP_Left = 0
 	Prs3d_DTHP_Right = 1
 	Prs3d_DTHP_Center = 2
 	Prs3d_DTHP_Fit = 3
+Prs3d_DTHP_Left = Prs3d_DimensionTextHorizontalPosition.Prs3d_DTHP_Left
+Prs3d_DTHP_Right = Prs3d_DimensionTextHorizontalPosition.Prs3d_DTHP_Right
+Prs3d_DTHP_Center = Prs3d_DimensionTextHorizontalPosition.Prs3d_DTHP_Center
+Prs3d_DTHP_Fit = Prs3d_DimensionTextHorizontalPosition.Prs3d_DTHP_Fit
 
 class Prs3d_TypeOfLinePicking(IntEnum):
 	Prs3d_TOLP_Point = 0
 	Prs3d_TOLP_Segment = 1
+Prs3d_TOLP_Point = Prs3d_TypeOfLinePicking.Prs3d_TOLP_Point
+Prs3d_TOLP_Segment = Prs3d_TypeOfLinePicking.Prs3d_TOLP_Segment
 
 class Prs3d_TypeOfHLR(IntEnum):
 	Prs3d_TOH_NotSet = 0
 	Prs3d_TOH_PolyAlgo = 1
 	Prs3d_TOH_Algo = 2
+Prs3d_TOH_NotSet = Prs3d_TypeOfHLR.Prs3d_TOH_NotSet
+Prs3d_TOH_PolyAlgo = Prs3d_TypeOfHLR.Prs3d_TOH_PolyAlgo
+Prs3d_TOH_Algo = Prs3d_TypeOfHLR.Prs3d_TOH_Algo
 
 class Prs3d_DatumAxes(IntEnum):
 	Prs3d_DA_XAxis = 1
@@ -241,6 +273,13 @@ class Prs3d_DatumAxes(IntEnum):
 	Prs3d_DA_YZAxis = Prs3d_DA_YAxis | Prs3d_DA_ZAxis
 	Prs3d_DA_XZAxis = Prs3d_DA_XAxis | Prs3d_DA_ZAxis
 	Prs3d_DA_XYZAxis = Prs3d_DA_XAxis | Prs3d_DA_YAxis | Prs3d_DA_ZAxis
+Prs3d_DA_XAxis = Prs3d_DatumAxes.Prs3d_DA_XAxis
+Prs3d_DA_YAxis = Prs3d_DatumAxes.Prs3d_DA_YAxis
+Prs3d_DA_ZAxis = Prs3d_DatumAxes.Prs3d_DA_ZAxis
+Prs3d_DA_XYAxis = Prs3d_DatumAxes.Prs3d_DA_XYAxis
+Prs3d_DA_YZAxis = Prs3d_DatumAxes.Prs3d_DA_YZAxis
+Prs3d_DA_XZAxis = Prs3d_DatumAxes.Prs3d_DA_XZAxis
+Prs3d_DA_XYZAxis = Prs3d_DatumAxes.Prs3d_DA_XYZAxis
 
 class Prs3d_DatumParts(IntEnum):
 	Prs3d_DP_Origin = 0
@@ -254,11 +293,25 @@ class Prs3d_DatumParts(IntEnum):
 	Prs3d_DP_YOZAxis = 8
 	Prs3d_DP_XOZAxis = 9
 	Prs3d_DP_None = 10
+Prs3d_DP_Origin = Prs3d_DatumParts.Prs3d_DP_Origin
+Prs3d_DP_XAxis = Prs3d_DatumParts.Prs3d_DP_XAxis
+Prs3d_DP_YAxis = Prs3d_DatumParts.Prs3d_DP_YAxis
+Prs3d_DP_ZAxis = Prs3d_DatumParts.Prs3d_DP_ZAxis
+Prs3d_DP_XArrow = Prs3d_DatumParts.Prs3d_DP_XArrow
+Prs3d_DP_YArrow = Prs3d_DatumParts.Prs3d_DP_YArrow
+Prs3d_DP_ZArrow = Prs3d_DatumParts.Prs3d_DP_ZArrow
+Prs3d_DP_XOYAxis = Prs3d_DatumParts.Prs3d_DP_XOYAxis
+Prs3d_DP_YOZAxis = Prs3d_DatumParts.Prs3d_DP_YOZAxis
+Prs3d_DP_XOZAxis = Prs3d_DatumParts.Prs3d_DP_XOZAxis
+Prs3d_DP_None = Prs3d_DatumParts.Prs3d_DP_None
 
 class Prs3d_DimensionArrowOrientation(IntEnum):
 	Prs3d_DAO_Internal = 0
 	Prs3d_DAO_External = 1
 	Prs3d_DAO_Fit = 2
+Prs3d_DAO_Internal = Prs3d_DimensionArrowOrientation.Prs3d_DAO_Internal
+Prs3d_DAO_External = Prs3d_DimensionArrowOrientation.Prs3d_DAO_External
+Prs3d_DAO_Fit = Prs3d_DimensionArrowOrientation.Prs3d_DAO_Fit
 };
 /* end python proxy for enums */
 

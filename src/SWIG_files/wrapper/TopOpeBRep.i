@@ -133,6 +133,11 @@ class TopOpeBRep_P2Dstatus(IntEnum):
 	TopOpeBRep_P2DSGF = 2
 	TopOpeBRep_P2DSGL = 3
 	TopOpeBRep_P2DNEW = 4
+TopOpeBRep_P2DUNK = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DUNK
+TopOpeBRep_P2DINT = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DINT
+TopOpeBRep_P2DSGF = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DSGF
+TopOpeBRep_P2DSGL = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DSGL
+TopOpeBRep_P2DNEW = TopOpeBRep_P2Dstatus.TopOpeBRep_P2DNEW
 
 class TopOpeBRep_TypeLineCurve(IntEnum):
 	TopOpeBRep_ANALYTIC = 0
@@ -144,6 +149,15 @@ class TopOpeBRep_TypeLineCurve(IntEnum):
 	TopOpeBRep_PARABOLA = 6
 	TopOpeBRep_HYPERBOLA = 7
 	TopOpeBRep_OTHERTYPE = 8
+TopOpeBRep_ANALYTIC = TopOpeBRep_TypeLineCurve.TopOpeBRep_ANALYTIC
+TopOpeBRep_RESTRICTION = TopOpeBRep_TypeLineCurve.TopOpeBRep_RESTRICTION
+TopOpeBRep_WALKING = TopOpeBRep_TypeLineCurve.TopOpeBRep_WALKING
+TopOpeBRep_LINE = TopOpeBRep_TypeLineCurve.TopOpeBRep_LINE
+TopOpeBRep_CIRCLE = TopOpeBRep_TypeLineCurve.TopOpeBRep_CIRCLE
+TopOpeBRep_ELLIPSE = TopOpeBRep_TypeLineCurve.TopOpeBRep_ELLIPSE
+TopOpeBRep_PARABOLA = TopOpeBRep_TypeLineCurve.TopOpeBRep_PARABOLA
+TopOpeBRep_HYPERBOLA = TopOpeBRep_TypeLineCurve.TopOpeBRep_HYPERBOLA
+TopOpeBRep_OTHERTYPE = TopOpeBRep_TypeLineCurve.TopOpeBRep_OTHERTYPE
 };
 /* end python proxy for enums */
 

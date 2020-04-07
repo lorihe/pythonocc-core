@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -11,15 +12,19 @@ from OCC.Core.StepRepr import *
 from OCC.Core.StepGeom import *
 
 
-class StepFEA_ElementVolume:
+class StepFEA_ElementVolume(IntEnum):
 	StepFEA_Volume: int = ...
+StepFEA_Volume = StepFEA_ElementVolume.StepFEA_Volume
 
-class StepFEA_CoordinateSystemType:
+class StepFEA_CoordinateSystemType(IntEnum):
 	StepFEA_Cartesian: int = ...
 	StepFEA_Cylindrical: int = ...
 	StepFEA_Spherical: int = ...
+StepFEA_Cartesian = StepFEA_CoordinateSystemType.StepFEA_Cartesian
+StepFEA_Cylindrical = StepFEA_CoordinateSystemType.StepFEA_Cylindrical
+StepFEA_Spherical = StepFEA_CoordinateSystemType.StepFEA_Spherical
 
-class StepFEA_EnumeratedDegreeOfFreedom:
+class StepFEA_EnumeratedDegreeOfFreedom(IntEnum):
 	StepFEA_XTranslation: int = ...
 	StepFEA_YTranslation: int = ...
 	StepFEA_ZTranslation: int = ...
@@ -27,12 +32,21 @@ class StepFEA_EnumeratedDegreeOfFreedom:
 	StepFEA_YRotation: int = ...
 	StepFEA_ZRotation: int = ...
 	StepFEA_Warp: int = ...
+StepFEA_XTranslation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_XTranslation
+StepFEA_YTranslation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_YTranslation
+StepFEA_ZTranslation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_ZTranslation
+StepFEA_XRotation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_XRotation
+StepFEA_YRotation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_YRotation
+StepFEA_ZRotation = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_ZRotation
+StepFEA_Warp = StepFEA_EnumeratedDegreeOfFreedom.StepFEA_Warp
 
-class StepFEA_CurveEdge:
+class StepFEA_CurveEdge(IntEnum):
 	StepFEA_ElementEdge: int = ...
+StepFEA_ElementEdge = StepFEA_CurveEdge.StepFEA_ElementEdge
 
-class StepFEA_UnspecifiedValue:
+class StepFEA_UnspecifiedValue(IntEnum):
 	StepFEA_Unspecified: int = ...
+StepFEA_Unspecified = StepFEA_UnspecifiedValue.StepFEA_Unspecified
 
 class StepFEA_Curve3dElementProperty(Standard_Transient):
 	def __init__(self) -> None: ...

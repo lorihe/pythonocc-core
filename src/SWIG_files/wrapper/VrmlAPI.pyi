@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,10 +10,13 @@ from OCC.Core.Quantity import *
 from OCC.Core.TDocStd import *
 
 
-class VrmlAPI_RepresentationOfShape:
+class VrmlAPI_RepresentationOfShape(IntEnum):
 	VrmlAPI_ShadedRepresentation: int = ...
 	VrmlAPI_WireFrameRepresentation: int = ...
 	VrmlAPI_BothRepresentation: int = ...
+VrmlAPI_ShadedRepresentation = VrmlAPI_RepresentationOfShape.VrmlAPI_ShadedRepresentation
+VrmlAPI_WireFrameRepresentation = VrmlAPI_RepresentationOfShape.VrmlAPI_WireFrameRepresentation
+VrmlAPI_BothRepresentation = VrmlAPI_RepresentationOfShape.VrmlAPI_BothRepresentation
 
 class VrmlAPI:
 	@staticmethod

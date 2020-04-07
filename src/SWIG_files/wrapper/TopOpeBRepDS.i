@@ -123,10 +123,15 @@ class TopOpeBRepDS_Config(IntEnum):
 	TopOpeBRepDS_UNSHGEOMETRY = 0
 	TopOpeBRepDS_SAMEORIENTED = 1
 	TopOpeBRepDS_DIFFORIENTED = 2
+TopOpeBRepDS_UNSHGEOMETRY = TopOpeBRepDS_Config.TopOpeBRepDS_UNSHGEOMETRY
+TopOpeBRepDS_SAMEORIENTED = TopOpeBRepDS_Config.TopOpeBRepDS_SAMEORIENTED
+TopOpeBRepDS_DIFFORIENTED = TopOpeBRepDS_Config.TopOpeBRepDS_DIFFORIENTED
 
 class TopOpeBRepDS_CheckStatus(IntEnum):
 	TopOpeBRepDS_OK = 0
 	TopOpeBRepDS_NOK = 1
+TopOpeBRepDS_OK = TopOpeBRepDS_CheckStatus.TopOpeBRepDS_OK
+TopOpeBRepDS_NOK = TopOpeBRepDS_CheckStatus.TopOpeBRepDS_NOK
 
 class TopOpeBRepDS_Kind(IntEnum):
 	TopOpeBRepDS_POINT = 0
@@ -141,6 +146,18 @@ class TopOpeBRepDS_Kind(IntEnum):
 	TopOpeBRepDS_COMPSOLID = 9
 	TopOpeBRepDS_COMPOUND = 10
 	TopOpeBRepDS_UNKNOWN = 11
+TopOpeBRepDS_POINT = TopOpeBRepDS_Kind.TopOpeBRepDS_POINT
+TopOpeBRepDS_CURVE = TopOpeBRepDS_Kind.TopOpeBRepDS_CURVE
+TopOpeBRepDS_SURFACE = TopOpeBRepDS_Kind.TopOpeBRepDS_SURFACE
+TopOpeBRepDS_VERTEX = TopOpeBRepDS_Kind.TopOpeBRepDS_VERTEX
+TopOpeBRepDS_EDGE = TopOpeBRepDS_Kind.TopOpeBRepDS_EDGE
+TopOpeBRepDS_WIRE = TopOpeBRepDS_Kind.TopOpeBRepDS_WIRE
+TopOpeBRepDS_FACE = TopOpeBRepDS_Kind.TopOpeBRepDS_FACE
+TopOpeBRepDS_SHELL = TopOpeBRepDS_Kind.TopOpeBRepDS_SHELL
+TopOpeBRepDS_SOLID = TopOpeBRepDS_Kind.TopOpeBRepDS_SOLID
+TopOpeBRepDS_COMPSOLID = TopOpeBRepDS_Kind.TopOpeBRepDS_COMPSOLID
+TopOpeBRepDS_COMPOUND = TopOpeBRepDS_Kind.TopOpeBRepDS_COMPOUND
+TopOpeBRepDS_UNKNOWN = TopOpeBRepDS_Kind.TopOpeBRepDS_UNKNOWN
 };
 /* end python proxy for enums */
 

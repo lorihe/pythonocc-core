@@ -101,17 +101,26 @@ enum Extrema_ElementType {
 class Extrema_ExtAlgo(IntEnum):
 	Extrema_ExtAlgo_Grad = 0
 	Extrema_ExtAlgo_Tree = 1
+Extrema_ExtAlgo_Grad = Extrema_ExtAlgo.Extrema_ExtAlgo_Grad
+Extrema_ExtAlgo_Tree = Extrema_ExtAlgo.Extrema_ExtAlgo_Tree
 
 class Extrema_ExtFlag(IntEnum):
 	Extrema_ExtFlag_MIN = 0
 	Extrema_ExtFlag_MAX = 1
 	Extrema_ExtFlag_MINMAX = 2
+Extrema_ExtFlag_MIN = Extrema_ExtFlag.Extrema_ExtFlag_MIN
+Extrema_ExtFlag_MAX = Extrema_ExtFlag.Extrema_ExtFlag_MAX
+Extrema_ExtFlag_MINMAX = Extrema_ExtFlag.Extrema_ExtFlag_MINMAX
 
 class Extrema_ElementType(IntEnum):
 	Extrema_Node = 0
 	Extrema_UIsoEdge = 1
 	Extrema_VIsoEdge = 2
 	Extrema_Face = 3
+Extrema_Node = Extrema_ElementType.Extrema_Node
+Extrema_UIsoEdge = Extrema_ElementType.Extrema_UIsoEdge
+Extrema_VIsoEdge = Extrema_ElementType.Extrema_VIsoEdge
+Extrema_Face = Extrema_ElementType.Extrema_Face
 };
 /* end python proxy for enums */
 

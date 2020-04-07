@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,7 +6,7 @@ from OCC.Core.NCollection import *
 from OCC.Core.TCollection import *
 
 
-class Resource_FormatType:
+class Resource_FormatType(IntEnum):
 	Resource_FormatType_SJIS: int = ...
 	Resource_FormatType_EUC: int = ...
 	Resource_FormatType_ANSI: int = ...
@@ -16,6 +17,16 @@ class Resource_FormatType:
 	Resource_EUC: int = ...
 	Resource_ANSI: int = ...
 	Resource_GB: int = ...
+Resource_FormatType_SJIS = Resource_FormatType.Resource_FormatType_SJIS
+Resource_FormatType_EUC = Resource_FormatType.Resource_FormatType_EUC
+Resource_FormatType_ANSI = Resource_FormatType.Resource_FormatType_ANSI
+Resource_FormatType_GB = Resource_FormatType.Resource_FormatType_GB
+Resource_FormatType_UTF8 = Resource_FormatType.Resource_FormatType_UTF8
+Resource_FormatType_SystemLocale = Resource_FormatType.Resource_FormatType_SystemLocale
+Resource_SJIS = Resource_FormatType.Resource_SJIS
+Resource_EUC = Resource_FormatType.Resource_EUC
+Resource_ANSI = Resource_FormatType.Resource_ANSI
+Resource_GB = Resource_FormatType.Resource_GB
 
 class Resource_LexicalCompare:
 	def __init__(self) -> None: ...

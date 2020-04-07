@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,9 +7,11 @@ from OCC.Core.NCollection import *
 TCollection_MapNodePtr = NewType('TCollection_MapNodePtr', TCollection_MapNode)
 TCollection_SeqNodePtr = NewType('TCollection_SeqNodePtr', TCollection_SeqNode)
 
-class TCollection_Side:
+class TCollection_Side(IntEnum):
 	TCollection_Left: int = ...
 	TCollection_Right: int = ...
+TCollection_Left = TCollection_Side.TCollection_Left
+TCollection_Right = TCollection_Side.TCollection_Right
 
 class TCollection:
 	@staticmethod

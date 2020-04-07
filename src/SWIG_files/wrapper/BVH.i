@@ -72,6 +72,13 @@ enum  {
 
 /* python proy classes for enums */
 %pythoncode {
+BVH_Constants_MaxTreeDepth = .BVH_Constants_MaxTreeDepth
+BVH_Constants_LeafNodeSizeSingle = .BVH_Constants_LeafNodeSizeSingle
+BVH_Constants_LeafNodeSizeAverage = .BVH_Constants_LeafNodeSizeAverage
+BVH_Constants_LeafNodeSizeDefault = .BVH_Constants_LeafNodeSizeDefault
+BVH_Constants_LeafNodeSizeSmall = .BVH_Constants_LeafNodeSizeSmall
+BVH_Constants_NbBinsOptimal = .BVH_Constants_NbBinsOptimal
+BVH_Constants_NbBinsBest = .BVH_Constants_NbBinsBest
 };
 /* end python proxy for enums */
 

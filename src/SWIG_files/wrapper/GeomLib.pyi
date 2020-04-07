@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,11 +15,15 @@ from OCC.Core.AdvApprox import *
 
 GeomLib_DenominatorMultiplierPtr = NewType('GeomLib_DenominatorMultiplierPtr', GeomLib_DenominatorMultiplier)
 
-class GeomLib_InterpolationErrors:
+class GeomLib_InterpolationErrors(IntEnum):
 	GeomLib_NoError: int = ...
 	GeomLib_NotEnoughtPoints: int = ...
 	GeomLib_DegreeSmallerThan3: int = ...
 	GeomLib_InversionProblem: int = ...
+GeomLib_NoError = GeomLib_InterpolationErrors.GeomLib_NoError
+GeomLib_NotEnoughtPoints = GeomLib_InterpolationErrors.GeomLib_NotEnoughtPoints
+GeomLib_DegreeSmallerThan3 = GeomLib_InterpolationErrors.GeomLib_DegreeSmallerThan3
+GeomLib_InversionProblem = GeomLib_InterpolationErrors.GeomLib_InversionProblem
 
 class GeomLib:
 	@staticmethod

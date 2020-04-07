@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,10 +6,13 @@ from OCC.Core.NCollection import *
 from OCC.Core.Units import *
 
 
-class UnitsAPI_SystemUnits:
+class UnitsAPI_SystemUnits(IntEnum):
 	UnitsAPI_DEFAULT: int = ...
 	UnitsAPI_SI: int = ...
 	UnitsAPI_MDTV: int = ...
+UnitsAPI_DEFAULT = UnitsAPI_SystemUnits.UnitsAPI_DEFAULT
+UnitsAPI_SI = UnitsAPI_SystemUnits.UnitsAPI_SI
+UnitsAPI_MDTV = UnitsAPI_SystemUnits.UnitsAPI_MDTV
 
 class UnitsAPI:
 	@staticmethod

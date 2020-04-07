@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,12 +7,17 @@ from OCC.Core.TDF import *
 from OCC.Core.TColStd import *
 
 
-class TFunction_ExecutionStatus:
+class TFunction_ExecutionStatus(IntEnum):
 	TFunction_ES_WrongDefinition: int = ...
 	TFunction_ES_NotExecuted: int = ...
 	TFunction_ES_Executing: int = ...
 	TFunction_ES_Succeeded: int = ...
 	TFunction_ES_Failed: int = ...
+TFunction_ES_WrongDefinition = TFunction_ExecutionStatus.TFunction_ES_WrongDefinition
+TFunction_ES_NotExecuted = TFunction_ExecutionStatus.TFunction_ES_NotExecuted
+TFunction_ES_Executing = TFunction_ExecutionStatus.TFunction_ES_Executing
+TFunction_ES_Succeeded = TFunction_ExecutionStatus.TFunction_ES_Succeeded
+TFunction_ES_Failed = TFunction_ExecutionStatus.TFunction_ES_Failed
 
 class TFunction_Driver(Standard_Transient):
 	def Arguments(self, args: TDF_LabelList) -> None: ...

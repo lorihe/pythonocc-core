@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -13,9 +14,11 @@ from OCC.Core.gp import *
 from OCC.Core.Geom import *
 
 
-class BRepAlgo_CheckStatus:
+class BRepAlgo_CheckStatus(IntEnum):
 	BRepAlgo_OK: int = ...
 	BRepAlgo_NOK: int = ...
+BRepAlgo_OK = BRepAlgo_CheckStatus.BRepAlgo_OK
+BRepAlgo_NOK = BRepAlgo_CheckStatus.BRepAlgo_NOK
 
 class BRepAlgo:
 	@staticmethod

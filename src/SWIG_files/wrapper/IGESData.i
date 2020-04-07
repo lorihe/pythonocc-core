@@ -110,6 +110,11 @@ class IGESData_ReadStage(IntEnum):
 	IGESData_ReadAssocs = 2
 	IGESData_ReadProps = 3
 	IGESData_ReadEnd = 4
+IGESData_ReadDir = IGESData_ReadStage.IGESData_ReadDir
+IGESData_ReadOwn = IGESData_ReadStage.IGESData_ReadOwn
+IGESData_ReadAssocs = IGESData_ReadStage.IGESData_ReadAssocs
+IGESData_ReadProps = IGESData_ReadStage.IGESData_ReadProps
+IGESData_ReadEnd = IGESData_ReadStage.IGESData_ReadEnd
 
 class IGESData_DefList(IntEnum):
 	IGESData_DefNone = 0
@@ -117,12 +122,21 @@ class IGESData_DefList(IntEnum):
 	IGESData_DefSeveral = 2
 	IGESData_ErrorOne = 3
 	IGESData_ErrorSeveral = 4
+IGESData_DefNone = IGESData_DefList.IGESData_DefNone
+IGESData_DefOne = IGESData_DefList.IGESData_DefOne
+IGESData_DefSeveral = IGESData_DefList.IGESData_DefSeveral
+IGESData_ErrorOne = IGESData_DefList.IGESData_ErrorOne
+IGESData_ErrorSeveral = IGESData_DefList.IGESData_ErrorSeveral
 
 class IGESData_Status(IntEnum):
 	IGESData_EntityOK = 0
 	IGESData_EntityError = 1
 	IGESData_ReferenceError = 2
 	IGESData_TypeError = 3
+IGESData_EntityOK = IGESData_Status.IGESData_EntityOK
+IGESData_EntityError = IGESData_Status.IGESData_EntityError
+IGESData_ReferenceError = IGESData_Status.IGESData_ReferenceError
+IGESData_TypeError = IGESData_Status.IGESData_TypeError
 
 class IGESData_DefType(IntEnum):
 	IGESData_DefVoid = 0
@@ -131,6 +145,12 @@ class IGESData_DefType(IntEnum):
 	IGESData_DefAny = 3
 	IGESData_ErrorVal = 4
 	IGESData_ErrorRef = 5
+IGESData_DefVoid = IGESData_DefType.IGESData_DefVoid
+IGESData_DefValue = IGESData_DefType.IGESData_DefValue
+IGESData_DefReference = IGESData_DefType.IGESData_DefReference
+IGESData_DefAny = IGESData_DefType.IGESData_DefAny
+IGESData_ErrorVal = IGESData_DefType.IGESData_ErrorVal
+IGESData_ErrorRef = IGESData_DefType.IGESData_ErrorRef
 };
 /* end python proxy for enums */
 

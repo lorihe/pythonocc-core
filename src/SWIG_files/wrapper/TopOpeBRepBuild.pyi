@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -15,10 +16,13 @@ TopOpeBRepBuild_PBuilder = NewType('TopOpeBRepBuild_PBuilder', TopOpeBRepBuild_B
 TopOpeBRepBuild_PGTopo = NewType('TopOpeBRepBuild_PGTopo', TopOpeBRepBuild_GTopo)
 TopOpeBRepBuild_PWireEdgeSet = NewType('TopOpeBRepBuild_PWireEdgeSet', TopOpeBRepBuild_WireEdgeSet)
 
-class TopOpeBRepBuild_LoopEnum:
+class TopOpeBRepBuild_LoopEnum(IntEnum):
 	TopOpeBRepBuild_ANYLOOP: int = ...
 	TopOpeBRepBuild_BOUNDARY: int = ...
 	TopOpeBRepBuild_BLOCK: int = ...
+TopOpeBRepBuild_ANYLOOP = TopOpeBRepBuild_LoopEnum.TopOpeBRepBuild_ANYLOOP
+TopOpeBRepBuild_BOUNDARY = TopOpeBRepBuild_LoopEnum.TopOpeBRepBuild_BOUNDARY
+TopOpeBRepBuild_BLOCK = TopOpeBRepBuild_LoopEnum.TopOpeBRepBuild_BLOCK
 
 class TopOpeBRepBuild_AreaBuilder:
 	@overload

@@ -1,12 +1,15 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 
 
-class MAT_Side:
+class MAT_Side(IntEnum):
 	MAT_Left: int = ...
 	MAT_Right: int = ...
+MAT_Left = MAT_Side.MAT_Left
+MAT_Right = MAT_Side.MAT_Right
 
 class MAT_Arc(Standard_Transient):
 	def __init__(self, ArcIndex: int, GeomIndex: int, FirstElement: MAT_BasicElt, SecondElement: MAT_BasicElt) -> None: ...

@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -23,10 +24,13 @@ TopOpeBRepTool_PShapeClassifier = NewType('TopOpeBRepTool_PShapeClassifier', Top
 TopOpeBRepTool_PSoClassif = NewType('TopOpeBRepTool_PSoClassif', BRepClass3d_SolidClassifier)
 TopOpeBRepTool_Plos = NewType('TopOpeBRepTool_Plos', TopTools_ListOfShape)
 
-class TopOpeBRepTool_OutCurveType:
+class TopOpeBRepTool_OutCurveType(IntEnum):
 	TopOpeBRepTool_BSPLINE1: int = ...
 	TopOpeBRepTool_APPROX: int = ...
 	TopOpeBRepTool_INTERPOL: int = ...
+TopOpeBRepTool_BSPLINE1 = TopOpeBRepTool_OutCurveType.TopOpeBRepTool_BSPLINE1
+TopOpeBRepTool_APPROX = TopOpeBRepTool_OutCurveType.TopOpeBRepTool_APPROX
+TopOpeBRepTool_INTERPOL = TopOpeBRepTool_OutCurveType.TopOpeBRepTool_INTERPOL
 
 class TopOpeBRepTool:
 	@staticmethod

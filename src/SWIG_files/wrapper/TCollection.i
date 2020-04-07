@@ -68,6 +68,8 @@ enum TCollection_Side {
 class TCollection_Side(IntEnum):
 	TCollection_Left = 0
 	TCollection_Right = 1
+TCollection_Left = TCollection_Side.TCollection_Left
+TCollection_Right = TCollection_Side.TCollection_Right
 };
 /* end python proxy for enums */
 

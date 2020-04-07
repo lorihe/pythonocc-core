@@ -85,6 +85,8 @@ enum BinDrivers_Marker {
 class BinDrivers_Marker(IntEnum):
 	BinDrivers_ENDATTRLIST = - 1
 	BinDrivers_ENDLABEL = - 2
+BinDrivers_ENDATTRLIST = BinDrivers_Marker.BinDrivers_ENDATTRLIST
+BinDrivers_ENDLABEL = BinDrivers_Marker.BinDrivers_ENDLABEL
 };
 /* end python proxy for enums */
 

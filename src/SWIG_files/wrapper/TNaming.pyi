@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,15 +15,21 @@ TNaming_PtrAttribute = NewType('TNaming_PtrAttribute', TNaming_NamedShape)
 TNaming_PtrNode = NewType('TNaming_PtrNode', TNaming_Node)
 TNaming_PtrRefShape = NewType('TNaming_PtrRefShape', TNaming_RefShape)
 
-class TNaming_Evolution:
+class TNaming_Evolution(IntEnum):
 	TNaming_PRIMITIVE: int = ...
 	TNaming_GENERATED: int = ...
 	TNaming_MODIFY: int = ...
 	TNaming_DELETE: int = ...
 	TNaming_REPLACE: int = ...
 	TNaming_SELECTED: int = ...
+TNaming_PRIMITIVE = TNaming_Evolution.TNaming_PRIMITIVE
+TNaming_GENERATED = TNaming_Evolution.TNaming_GENERATED
+TNaming_MODIFY = TNaming_Evolution.TNaming_MODIFY
+TNaming_DELETE = TNaming_Evolution.TNaming_DELETE
+TNaming_REPLACE = TNaming_Evolution.TNaming_REPLACE
+TNaming_SELECTED = TNaming_Evolution.TNaming_SELECTED
 
-class TNaming_NameType:
+class TNaming_NameType(IntEnum):
 	TNaming_UNKNOWN: int = ...
 	TNaming_IDENTITY: int = ...
 	TNaming_MODIFUNTIL: int = ...
@@ -35,6 +42,18 @@ class TNaming_NameType:
 	TNaming_ORIENTATION: int = ...
 	TNaming_WIREIN: int = ...
 	TNaming_SHELLIN: int = ...
+TNaming_UNKNOWN = TNaming_NameType.TNaming_UNKNOWN
+TNaming_IDENTITY = TNaming_NameType.TNaming_IDENTITY
+TNaming_MODIFUNTIL = TNaming_NameType.TNaming_MODIFUNTIL
+TNaming_GENERATION = TNaming_NameType.TNaming_GENERATION
+TNaming_INTERSECTION = TNaming_NameType.TNaming_INTERSECTION
+TNaming_UNION = TNaming_NameType.TNaming_UNION
+TNaming_SUBSTRACTION = TNaming_NameType.TNaming_SUBSTRACTION
+TNaming_CONSTSHAPE = TNaming_NameType.TNaming_CONSTSHAPE
+TNaming_FILTERBYNEIGHBOURGS = TNaming_NameType.TNaming_FILTERBYNEIGHBOURGS
+TNaming_ORIENTATION = TNaming_NameType.TNaming_ORIENTATION
+TNaming_WIREIN = TNaming_NameType.TNaming_WIREIN
+TNaming_SHELLIN = TNaming_NameType.TNaming_SHELLIN
 
 class TNaming:
 	@staticmethod

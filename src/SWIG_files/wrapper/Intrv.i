@@ -90,6 +90,19 @@ class Intrv_Position(IntEnum):
 	Intrv_OverlappingAtEnd = 10
 	Intrv_JustAfter = 11
 	Intrv_After = 12
+Intrv_Before = Intrv_Position.Intrv_Before
+Intrv_JustBefore = Intrv_Position.Intrv_JustBefore
+Intrv_OverlappingAtStart = Intrv_Position.Intrv_OverlappingAtStart
+Intrv_JustEnclosingAtEnd = Intrv_Position.Intrv_JustEnclosingAtEnd
+Intrv_Enclosing = Intrv_Position.Intrv_Enclosing
+Intrv_JustOverlappingAtStart = Intrv_Position.Intrv_JustOverlappingAtStart
+Intrv_Similar = Intrv_Position.Intrv_Similar
+Intrv_JustEnclosingAtStart = Intrv_Position.Intrv_JustEnclosingAtStart
+Intrv_Inside = Intrv_Position.Intrv_Inside
+Intrv_JustOverlappingAtEnd = Intrv_Position.Intrv_JustOverlappingAtEnd
+Intrv_OverlappingAtEnd = Intrv_Position.Intrv_OverlappingAtEnd
+Intrv_JustAfter = Intrv_Position.Intrv_JustAfter
+Intrv_After = Intrv_Position.Intrv_After
 };
 /* end python proxy for enums */
 

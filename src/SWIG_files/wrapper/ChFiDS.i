@@ -127,16 +127,29 @@ class ChFiDS_State(IntEnum):
 	ChFiDS_FreeBoundary = 4
 	ChFiDS_Closed = 5
 	ChFiDS_Tangent = 6
+ChFiDS_OnSame = ChFiDS_State.ChFiDS_OnSame
+ChFiDS_OnDiff = ChFiDS_State.ChFiDS_OnDiff
+ChFiDS_AllSame = ChFiDS_State.ChFiDS_AllSame
+ChFiDS_BreakPoint = ChFiDS_State.ChFiDS_BreakPoint
+ChFiDS_FreeBoundary = ChFiDS_State.ChFiDS_FreeBoundary
+ChFiDS_Closed = ChFiDS_State.ChFiDS_Closed
+ChFiDS_Tangent = ChFiDS_State.ChFiDS_Tangent
 
 class ChFiDS_ChamfMethod(IntEnum):
 	ChFiDS_Sym = 0
 	ChFiDS_TwoDist = 1
 	ChFiDS_DistAngle = 2
+ChFiDS_Sym = ChFiDS_ChamfMethod.ChFiDS_Sym
+ChFiDS_TwoDist = ChFiDS_ChamfMethod.ChFiDS_TwoDist
+ChFiDS_DistAngle = ChFiDS_ChamfMethod.ChFiDS_DistAngle
 
 class ChFiDS_ChamfMode(IntEnum):
 	ChFiDS_ClassicChamfer = 0
 	ChFiDS_ConstThroatChamfer = 1
 	ChFiDS_ConstThroatWithPenetrationChamfer = 2
+ChFiDS_ClassicChamfer = ChFiDS_ChamfMode.ChFiDS_ClassicChamfer
+ChFiDS_ConstThroatChamfer = ChFiDS_ChamfMode.ChFiDS_ConstThroatChamfer
+ChFiDS_ConstThroatWithPenetrationChamfer = ChFiDS_ChamfMode.ChFiDS_ConstThroatWithPenetrationChamfer
 
 class ChFiDS_ErrorStatus(IntEnum):
 	ChFiDS_Ok = 0
@@ -144,6 +157,11 @@ class ChFiDS_ErrorStatus(IntEnum):
 	ChFiDS_WalkingFailure = 2
 	ChFiDS_StartsolFailure = 3
 	ChFiDS_TwistedSurface = 4
+ChFiDS_Ok = ChFiDS_ErrorStatus.ChFiDS_Ok
+ChFiDS_Error = ChFiDS_ErrorStatus.ChFiDS_Error
+ChFiDS_WalkingFailure = ChFiDS_ErrorStatus.ChFiDS_WalkingFailure
+ChFiDS_StartsolFailure = ChFiDS_ErrorStatus.ChFiDS_StartsolFailure
+ChFiDS_TwistedSurface = ChFiDS_ErrorStatus.ChFiDS_TwistedSurface
 };
 /* end python proxy for enums */
 

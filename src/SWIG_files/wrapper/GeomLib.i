@@ -94,6 +94,10 @@ class GeomLib_InterpolationErrors(IntEnum):
 	GeomLib_NotEnoughtPoints = 1
 	GeomLib_DegreeSmallerThan3 = 2
 	GeomLib_InversionProblem = 3
+GeomLib_NoError = GeomLib_InterpolationErrors.GeomLib_NoError
+GeomLib_NotEnoughtPoints = GeomLib_InterpolationErrors.GeomLib_NotEnoughtPoints
+GeomLib_DegreeSmallerThan3 = GeomLib_InterpolationErrors.GeomLib_DegreeSmallerThan3
+GeomLib_InversionProblem = GeomLib_InterpolationErrors.GeomLib_InversionProblem
 };
 /* end python proxy for enums */
 

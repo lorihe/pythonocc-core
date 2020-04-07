@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -13,20 +14,29 @@ from OCC.Core.Geom import *
 from OCC.Core.GeomAdaptor import *
 
 
-class Extrema_ExtAlgo:
+class Extrema_ExtAlgo(IntEnum):
 	Extrema_ExtAlgo_Grad: int = ...
 	Extrema_ExtAlgo_Tree: int = ...
+Extrema_ExtAlgo_Grad = Extrema_ExtAlgo.Extrema_ExtAlgo_Grad
+Extrema_ExtAlgo_Tree = Extrema_ExtAlgo.Extrema_ExtAlgo_Tree
 
-class Extrema_ExtFlag:
+class Extrema_ExtFlag(IntEnum):
 	Extrema_ExtFlag_MIN: int = ...
 	Extrema_ExtFlag_MAX: int = ...
 	Extrema_ExtFlag_MINMAX: int = ...
+Extrema_ExtFlag_MIN = Extrema_ExtFlag.Extrema_ExtFlag_MIN
+Extrema_ExtFlag_MAX = Extrema_ExtFlag.Extrema_ExtFlag_MAX
+Extrema_ExtFlag_MINMAX = Extrema_ExtFlag.Extrema_ExtFlag_MINMAX
 
-class Extrema_ElementType:
+class Extrema_ElementType(IntEnum):
 	Extrema_Node: int = ...
 	Extrema_UIsoEdge: int = ...
 	Extrema_VIsoEdge: int = ...
 	Extrema_Face: int = ...
+Extrema_Node = Extrema_ElementType.Extrema_Node
+Extrema_UIsoEdge = Extrema_ElementType.Extrema_UIsoEdge
+Extrema_VIsoEdge = Extrema_ElementType.Extrema_VIsoEdge
+Extrema_Face = Extrema_ElementType.Extrema_Face
 
 class Extrema_CCLocFOfLocECC(math_FunctionSetWithDerivatives):
 	@overload

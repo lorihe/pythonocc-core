@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -5,12 +6,17 @@ from OCC.Core.NCollection import *
 from OCC.Core.gp import *
 
 
-class GccEnt_Position:
+class GccEnt_Position(IntEnum):
 	GccEnt_unqualified: int = ...
 	GccEnt_enclosing: int = ...
 	GccEnt_enclosed: int = ...
 	GccEnt_outside: int = ...
 	GccEnt_noqualifier: int = ...
+GccEnt_unqualified = GccEnt_Position.GccEnt_unqualified
+GccEnt_enclosing = GccEnt_Position.GccEnt_enclosing
+GccEnt_enclosed = GccEnt_Position.GccEnt_enclosed
+GccEnt_outside = GccEnt_Position.GccEnt_outside
+GccEnt_noqualifier = GccEnt_Position.GccEnt_noqualifier
 
 class GccEnt:
 	@staticmethod

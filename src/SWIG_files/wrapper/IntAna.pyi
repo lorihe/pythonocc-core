@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,7 +7,7 @@ from OCC.Core.gp import *
 from OCC.Core.TColStd import *
 
 
-class IntAna_ResultType:
+class IntAna_ResultType(IntEnum):
 	IntAna_Point: int = ...
 	IntAna_Line: int = ...
 	IntAna_Circle: int = ...
@@ -17,6 +18,16 @@ class IntAna_ResultType:
 	IntAna_Empty: int = ...
 	IntAna_Same: int = ...
 	IntAna_NoGeometricSolution: int = ...
+IntAna_Point = IntAna_ResultType.IntAna_Point
+IntAna_Line = IntAna_ResultType.IntAna_Line
+IntAna_Circle = IntAna_ResultType.IntAna_Circle
+IntAna_PointAndCircle = IntAna_ResultType.IntAna_PointAndCircle
+IntAna_Ellipse = IntAna_ResultType.IntAna_Ellipse
+IntAna_Parabola = IntAna_ResultType.IntAna_Parabola
+IntAna_Hyperbola = IntAna_ResultType.IntAna_Hyperbola
+IntAna_Empty = IntAna_ResultType.IntAna_Empty
+IntAna_Same = IntAna_ResultType.IntAna_Same
+IntAna_NoGeometricSolution = IntAna_ResultType.IntAna_NoGeometricSolution
 
 class IntAna_Curve:
 	def __init__(self) -> None: ...

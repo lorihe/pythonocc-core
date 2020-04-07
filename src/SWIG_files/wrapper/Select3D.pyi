@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -15,9 +16,11 @@ from OCC.Core.Geom import *
 
 SelectBasics_SensitiveEntity = NewType('SelectBasics_SensitiveEntity', Select3D_SensitiveEntity)
 
-class Select3D_TypeOfSensitivity:
+class Select3D_TypeOfSensitivity(IntEnum):
 	Select3D_TOS_INTERIOR: int = ...
 	Select3D_TOS_BOUNDARY: int = ...
+Select3D_TOS_INTERIOR = Select3D_TypeOfSensitivity.Select3D_TOS_INTERIOR
+Select3D_TOS_BOUNDARY = Select3D_TypeOfSensitivity.Select3D_TOS_BOUNDARY
 
 class Select3D_BVHIndexBuffer(Graphic3d_Buffer):
 	def __init__(self, theAlloc: NCollection_BaseAllocator) -> None: ...

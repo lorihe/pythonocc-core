@@ -1,10 +1,11 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 
 
-class Image_Format:
+class Image_Format(IntEnum):
 	Image_Format_UNKNOWN: int = ...
 	Image_Format_Gray: int = ...
 	Image_Format_Alpha: int = ...
@@ -20,6 +21,21 @@ class Image_Format:
 	Image_Format_BGRF: int = ...
 	Image_Format_RGBAF: int = ...
 	Image_Format_BGRAF: int = ...
+Image_Format_UNKNOWN = Image_Format.Image_Format_UNKNOWN
+Image_Format_Gray = Image_Format.Image_Format_Gray
+Image_Format_Alpha = Image_Format.Image_Format_Alpha
+Image_Format_RGB = Image_Format.Image_Format_RGB
+Image_Format_BGR = Image_Format.Image_Format_BGR
+Image_Format_RGB32 = Image_Format.Image_Format_RGB32
+Image_Format_BGR32 = Image_Format.Image_Format_BGR32
+Image_Format_RGBA = Image_Format.Image_Format_RGBA
+Image_Format_BGRA = Image_Format.Image_Format_BGRA
+Image_Format_GrayF = Image_Format.Image_Format_GrayF
+Image_Format_AlphaF = Image_Format.Image_Format_AlphaF
+Image_Format_RGBF = Image_Format.Image_Format_RGBF
+Image_Format_BGRF = Image_Format.Image_Format_BGRF
+Image_Format_RGBAF = Image_Format.Image_Format_RGBAF
+Image_Format_BGRAF = Image_Format.Image_Format_BGRAF
 
 #classnotwrapped
 class Image_ColorRGB:

@@ -115,11 +115,17 @@ class FilletSurf_StatusDone(IntEnum):
 	FilletSurf_IsOk = 0
 	FilletSurf_IsNotOk = 1
 	FilletSurf_IsPartial = 2
+FilletSurf_IsOk = FilletSurf_StatusDone.FilletSurf_IsOk
+FilletSurf_IsNotOk = FilletSurf_StatusDone.FilletSurf_IsNotOk
+FilletSurf_IsPartial = FilletSurf_StatusDone.FilletSurf_IsPartial
 
 class FilletSurf_StatusType(IntEnum):
 	FilletSurf_TwoExtremityOnEdge = 0
 	FilletSurf_OneExtremityOnEdge = 1
 	FilletSurf_NoExtremityOnEdge = 2
+FilletSurf_TwoExtremityOnEdge = FilletSurf_StatusType.FilletSurf_TwoExtremityOnEdge
+FilletSurf_OneExtremityOnEdge = FilletSurf_StatusType.FilletSurf_OneExtremityOnEdge
+FilletSurf_NoExtremityOnEdge = FilletSurf_StatusType.FilletSurf_NoExtremityOnEdge
 
 class FilletSurf_ErrorTypeStatus(IntEnum):
 	FilletSurf_EmptyList = 0
@@ -128,6 +134,12 @@ class FilletSurf_ErrorTypeStatus(IntEnum):
 	FilletSurf_EdgeNotOnShape = 3
 	FilletSurf_NotSharpEdge = 4
 	FilletSurf_PbFilletCompute = 5
+FilletSurf_EmptyList = FilletSurf_ErrorTypeStatus.FilletSurf_EmptyList
+FilletSurf_EdgeNotG1 = FilletSurf_ErrorTypeStatus.FilletSurf_EdgeNotG1
+FilletSurf_FacesNotG1 = FilletSurf_ErrorTypeStatus.FilletSurf_FacesNotG1
+FilletSurf_EdgeNotOnShape = FilletSurf_ErrorTypeStatus.FilletSurf_EdgeNotOnShape
+FilletSurf_NotSharpEdge = FilletSurf_ErrorTypeStatus.FilletSurf_NotSharpEdge
+FilletSurf_PbFilletCompute = FilletSurf_ErrorTypeStatus.FilletSurf_PbFilletCompute
 };
 /* end python proxy for enums */
 

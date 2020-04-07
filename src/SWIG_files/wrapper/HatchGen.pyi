@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,18 +7,27 @@ from OCC.Core.TopAbs import *
 from OCC.Core.IntRes2d import *
 
 
-class HatchGen_ErrorStatus:
+class HatchGen_ErrorStatus(IntEnum):
 	HatchGen_NoProblem: int = ...
 	HatchGen_TrimFailure: int = ...
 	HatchGen_TransitionFailure: int = ...
 	HatchGen_IncoherentParity: int = ...
 	HatchGen_IncompatibleStates: int = ...
+HatchGen_NoProblem = HatchGen_ErrorStatus.HatchGen_NoProblem
+HatchGen_TrimFailure = HatchGen_ErrorStatus.HatchGen_TrimFailure
+HatchGen_TransitionFailure = HatchGen_ErrorStatus.HatchGen_TransitionFailure
+HatchGen_IncoherentParity = HatchGen_ErrorStatus.HatchGen_IncoherentParity
+HatchGen_IncompatibleStates = HatchGen_ErrorStatus.HatchGen_IncompatibleStates
 
-class HatchGen_IntersectionType:
+class HatchGen_IntersectionType(IntEnum):
 	HatchGen_TRUE: int = ...
 	HatchGen_TOUCH: int = ...
 	HatchGen_TANGENT: int = ...
 	HatchGen_UNDETERMINED: int = ...
+HatchGen_TRUE = HatchGen_IntersectionType.HatchGen_TRUE
+HatchGen_TOUCH = HatchGen_IntersectionType.HatchGen_TOUCH
+HatchGen_TANGENT = HatchGen_IntersectionType.HatchGen_TANGENT
+HatchGen_UNDETERMINED = HatchGen_IntersectionType.HatchGen_UNDETERMINED
 
 class HatchGen_Domain:
 	@overload

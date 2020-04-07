@@ -127,6 +127,12 @@ class HLRBRep_TypeOfResultingEdge(IntEnum):
 	HLRBRep_Rg1Line = 3
 	HLRBRep_RgNLine = 4
 	HLRBRep_Sharp = 5
+HLRBRep_Undefined = HLRBRep_TypeOfResultingEdge.HLRBRep_Undefined
+HLRBRep_IsoLine = HLRBRep_TypeOfResultingEdge.HLRBRep_IsoLine
+HLRBRep_OutLine = HLRBRep_TypeOfResultingEdge.HLRBRep_OutLine
+HLRBRep_Rg1Line = HLRBRep_TypeOfResultingEdge.HLRBRep_Rg1Line
+HLRBRep_RgNLine = HLRBRep_TypeOfResultingEdge.HLRBRep_RgNLine
+HLRBRep_Sharp = HLRBRep_TypeOfResultingEdge.HLRBRep_Sharp
 };
 /* end python proxy for enums */
 

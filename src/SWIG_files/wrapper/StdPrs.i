@@ -118,6 +118,9 @@ class StdPrs_Volume(IntEnum):
 	StdPrs_Volume_Autodetection = 0
 	StdPrs_Volume_Closed = 1
 	StdPrs_Volume_Opened = 2
+StdPrs_Volume_Autodetection = StdPrs_Volume.StdPrs_Volume_Autodetection
+StdPrs_Volume_Closed = StdPrs_Volume.StdPrs_Volume_Closed
+StdPrs_Volume_Opened = StdPrs_Volume.StdPrs_Volume_Opened
 };
 /* end python proxy for enums */
 

@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -10,7 +11,7 @@ from OCC.Core.OSD import *
 from OCC.Core.TColStd import *
 
 
-class MoniTool_ValueType:
+class MoniTool_ValueType(IntEnum):
 	MoniTool_ValueMisc: int = ...
 	MoniTool_ValueInteger: int = ...
 	MoniTool_ValueReal: int = ...
@@ -22,6 +23,17 @@ class MoniTool_ValueType:
 	MoniTool_ValueSub: int = ...
 	MoniTool_ValueHexa: int = ...
 	MoniTool_ValueBinary: int = ...
+MoniTool_ValueMisc = MoniTool_ValueType.MoniTool_ValueMisc
+MoniTool_ValueInteger = MoniTool_ValueType.MoniTool_ValueInteger
+MoniTool_ValueReal = MoniTool_ValueType.MoniTool_ValueReal
+MoniTool_ValueIdent = MoniTool_ValueType.MoniTool_ValueIdent
+MoniTool_ValueVoid = MoniTool_ValueType.MoniTool_ValueVoid
+MoniTool_ValueText = MoniTool_ValueType.MoniTool_ValueText
+MoniTool_ValueEnum = MoniTool_ValueType.MoniTool_ValueEnum
+MoniTool_ValueLogical = MoniTool_ValueType.MoniTool_ValueLogical
+MoniTool_ValueSub = MoniTool_ValueType.MoniTool_ValueSub
+MoniTool_ValueHexa = MoniTool_ValueType.MoniTool_ValueHexa
+MoniTool_ValueBinary = MoniTool_ValueType.MoniTool_ValueBinary
 
 class MoniTool_AttrList:
 	@overload

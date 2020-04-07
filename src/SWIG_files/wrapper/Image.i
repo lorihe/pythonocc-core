@@ -94,6 +94,21 @@ class Image_Format(IntEnum):
 	Image_Format_BGRF = 12
 	Image_Format_RGBAF = 13
 	Image_Format_BGRAF = 14
+Image_Format_UNKNOWN = Image_Format.Image_Format_UNKNOWN
+Image_Format_Gray = Image_Format.Image_Format_Gray
+Image_Format_Alpha = Image_Format.Image_Format_Alpha
+Image_Format_RGB = Image_Format.Image_Format_RGB
+Image_Format_BGR = Image_Format.Image_Format_BGR
+Image_Format_RGB32 = Image_Format.Image_Format_RGB32
+Image_Format_BGR32 = Image_Format.Image_Format_BGR32
+Image_Format_RGBA = Image_Format.Image_Format_RGBA
+Image_Format_BGRA = Image_Format.Image_Format_BGRA
+Image_Format_GrayF = Image_Format.Image_Format_GrayF
+Image_Format_AlphaF = Image_Format.Image_Format_AlphaF
+Image_Format_RGBF = Image_Format.Image_Format_RGBF
+Image_Format_BGRF = Image_Format.Image_Format_BGRF
+Image_Format_RGBAF = Image_Format.Image_Format_RGBAF
+Image_Format_BGRAF = Image_Format.Image_Format_BGRAF
 };
 /* end python proxy for enums */
 

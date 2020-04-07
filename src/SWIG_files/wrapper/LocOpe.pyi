@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -11,10 +12,13 @@ from OCC.Core.gp import *
 from OCC.Core.Geom import *
 
 
-class LocOpe_Operation:
+class LocOpe_Operation(IntEnum):
 	LocOpe_FUSE: int = ...
 	LocOpe_CUT: int = ...
 	LocOpe_INVALID: int = ...
+LocOpe_FUSE = LocOpe_Operation.LocOpe_FUSE
+LocOpe_CUT = LocOpe_Operation.LocOpe_CUT
+LocOpe_INVALID = LocOpe_Operation.LocOpe_INVALID
 
 class LocOpe:
 	@staticmethod

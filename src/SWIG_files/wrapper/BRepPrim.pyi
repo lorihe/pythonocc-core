@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,13 +10,19 @@ from OCC.Core.Geom import *
 from OCC.Core.Geom2d import *
 
 
-class BRepPrim_Direction:
+class BRepPrim_Direction(IntEnum):
 	BRepPrim_XMin: int = ...
 	BRepPrim_XMax: int = ...
 	BRepPrim_YMin: int = ...
 	BRepPrim_YMax: int = ...
 	BRepPrim_ZMin: int = ...
 	BRepPrim_ZMax: int = ...
+BRepPrim_XMin = BRepPrim_Direction.BRepPrim_XMin
+BRepPrim_XMax = BRepPrim_Direction.BRepPrim_XMax
+BRepPrim_YMin = BRepPrim_Direction.BRepPrim_YMin
+BRepPrim_YMax = BRepPrim_Direction.BRepPrim_YMax
+BRepPrim_ZMin = BRepPrim_Direction.BRepPrim_ZMin
+BRepPrim_ZMax = BRepPrim_Direction.BRepPrim_ZMax
 
 class BRepPrim_Builder:
 	@overload

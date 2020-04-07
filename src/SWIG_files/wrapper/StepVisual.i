@@ -114,21 +114,31 @@ enum StepVisual_MarkerType {
 
 class StepVisual_NullStyle(IntEnum):
 	StepVisual_Null = 0
+StepVisual_Null = StepVisual_NullStyle.StepVisual_Null
 
 class StepVisual_CentralOrParallel(IntEnum):
 	StepVisual_copCentral = 0
 	StepVisual_copParallel = 1
+StepVisual_copCentral = StepVisual_CentralOrParallel.StepVisual_copCentral
+StepVisual_copParallel = StepVisual_CentralOrParallel.StepVisual_copParallel
 
 class StepVisual_SurfaceSide(IntEnum):
 	StepVisual_ssNegative = 0
 	StepVisual_ssPositive = 1
 	StepVisual_ssBoth = 2
+StepVisual_ssNegative = StepVisual_SurfaceSide.StepVisual_ssNegative
+StepVisual_ssPositive = StepVisual_SurfaceSide.StepVisual_ssPositive
+StepVisual_ssBoth = StepVisual_SurfaceSide.StepVisual_ssBoth
 
 class StepVisual_TextPath(IntEnum):
 	StepVisual_tpUp = 0
 	StepVisual_tpRight = 1
 	StepVisual_tpDown = 2
 	StepVisual_tpLeft = 3
+StepVisual_tpUp = StepVisual_TextPath.StepVisual_tpUp
+StepVisual_tpRight = StepVisual_TextPath.StepVisual_tpRight
+StepVisual_tpDown = StepVisual_TextPath.StepVisual_tpDown
+StepVisual_tpLeft = StepVisual_TextPath.StepVisual_tpLeft
 
 class StepVisual_MarkerType(IntEnum):
 	StepVisual_mtDot = 0
@@ -138,6 +148,13 @@ class StepVisual_MarkerType(IntEnum):
 	StepVisual_mtRing = 4
 	StepVisual_mtSquare = 5
 	StepVisual_mtTriangle = 6
+StepVisual_mtDot = StepVisual_MarkerType.StepVisual_mtDot
+StepVisual_mtX = StepVisual_MarkerType.StepVisual_mtX
+StepVisual_mtPlus = StepVisual_MarkerType.StepVisual_mtPlus
+StepVisual_mtAsterisk = StepVisual_MarkerType.StepVisual_mtAsterisk
+StepVisual_mtRing = StepVisual_MarkerType.StepVisual_mtRing
+StepVisual_mtSquare = StepVisual_MarkerType.StepVisual_mtSquare
+StepVisual_mtTriangle = StepVisual_MarkerType.StepVisual_mtTriangle
 };
 /* end python proxy for enums */
 

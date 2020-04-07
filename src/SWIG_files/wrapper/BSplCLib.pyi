@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -9,14 +10,19 @@ from OCC.Core.gp import *
 from OCC.Core.GeomAbs import *
 
 
-class BSplCLib_MultDistribution:
+class BSplCLib_MultDistribution(IntEnum):
 	BSplCLib_NonConstant: int = ...
 	BSplCLib_Constant: int = ...
 	BSplCLib_QuasiConstant: int = ...
+BSplCLib_NonConstant = BSplCLib_MultDistribution.BSplCLib_NonConstant
+BSplCLib_Constant = BSplCLib_MultDistribution.BSplCLib_Constant
+BSplCLib_QuasiConstant = BSplCLib_MultDistribution.BSplCLib_QuasiConstant
 
-class BSplCLib_KnotDistribution:
+class BSplCLib_KnotDistribution(IntEnum):
 	BSplCLib_NonUniform: int = ...
 	BSplCLib_Uniform: int = ...
+BSplCLib_NonUniform = BSplCLib_KnotDistribution.BSplCLib_NonUniform
+BSplCLib_Uniform = BSplCLib_KnotDistribution.BSplCLib_Uniform
 
 class BSplCLib:
 	@staticmethod

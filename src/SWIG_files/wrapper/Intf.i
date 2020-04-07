@@ -76,6 +76,10 @@ class Intf_PIType(IntEnum):
 	Intf_FACE = 1
 	Intf_EDGE = 2
 	Intf_VERTEX = 3
+Intf_EXTERNAL = Intf_PIType.Intf_EXTERNAL
+Intf_FACE = Intf_PIType.Intf_FACE
+Intf_EDGE = Intf_PIType.Intf_EDGE
+Intf_VERTEX = Intf_PIType.Intf_VERTEX
 };
 /* end python proxy for enums */
 

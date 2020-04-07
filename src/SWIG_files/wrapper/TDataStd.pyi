@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -8,10 +9,13 @@ from OCC.Core.TCollection import *
 
 TDataStd_PtrTreeNode = NewType('TDataStd_PtrTreeNode', TDataStd_TreeNode)
 
-class TDataStd_RealEnum:
+class TDataStd_RealEnum(IntEnum):
 	TDataStd_SCALAR: int = ...
 	TDataStd_LENGTH: int = ...
 	TDataStd_ANGULAR: int = ...
+TDataStd_SCALAR = TDataStd_RealEnum.TDataStd_SCALAR
+TDataStd_LENGTH = TDataStd_RealEnum.TDataStd_LENGTH
+TDataStd_ANGULAR = TDataStd_RealEnum.TDataStd_ANGULAR
 
 class TDataStd:
 	@staticmethod

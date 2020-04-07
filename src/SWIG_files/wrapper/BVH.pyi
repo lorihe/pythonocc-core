@@ -1,8 +1,16 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 
+BVH_Constants_MaxTreeDepth = .BVH_Constants_MaxTreeDepth
+BVH_Constants_LeafNodeSizeSingle = .BVH_Constants_LeafNodeSizeSingle
+BVH_Constants_LeafNodeSizeAverage = .BVH_Constants_LeafNodeSizeAverage
+BVH_Constants_LeafNodeSizeDefault = .BVH_Constants_LeafNodeSizeDefault
+BVH_Constants_LeafNodeSizeSmall = .BVH_Constants_LeafNodeSizeSmall
+BVH_Constants_NbBinsOptimal = .BVH_Constants_NbBinsOptimal
+BVH_Constants_NbBinsBest = .BVH_Constants_NbBinsBest
 
 class BVH_AxisSelector:
 	@staticmethod

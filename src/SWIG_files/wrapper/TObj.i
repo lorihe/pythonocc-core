@@ -84,6 +84,9 @@ class TObj_DeletingMode(IntEnum):
 	TObj_FreeOnly = 0
 	TObj_KeepDepending = 1
 	TObj_Forced = 2
+TObj_FreeOnly = TObj_DeletingMode.TObj_FreeOnly
+TObj_KeepDepending = TObj_DeletingMode.TObj_KeepDepending
+TObj_Forced = TObj_DeletingMode.TObj_Forced
 };
 /* end python proxy for enums */
 
@@ -984,6 +987,7 @@ enum ObjectState {
 
 class TypeFlags(IntEnum):
 	Visible = 1
+Visible = TypeFlags.Visible
 
 class ObjectState(IntEnum):
 	ObjectState_Hidden = 1
@@ -991,6 +995,11 @@ class ObjectState(IntEnum):
 	ObjectState_Imported = 4
 	ObjectState_ImportedByFile = 8
 	ObjectState_Ordered = 16
+ObjectState_Hidden = ObjectState.ObjectState_Hidden
+ObjectState_Saved = ObjectState.ObjectState_Saved
+ObjectState_Imported = ObjectState.ObjectState_Imported
+ObjectState_ImportedByFile = ObjectState.ObjectState_ImportedByFile
+ObjectState_Ordered = ObjectState.ObjectState_Ordered
 };
 /* end python proxy for enums */
 

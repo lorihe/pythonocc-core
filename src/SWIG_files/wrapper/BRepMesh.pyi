@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -19,13 +20,17 @@ from OCC.Core.Geom import *
 from OCC.Core.IMeshData import *
 
 
-class BRepMesh_FactoryError:
+class BRepMesh_FactoryError(IntEnum):
 	BRepMesh_FE_NOERROR: int = ...
 	BRepMesh_FE_LIBRARYNOTFOUND: int = ...
 	BRepMesh_FE_FUNCTIONNOTFOUND: int = ...
 	BRepMesh_FE_CANNOTCREATEALGO: int = ...
+BRepMesh_FE_NOERROR = BRepMesh_FactoryError.BRepMesh_FE_NOERROR
+BRepMesh_FE_LIBRARYNOTFOUND = BRepMesh_FactoryError.BRepMesh_FE_LIBRARYNOTFOUND
+BRepMesh_FE_FUNCTIONNOTFOUND = BRepMesh_FactoryError.BRepMesh_FE_FUNCTIONNOTFOUND
+BRepMesh_FE_CANNOTCREATEALGO = BRepMesh_FactoryError.BRepMesh_FE_CANNOTCREATEALGO
 
-class BRepMesh_DegreeOfFreedom:
+class BRepMesh_DegreeOfFreedom(IntEnum):
 	BRepMesh_Free: int = ...
 	BRepMesh_InVolume: int = ...
 	BRepMesh_OnSurface: int = ...
@@ -33,6 +38,13 @@ class BRepMesh_DegreeOfFreedom:
 	BRepMesh_Fixed: int = ...
 	BRepMesh_Frontier: int = ...
 	BRepMesh_Deleted: int = ...
+BRepMesh_Free = BRepMesh_DegreeOfFreedom.BRepMesh_Free
+BRepMesh_InVolume = BRepMesh_DegreeOfFreedom.BRepMesh_InVolume
+BRepMesh_OnSurface = BRepMesh_DegreeOfFreedom.BRepMesh_OnSurface
+BRepMesh_OnCurve = BRepMesh_DegreeOfFreedom.BRepMesh_OnCurve
+BRepMesh_Fixed = BRepMesh_DegreeOfFreedom.BRepMesh_Fixed
+BRepMesh_Frontier = BRepMesh_DegreeOfFreedom.BRepMesh_Frontier
+BRepMesh_Deleted = BRepMesh_DegreeOfFreedom.BRepMesh_Deleted
 
 class BRepMesh_BaseMeshAlgo(IMeshTools_MeshAlgo):
 	pass

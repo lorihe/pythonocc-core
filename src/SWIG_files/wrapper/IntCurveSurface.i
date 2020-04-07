@@ -91,6 +91,9 @@ class IntCurveSurface_TransitionOnCurve(IntEnum):
 	IntCurveSurface_Tangent = 0
 	IntCurveSurface_In = 1
 	IntCurveSurface_Out = 2
+IntCurveSurface_Tangent = IntCurveSurface_TransitionOnCurve.IntCurveSurface_Tangent
+IntCurveSurface_In = IntCurveSurface_TransitionOnCurve.IntCurveSurface_In
+IntCurveSurface_Out = IntCurveSurface_TransitionOnCurve.IntCurveSurface_Out
 };
 /* end python proxy for enums */
 

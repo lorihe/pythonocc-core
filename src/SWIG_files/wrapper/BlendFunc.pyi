@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -14,11 +15,15 @@ from OCC.Core.TColgp import *
 from OCC.Core.Adaptor2d import *
 
 
-class BlendFunc_SectionShape:
+class BlendFunc_SectionShape(IntEnum):
 	BlendFunc_Rational: int = ...
 	BlendFunc_QuasiAngular: int = ...
 	BlendFunc_Polynomial: int = ...
 	BlendFunc_Linear: int = ...
+BlendFunc_Rational = BlendFunc_SectionShape.BlendFunc_Rational
+BlendFunc_QuasiAngular = BlendFunc_SectionShape.BlendFunc_QuasiAngular
+BlendFunc_Polynomial = BlendFunc_SectionShape.BlendFunc_Polynomial
+BlendFunc_Linear = BlendFunc_SectionShape.BlendFunc_Linear
 
 class BlendFunc:
 	@staticmethod

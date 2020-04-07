@@ -115,12 +115,18 @@ enum IFSelect_PrintCount {
 class IFSelect_PrintFail(IntEnum):
 	IFSelect_FailOnly = 0
 	IFSelect_FailAndWarn = 1
+IFSelect_FailOnly = IFSelect_PrintFail.IFSelect_FailOnly
+IFSelect_FailAndWarn = IFSelect_PrintFail.IFSelect_FailAndWarn
 
 class IFSelect_RemainMode(IntEnum):
 	IFSelect_RemainForget = 0
 	IFSelect_RemainCompute = 1
 	IFSelect_RemainDisplay = 2
 	IFSelect_RemainUndo = 3
+IFSelect_RemainForget = IFSelect_RemainMode.IFSelect_RemainForget
+IFSelect_RemainCompute = IFSelect_RemainMode.IFSelect_RemainCompute
+IFSelect_RemainDisplay = IFSelect_RemainMode.IFSelect_RemainDisplay
+IFSelect_RemainUndo = IFSelect_RemainMode.IFSelect_RemainUndo
 
 class IFSelect_EditValue(IntEnum):
 	IFSelect_Optional = 0
@@ -129,6 +135,12 @@ class IFSelect_EditValue(IntEnum):
 	IFSelect_EditComputed = 3
 	IFSelect_EditRead = 4
 	IFSelect_EditDynamic = 5
+IFSelect_Optional = IFSelect_EditValue.IFSelect_Optional
+IFSelect_Editable = IFSelect_EditValue.IFSelect_Editable
+IFSelect_EditProtected = IFSelect_EditValue.IFSelect_EditProtected
+IFSelect_EditComputed = IFSelect_EditValue.IFSelect_EditComputed
+IFSelect_EditRead = IFSelect_EditValue.IFSelect_EditRead
+IFSelect_EditDynamic = IFSelect_EditValue.IFSelect_EditDynamic
 
 class IFSelect_ReturnStatus(IntEnum):
 	IFSelect_RetVoid = 0
@@ -136,6 +148,11 @@ class IFSelect_ReturnStatus(IntEnum):
 	IFSelect_RetError = 2
 	IFSelect_RetFail = 3
 	IFSelect_RetStop = 4
+IFSelect_RetVoid = IFSelect_ReturnStatus.IFSelect_RetVoid
+IFSelect_RetDone = IFSelect_ReturnStatus.IFSelect_RetDone
+IFSelect_RetError = IFSelect_ReturnStatus.IFSelect_RetError
+IFSelect_RetFail = IFSelect_ReturnStatus.IFSelect_RetFail
+IFSelect_RetStop = IFSelect_ReturnStatus.IFSelect_RetStop
 
 class IFSelect_PrintCount(IntEnum):
 	IFSelect_ItemsByEntity = 0
@@ -147,6 +164,15 @@ class IFSelect_PrintCount(IntEnum):
 	IFSelect_GeneralInfo = 6
 	IFSelect_Mapping = 7
 	IFSelect_ResultCount = 8
+IFSelect_ItemsByEntity = IFSelect_PrintCount.IFSelect_ItemsByEntity
+IFSelect_CountByItem = IFSelect_PrintCount.IFSelect_CountByItem
+IFSelect_ShortByItem = IFSelect_PrintCount.IFSelect_ShortByItem
+IFSelect_ListByItem = IFSelect_PrintCount.IFSelect_ListByItem
+IFSelect_EntitiesByItem = IFSelect_PrintCount.IFSelect_EntitiesByItem
+IFSelect_CountSummary = IFSelect_PrintCount.IFSelect_CountSummary
+IFSelect_GeneralInfo = IFSelect_PrintCount.IFSelect_GeneralInfo
+IFSelect_Mapping = IFSelect_PrintCount.IFSelect_Mapping
+IFSelect_ResultCount = IFSelect_PrintCount.IFSelect_ResultCount
 };
 /* end python proxy for enums */
 

@@ -72,6 +72,9 @@ class UnitsAPI_SystemUnits(IntEnum):
 	UnitsAPI_DEFAULT = 0
 	UnitsAPI_SI = 1
 	UnitsAPI_MDTV = 2
+UnitsAPI_DEFAULT = UnitsAPI_SystemUnits.UnitsAPI_DEFAULT
+UnitsAPI_SI = UnitsAPI_SystemUnits.UnitsAPI_SI
+UnitsAPI_MDTV = UnitsAPI_SystemUnits.UnitsAPI_MDTV
 };
 /* end python proxy for enums */
 

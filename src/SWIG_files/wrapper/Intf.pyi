@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,11 +7,15 @@ from OCC.Core.gp import *
 from OCC.Core.Bnd import *
 
 
-class Intf_PIType:
+class Intf_PIType(IntEnum):
 	Intf_EXTERNAL: int = ...
 	Intf_FACE: int = ...
 	Intf_EDGE: int = ...
 	Intf_VERTEX: int = ...
+Intf_EXTERNAL = Intf_PIType.Intf_EXTERNAL
+Intf_FACE = Intf_PIType.Intf_FACE
+Intf_EDGE = Intf_PIType.Intf_EDGE
+Intf_VERTEX = Intf_PIType.Intf_VERTEX
 
 class Intf:
 	@staticmethod

@@ -86,6 +86,14 @@ class Convert_ParameterisationType(IntEnum):
 	Convert_QuasiAngular = 5
 	Convert_RationalC1 = 6
 	Convert_Polynomial = 7
+Convert_TgtThetaOver2 = Convert_ParameterisationType.Convert_TgtThetaOver2
+Convert_TgtThetaOver2_1 = Convert_ParameterisationType.Convert_TgtThetaOver2_1
+Convert_TgtThetaOver2_2 = Convert_ParameterisationType.Convert_TgtThetaOver2_2
+Convert_TgtThetaOver2_3 = Convert_ParameterisationType.Convert_TgtThetaOver2_3
+Convert_TgtThetaOver2_4 = Convert_ParameterisationType.Convert_TgtThetaOver2_4
+Convert_QuasiAngular = Convert_ParameterisationType.Convert_QuasiAngular
+Convert_RationalC1 = Convert_ParameterisationType.Convert_RationalC1
+Convert_Polynomial = Convert_ParameterisationType.Convert_Polynomial
 };
 /* end python proxy for enums */
 

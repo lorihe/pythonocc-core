@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -19,27 +20,41 @@ from OCC.Core.Bnd import *
 SelectBasics_EntityOwner = NewType('SelectBasics_EntityOwner', SelectMgr_EntityOwner)
 SelectMgr_SOPtr = NewType('SelectMgr_SOPtr', SelectMgr_SelectableObject)
 
-class SelectMgr_TypeOfUpdate:
+class SelectMgr_TypeOfUpdate(IntEnum):
 	SelectMgr_TOU_Full: int = ...
 	SelectMgr_TOU_Partial: int = ...
 	SelectMgr_TOU_None: int = ...
+SelectMgr_TOU_Full = SelectMgr_TypeOfUpdate.SelectMgr_TOU_Full
+SelectMgr_TOU_Partial = SelectMgr_TypeOfUpdate.SelectMgr_TOU_Partial
+SelectMgr_TOU_None = SelectMgr_TypeOfUpdate.SelectMgr_TOU_None
 
-class SelectMgr_TypeOfBVHUpdate:
+class SelectMgr_TypeOfBVHUpdate(IntEnum):
 	SelectMgr_TBU_Add: int = ...
 	SelectMgr_TBU_Remove: int = ...
 	SelectMgr_TBU_Renew: int = ...
 	SelectMgr_TBU_Invalidate: int = ...
 	SelectMgr_TBU_None: int = ...
+SelectMgr_TBU_Add = SelectMgr_TypeOfBVHUpdate.SelectMgr_TBU_Add
+SelectMgr_TBU_Remove = SelectMgr_TypeOfBVHUpdate.SelectMgr_TBU_Remove
+SelectMgr_TBU_Renew = SelectMgr_TypeOfBVHUpdate.SelectMgr_TBU_Renew
+SelectMgr_TBU_Invalidate = SelectMgr_TypeOfBVHUpdate.SelectMgr_TBU_Invalidate
+SelectMgr_TBU_None = SelectMgr_TypeOfBVHUpdate.SelectMgr_TBU_None
 
-class SelectMgr_StateOfSelection:
+class SelectMgr_StateOfSelection(IntEnum):
 	SelectMgr_SOS_Any: int = ...
 	SelectMgr_SOS_Unknown: int = ...
 	SelectMgr_SOS_Deactivated: int = ...
 	SelectMgr_SOS_Activated: int = ...
+SelectMgr_SOS_Any = SelectMgr_StateOfSelection.SelectMgr_SOS_Any
+SelectMgr_SOS_Unknown = SelectMgr_StateOfSelection.SelectMgr_SOS_Unknown
+SelectMgr_SOS_Deactivated = SelectMgr_StateOfSelection.SelectMgr_SOS_Deactivated
+SelectMgr_SOS_Activated = SelectMgr_StateOfSelection.SelectMgr_SOS_Activated
 
-class SelectMgr_PickingStrategy:
+class SelectMgr_PickingStrategy(IntEnum):
 	SelectMgr_PickingStrategy_FirstAcceptable: int = ...
 	SelectMgr_PickingStrategy_OnlyTopmost: int = ...
+SelectMgr_PickingStrategy_FirstAcceptable = SelectMgr_PickingStrategy.SelectMgr_PickingStrategy_FirstAcceptable
+SelectMgr_PickingStrategy_OnlyTopmost = SelectMgr_PickingStrategy.SelectMgr_PickingStrategy_OnlyTopmost
 
 class SelectMgr_EntityOwner(Standard_Transient):
 	@overload

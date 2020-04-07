@@ -1,3 +1,4 @@
+from enum import IntEnum
 from typing import overload, NewType, Optional, Tuple
 
 from OCC.Core.Standard import *
@@ -6,6 +7,10 @@ from OCC.Core.TCollection import *
 from OCC.Core.TColStd import *
 
 TDF_LabelNodePtr = NewType('TDF_LabelNodePtr', TDF_LabelNode)
+TDF_LabelNodeImportMsk = .TDF_LabelNodeImportMsk
+TDF_LabelNodeAttModMsk = .TDF_LabelNodeAttModMsk
+TDF_LabelNodeMayModMsk = .TDF_LabelNodeMayModMsk
+TDF_LabelNodeFlagsMsk = .TDF_LabelNodeFlagsMsk
 
 class TDF:
 	@staticmethod

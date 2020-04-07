@@ -83,6 +83,10 @@ class FairCurve_AnalysisCode(IntEnum):
 	FairCurve_NotConverged = 1
 	FairCurve_InfiniteSliding = 2
 	FairCurve_NullHeight = 3
+FairCurve_OK = FairCurve_AnalysisCode.FairCurve_OK
+FairCurve_NotConverged = FairCurve_AnalysisCode.FairCurve_NotConverged
+FairCurve_InfiniteSliding = FairCurve_AnalysisCode.FairCurve_InfiniteSliding
+FairCurve_NullHeight = FairCurve_AnalysisCode.FairCurve_NullHeight
 };
 /* end python proxy for enums */
 
