@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.Standard import *
 
 Standard_Address = NewType('Standard_Address', None)
 Standard_Boolean = NewType('Standard_Boolean', bool)

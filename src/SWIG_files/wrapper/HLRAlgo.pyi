@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.HLRAlgo import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.TopAbs import *

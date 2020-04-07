@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.NCollection import *
 from OCC.Core.Standard import *
 
 NCollection_String = NewType('NCollection_String', NCollection_Utf8String)

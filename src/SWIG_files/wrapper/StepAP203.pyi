@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.StepAP203 import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.StepData import *

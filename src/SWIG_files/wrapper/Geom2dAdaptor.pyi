@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.Geom2dAdaptor import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.Adaptor2d import *

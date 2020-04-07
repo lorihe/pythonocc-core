@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.IGESData import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.Interface import *

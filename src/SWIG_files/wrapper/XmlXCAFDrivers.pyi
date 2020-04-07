@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.XmlXCAFDrivers import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.TDocStd import *

@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.PrsMgr import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.Prs3d import *

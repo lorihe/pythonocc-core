@@ -1,6 +1,5 @@
 from typing import overload, NewType, Optional, Tuple
 
-from OCC.Core.PCDM import *
 from OCC.Core.Standard import *
 from OCC.Core.NCollection import *
 from OCC.Core.Storage import *
