@@ -158,3 +158,39 @@ class Standard_Persistent(Standard_Transient):
 	def __init__(self) -> None: ...
 	def GetTypeNum(self) -> int: ...
 	def SetTypeNum(self, value: int) -> None: ...
+
+#classnotwrapped
+class Standard_AncestorIterator:
+	pass
+
+#classnotwrapped
+class Standard_Static_Assert:
+	pass
+
+#classnotwrapped
+class Standard_CLocaleSentry:
+	pass
+
+#classnotwrapped
+class Standard_Type:
+	pass
+
+#classnotwrapped
+class Standard_Failure:
+	pass
+
+#classnotwrapped
+class Standard_Mutex:
+	pass
+
+#classnotwrapped
+class Standard_ReadLineBuffer:
+	pass
+
+#classnotwrapped
+class Standard_ProgramError:
+	pass
+
+#classnotwrapped
+class Standard_ReadBuffer:
+	pass

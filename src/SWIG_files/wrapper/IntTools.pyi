@@ -484,3 +484,11 @@ class IntTools_CurveRangeSample(IntTools_BaseRangeSample):
 	def GetRangeIndexDeeper(self, theNbSample: int) -> int: ...
 	def IsEqual(self, Other: IntTools_CurveRangeSample) -> bool: ...
 	def SetRangeIndex(self, theIndex: int) -> None: ...
+
+#classnotwrapped
+class IntTools_CArray1OfInteger:
+	pass
+
+#classnotwrapped
+class IntTools_CArray1OfReal:
+	pass

@@ -159,3 +159,23 @@ class Poly_Triangulation(Standard_Transient):
 	def Triangles(self) -> Poly_Array1OfTriangle: ...
 	def UVNode(self, theIndex: int) -> gp_Pnt2d: ...
 	def UVNodes(self) -> TColgp_Array1OfPnt2d: ...
+
+#classnotwrapped
+class Poly_CoherentTriPtr:
+	pass
+
+#classnotwrapped
+class Poly_CoherentTriangulation:
+	pass
+
+#classnotwrapped
+class Poly_MakeLoops:
+	pass
+
+#classnotwrapped
+class Poly_MakeLoops3D:
+	pass
+
+#classnotwrapped
+class Poly_MakeLoops2D:
+	pass

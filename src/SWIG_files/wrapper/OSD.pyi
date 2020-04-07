@@ -101,3 +101,91 @@ class OSD_SingleProtection:
 	OSD_RXD: int = ...
 	OSD_WXD: int = ...
 	OSD_RWXD: int = ...
+
+#classnotwrapped
+class OSD_Timer:
+	pass
+
+#classnotwrapped
+class OSD_PerfMeter:
+	pass
+
+#classnotwrapped
+class OSD_Disk:
+	pass
+
+#classnotwrapped
+class OSD_Protection:
+	pass
+
+#classnotwrapped
+class OSD_MemInfo:
+	pass
+
+#classnotwrapped
+class OSD_DirectoryIterator:
+	pass
+
+#classnotwrapped
+class OSD_Chronometer:
+	pass
+
+#classnotwrapped
+class OSD_ThreadPool:
+	pass
+
+#classnotwrapped
+class OSD_SharedLibrary:
+	pass
+
+#classnotwrapped
+class OSD_Error:
+	pass
+
+#classnotwrapped
+class OSD_Host:
+	pass
+
+#classnotwrapped
+class OSD_Parallel:
+	pass
+
+#classnotwrapped
+class OSD_Directory:
+	pass
+
+#classnotwrapped
+class OSD_Path:
+	pass
+
+#classnotwrapped
+class OSD_Process:
+	pass
+
+#classnotwrapped
+class OSD_MAllocHook:
+	pass
+
+#classnotwrapped
+class OSD_FileNode:
+	pass
+
+#classnotwrapped
+class OSD_File:
+	pass
+
+#classnotwrapped
+class OSD_FileIterator:
+	pass
+
+#classnotwrapped
+class OSD_Thread:
+	pass
+
+#classnotwrapped
+class OSD_Environment:
+	pass
+
+#classnotwrapped
+class OSD:
+	pass

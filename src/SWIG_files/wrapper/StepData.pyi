@@ -536,3 +536,11 @@ class StepData_SelectArrReal(StepData_SelectNamed):
 	def ArrReal(self) -> TColStd_HArray1OfReal: ...
 	def Kind(self) -> int: ...
 	def SetArrReal(self, arr: TColStd_HArray1OfReal) -> None: ...
+
+#classnotwrapped
+class StepData_FreeFormEntity:
+	pass
+
+#classnotwrapped
+class StepData_UndefinedEntity:
+	pass

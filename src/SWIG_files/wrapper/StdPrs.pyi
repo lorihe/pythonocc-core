@@ -234,3 +234,7 @@ class StdPrs_WFShape(Prs3d_Root):
 class StdPrs_WFSurface(Prs3d_Root):
 	@staticmethod
 	def Add(self, aPresentation: Prs3d_Presentation, aSurface: Adaptor3d_HSurface, aDrawer: Prs3d_Drawer) -> None: ...
+
+#classnotwrapped
+class StdPrs_DeflectionCurve:
+	pass

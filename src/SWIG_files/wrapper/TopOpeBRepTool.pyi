@@ -473,3 +473,11 @@ class TopOpeBRepTool_makeTransition:
 	def MkTonE(self, stb: TopAbs_State, sta: TopAbs_State) -> bool: ...
 	def SetRest(self, ES: TopoDS_Edge, parES: float) -> bool: ...
 	def Setfactor(self, factor: float) -> None: ...
+
+#classnotwrapped
+class TopOpeBRepTool_STATE:
+	pass
+
+#classnotwrapped
+class TopOpeBRepTool_mkTondgE:
+	pass

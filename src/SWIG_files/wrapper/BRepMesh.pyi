@@ -364,3 +364,47 @@ class BRepMesh_IncrementalMesh(BRepMesh_DiscretRoot):
 
 class BRepMesh_DelaunayBaseMeshAlgo(BRepMesh_ConstrainedBaseMeshAlgo):
 	def __init__(self) -> None: ...
+
+#classnotwrapped
+class BRepMesh_WireInterferenceChecker:
+	pass
+
+#classnotwrapped
+class BRepMesh_EdgeTessellator:
+	pass
+
+#classnotwrapped
+class BRepMesh_EdgeTessellationExtractor:
+	pass
+
+#classnotwrapped
+class BRepMesh_EdgeParameterProvider:
+	pass
+
+#classnotwrapped
+class BRepMesh_FastDiscret:
+	pass
+
+#classnotwrapped
+class BRepMesh_CustomDelaunayBaseMeshAlgo:
+	pass
+
+#classnotwrapped
+class BRepMesh_NodeInsertionMeshAlgo:
+	pass
+
+#classnotwrapped
+class BRepMesh_ConstrainedBaseMeshAlgo:
+	pass
+
+#classnotwrapped
+class BRepMesh_CustomBaseMeshAlgo:
+	pass
+
+#classnotwrapped
+class BRepMesh_DelaunayDeflectionControlMeshAlgo:
+	pass
+
+#classnotwrapped
+class BRepMesh_DelaunayNodeInsertionMeshAlgo:
+	pass

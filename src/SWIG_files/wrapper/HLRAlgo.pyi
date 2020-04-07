@@ -239,3 +239,15 @@ class HLRAlgo_WiresBlock(Standard_Transient):
 	def NbWires(self) -> int: ...
 	def Set(self, I: int, W: HLRAlgo_EdgesBlock) -> None: ...
 	def Wire(self, I: int) -> HLRAlgo_EdgesBlock: ...
+
+#classnotwrapped
+class HLRAlgo_TriangleData:
+	pass
+
+#classnotwrapped
+class HLRAlgo_PolyInternalSegment:
+	pass
+
+#classnotwrapped
+class HLRAlgo_PolyHidingData:
+	pass

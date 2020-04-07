@@ -126,3 +126,11 @@ class PCDM_StorageDriver(PCDM_Writer):
 	def SetIsError(self, theIsError: bool) -> None: ...
 	def SetStoreStatus(self, theStoreStatus: PCDM_StoreStatus) -> None: ...
 	def Write(self, aDocument: CDM_Document, aFileName: TCollection_ExtendedString) -> None: ...
+
+#classnotwrapped
+class PCDM_DOMHeaderParser:
+	pass
+
+#classnotwrapped
+class PCDM_Document:
+	pass

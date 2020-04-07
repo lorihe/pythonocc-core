@@ -280,3 +280,11 @@ class LocOpe_GluedShape(LocOpe_GeneratedShape):
 	def GlueOnFace(self, F: TopoDS_Face) -> None: ...
 	def Init(self, S: TopoDS_Shape) -> None: ...
 	def OrientedFaces(self) -> TopTools_ListOfShape: ...
+
+#classnotwrapped
+class LocOpe_Revol:
+	pass
+
+#classnotwrapped
+class LocOpe_RevolutionForm:
+	pass

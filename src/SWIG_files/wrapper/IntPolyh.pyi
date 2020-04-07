@@ -196,3 +196,11 @@ class IntPolyh_Triangle:
 	def ThirdEdge(self) -> int: ...
 	def ThirdEdgeOrientation(self) -> int: ...
 	def ThirdPoint(self) -> int: ...
+
+#classnotwrapped
+class IntPolyh_Array:
+	pass
+
+#classnotwrapped
+class IntPolyh_MaillageAffinage:
+	pass

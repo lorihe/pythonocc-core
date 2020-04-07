@@ -231,3 +231,19 @@ class BOPTools_SetMapHasher:
 	def HashCode(self, theSet: BOPTools_Set, theUpperBound: int) -> int: ...
 	@staticmethod
 	def IsEqual(self, aSet1: BOPTools_Set, aSet2: BOPTools_Set) -> bool: ...
+
+#classnotwrapped
+class BOPTools_Parallel:
+	pass
+
+#classnotwrapped
+class BOPTools_BoxSelector:
+	pass
+
+#classnotwrapped
+class BOPTools_BoxSet:
+	pass
+
+#classnotwrapped
+class BOPTools_PairSelector:
+	pass

@@ -195,3 +195,11 @@ class AdvApp2Var_SysBase:
 	def mainial_(self) -> False: ...
 	@staticmethod
 	def mnfndeb_(self) -> int: ...
+
+#classnotwrapped
+class AdvApp2Var_EvaluatorFunc2Var:
+	pass
+
+#classnotwrapped
+class AdvApp2Var_Iso:
+	pass

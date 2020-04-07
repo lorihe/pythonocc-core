@@ -22,3 +22,23 @@ class RWObj_Material:
 
 class RWObj_SubMesh:
 	pass
+
+#classnotwrapped
+class RWObj:
+	pass
+
+#classnotwrapped
+class RWObj_MtlReader:
+	pass
+
+#classnotwrapped
+class RWObj_CafReader:
+	pass
+
+#classnotwrapped
+class RWObj_TriangulationReader:
+	pass
+
+#classnotwrapped
+class RWObj_Reader:
+	pass

@@ -104,3 +104,11 @@ class BRepClass3d_SolidClassifier(BRepClass3d_SClassifier):
 	def Load(self, S: TopoDS_Shape) -> None: ...
 	def Perform(self, P: gp_Pnt, Tol: float) -> None: ...
 	def PerformInfinitePoint(self, Tol: float) -> None: ...
+
+#classnotwrapped
+class BRepClass3d_BndBoxTreeSelectorLine:
+	pass
+
+#classnotwrapped
+class BRepClass3d_BndBoxTreeSelectorPoint:
+	pass

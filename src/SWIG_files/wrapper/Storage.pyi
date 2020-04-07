@@ -31,3 +31,63 @@ class Storage_OpenMode:
 	Storage_VSRead: int = ...
 	Storage_VSWrite: int = ...
 	Storage_VSReadWrite: int = ...
+
+#classnotwrapped
+class Storage_Bucket:
+	pass
+
+#classnotwrapped
+class Storage_BucketOfPersistent:
+	pass
+
+#classnotwrapped
+class Storage_BucketIterator:
+	pass
+
+#classnotwrapped
+class Storage_RootData:
+	pass
+
+#classnotwrapped
+class Storage_TypeData:
+	pass
+
+#classnotwrapped
+class Storage_Root:
+	pass
+
+#classnotwrapped
+class Storage_Schema:
+	pass
+
+#classnotwrapped
+class Storage_DefaultCallBack:
+	pass
+
+#classnotwrapped
+class Storage_TypedCallBack:
+	pass
+
+#classnotwrapped
+class Storage_CallBack:
+	pass
+
+#classnotwrapped
+class Storage_HeaderData:
+	pass
+
+#classnotwrapped
+class Storage_BaseDriver:
+	pass
+
+#classnotwrapped
+class Storage_InternalData:
+	pass
+
+#classnotwrapped
+class Storage_Data:
+	pass
+
+#classnotwrapped
+class Storage:
+	pass

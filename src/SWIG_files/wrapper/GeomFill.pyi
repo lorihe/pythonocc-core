@@ -859,3 +859,11 @@ class GeomFill_GuideTrihedronPlan(GeomFill_TrihedronWithGuide):
 	def Origine(self, OrACR1: float, OrACR2: float) -> None: ...
 	def SetCurve(self, thePath: Adaptor3d_HCurve) -> None: ...
 	def SetInterval(self, First: float, Last: float) -> None: ...
+
+#classnotwrapped
+class GeomFill_NSections:
+	pass
+
+#classnotwrapped
+class GeomFill_SweepSectionGenerator:
+	pass

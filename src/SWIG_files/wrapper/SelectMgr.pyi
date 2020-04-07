@@ -238,3 +238,39 @@ class SelectMgr_OrFilter(SelectMgr_CompositionFilter):
 	def __init__(self) -> None: ...
 	def IsOk(self, anobj: SelectMgr_EntityOwner) -> bool: ...
 	def SetDisabledObjects(self, theObjects: Graphic3d_NMapOfTransient) -> None: ...
+
+#classnotwrapped
+class SelectMgr_Frustum:
+	pass
+
+#classnotwrapped
+class SelectMgr_FrustumBuilder:
+	pass
+
+#classnotwrapped
+class SelectMgr_BaseFrustum:
+	pass
+
+#classnotwrapped
+class SelectMgr_TriangularFrustum:
+	pass
+
+#classnotwrapped
+class SelectMgr_RectangularFrustum:
+	pass
+
+#classnotwrapped
+class SelectMgr_TriangularFrustumSet:
+	pass
+
+#classnotwrapped
+class SelectMgr_ToleranceMap:
+	pass
+
+#classnotwrapped
+class SelectMgr_ViewerSelector:
+	pass
+
+#classnotwrapped
+class SelectMgr_SensitiveEntitySet:
+	pass

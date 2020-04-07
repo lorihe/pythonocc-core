@@ -20,3 +20,7 @@ class RWStl:
 	def WriteAscii(self, theMesh: Poly_Triangulation, thePath: OSD_Path, theProgInd: Optional[Message_ProgressIndicator]) -> bool: ...
 	@staticmethod
 	def WriteBinary(self, theMesh: Poly_Triangulation, thePath: OSD_Path, theProgInd: Optional[Message_ProgressIndicator]) -> bool: ...
+
+#classnotwrapped
+class RWStl_Reader:
+	pass

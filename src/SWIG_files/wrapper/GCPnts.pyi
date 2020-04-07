@@ -182,3 +182,11 @@ class GCPnts_UniformDeflection:
 	def NbPoints(self) -> int: ...
 	def Parameter(self, Index: int) -> float: ...
 	def Value(self, Index: int) -> gp_Pnt: ...
+
+#classnotwrapped
+class GCPnts_DistFunction:
+	pass
+
+#classnotwrapped
+class GCPnts_DistFunction2d:
+	pass

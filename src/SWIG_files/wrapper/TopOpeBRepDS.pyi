@@ -690,3 +690,11 @@ class TopOpeBRepDS_EdgeVertexInterference(TopOpeBRepDS_ShapeShapeInterference):
 
 class TopOpeBRepDS_FaceEdgeInterference(TopOpeBRepDS_ShapeShapeInterference):
 	def __init__(self, T: TopOpeBRepDS_Transition, S: int, G: int, GIsBound: bool, C: TopOpeBRepDS_Config) -> None: ...
+
+#classnotwrapped
+class TopOpeBRepDS_DSS:
+	pass
+
+#classnotwrapped
+class TopOpeBRepDS_HDataStructure:
+	pass

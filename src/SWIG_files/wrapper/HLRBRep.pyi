@@ -1149,3 +1149,19 @@ class HLRBRep_Algo(HLRBRep_InternalAlgo):
 	def Add(self, S: TopoDS_Shape, nbIso: Optional[int]) -> None: ...
 	def Index(self, S: TopoDS_Shape) -> int: ...
 	def OutLinedShapeNullify(self) -> None: ...
+
+#classnotwrapped
+class HLRBRep_ThePolyhedronOfInterCSurf:
+	pass
+
+#classnotwrapped
+class HLRBRep_BSurfaceTool:
+	pass
+
+#classnotwrapped
+class HLRBRep_Surface:
+	pass
+
+#classnotwrapped
+class HLRBRep_TheCurveLocatorOfTheProjPCurOfCInter:
+	pass

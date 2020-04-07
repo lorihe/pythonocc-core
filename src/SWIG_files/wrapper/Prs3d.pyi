@@ -532,3 +532,11 @@ class Prs3d_IsoAspect(Prs3d_LineAspect):
 	def __init__(self, theColor: Quantity_Color, theType: Aspect_TypeOfLine, theWidth: float, theNumber: int) -> None: ...
 	def Number(self) -> int: ...
 	def SetNumber(self, theNumber: int) -> None: ...
+
+#classnotwrapped
+class Prs3d_WFShape:
+	pass
+
+#classnotwrapped
+class Prs3d_Point:
+	pass

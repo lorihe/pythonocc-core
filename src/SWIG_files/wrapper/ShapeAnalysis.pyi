@@ -468,3 +468,11 @@ class ShapeAnalysis_TransferParametersProj(ShapeAnalysis_TransferParameters):
 	def Perform(self, Papams: TColStd_HSequenceOfReal, To2d: bool) -> TColStd_HSequenceOfReal: ...
 	def Perform(self, Param: float, To2d: bool) -> float: ...
 	def TransferRange(self, newEdge: TopoDS_Edge, prevPar: float, currPar: float, Is2d: bool) -> None: ...
+
+#classnotwrapped
+class ShapeAnalysis_BoxBndTreeSelector:
+	pass
+
+#classnotwrapped
+class ShapeCustom_ConvertToRevolution:
+	pass

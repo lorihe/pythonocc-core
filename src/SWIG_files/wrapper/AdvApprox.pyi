@@ -61,3 +61,7 @@ class AdvApprox_PrefAndRec(AdvApprox_Cutting):
 class AdvApprox_PrefCutting(AdvApprox_Cutting):
 	def __init__(self, CutPnts: TColStd_Array1OfReal) -> None: ...
 	def Value(self, a: float, b: float) -> Tuple[bool, float]: ...
+
+#classnotwrapped
+class AdvApprox_EvaluatorFunction:
+	pass

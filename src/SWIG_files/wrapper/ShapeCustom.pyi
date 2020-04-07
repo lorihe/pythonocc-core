@@ -123,3 +123,15 @@ class ShapeCustom_DirectModification(ShapeCustom_Modification):
 	def NewParameter(self, V: TopoDS_Vertex, E: TopoDS_Edge) -> Tuple[bool, float, float]: ...
 	def NewPoint(self, V: TopoDS_Vertex, P: gp_Pnt) -> Tuple[bool, float]: ...
 	def NewSurface(self, F: TopoDS_Face, S: Geom_Surface, L: TopLoc_Location) -> Tuple[bool, float, bool, bool]: ...
+
+#classnotwrapped
+class ShapeCustom_BSplineRestriction:
+	pass
+
+#classnotwrapped
+class ShapeCustom_SweptToElementary:
+	pass
+
+#classnotwrapped
+class ShapeCustom_ConvertToRevolution:
+	pass

@@ -1772,3 +1772,43 @@ class Graphic3d_Texture2Dplane(Graphic3d_Texture2D):
 	def SetTranslateT(self, theVal: Standard_ShortReal) -> None: ...
 	def TranslateS(self, theVal: Standard_ShortReal) -> None: ...
 	def TranslateT(self, theVal: Standard_ShortReal) -> None: ...
+
+#classnotwrapped
+class Graphic3d_UniformValue:
+	pass
+
+#classnotwrapped
+class Graphic3d_UniformValueType:
+	pass
+
+#classnotwrapped
+class Graphic3d_UniformValueTypeID:
+	pass
+
+#classnotwrapped
+class Graphic3d_Buffer:
+	pass
+
+#classnotwrapped
+class Graphic3d_IndexBuffer:
+	pass
+
+#classnotwrapped
+class Graphic3d_TransformPers:
+	pass
+
+#classnotwrapped
+class Graphic3d_TextureSet:
+	pass
+
+#classnotwrapped
+class Graphic3d_CubeMapOrder:
+	pass
+
+#classnotwrapped
+class Graphic3d_CubeMapPacked:
+	pass
+
+#classnotwrapped
+class Graphic3d_BvhCStructureSetTrsfPers:
+	pass

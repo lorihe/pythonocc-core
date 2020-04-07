@@ -92,3 +92,23 @@ class RWGltf_MaterialCommon(Standard_Transient):
 
 class RWGltf_MaterialMetallicRoughness(Standard_Transient):
 	def __init__(self) -> None: ...
+
+#classnotwrapped
+class RWGltf_GltfSharedIStream:
+	pass
+
+#classnotwrapped
+class RWGltf_TriangulationReader:
+	pass
+
+#classnotwrapped
+class RWGltf_GltfLatePrimitiveArray:
+	pass
+
+#classnotwrapped
+class RWGltf_PrimitiveArrayReader:
+	pass
+
+#classnotwrapped
+class RWGltf_CafReader:
+	pass

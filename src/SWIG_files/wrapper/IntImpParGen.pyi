@@ -15,3 +15,7 @@ class IntImpParGen:
 	def DetermineTransition(self, Pos1: IntRes2d_Position, Tan1: gp_Vec2d, Trans1: IntRes2d_Transition, Pos2: IntRes2d_Position, Tan2: gp_Vec2d, Trans2: IntRes2d_Transition, Tol: float) -> bool: ...
 	@staticmethod
 	def NormalizeOnDomain(self, Dom1: IntRes2d_Domain) -> Tuple[float, float]: ...
+
+#classnotwrapped
+class IntImpParGen_ImpTool:
+	pass

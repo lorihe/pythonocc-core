@@ -367,3 +367,7 @@ class TDF_DefaultDeltaOnModification(TDF_DeltaOnModification):
 class TDF_DefaultDeltaOnRemoval(TDF_DeltaOnRemoval):
 	def __init__(self, anAttribute: TDF_Attribute) -> None: ...
 	def Apply(self) -> None: ...
+
+#classnotwrapped
+class TDF_LabelNode:
+	pass

@@ -333,3 +333,23 @@ class VrmlData_IndexedFaceSet(VrmlData_Faceted):
 	def TShape(self) -> TopoDS_TShape: ...
 	def TextureCoords(self) -> VrmlData_TextureCoordinate: ...
 	def Write(self, thePrefix: str) -> VrmlData_ErrorStatus: ...
+
+#classnotwrapped
+class VrmlData_InBuffer:
+	pass
+
+#classnotwrapped
+class VrmlData_ArrayVec3d:
+	pass
+
+#classnotwrapped
+class VrmlData_Texture:
+	pass
+
+#classnotwrapped
+class VrmlData_TextureTransform:
+	pass
+
+#classnotwrapped
+class VrmlData_Faceted:
+	pass

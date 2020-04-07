@@ -399,3 +399,15 @@ class Aspect_GradientBackground(Aspect_Background):
 	def BgGradientFillMethod(self) -> Aspect_GradientFillMethod: ...
 	def Colors(self, AColor1: Quantity_Color, AColor2: Quantity_Color) -> None: ...
 	def SetColors(self, AColor1: Quantity_Color, AColor2: Quantity_Color, AMethod: Optional[Aspect_GradientFillMethod]) -> None: ...
+
+#classnotwrapped
+class Aspect_CircularGrid:
+	pass
+
+#classnotwrapped
+class Aspect_NeutralWindow:
+	pass
+
+#classnotwrapped
+class Aspect_RectangularGrid:
+	pass

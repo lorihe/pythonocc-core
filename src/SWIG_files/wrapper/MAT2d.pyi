@@ -107,3 +107,11 @@ class MAT2d_Tool2d:
 	def ToleranceOfConfusion(self) -> float: ...
 	def TrimBisector(self, abisector: MAT_Bisector) -> bool: ...
 	def TrimBisector(self, abisector: MAT_Bisector, apoint: int) -> bool: ...
+
+#classnotwrapped
+class MAT2d_SketchExplorer:
+	pass
+
+#classnotwrapped
+class MAT2d_CutCurve:
+	pass

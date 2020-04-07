@@ -219,3 +219,11 @@ class Units_UnitsLexicon(Units_Lexicon):
 	def __init__(self) -> None: ...
 	def Creates(self, amode: Optional[bool]) -> None: ...
 	def Dump(self) -> None: ...
+
+#classnotwrapped
+class Units_Quantity:
+	pass
+
+#classnotwrapped
+class Units_Dimensions:
+	pass

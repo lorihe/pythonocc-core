@@ -220,3 +220,19 @@ class Select3D_SensitiveCurve(Select3D_SensitivePoly):
 	@overload
 	def __init__(self, theOwnerId: SelectMgr_EntityOwner, thePoints: TColgp_Array1OfPnt) -> None: ...
 	def GetConnected(self) -> Select3D_SensitiveEntity: ...
+
+#classnotwrapped
+class Select3D_SensitiveTriangulation:
+	pass
+
+#classnotwrapped
+class Select3D_SensitiveEntity:
+	pass
+
+#classnotwrapped
+class Handle_Select3D_SensitiveEntity:
+	pass
+
+#classnotwrapped
+class Select3D_SensitiveSet:
+	pass

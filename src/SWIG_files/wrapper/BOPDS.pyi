@@ -422,3 +422,7 @@ class BOPDS_IteratorSI(BOPDS_Iterator):
 	@overload
 	def __init__(self, theAllocator: NCollection_BaseAllocator) -> None: ...
 	def UpdateByLevelOfCheck(self, theLevel: int) -> None: ...
+
+#classnotwrapped
+class BOPDS_Interf:
+	pass

@@ -483,3 +483,7 @@ class StepRepr_ReprItemAndPlaneAngleMeasureWithUnitAndQRI(StepRepr_ReprItemAndMe
 
 class StepRepr_ShapeRepresentationRelationshipWithTransformation(StepRepr_RepresentationRelationshipWithTransformation):
 	def __init__(self) -> None: ...
+
+#classnotwrapped
+class StepRepr_ReprItemAndMeasureWithUnitAndQRI:
+	pass

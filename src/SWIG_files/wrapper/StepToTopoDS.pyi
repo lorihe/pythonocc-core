@@ -216,3 +216,11 @@ class StepToTopoDS_TranslateVertexLoop(StepToTopoDS_Root):
 	def Error(self) -> StepToTopoDS_TranslateVertexLoopError: ...
 	def Init(self, VL: StepShape_VertexLoop, T: StepToTopoDS_Tool, NMTool: StepToTopoDS_NMTool) -> None: ...
 	def Value(self) -> TopoDS_Shape: ...
+
+#classnotwrapped
+class StepToTopoDS_Builder:
+	pass
+
+#classnotwrapped
+class StepToTopoDS_PointVertexMap:
+	pass

@@ -410,3 +410,11 @@ class Geom2dGcc_QualifiedCurve:
 	def IsUnqualified(self) -> bool: ...
 	def Qualified(self) -> Geom2dAdaptor_Curve: ...
 	def Qualifier(self) -> GccEnt_Position: ...
+
+#classnotwrapped
+class Geom2dGcc_FuncTCuCuCuOfMyC2d3Tan:
+	pass
+
+#classnotwrapped
+class Geom2dGcc_FunctionTanCuCuCu:
+	pass
